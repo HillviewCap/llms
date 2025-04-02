@@ -7,7 +7,7 @@
         "metadata": {
             "source_domain": "docs.tilebox.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:25:51Z",
         "last_updated": "2025-04-02T18:25:51Z",
         "fallback_title": "AI Assistance",
@@ -21,7 +21,7 @@
         "metadata": {
             "source_domain": "python.langchain.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:25:50Z",
         "last_updated": "2025-04-02T18:25:50Z",
         "fallback_title": "LangChain",
@@ -35,7 +35,7 @@
         "metadata": {
             "source_domain": "langfuse.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:25:50Z",
         "last_updated": "2025-04-02T18:25:50Z",
         "parsed_title": "Langfuse"
@@ -48,7 +48,7 @@
         "metadata": {
             "source_domain": "modelcontextprotocol.io"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:25:50Z",
         "last_updated": "2025-04-02T18:25:50Z",
         "fallback_title": "Example Clients",
@@ -62,7 +62,7 @@
         "metadata": {
             "source_domain": "docs.ionq.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:25:50Z",
         "last_updated": "2025-04-02T18:25:50Z",
         "fallback_title": "IonQ Quantum Cloud Documentation",
@@ -89,7 +89,7 @@
         "metadata": {
             "source_domain": "docs.zapier.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:25:50Z",
         "last_updated": "2025-04-02T18:25:50Z",
         "fallback_title": "Get Action Details",
@@ -103,7 +103,7 @@
         "metadata": {
             "source_domain": "www.answer.ai"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:25:50Z",
         "last_updated": "2025-04-02T18:25:50Z",
         "parsed_title": "Answer.AI company website",
@@ -117,7 +117,7 @@
         "metadata": {
             "source_domain": "superwall.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:25:50Z",
         "last_updated": "2025-04-02T18:25:50Z",
         "fallback_title": "Superwall"
@@ -130,7 +130,7 @@
         "metadata": {
             "source_domain": "theirstack.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:25:50Z",
         "last_updated": "2025-04-02T18:25:50Z",
         "parsed_title": "TheirStack"
@@ -143,7 +143,7 @@
         "metadata": {
             "source_domain": "sdk.vercel.ai"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:25:50Z",
         "last_updated": "2025-04-02T18:25:50Z",
         "fallback_title": "Node.js HTTP Server",
@@ -157,7 +157,7 @@
         "metadata": {
             "source_domain": "www.plain.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:25:50Z",
         "last_updated": "2025-04-02T18:25:50Z",
         "fallback_title": "Plain Docs"
@@ -170,7 +170,7 @@
         "metadata": {
             "source_domain": "js.langchain.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:25:50Z",
         "last_updated": "2025-04-02T18:25:50Z",
         "fallback_title": "LangChain JavaScript",
@@ -180,13 +180,13 @@
         "url": "https://pinimg.com/content/llms-full.txt",
         "domain": "pinimg.com",
         "status_code": 200,
-        "content_hash": "28eb9d25109625d183ed34a73fafb3d277ccf51ecf7023e4697599f3e76f2d08",
+        "content_hash": "fc857702541355360b301bfaeeb7c0b8ee374c7baccc3d82dce16fc46090d887",
         "metadata": {
             "source_domain": "pinimg.com"
         },
-        "last_checked_utc": "2025-04-02T18:37:27Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:37:27Z",
-        "last_updated": "2025-04-02T18:37:27Z",
+        "last_updated": "2025-04-02T20:06:12Z",
         "parsed_title": "map_canvas img {\n  max-width: none;\n}"
     },
     {
@@ -201,18 +201,6 @@
         "first_added": "2025-04-02T18:37:27Z",
         "last_updated": "2025-04-02T18:37:27Z",
         "parsed_title": "login_error, .login .message, #loginform { margin-bottom: 20px; }\n</style>"
-    },
-    {
-        "url": "https://playablefactory.app/static/llms.txt",
-        "domain": "playablefactory.app",
-        "status_code": 200,
-        "content_hash": "f350166f8990531d61e40f390458d448400f88f0d92bc31771b6ebe2a68c1b22",
-        "metadata": {
-            "source_domain": "playablefactory.app"
-        },
-        "last_checked_utc": "2025-04-02T18:37:27Z",
-        "first_added": "2025-04-02T18:37:27Z",
-        "last_updated": "2025-04-02T18:37:27Z"
     },
     {
         "url": "https://sendbird.com/llms.txt",
@@ -248,7 +236,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "List files in a directory",
@@ -262,7 +250,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Tinybird Documentation (FWD)",
@@ -276,7 +264,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Upstash Documentation"
@@ -289,7 +277,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Quickstart",
@@ -303,7 +291,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Svelte Documentation for LLMs"
@@ -316,7 +304,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "parsed_title": "Supabase Docs"
@@ -329,7 +317,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "OpenPhone Docs"
@@ -342,7 +330,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Example Clients",
@@ -356,7 +344,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Loops"
@@ -369,7 +357,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "ScreenshotOne.com Full Documentation",
@@ -383,7 +371,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "World Developer Docs",
@@ -397,7 +385,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "{{ .Site.Params.vendor.name }}",
@@ -411,7 +399,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Quickstart",
@@ -425,7 +413,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "LLMs Documentation",
@@ -439,7 +427,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Example Clients",
@@ -453,7 +441,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "EN Technical Documentation",
@@ -467,7 +455,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Envoyer"
@@ -480,7 +468,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Oxla Developer Hub"
@@ -493,7 +481,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Inkeep"
@@ -506,7 +494,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Chakra UI v3 Documentation for LLMs"
@@ -519,7 +507,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Stedi",
@@ -533,7 +521,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "DevHub API Documentation"
@@ -546,7 +534,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "POPSMASH\r\r> POPSMASH is a Shopify app that helps merchants create AI-powered product recommendation quizzes to boost engagement, sales, and customer insights.\r\rImportant notes:\r\r- Designed specifically for Shopify merchants to integrate seamlessly with their stores.\r- Available exclusively in the [Shopify App Store here](https://apps.shopify.com/popsmash)\r- Uses AI to prioritize speed, simplicity and conversions over customization and manual setup. Best for Shopify stores that need multiple quizzes for collection pages, social posts, and product recommendations quizzes to grow sales.\r\r## Docs & Help site\r\r- [Documentation and Help Site](https://help.popsmash.com/en/): Guides, explainers and troubleshooting tips for using POPSMASH and getting the most out of its features.\r\r## Pages\r- [Homepage & Feature Overview](https://www.popsmash.com): Introduction to POPSMASH and its key features for Shopify merchants.\r- [Pricing Plans](https://www.popsmash.com/pricing): Details on subscription plans, pricing tiers, and features available in each plan.\r- [Shopify Quiz App Comparison and Reviews](www.popsmash.com/blog/shopify-quiz-apps-comparison-best-ecommerce-product-recommendation-funnel-tools-free-paid): A comparison of popular Shopify quiz apps.\r- [Shopify Quiz Examples](https://demo.popsmash.com/): A demo site showcasing examples of real, interactive Shopify quizzes to see how they drive customer engagement, boost sales and capture data.\r- [About the Company](https://www.popsmash.com/about): The story of POPSMASH and the team behind the app.\r- [Affiliate Program](https://www.popsmash.com/affiliates): Information about POPSMASH's affiliate program and how to join.\r- [How much could a quiz  grow your Shopify store?](https://www.popsmash.com/shopify-calculator): Estimate incremental growth from product recommendation quizzes on a Shopify store.\r- [Free Newsletter for Shopify Merchants](https://www.popsmash.com/newsletter): A free newsletter to help Shopify merchants do better marketing to grow their sales.\r- [Shopify Marketing Blog](https://www.popsmash.com/blog): Regularly updated articles with marketing tips for Shopify Merchants.\r- [Product Changelog](https://www.popsmash.com/changelog): Learn about the latest product improvements and updates for the POPSMASH Shopify quiz app.\r- [Privacy Policy](https://www.popsmash.com/lega/privacy): Explanation of how user data is collected, stored, and used.\r- [Terms of Service](https://www.popsmash.com/legal/tos): Legal terms governing the use of the POPSMASH app."
@@ -559,7 +547,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Example Clients",
@@ -586,7 +574,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "parsed_title": "{{ .Title }}"
@@ -599,7 +587,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Trail of Bits",
@@ -613,7 +601,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Prisma Documentation"
@@ -626,7 +614,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "flatfile.com"
@@ -639,7 +627,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Task",
@@ -653,7 +641,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Infisical"
@@ -666,11 +654,11 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
-        "fallback_title": "Guia Completo sobre o DPVAT - Paraná",
-        "fallback_summary": "Versão: 2.0"
+        "fallback_title": "Guia Completo sobre o DPVAT - Paran\u00e1",
+        "fallback_summary": "Vers\u00e3o: 2.0"
     },
     {
         "url": "https://raw.githubusercontent.com/taranasus/pls/2646273cc74ba8cf37b01c9644efd6860b9bf1e2/OpenRouterDocs/llms-full.txt",
@@ -680,7 +668,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Quickstart",
@@ -694,7 +682,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Custom configurations",
@@ -708,7 +696,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Example Clients",
@@ -722,7 +710,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Axiom Docs"
@@ -749,7 +737,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "XMTP Full Documentation",
@@ -763,7 +751,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "List Audit Logs",
@@ -777,7 +765,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Galileo",
@@ -791,7 +779,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "LuxAlgo"
@@ -804,7 +792,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Velt"
@@ -817,7 +805,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Build Agents on Cloudflare",
@@ -831,7 +819,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Example Clients",
@@ -845,7 +833,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Example Clients",
@@ -859,7 +847,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Clients",
@@ -873,7 +861,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Campsite"
@@ -886,7 +874,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:51Z",
         "last_updated": "2025-04-02T18:45:51Z",
         "fallback_title": "Anthropic",
@@ -900,7 +888,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "ElectricSQL - Instructions for LLMs",
@@ -914,7 +902,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "docs2llms",
@@ -928,7 +916,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Docker Documentation",
@@ -942,7 +930,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -956,7 +944,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Hyperline",
@@ -970,7 +958,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Get Backends",
@@ -984,7 +972,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Docs"
@@ -997,7 +985,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "https://neptun-tools-docs.pages.dev/docs llms-full.txt"
@@ -1010,7 +998,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "dotenvx"
@@ -1023,7 +1011,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "The 'name' field is unused by add_and_stringify",
@@ -1037,7 +1025,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Plain Docs"
@@ -1050,7 +1038,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Clients",
@@ -1064,7 +1052,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Fabric",
@@ -1078,7 +1066,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "parsed_title": "Start of Effect documentation"
@@ -1091,7 +1079,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "ConfirmButton",
@@ -1105,7 +1093,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Fireproof Database API Guide",
@@ -1119,7 +1107,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Mintlify"
@@ -1132,7 +1120,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "parsed_title": "The llms-full.txt\n# https://llmstxt.org/\nlayout: null\npermalink: llms-full.txt\n---"
@@ -1148,7 +1136,7 @@
         "last_checked_utc": "2025-04-02T18:45:54Z",
         "first_added": "2025-04-02T18:45:54Z",
         "last_updated": "2025-04-02T18:45:54Z",
-        "parsed_title": "vcm-v-consent-sdk * {\nfont-family: \"languageFont\",\"AvenirNext\",\"Microsoft YaHei\",微软雅黑,\"MicrosoftJhengHei\",华文细黑,STHeiti,MingLiu,sans-serif,\"WebRupee\",\"ZAWGYI-ONE\";\n}\n</style>\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/common/css/vicon_28ffe74.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/include/vep-new-global/dist/css/vivo_7f76ff7.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/index/manage/dist/css/vivo_cd2ffde.css\" rel=\"stylesheet\" type=\"text/css\">\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/jquery.min.3.3.1_7679e5a.js\"></script>\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/global.pack_bcdfa40.js\"></script>\n<script>\nwindow.onload = function(){\nconst vcmHeaderLogo = $(\".vcm-v-header-logo>img\")\nconst vcmWin = $(\"#vcm-v-banner-sdk\")\nconst vcmBtn = $(\".vcm-v-group-btn\")\nif(globalVar.brandMark === 'jovi'){\n$('#vcm-v-dialog-sdk .vcm-v-header-logo')?.css({'width':'82px','height':'auto','margin-top':'28.3px','margin-right':'23px'})\n// vcmHeaderLogo?.attr('src','/static/img/icon/vcm-logo-jovi.svg')\nvcmHeaderLogo?.attr('src','/static/img/image/vcm-logo-jovi.png')\n}\nif(vcmWin.length) {\nvcmWin.attr('tabindex', '0').focus()\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-4, .portal-font-scale-5\")){\nvcmBtn?.css({\n'overflow':'hidden',\n'text-overflow':'ellipsis',\n'white-space':'nowrap',\n'display':'block'\n})\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-6, .portal-font-scale-7\")){\nvcmBtn?.css({\n'padding': '30px 20px'\n})\n}\n}\n</script>\n</head>\n<body class=\"veu-header-relative\" data-nav=\"Home\" data-app-page=\"none-cookie\">\n<script>\nwindow._env='非vivoapp'\n</script>\n<header id=\"header\" class=\"new-head-wrap\">\n<div class=\"vep-public vep-head vep-new-header vep-responsive\">\n<div class=\"vep-header-pc-box\">\n<div class=\"vep-pc-nav-box\">\n<div class=\"vep-pc-nav\">\n<p class=\"vep-pc-logo-box no-flip-over\">\n<a class=\"vep-pc-logo\" href=\"//www.vivo.com/en\" aria-label=\"vivo\" name=\"content\">\n<svg aria-hidden=\"true\" width=\"104px\" height=\"28px\" viewBox=\"0 0 103 28\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<g id=\"海外一期\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n<g id=\"F14-PC-返回顶部Normal\" transform=\"translate(-241.000000, -29.000000)\">\n<g id=\"编组-6\">\n<g id=\"vivo\" transform=\"translate(240.000000, 29.000000)\">\n<g id=\"vivo-LOGO\" transform=\"translate(1.000000, 0.000000)\" fill=\"#ffffff\">\n<path class=\"vep-pc-logo-path\" d=\"M92.1201187,22.7773568 L83.3531521,22.7773568 C78.4247857,22.7773568 77.9864276,18.7356293 77.9864276,17.5007165 C77.9864276,16.2658037 78.4247857,12.2240763 83.3531521,12.2240763 L92.1201187,12.2240763 C97.0484851,12.2240763 97.4868432,16.2658037 97.4868432,17.5007165 C97.4868432,18.7356293 97.0484851,22.7773568 92.1201187,22.7773568 M92.1201187,7.77940186 L83.3531521,7.77940186 C74.2419976,7.77940186 73.4316287,15.2256518 73.4316287,17.5007165 C73.4316287,19.7759758 74.2419976,27.2222258 83.3531521,27.2222258 L92.1201187,27.2222258 C101.231468,27.2222258 102.041837,19.7759758 102.041837,17.5007165 C102.041837,15.2256518 101.231468,7.77940186 92.1201187,7.77940186\" id=\"Fill-1\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M71.6722232,8.23532926 L68.8307758,8.23532926 C67.6137631,8.23532926 67.362967,8.44312615 66.8934784,9.13947923 C66.4241842,9.83602688 58.2963682,22.2443033 58.2963682,22.2443033 C58.0372058,22.6258479 57.7622835,22.7801391 57.4200413,22.7801391 C57.0779936,22.7801391 56.8028767,22.6258479 56.5437143,22.2443033 C56.5437143,22.2443033 48.4158983,9.83602688 47.9466042,9.13947923 C47.4771155,8.44312615 47.2263194,8.23532926 46.0095013,8.23532926 L43.1678593,8.23532926 C42.5139217,8.23532926 42.2146786,8.74664971 42.6257973,9.37101323 C43.0369161,9.99537674 52.3331032,24.1107786 52.3331032,24.1107786 C53.8394361,26.3265005 54.9449623,27.2222841 57.4200413,27.2222841 C59.8951202,27.2222841 61.0008409,26.3265005 62.5073684,24.1107786 C62.5073684,24.1107786 71.8031664,9.99537674 72.2142852,9.37101323 C72.6254039,8.74664971 72.3263554,8.23532926 71.6722232,8.23532926\" id=\"Fill-4\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.9316764,9.43928657 C33.9316764,8.57716293 34.273335,8.2353098 35.1354586,8.2353098 L37.2832769,8.2353098 C38.1454005,8.2353098 38.4872537,8.57716293 38.4872537,9.43928657 L38.4872537,26.0182879 C38.4872537,26.8804115 38.1454005,27.2222647 37.2832769,27.2222647 L35.1354586,27.2222647 C34.273335,27.2222647 33.9316764,26.8804115 33.9316764,26.0182879 L33.9316764,9.43928657 Z\" id=\"Fill-7\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M29.2512459,8.23532926 L26.4097985,8.23532926 C25.1925912,8.23532926 24.9417952,8.44312615 24.4723065,9.13947923 C24.0030124,9.83602688 15.8753909,22.2443033 15.8753909,22.2443033 C15.6160339,22.6256534 15.3411116,22.7801391 14.9988694,22.7801391 C14.6566271,22.7801391 14.3817048,22.6256534 14.1225424,22.2443033 C14.1225424,22.2443033 5.9947264,9.83602688 5.52543229,9.13947923 C5.05613818,8.44312615 4.80514754,8.23532926 3.5883294,8.23532926 L0.746492834,8.23532926 C0.0162852061,8.23532926 -0.206687867,8.74664971 0.204625463,9.37101323 C0.615744226,9.99537674 9.91193135,24.1107786 9.91193135,24.1107786 C11.4180697,26.3265005 12.5237904,27.2222841 14.9988694,27.2222841 C17.4741429,27.2222841 18.5796691,26.3265005 20.0861965,24.1107786 C20.0861965,24.1107786 29.3821891,9.99537674 29.7931133,9.37101323 C30.2044266,8.74664971 29.9814536,8.23532926 29.2512459,8.23532926\" id=\"Fill-13\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.7359621,4.43800671 C33.0359123,3.73815144 33.0359123,3.18324812 33.7359621,2.48319828 L35.231983,0.987177377 C35.9318383,0.287127538 36.4869362,0.287127538 37.1867914,0.986982811 L38.6830069,2.48319828 C39.3828622,3.18324812 39.3828622,3.73815144 38.6830069,4.43800671 L37.1867914,5.93422218 C36.4869362,6.63427202 35.9318383,6.63427202 35.231983,5.93422218 L33.7359621,4.43800671 Z\" id=\"Fill-10\"></path>\n</g>\n</g>\n</g>\n</g>\n</g>\n</svg>\n</a>\n</p>\n<div role=\"navigation\" aria-label=\"Primary\">\n<ul class=\"vep-pc-nav-list\" data-include-view-stat=\"cfrom=1002\">\n<li class=\"vep-pc-nav-item\">\n<a aria-current=\"page\" class=\"vep-pc-nav-link no-flip-over\"\nhref=\"https://www.vivo.com/en\"\ndata-nav-home\ndata-include-click-stat=\"cfrom=1001&name=Home&position=1\"",
+        "parsed_title": "vcm-v-consent-sdk * {\nfont-family: \"languageFont\",\"AvenirNext\",\"Microsoft YaHei\",\u5fae\u8f6f\u96c5\u9ed1,\"MicrosoftJhengHei\",\u534e\u6587\u7ec6\u9ed1,STHeiti,MingLiu,sans-serif,\"WebRupee\",\"ZAWGYI-ONE\";\n}\n</style>\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/common/css/vicon_28ffe74.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/include/vep-new-global/dist/css/vivo_7f76ff7.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/index/manage/dist/css/vivo_cd2ffde.css\" rel=\"stylesheet\" type=\"text/css\">\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/jquery.min.3.3.1_7679e5a.js\"></script>\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/global.pack_bcdfa40.js\"></script>\n<script>\nwindow.onload = function(){\nconst vcmHeaderLogo = $(\".vcm-v-header-logo>img\")\nconst vcmWin = $(\"#vcm-v-banner-sdk\")\nconst vcmBtn = $(\".vcm-v-group-btn\")\nif(globalVar.brandMark === 'jovi'){\n$('#vcm-v-dialog-sdk .vcm-v-header-logo')?.css({'width':'82px','height':'auto','margin-top':'28.3px','margin-right':'23px'})\n// vcmHeaderLogo?.attr('src','/static/img/icon/vcm-logo-jovi.svg')\nvcmHeaderLogo?.attr('src','/static/img/image/vcm-logo-jovi.png')\n}\nif(vcmWin.length) {\nvcmWin.attr('tabindex', '0').focus()\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-4, .portal-font-scale-5\")){\nvcmBtn?.css({\n'overflow':'hidden',\n'text-overflow':'ellipsis',\n'white-space':'nowrap',\n'display':'block'\n})\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-6, .portal-font-scale-7\")){\nvcmBtn?.css({\n'padding': '30px 20px'\n})\n}\n}\n</script>\n</head>\n<body class=\"veu-header-relative\" data-nav=\"Home\" data-app-page=\"none-cookie\">\n<script>\nwindow._env='\u975evivoapp'\n</script>\n<header id=\"header\" class=\"new-head-wrap\">\n<div class=\"vep-public vep-head vep-new-header vep-responsive\">\n<div class=\"vep-header-pc-box\">\n<div class=\"vep-pc-nav-box\">\n<div class=\"vep-pc-nav\">\n<p class=\"vep-pc-logo-box no-flip-over\">\n<a class=\"vep-pc-logo\" href=\"//www.vivo.com/en\" aria-label=\"vivo\" name=\"content\">\n<svg aria-hidden=\"true\" width=\"104px\" height=\"28px\" viewBox=\"0 0 103 28\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<g id=\"\u6d77\u5916\u4e00\u671f\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n<g id=\"F14-PC-\u8fd4\u56de\u9876\u90e8Normal\" transform=\"translate(-241.000000, -29.000000)\">\n<g id=\"\u7f16\u7ec4-6\">\n<g id=\"vivo\" transform=\"translate(240.000000, 29.000000)\">\n<g id=\"vivo-LOGO\" transform=\"translate(1.000000, 0.000000)\" fill=\"#ffffff\">\n<path class=\"vep-pc-logo-path\" d=\"M92.1201187,22.7773568 L83.3531521,22.7773568 C78.4247857,22.7773568 77.9864276,18.7356293 77.9864276,17.5007165 C77.9864276,16.2658037 78.4247857,12.2240763 83.3531521,12.2240763 L92.1201187,12.2240763 C97.0484851,12.2240763 97.4868432,16.2658037 97.4868432,17.5007165 C97.4868432,18.7356293 97.0484851,22.7773568 92.1201187,22.7773568 M92.1201187,7.77940186 L83.3531521,7.77940186 C74.2419976,7.77940186 73.4316287,15.2256518 73.4316287,17.5007165 C73.4316287,19.7759758 74.2419976,27.2222258 83.3531521,27.2222258 L92.1201187,27.2222258 C101.231468,27.2222258 102.041837,19.7759758 102.041837,17.5007165 C102.041837,15.2256518 101.231468,7.77940186 92.1201187,7.77940186\" id=\"Fill-1\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M71.6722232,8.23532926 L68.8307758,8.23532926 C67.6137631,8.23532926 67.362967,8.44312615 66.8934784,9.13947923 C66.4241842,9.83602688 58.2963682,22.2443033 58.2963682,22.2443033 C58.0372058,22.6258479 57.7622835,22.7801391 57.4200413,22.7801391 C57.0779936,22.7801391 56.8028767,22.6258479 56.5437143,22.2443033 C56.5437143,22.2443033 48.4158983,9.83602688 47.9466042,9.13947923 C47.4771155,8.44312615 47.2263194,8.23532926 46.0095013,8.23532926 L43.1678593,8.23532926 C42.5139217,8.23532926 42.2146786,8.74664971 42.6257973,9.37101323 C43.0369161,9.99537674 52.3331032,24.1107786 52.3331032,24.1107786 C53.8394361,26.3265005 54.9449623,27.2222841 57.4200413,27.2222841 C59.8951202,27.2222841 61.0008409,26.3265005 62.5073684,24.1107786 C62.5073684,24.1107786 71.8031664,9.99537674 72.2142852,9.37101323 C72.6254039,8.74664971 72.3263554,8.23532926 71.6722232,8.23532926\" id=\"Fill-4\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.9316764,9.43928657 C33.9316764,8.57716293 34.273335,8.2353098 35.1354586,8.2353098 L37.2832769,8.2353098 C38.1454005,8.2353098 38.4872537,8.57716293 38.4872537,9.43928657 L38.4872537,26.0182879 C38.4872537,26.8804115 38.1454005,27.2222647 37.2832769,27.2222647 L35.1354586,27.2222647 C34.273335,27.2222647 33.9316764,26.8804115 33.9316764,26.0182879 L33.9316764,9.43928657 Z\" id=\"Fill-7\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M29.2512459,8.23532926 L26.4097985,8.23532926 C25.1925912,8.23532926 24.9417952,8.44312615 24.4723065,9.13947923 C24.0030124,9.83602688 15.8753909,22.2443033 15.8753909,22.2443033 C15.6160339,22.6256534 15.3411116,22.7801391 14.9988694,22.7801391 C14.6566271,22.7801391 14.3817048,22.6256534 14.1225424,22.2443033 C14.1225424,22.2443033 5.9947264,9.83602688 5.52543229,9.13947923 C5.05613818,8.44312615 4.80514754,8.23532926 3.5883294,8.23532926 L0.746492834,8.23532926 C0.0162852061,8.23532926 -0.206687867,8.74664971 0.204625463,9.37101323 C0.615744226,9.99537674 9.91193135,24.1107786 9.91193135,24.1107786 C11.4180697,26.3265005 12.5237904,27.2222841 14.9988694,27.2222841 C17.4741429,27.2222841 18.5796691,26.3265005 20.0861965,24.1107786 C20.0861965,24.1107786 29.3821891,9.99537674 29.7931133,9.37101323 C30.2044266,8.74664971 29.9814536,8.23532926 29.2512459,8.23532926\" id=\"Fill-13\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.7359621,4.43800671 C33.0359123,3.73815144 33.0359123,3.18324812 33.7359621,2.48319828 L35.231983,0.987177377 C35.9318383,0.287127538 36.4869362,0.287127538 37.1867914,0.986982811 L38.6830069,2.48319828 C39.3828622,3.18324812 39.3828622,3.73815144 38.6830069,4.43800671 L37.1867914,5.93422218 C36.4869362,6.63427202 35.9318383,6.63427202 35.231983,5.93422218 L33.7359621,4.43800671 Z\" id=\"Fill-10\"></path>\n</g>\n</g>\n</g>\n</g>\n</g>\n</svg>\n</a>\n</p>\n<div role=\"navigation\" aria-label=\"Primary\">\n<ul class=\"vep-pc-nav-list\" data-include-view-stat=\"cfrom=1002\">\n<li class=\"vep-pc-nav-item\">\n<a aria-current=\"page\" class=\"vep-pc-nav-link no-flip-over\"\nhref=\"https://www.vivo.com/en\"\ndata-nav-home\ndata-include-click-stat=\"cfrom=1001&name=Home&position=1\"",
         "parsed_summary": "Home</a>"
     },
     {
@@ -1159,7 +1147,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "parsed_title": "Bun Documentation",
@@ -1173,7 +1161,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "parsed_title": "docs.airbyte.com llms.txt",
@@ -1201,7 +1189,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "DocETL System Description and LLM Instructions (Full)",
@@ -1215,7 +1203,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Argil"
@@ -1228,7 +1216,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Solid",
@@ -1242,7 +1230,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "live_select",
@@ -1256,7 +1244,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Hypermode"
@@ -1269,7 +1257,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Breaking Changes",
@@ -1283,7 +1271,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Frigade"
@@ -1296,7 +1284,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Documentation",
@@ -1310,7 +1298,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "https://www.muppet.dev/docs llms-full.txt",
@@ -1324,7 +1312,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "parsed_title": "LLM documentation for Netlify"
@@ -1337,7 +1325,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Clients",
@@ -1351,7 +1339,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "What is Conductor?",
@@ -1365,7 +1353,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Unkey Docs"
@@ -1378,7 +1366,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Aporia"
@@ -1391,7 +1379,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Convex",
@@ -1405,7 +1393,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "smartcar"
@@ -1418,7 +1406,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Tustin Recruiting",
@@ -1432,7 +1420,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -1446,7 +1434,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "parsed_title": "!/bin/bash\nset -e"
@@ -1459,7 +1447,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Tavus",
@@ -1473,7 +1461,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Clients",
@@ -1487,7 +1475,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Attachments",
@@ -1501,7 +1489,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "OpenPipe"
@@ -1514,7 +1502,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -1528,7 +1516,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "from this:",
@@ -1556,7 +1544,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "parsed_title": "WordLift",
@@ -1570,7 +1558,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Daytona SDK Features",
@@ -1584,7 +1572,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Jazz",
@@ -1598,7 +1586,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "parsed_title": "Add File To Group\nSource: https://docs.pinata.cloud/api-reference/endpoint/add-file-to-group"
@@ -1611,7 +1599,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Lago",
@@ -1625,7 +1613,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "https://docs.composio.dev/introduction/intro/overview llms-full.txt",
@@ -1639,7 +1627,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Developer Hub"
@@ -1652,7 +1640,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Hats Protocol Documentation",
@@ -1666,7 +1654,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "JA Technical Documentation",
@@ -1680,7 +1668,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Codeium Docs"
@@ -1693,7 +1681,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -1707,7 +1695,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "CrewAI"
@@ -1720,7 +1708,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Unify"
@@ -1733,7 +1721,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -1760,7 +1748,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Source Control",
@@ -1774,7 +1762,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "ZH Technical Documentation",
@@ -1788,7 +1776,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Get account balance",
@@ -1802,7 +1790,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "https://arpitdalal.dev llms-full.txt",
@@ -1816,7 +1804,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Zapier",
@@ -1830,7 +1818,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "parsed_title": "Tinybird"
@@ -1843,7 +1831,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Mem0"
@@ -1856,7 +1844,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Billing",
@@ -1870,7 +1858,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Chat Completions",
@@ -1884,7 +1872,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "null",
@@ -1898,7 +1886,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "mkdocstrings",
@@ -1912,7 +1900,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -1926,7 +1914,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -1940,7 +1928,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Mangopay docs"
@@ -1953,7 +1941,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "{{ .Site.Params.vendor.name }}",
@@ -1967,7 +1955,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Datafold",
@@ -1981,7 +1969,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "{{ .Site.Title }}",
@@ -1995,7 +1983,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "SkyDeck.ai LLM Ready Documentation",
@@ -2009,7 +1997,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -2023,7 +2011,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Dub Docs"
@@ -2036,7 +2024,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Dynamic"
@@ -2049,7 +2037,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -2063,7 +2051,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "GitButler Documentation",
@@ -2080,7 +2068,7 @@
         "last_checked_utc": "2025-04-02T18:45:54Z",
         "first_added": "2025-04-02T18:45:54Z",
         "last_updated": "2025-04-02T18:45:54Z",
-        "parsed_title": "vcm-v-consent-sdk * {\nfont-family: \"languageFont\",\"AvenirNext\",\"Microsoft YaHei\",微软雅黑,\"MicrosoftJhengHei\",华文细黑,STHeiti,MingLiu,sans-serif,\"WebRupee\",\"ZAWGYI-ONE\";\n}\n</style>\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/common/css/vicon_28ffe74.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/include/vep-new-global/dist/css/vivo_7f76ff7.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/index/manage/dist/css/vivo_cd2ffde.css\" rel=\"stylesheet\" type=\"text/css\">\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/jquery.min.3.3.1_7679e5a.js\"></script>\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/global.pack_bcdfa40.js\"></script>\n<script>\nwindow.onload = function(){\nconst vcmHeaderLogo = $(\".vcm-v-header-logo>img\")\nconst vcmWin = $(\"#vcm-v-banner-sdk\")\nconst vcmBtn = $(\".vcm-v-group-btn\")\nif(globalVar.brandMark === 'jovi'){\n$('#vcm-v-dialog-sdk .vcm-v-header-logo')?.css({'width':'82px','height':'auto','margin-top':'28.3px','margin-right':'23px'})\n// vcmHeaderLogo?.attr('src','/static/img/icon/vcm-logo-jovi.svg')\nvcmHeaderLogo?.attr('src','/static/img/image/vcm-logo-jovi.png')\n}\nif(vcmWin.length) {\nvcmWin.attr('tabindex', '0').focus()\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-4, .portal-font-scale-5\")){\nvcmBtn?.css({\n'overflow':'hidden',\n'text-overflow':'ellipsis',\n'white-space':'nowrap',\n'display':'block'\n})\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-6, .portal-font-scale-7\")){\nvcmBtn?.css({\n'padding': '30px 20px'\n})\n}\n}\n</script>\n</head>\n<body class=\"veu-header-relative\" data-nav=\"Home\" data-app-page=\"none-cookie\">\n<script>\nwindow._env='非vivoapp'\n</script>\n<header id=\"header\" class=\"new-head-wrap\">\n<div class=\"vep-public vep-head vep-new-header vep-responsive\">\n<div class=\"vep-header-pc-box\">\n<div class=\"vep-pc-nav-box\">\n<div class=\"vep-pc-nav\">\n<p class=\"vep-pc-logo-box no-flip-over\">\n<a class=\"vep-pc-logo\" href=\"//www.vivo.com/en\" aria-label=\"vivo\" name=\"content\">\n<svg aria-hidden=\"true\" width=\"104px\" height=\"28px\" viewBox=\"0 0 103 28\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<g id=\"海外一期\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n<g id=\"F14-PC-返回顶部Normal\" transform=\"translate(-241.000000, -29.000000)\">\n<g id=\"编组-6\">\n<g id=\"vivo\" transform=\"translate(240.000000, 29.000000)\">\n<g id=\"vivo-LOGO\" transform=\"translate(1.000000, 0.000000)\" fill=\"#ffffff\">\n<path class=\"vep-pc-logo-path\" d=\"M92.1201187,22.7773568 L83.3531521,22.7773568 C78.4247857,22.7773568 77.9864276,18.7356293 77.9864276,17.5007165 C77.9864276,16.2658037 78.4247857,12.2240763 83.3531521,12.2240763 L92.1201187,12.2240763 C97.0484851,12.2240763 97.4868432,16.2658037 97.4868432,17.5007165 C97.4868432,18.7356293 97.0484851,22.7773568 92.1201187,22.7773568 M92.1201187,7.77940186 L83.3531521,7.77940186 C74.2419976,7.77940186 73.4316287,15.2256518 73.4316287,17.5007165 C73.4316287,19.7759758 74.2419976,27.2222258 83.3531521,27.2222258 L92.1201187,27.2222258 C101.231468,27.2222258 102.041837,19.7759758 102.041837,17.5007165 C102.041837,15.2256518 101.231468,7.77940186 92.1201187,7.77940186\" id=\"Fill-1\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M71.6722232,8.23532926 L68.8307758,8.23532926 C67.6137631,8.23532926 67.362967,8.44312615 66.8934784,9.13947923 C66.4241842,9.83602688 58.2963682,22.2443033 58.2963682,22.2443033 C58.0372058,22.6258479 57.7622835,22.7801391 57.4200413,22.7801391 C57.0779936,22.7801391 56.8028767,22.6258479 56.5437143,22.2443033 C56.5437143,22.2443033 48.4158983,9.83602688 47.9466042,9.13947923 C47.4771155,8.44312615 47.2263194,8.23532926 46.0095013,8.23532926 L43.1678593,8.23532926 C42.5139217,8.23532926 42.2146786,8.74664971 42.6257973,9.37101323 C43.0369161,9.99537674 52.3331032,24.1107786 52.3331032,24.1107786 C53.8394361,26.3265005 54.9449623,27.2222841 57.4200413,27.2222841 C59.8951202,27.2222841 61.0008409,26.3265005 62.5073684,24.1107786 C62.5073684,24.1107786 71.8031664,9.99537674 72.2142852,9.37101323 C72.6254039,8.74664971 72.3263554,8.23532926 71.6722232,8.23532926\" id=\"Fill-4\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.9316764,9.43928657 C33.9316764,8.57716293 34.273335,8.2353098 35.1354586,8.2353098 L37.2832769,8.2353098 C38.1454005,8.2353098 38.4872537,8.57716293 38.4872537,9.43928657 L38.4872537,26.0182879 C38.4872537,26.8804115 38.1454005,27.2222647 37.2832769,27.2222647 L35.1354586,27.2222647 C34.273335,27.2222647 33.9316764,26.8804115 33.9316764,26.0182879 L33.9316764,9.43928657 Z\" id=\"Fill-7\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M29.2512459,8.23532926 L26.4097985,8.23532926 C25.1925912,8.23532926 24.9417952,8.44312615 24.4723065,9.13947923 C24.0030124,9.83602688 15.8753909,22.2443033 15.8753909,22.2443033 C15.6160339,22.6256534 15.3411116,22.7801391 14.9988694,22.7801391 C14.6566271,22.7801391 14.3817048,22.6256534 14.1225424,22.2443033 C14.1225424,22.2443033 5.9947264,9.83602688 5.52543229,9.13947923 C5.05613818,8.44312615 4.80514754,8.23532926 3.5883294,8.23532926 L0.746492834,8.23532926 C0.0162852061,8.23532926 -0.206687867,8.74664971 0.204625463,9.37101323 C0.615744226,9.99537674 9.91193135,24.1107786 9.91193135,24.1107786 C11.4180697,26.3265005 12.5237904,27.2222841 14.9988694,27.2222841 C17.4741429,27.2222841 18.5796691,26.3265005 20.0861965,24.1107786 C20.0861965,24.1107786 29.3821891,9.99537674 29.7931133,9.37101323 C30.2044266,8.74664971 29.9814536,8.23532926 29.2512459,8.23532926\" id=\"Fill-13\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.7359621,4.43800671 C33.0359123,3.73815144 33.0359123,3.18324812 33.7359621,2.48319828 L35.231983,0.987177377 C35.9318383,0.287127538 36.4869362,0.287127538 37.1867914,0.986982811 L38.6830069,2.48319828 C39.3828622,3.18324812 39.3828622,3.73815144 38.6830069,4.43800671 L37.1867914,5.93422218 C36.4869362,6.63427202 35.9318383,6.63427202 35.231983,5.93422218 L33.7359621,4.43800671 Z\" id=\"Fill-10\"></path>\n</g>\n</g>\n</g>\n</g>\n</g>\n</svg>\n</a>\n</p>\n<div role=\"navigation\" aria-label=\"Primary\">\n<ul class=\"vep-pc-nav-list\" data-include-view-stat=\"cfrom=1002\">\n<li class=\"vep-pc-nav-item\">\n<a aria-current=\"page\" class=\"vep-pc-nav-link no-flip-over\"\nhref=\"https://www.vivo.com/en\"\ndata-nav-home\ndata-include-click-stat=\"cfrom=1001&name=Home&position=1\"",
+        "parsed_title": "vcm-v-consent-sdk * {\nfont-family: \"languageFont\",\"AvenirNext\",\"Microsoft YaHei\",\u5fae\u8f6f\u96c5\u9ed1,\"MicrosoftJhengHei\",\u534e\u6587\u7ec6\u9ed1,STHeiti,MingLiu,sans-serif,\"WebRupee\",\"ZAWGYI-ONE\";\n}\n</style>\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/common/css/vicon_28ffe74.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/include/vep-new-global/dist/css/vivo_7f76ff7.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/index/manage/dist/css/vivo_cd2ffde.css\" rel=\"stylesheet\" type=\"text/css\">\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/jquery.min.3.3.1_7679e5a.js\"></script>\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/global.pack_bcdfa40.js\"></script>\n<script>\nwindow.onload = function(){\nconst vcmHeaderLogo = $(\".vcm-v-header-logo>img\")\nconst vcmWin = $(\"#vcm-v-banner-sdk\")\nconst vcmBtn = $(\".vcm-v-group-btn\")\nif(globalVar.brandMark === 'jovi'){\n$('#vcm-v-dialog-sdk .vcm-v-header-logo')?.css({'width':'82px','height':'auto','margin-top':'28.3px','margin-right':'23px'})\n// vcmHeaderLogo?.attr('src','/static/img/icon/vcm-logo-jovi.svg')\nvcmHeaderLogo?.attr('src','/static/img/image/vcm-logo-jovi.png')\n}\nif(vcmWin.length) {\nvcmWin.attr('tabindex', '0').focus()\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-4, .portal-font-scale-5\")){\nvcmBtn?.css({\n'overflow':'hidden',\n'text-overflow':'ellipsis',\n'white-space':'nowrap',\n'display':'block'\n})\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-6, .portal-font-scale-7\")){\nvcmBtn?.css({\n'padding': '30px 20px'\n})\n}\n}\n</script>\n</head>\n<body class=\"veu-header-relative\" data-nav=\"Home\" data-app-page=\"none-cookie\">\n<script>\nwindow._env='\u975evivoapp'\n</script>\n<header id=\"header\" class=\"new-head-wrap\">\n<div class=\"vep-public vep-head vep-new-header vep-responsive\">\n<div class=\"vep-header-pc-box\">\n<div class=\"vep-pc-nav-box\">\n<div class=\"vep-pc-nav\">\n<p class=\"vep-pc-logo-box no-flip-over\">\n<a class=\"vep-pc-logo\" href=\"//www.vivo.com/en\" aria-label=\"vivo\" name=\"content\">\n<svg aria-hidden=\"true\" width=\"104px\" height=\"28px\" viewBox=\"0 0 103 28\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<g id=\"\u6d77\u5916\u4e00\u671f\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n<g id=\"F14-PC-\u8fd4\u56de\u9876\u90e8Normal\" transform=\"translate(-241.000000, -29.000000)\">\n<g id=\"\u7f16\u7ec4-6\">\n<g id=\"vivo\" transform=\"translate(240.000000, 29.000000)\">\n<g id=\"vivo-LOGO\" transform=\"translate(1.000000, 0.000000)\" fill=\"#ffffff\">\n<path class=\"vep-pc-logo-path\" d=\"M92.1201187,22.7773568 L83.3531521,22.7773568 C78.4247857,22.7773568 77.9864276,18.7356293 77.9864276,17.5007165 C77.9864276,16.2658037 78.4247857,12.2240763 83.3531521,12.2240763 L92.1201187,12.2240763 C97.0484851,12.2240763 97.4868432,16.2658037 97.4868432,17.5007165 C97.4868432,18.7356293 97.0484851,22.7773568 92.1201187,22.7773568 M92.1201187,7.77940186 L83.3531521,7.77940186 C74.2419976,7.77940186 73.4316287,15.2256518 73.4316287,17.5007165 C73.4316287,19.7759758 74.2419976,27.2222258 83.3531521,27.2222258 L92.1201187,27.2222258 C101.231468,27.2222258 102.041837,19.7759758 102.041837,17.5007165 C102.041837,15.2256518 101.231468,7.77940186 92.1201187,7.77940186\" id=\"Fill-1\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M71.6722232,8.23532926 L68.8307758,8.23532926 C67.6137631,8.23532926 67.362967,8.44312615 66.8934784,9.13947923 C66.4241842,9.83602688 58.2963682,22.2443033 58.2963682,22.2443033 C58.0372058,22.6258479 57.7622835,22.7801391 57.4200413,22.7801391 C57.0779936,22.7801391 56.8028767,22.6258479 56.5437143,22.2443033 C56.5437143,22.2443033 48.4158983,9.83602688 47.9466042,9.13947923 C47.4771155,8.44312615 47.2263194,8.23532926 46.0095013,8.23532926 L43.1678593,8.23532926 C42.5139217,8.23532926 42.2146786,8.74664971 42.6257973,9.37101323 C43.0369161,9.99537674 52.3331032,24.1107786 52.3331032,24.1107786 C53.8394361,26.3265005 54.9449623,27.2222841 57.4200413,27.2222841 C59.8951202,27.2222841 61.0008409,26.3265005 62.5073684,24.1107786 C62.5073684,24.1107786 71.8031664,9.99537674 72.2142852,9.37101323 C72.6254039,8.74664971 72.3263554,8.23532926 71.6722232,8.23532926\" id=\"Fill-4\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.9316764,9.43928657 C33.9316764,8.57716293 34.273335,8.2353098 35.1354586,8.2353098 L37.2832769,8.2353098 C38.1454005,8.2353098 38.4872537,8.57716293 38.4872537,9.43928657 L38.4872537,26.0182879 C38.4872537,26.8804115 38.1454005,27.2222647 37.2832769,27.2222647 L35.1354586,27.2222647 C34.273335,27.2222647 33.9316764,26.8804115 33.9316764,26.0182879 L33.9316764,9.43928657 Z\" id=\"Fill-7\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M29.2512459,8.23532926 L26.4097985,8.23532926 C25.1925912,8.23532926 24.9417952,8.44312615 24.4723065,9.13947923 C24.0030124,9.83602688 15.8753909,22.2443033 15.8753909,22.2443033 C15.6160339,22.6256534 15.3411116,22.7801391 14.9988694,22.7801391 C14.6566271,22.7801391 14.3817048,22.6256534 14.1225424,22.2443033 C14.1225424,22.2443033 5.9947264,9.83602688 5.52543229,9.13947923 C5.05613818,8.44312615 4.80514754,8.23532926 3.5883294,8.23532926 L0.746492834,8.23532926 C0.0162852061,8.23532926 -0.206687867,8.74664971 0.204625463,9.37101323 C0.615744226,9.99537674 9.91193135,24.1107786 9.91193135,24.1107786 C11.4180697,26.3265005 12.5237904,27.2222841 14.9988694,27.2222841 C17.4741429,27.2222841 18.5796691,26.3265005 20.0861965,24.1107786 C20.0861965,24.1107786 29.3821891,9.99537674 29.7931133,9.37101323 C30.2044266,8.74664971 29.9814536,8.23532926 29.2512459,8.23532926\" id=\"Fill-13\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.7359621,4.43800671 C33.0359123,3.73815144 33.0359123,3.18324812 33.7359621,2.48319828 L35.231983,0.987177377 C35.9318383,0.287127538 36.4869362,0.287127538 37.1867914,0.986982811 L38.6830069,2.48319828 C39.3828622,3.18324812 39.3828622,3.73815144 38.6830069,4.43800671 L37.1867914,5.93422218 C36.4869362,6.63427202 35.9318383,6.63427202 35.231983,5.93422218 L33.7359621,4.43800671 Z\" id=\"Fill-10\"></path>\n</g>\n</g>\n</g>\n</g>\n</g>\n</svg>\n</a>\n</p>\n<div role=\"navigation\" aria-label=\"Primary\">\n<ul class=\"vep-pc-nav-list\" data-include-view-stat=\"cfrom=1002\">\n<li class=\"vep-pc-nav-item\">\n<a aria-current=\"page\" class=\"vep-pc-nav-link no-flip-over\"\nhref=\"https://www.vivo.com/en\"\ndata-nav-home\ndata-include-click-stat=\"cfrom=1001&name=Home&position=1\"",
         "parsed_summary": "Home</a>"
     },
     {
@@ -2091,7 +2079,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Goody"
@@ -2104,7 +2092,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Turso"
@@ -2117,7 +2105,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Junction",
@@ -2131,7 +2119,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "IonQ Quantum Cloud Documentation",
@@ -2145,7 +2133,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Resend"
@@ -2158,7 +2146,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Pinata Docs"
@@ -2171,7 +2159,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Conductor Docs",
@@ -2185,7 +2173,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Using npm",
@@ -2212,7 +2200,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Intuned",
@@ -2226,7 +2214,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Authentication",
@@ -2240,7 +2228,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Editor Permissions",
@@ -2254,7 +2242,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Clients",
@@ -2268,7 +2256,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -2282,7 +2270,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "null",
@@ -2296,7 +2284,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Scaffold-ETH 2",
@@ -2310,7 +2298,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Finch",
@@ -2324,7 +2312,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "TanStack Table v8 Documentation Compilation",
@@ -2351,7 +2339,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Workflow Help"
@@ -2364,7 +2352,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "StrawMCP: Basic Concepts and Introduction",
@@ -2378,10 +2366,10 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
-        "fallback_title": "문서 시작하기",
+        "fallback_title": "\ubb38\uc11c \uc2dc\uc791\ud558\uae30",
         "fallback_summary": "${memos"
     },
     {
@@ -2392,7 +2380,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Keboola Full Documentation",
@@ -2406,7 +2394,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "BaseHub",
@@ -2420,7 +2408,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -2434,7 +2422,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Equipment Framework Documentation for LLMs",
@@ -2448,7 +2436,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Supabase UI Library",
@@ -2462,7 +2450,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "parsed_title": "Medusa",
@@ -2476,7 +2464,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
@@ -2503,7 +2491,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "www.stemaide.com llms-full.txt",
@@ -2517,7 +2505,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Create Conversation",
@@ -2531,7 +2519,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "LLMs.txt",
@@ -2545,7 +2533,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Stripe Documentation",
@@ -2559,7 +2547,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Axle",
@@ -2573,7 +2561,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "GENERAL: [Books](https://ux-patterns-for-developers-khahu0xl3.vercel.app/en/patterns/general/books)",
@@ -2587,7 +2575,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Bucket docs"
@@ -2600,7 +2588,7 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:12Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Cursor"
@@ -2613,10 +2601,155 @@
         "metadata": {
             "source_domain": "raw.githubusercontent.com"
         },
-        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "last_checked_utc": "2025-04-02T20:06:11Z",
         "first_added": "2025-04-02T18:45:52Z",
         "last_updated": "2025-04-02T18:45:52Z",
         "fallback_title": "Example Clients",
         "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://redbutton.de/llms/llms-full.txt",
+        "domain": "redbutton.de",
+        "status_code": 200,
+        "content_hash": "26be75d102120059386c0003c7e809e1067b2645028c440722caeec665a8b926",
+        "metadata": {
+            "source_domain": "redbutton.de"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "rs-demo-id {}\n</style>\n<link rel='stylesheet' id='theme-styles-css'  href='wp-content/themes/jupiter/assets/stylesheet/min/full-styles.6.1.42298.css?ver=1531554132' type='text/css' media='all' />\n<style id='theme-styles-inline-css' type='text/css'>\nbody { background-color:#fff; } .hb-custom-header #mk-page-introduce, .mk-header { background:-webkit-linear-gradient(left,#0c1e2a 0%, #c5cace 100%);background:linear-gradient(to right,#0c1e2a 0%, #c5cace 100%) } .hb-custom-header > div, .mk-header-bg { background-color:rgba(25,51,69,0); } .mk-classic-nav-bg { background-color:rgba(25,51,69,0); } .master-holder-bg { background:-webkit-linear-gradient(left,#0c1e2a 0%, #c5cace 100%);background:linear-gradient(to right,#0c1e2a 0%, #c5cace 100%) } #mk-footer { background-color:#193345; } #mk-boxed-layout { -webkit-box-shadow:0 0 0px rgba(0, 0, 0, 0); -moz-box-shadow:0 0 0px rgba(0, 0, 0, 0); box-shadow:0 0 0px rgba(0, 0, 0, 0); } .mk-news-tab .mk-tabs-tabs .is-active a, .mk-fancy-title.pattern-style span, .mk-fancy-title.pattern-style.color-gradient span:after, .page-bg-color { background-color:#0c1e2a; } .page-title { font-size:20px; color:; text-transform:uppercase; font-weight:400; letter-spacing:2px; } .page-subtitle { font-size:14px; line-height:100%; color:; font-size:14px; text-transform:none; } body { font-family:HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, \"Lucida Grande\", sans-serif } body, h1, h2, h3, h4, h5, h6, p:not(.form-row):not(.woocommerce-mini-cart__empty-message):not(.woocommerce-mini-cart__total):not(.woocommerce-mini-cart__buttons):not(.mk-product-total-name):not(.woocommerce-result-count), .woocommerce-customer-details address, a, textarea,input,select,button, #mk-page-introduce, .the-title, .mk-edge-title, .edge-title, .mk-edge-desc, .edge-desc, .main-navigation-ul, .mk-vm-menuwrapper, #mk-footer-navigation ul li a, .vm-header-copyright, .mk-footer-copyright, .mk-content-box, .filter-portfolio a, .mk-button, .mk-blockquote, .mk-pricing-table .mk-offer-title, .mk-pricing-table .mk-pricing-plan, .mk-pricing-table .mk-pricing-price, .mk-tabs-tabs a, .mk-accordion-tab, .mk-toggle-title, .mk-dropcaps, .price, .mk-imagebox, .mk-event-countdown, .mk-fancy-title, .mk-button-gradient, .mk-iconBox-gradient, .mk-custom-box, .mk-ornamental-title, .mk-subscribe, .mk-timeline, .mk-blog-container .mk-blog-meta .the-title, .post .blog-single-title, .mk-blog-hero .content-holder .the-title, .blog-blockquote-content, .blog-twitter-content, .mk-blog-container .mk-blog-meta .the-excerpt p, .mk-single-content p, .mk-employees .mk-employee-item .team-info-wrapper .team-member-name, .mk-testimonial-quote, .mk-contact-form, .mk-contact-form input,.mk-contact-form button, .mk-box-icon .icon-box-title { font-family:Lato } @font-face { font-family:'star'; src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.eot'); src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/fontd41d.eot?#iefix') format('embedded-opentype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.woff') format('woff'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.ttf') format('truetype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.svg#star') format('svg'); font-weight:normal; font-style:normal; } @font-face { font-family:'WooCommerce'; src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.eot'); src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/fontd41d.eot?#iefix') format('embedded-opentype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.woff') format('woff'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.ttf') format('truetype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.svg#WooCommerce') format('svg'); font-weight:normal; font-style:normal; }\n</style>\n<link rel='stylesheet' id='mkhb-render-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-render1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mkhb-row-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-row1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mkhb-column-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-column1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='js_composer_front-css'  href='wp-content/plugins/js_composer_theme/assets/css/js_composer.min23da.css?ver=5.4.8' type='text/css' media='all' />\n<link rel='stylesheet' id='popup-maker-site-css'  href='wp-content/uploads/pum/pum-site-styles1c44.css?generated=1634283638&amp;ver=1.7.29' type='text/css' media='all' />\n<link rel='stylesheet' id='pum-videos-css'  href='wp-content/plugins/pum-videos.disabled/assets/css/site.min8a54.css?ver=1.0.0' type='text/css' media='all' />\n<link rel='stylesheet' id='theme-options-css'  href='wp-content/uploads/mk_assets/theme-options-production-1647357263180b.css?ver=1647357256' type='text/css' media='all' />\n<link rel='stylesheet' id='ms-main-css'  href='wp-content/plugins/masterslider/public/assets/css/masterslider.mainee9a.css?ver=3.2.2' type='text/css' media='all' />\n<link rel='stylesheet' id='ms-custom-css'  href='wp-content/uploads/masterslider/customad05.css?ver=1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mk-style-css'  href='wp-content/themes/jupiter-child/style4b0b.css?ver=4.9.20' type='text/css' media='all' />\n<script type='text/javascript' src='wp-content/themes/jupiter/assets/js/plugins/wp-enqueue/min/webfontloader4b0b.js?ver=4.9.20'></script>\n<script type='text/javascript'>\nWebFontConfig = {\n\ttimeout: 2000\n}"
+    },
+    {
+        "url": "https://redbutton.de/api/llms.txt",
+        "domain": "redbutton.de",
+        "status_code": 200,
+        "content_hash": "26be75d102120059386c0003c7e809e1067b2645028c440722caeec665a8b926",
+        "metadata": {
+            "source_domain": "redbutton.de"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "rs-demo-id {}\n</style>\n<link rel='stylesheet' id='theme-styles-css'  href='wp-content/themes/jupiter/assets/stylesheet/min/full-styles.6.1.42298.css?ver=1531554132' type='text/css' media='all' />\n<style id='theme-styles-inline-css' type='text/css'>\nbody { background-color:#fff; } .hb-custom-header #mk-page-introduce, .mk-header { background:-webkit-linear-gradient(left,#0c1e2a 0%, #c5cace 100%);background:linear-gradient(to right,#0c1e2a 0%, #c5cace 100%) } .hb-custom-header > div, .mk-header-bg { background-color:rgba(25,51,69,0); } .mk-classic-nav-bg { background-color:rgba(25,51,69,0); } .master-holder-bg { background:-webkit-linear-gradient(left,#0c1e2a 0%, #c5cace 100%);background:linear-gradient(to right,#0c1e2a 0%, #c5cace 100%) } #mk-footer { background-color:#193345; } #mk-boxed-layout { -webkit-box-shadow:0 0 0px rgba(0, 0, 0, 0); -moz-box-shadow:0 0 0px rgba(0, 0, 0, 0); box-shadow:0 0 0px rgba(0, 0, 0, 0); } .mk-news-tab .mk-tabs-tabs .is-active a, .mk-fancy-title.pattern-style span, .mk-fancy-title.pattern-style.color-gradient span:after, .page-bg-color { background-color:#0c1e2a; } .page-title { font-size:20px; color:; text-transform:uppercase; font-weight:400; letter-spacing:2px; } .page-subtitle { font-size:14px; line-height:100%; color:; font-size:14px; text-transform:none; } body { font-family:HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, \"Lucida Grande\", sans-serif } body, h1, h2, h3, h4, h5, h6, p:not(.form-row):not(.woocommerce-mini-cart__empty-message):not(.woocommerce-mini-cart__total):not(.woocommerce-mini-cart__buttons):not(.mk-product-total-name):not(.woocommerce-result-count), .woocommerce-customer-details address, a, textarea,input,select,button, #mk-page-introduce, .the-title, .mk-edge-title, .edge-title, .mk-edge-desc, .edge-desc, .main-navigation-ul, .mk-vm-menuwrapper, #mk-footer-navigation ul li a, .vm-header-copyright, .mk-footer-copyright, .mk-content-box, .filter-portfolio a, .mk-button, .mk-blockquote, .mk-pricing-table .mk-offer-title, .mk-pricing-table .mk-pricing-plan, .mk-pricing-table .mk-pricing-price, .mk-tabs-tabs a, .mk-accordion-tab, .mk-toggle-title, .mk-dropcaps, .price, .mk-imagebox, .mk-event-countdown, .mk-fancy-title, .mk-button-gradient, .mk-iconBox-gradient, .mk-custom-box, .mk-ornamental-title, .mk-subscribe, .mk-timeline, .mk-blog-container .mk-blog-meta .the-title, .post .blog-single-title, .mk-blog-hero .content-holder .the-title, .blog-blockquote-content, .blog-twitter-content, .mk-blog-container .mk-blog-meta .the-excerpt p, .mk-single-content p, .mk-employees .mk-employee-item .team-info-wrapper .team-member-name, .mk-testimonial-quote, .mk-contact-form, .mk-contact-form input,.mk-contact-form button, .mk-box-icon .icon-box-title { font-family:Lato } @font-face { font-family:'star'; src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.eot'); src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/fontd41d.eot?#iefix') format('embedded-opentype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.woff') format('woff'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.ttf') format('truetype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.svg#star') format('svg'); font-weight:normal; font-style:normal; } @font-face { font-family:'WooCommerce'; src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.eot'); src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/fontd41d.eot?#iefix') format('embedded-opentype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.woff') format('woff'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.ttf') format('truetype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.svg#WooCommerce') format('svg'); font-weight:normal; font-style:normal; }\n</style>\n<link rel='stylesheet' id='mkhb-render-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-render1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mkhb-row-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-row1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mkhb-column-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-column1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='js_composer_front-css'  href='wp-content/plugins/js_composer_theme/assets/css/js_composer.min23da.css?ver=5.4.8' type='text/css' media='all' />\n<link rel='stylesheet' id='popup-maker-site-css'  href='wp-content/uploads/pum/pum-site-styles1c44.css?generated=1634283638&amp;ver=1.7.29' type='text/css' media='all' />\n<link rel='stylesheet' id='pum-videos-css'  href='wp-content/plugins/pum-videos.disabled/assets/css/site.min8a54.css?ver=1.0.0' type='text/css' media='all' />\n<link rel='stylesheet' id='theme-options-css'  href='wp-content/uploads/mk_assets/theme-options-production-1647357263180b.css?ver=1647357256' type='text/css' media='all' />\n<link rel='stylesheet' id='ms-main-css'  href='wp-content/plugins/masterslider/public/assets/css/masterslider.mainee9a.css?ver=3.2.2' type='text/css' media='all' />\n<link rel='stylesheet' id='ms-custom-css'  href='wp-content/uploads/masterslider/customad05.css?ver=1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mk-style-css'  href='wp-content/themes/jupiter-child/style4b0b.css?ver=4.9.20' type='text/css' media='all' />\n<script type='text/javascript' src='wp-content/themes/jupiter/assets/js/plugins/wp-enqueue/min/webfontloader4b0b.js?ver=4.9.20'></script>\n<script type='text/javascript'>\nWebFontConfig = {\n\ttimeout: 2000\n}"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/quill-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "5dfcf2c4fba8d4ba93abff41ce8a59f3bf225c658d6b72439dd1519c7fc502a0",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T20:06:11Z",
+        "last_updated": "2025-04-02T20:06:11Z",
+        "fallback_title": "Quill"
+    },
+    {
+        "url": "https://4strokemedia.com/api/llms.txt",
+        "domain": "4strokemedia.com",
+        "status_code": 200,
+        "content_hash": "6d7e176ca3ded6cc28c69b9a221ff5c63eddecb287045fe915b9a3e87e718c62",
+        "metadata": {
+            "source_domain": "4strokemedia.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "login_error, .login .message, #loginform { margin-bottom: 20px; }\n</style>"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/demo-time-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "02ef2ec036f0046d2ef5d999a90f12b131e3ee6476e76965aa32b3e19a3e11d9",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "Demo Time - Live demos & slides in VS Code"
+    },
+    {
+        "url": "https://yahoobix.com/content/llms.txt",
+        "domain": "yahoobix.com",
+        "status_code": 200,
+        "content_hash": "b822db41cc58efac7005d05763f7a6bb1cc51ba9ba4919cd084b75688e552609",
+        "metadata": {
+            "source_domain": "yahoobix.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "ajaxloaderHolder {\n\tdisplay: block;\n\twidth: 24px;\n\theight: 24px;\n\tbackground: #fff;\n\tpadding: 8px 0 0 8px;\n\tmargin:10px auto;\n\t-webkit-border-radius: 4px;\n\t-moz-border-radius: 4px;\n\tborder-radius: 4px;\n}</style>    <style media=\"screen\">\n* {\n    margin:0;padding:0\n}"
+    },
+    {
+        "url": "https://developers.cloudflare.com/llms.txt",
+        "domain": "developers.cloudflare.com",
+        "status_code": 200,
+        "content_hash": "d80b18918218266afc9dbe59d1fb8ffa73b0df6d5482cab9e5ad3592152d040f",
+        "metadata": {
+            "source_domain": "developers.cloudflare.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T20:06:11Z",
+        "last_updated": "2025-04-02T20:06:11Z",
+        "parsed_title": "Cloudflare Developer Documentation"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/warp-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "10a44c79487f89e7d9c4d36db6f81f7d2f33cdf54766089433a59d51e8233573",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "fallback_title": "Warp documentation"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/lbnl-science-it/scienceit-docs/62e7b3d92d5b530729c3487bbf19206a50b3c322/docs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "3b0fe2116a08a6b30ade22416939d8aeed935ebd1e0d1ff4851e411581105ff7",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "fallback_title": "Science IT Technical Documentation",
+        "fallback_summary": "<div class=\"grid cards\" markdown>"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/answer-ai-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "d4ec98294f9d919cc6b26c6f85480204ed7213d2898e499a229fec03ae06b9f1",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "Answer.AI company website",
+        "parsed_summary": "Answer.AI is a new kind of AI R&D lab which creates practical end-user products based on foundational research breakthroughs."
+    },
+    {
+        "url": "https://4strokemedia.com/assets/llms-full.txt",
+        "domain": "4strokemedia.com",
+        "status_code": 200,
+        "content_hash": "ffdb2b972ab8122f1ecb170c5740508cca95fb29b98776b0ea1523b731a948c5",
+        "metadata": {
+            "source_domain": "4strokemedia.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "login_error, .login .message, #loginform { margin-bottom: 20px; }\n</style>"
     }
 ]
