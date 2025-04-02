@@ -19,7 +19,7 @@ export default defineConfig({
       CSS: true,
       HTML: true,
       JavaScript: true,
-      Image: false,
+      Image: false, // Temporarily disable image compression
       SVG: true,
     }),
   ],
