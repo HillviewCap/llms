@@ -67,17 +67,20 @@ astro-llms-explorer/
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/example/llms-explorer.git
    cd llms-explorer
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -86,7 +89,7 @@ astro-llms-explorer/
 
 ## Data Source
 
-The LLMS.txt data displayed in this explorer (`src/data/llms_metadata_enriched.json`) is automatically acquired, processed, and updated by a separate backend process. This process runs in the [llms-backend](<https://github.com/your-username/llms-backend>) repository (replace with actual link if available).
+The LLMS.txt data displayed in this explorer (`src/data/llms_metadata.json`) is automatically acquired, processed, and updated by a separate backend process. This process runs in the [llms-backend](https://github.com/your-username/llms-backend) repository (replace with actual link if available).
 
 The backend uses Python scripts and various APIs (Brave Search, GitHub, Cloudflare) to gather and enrich the data. A GitHub Actions workflow in the backend repository automatically commits the updated `llms_metadata_enriched.json` file to this frontend repository's `src/data/` directory periodically.
 
@@ -97,11 +100,13 @@ Therefore, manual data updates are no longer required within this repository. Th
 ### Building for Production
 
 1. Update the site URL in `astro.config.mjs`:
+
    ```javascript
    site: 'https://your-domain.com',
    ```
 
 2. Build the site:
+
    ```bash
    npm run build
    ```
@@ -146,22 +151,25 @@ The site includes a `_headers` file that will automatically configure caching an
 #### GitHub Pages Deployment
 
 1. Update the `astro.config.mjs` file:
+
    ```javascript
-   import { defineConfig } from 'astro/config';
-   
+   import { defineConfig } from "astro/config";
+
    export default defineConfig({
-     site: 'https://username.github.io',
-     base: '/repository-name',
+     site: "https://username.github.io",
+     base: "/repository-name",
      // other configuration...
    });
    ```
 
 2. Build the site:
+
    ```bash
    npm run build
    ```
 
 3. Deploy using GitHub Actions by creating a `.github/workflows/deploy.yml` file:
+
    ```yaml
    name: Deploy to GitHub Pages
 
@@ -199,11 +207,13 @@ The site includes a `_headers` file that will automatically configure caching an
 ### Custom Domain Setup
 
 1. Update the `site` property in `astro.config.mjs` to your production domain:
+
    ```javascript
    site: 'https://your-domain.com',
    ```
 
 2. If using a CDN or hosting provider:
+
    - Configure your DNS settings to point to your hosting provider
    - Set up SSL certificates for HTTPS
    - Configure any additional domain settings according to your provider's documentation
@@ -217,7 +227,7 @@ The site includes a `_headers` file that will automatically configure caching an
 
 ### Updating the Data
 
-The LLMS.txt data (`src/data/llms_metadata_enriched.json`) is updated automatically by a backend process running in a separate repository. A GitHub Actions workflow commits the latest data directly to this repository.
+The LLMS.txt data (`src/data/llms_metadata.json`) is updated automatically by a backend process running in a separate repository. A GitHub Actions workflow commits the latest data directly to this repository.
 
 No manual steps are needed here to update the data. If the site is deployed on a platform like Cloudflare Pages, Vercel, or Netlify with continuous deployment enabled, the site will automatically rebuild and redeploy when the data file is updated by the backend workflow.
 
