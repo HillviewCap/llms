@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import StructuredData from '../components/StructuredData.astro';
-import llmsData from '../data/llms_metadata_enriched.json';
+import llmsData from '../data/llms_metadata.json';
 
 // Function to get unique categories from all entries
 function getUniqueCategories(data) {
@@ -46,7 +46,7 @@ const uniqueDomains = [...new Set(llmsData.map(entry => entry.metadata.source_do
     }}
   />
 
-  <div class="container mx-auto px-4 py-8">
+  <div class="mx-auto px-4 py-8">
     <header class="mb-10 text-center">
       <div class="enhanced-header py-12 px-4 rounded-lg shadow-lg mb-8 relative">
         <div class="circuit-pattern"></div>
@@ -108,7 +108,7 @@ const uniqueDomains = [...new Set(llmsData.map(entry => entry.metadata.source_do
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
           </svg>
-          Switch to Card View
+          Switch to Table View
         </button>
       </div>
     </div>
@@ -130,7 +130,7 @@ const uniqueDomains = [...new Set(llmsData.map(entry => entry.metadata.source_do
       </div>
     </section>
 
-    <div id="table-view" class="overflow-x-auto bg-white dark:bg-neutral-800 rounded-lg shadow-md enhanced-table">
+    <div id="table-view" class="overflow-x-auto bg-white dark:bg-neutral-800 rounded-lg shadow-md enhanced-table hidden">
       <table class="min-w-full divide-y divide-neutral-200 dark:divide-neutral-700">
         <thead class="bg-neutral-50 dark:bg-neutral-800">
           <tr>
@@ -167,7 +167,7 @@ const uniqueDomains = [...new Set(llmsData.map(entry => entry.metadata.source_do
       </table>
     </div>
 
-    <div id="card-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+    <div id="card-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {llmsData.map(entry => (
         <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden enhanced-card" data-domain={entry.metadata.source_domain} data-categories={entry.metadata.cf_categories?.join(',')}>
           <div class="p-6">

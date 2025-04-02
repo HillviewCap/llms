@@ -3,7 +3,7 @@ name: Update Frontend Data
 on:
   schedule:
     # Runs daily at midnight UTC
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
   workflow_dispatch: # Allows manual triggering
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11' # Using a specific version is recommended
+          python-version: "3.11" # Using a specific version is recommended
 
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
@@ -54,7 +54,7 @@ jobs:
         if: steps.check_file.outputs.file_exists == 'true'
         run: |
           mkdir -p frontend-repo/src/data/
-          cp llms_metadata_enriched.json frontend-repo/src/data/llms_metadata_enriched.json
+          cp llms_metadata_enriched.json frontend-repo/src/data/llms_metadata.json
 
       - name: Commit and push changes to frontend repo
         if: steps.check_file.outputs.file_exists == 'true'
@@ -63,8 +63,8 @@ jobs:
           git config user.name "GitHub Action Bot"
           git config user.email "action-bot@users.noreply.github.com"
           # Check if there are changes to commit
-          if ! git diff --quiet src/data/llms_metadata_enriched.json; then
-            git add src/data/llms_metadata_enriched.json
+          if ! git diff --quiet src/data/llms_metadata.json; then
+            git add src/data/llms_metadata.json
             git commit -m "Update LLM metadata from backend process"
             git push origin main # Push back to the same branch checked out
             echo "Data file updated and pushed to frontend repository."

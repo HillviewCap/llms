@@ -45,13 +45,15 @@ body {
 
 /* Enhanced card styles */
 .enhanced-card {
-  border-left: 4px solid transparent;
+  border: 1px solid #d1d5db; /* Added border */
+  padding: 1rem; /* Added padding */
   transition: all 0.3s ease;
-  background: linear-gradient(to right, rgba(108, 43, 217, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  /* background: linear-gradient(to right, rgba(108, 43, 217, 0.05) 0%, rgba(255, 255, 255, 0) 100%); */ /* Removed gradient */
+  background-color: white; /* Added solid background for light mode */
 }
 
 .enhanced-card:hover {
-  border-left-color: #6d28d9;
+  /* border-left-color removed as border-left was removed */
   transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
@@ -131,7 +133,8 @@ body {
 
 /* Dark mode enhancements */
 .dark .enhanced-card {
-  background: linear-gradient(to right, rgba(109, 40, 217, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  /* background: linear-gradient(to right, rgba(109, 40, 217, 0.1) 0%, rgba(0, 0, 0, 0) 100%); */ /* Removed gradient */
+  background-color: #1e293b; /* Added solid background for dark mode (neutral-800) */
 }
 
 .dark .enhanced-filter {
@@ -170,4 +173,35 @@ body {
   background-color: white;
   border-radius: 50%;
   margin-right: 0.5rem;
+}
+
+/* Grid layout fixes */
+#card-view {
+  display: -ms-grid !important;
+  display: grid !important;
+  width: 100%;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important; /* Default to 1 column */
+  gap: 1.5rem !important; /* Explicitly set gap (tailwind gap-6) */
+}
+
+#card-view > div {
+  width: 100%;
+}
+
+/* Responsive grid columns */
+@media (min-width: 768px) {
+  #card-view {
+    -ms-grid-columns: 1fr 1fr;
+    gap: 1.5rem !important; /* Explicitly set gap */
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #card-view {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    gap: 1.5rem !important; /* Explicitly set gap */
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
 }
