@@ -187,8 +187,6 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
       </table>
     </div>
 
-    <div id="card-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
-      {filteredLlmsData.map(entry => (
     <div id="card-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {llmsData.map(entry => (
         <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden enhanced-card" data-domain={entry.metadata.source_domain} data-categories={entry.metadata.cf_categories?.join(',')}>
