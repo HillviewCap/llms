@@ -1,0 +1,11 @@
+# robots.txt for LLMS.txt Explorer
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://llms-explorer.example.com/sitemap.xml
+
+# Disallow any potential admin or private areas
+Disallow: /admin/
+Disallow: /private/

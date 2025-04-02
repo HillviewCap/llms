@@ -1,0 +1,44 @@
+# Netlify/Cloudflare Headers file
+
+# All pages
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none';
+
+# Cache assets with a long cache lifetime
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache CSS and JavaScript with a medium cache lifetime
+*.js
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+*.css
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Cache images with a medium cache lifetime
+*.ico
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+*.jpg
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+*.jpeg
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+*.png
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+*.svg
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+*.webp
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Cache fonts with a long cache lifetime
+*.woff
+  Cache-Control: public, max-age=31536000, immutable
+*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+*.otf
+  Cache-Control: public, max-age=31536000, immutable

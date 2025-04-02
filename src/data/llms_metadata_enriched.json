@@ -1,0 +1,1247 @@
+[
+    {
+        "url": "https://windows.com/llms.txt",
+        "sha256": "7b81a6685836930f8e2adee4fc9afa07c5be9a7068de3374b4c6078255280c64",
+        "metadata": {
+            "source_domain": "windows.com",
+            "cf_categories": [
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:18Z"
+    },
+    {
+        "url": "https://remult.dev/llms.txt",
+        "sha256": "0c81353c9652c1d91ebddeaeb62b19ba0b25644e358ffef1ca73b23ea7cab5b8",
+        "metadata": {
+            "source_domain": "remult.dev",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:18Z"
+    },
+    {
+        "url": "https://segment.io/llms-full.txt",
+        "sha256": "6667391a7b59530f52e82aa8c4b1448b58ebc47dfefaa128dc95767543cd1f9b",
+        "metadata": {
+            "source_domain": "segment.io",
+            "cf_categories": [
+                "Business",
+                "Business & Economy"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:20Z"
+    },
+    {
+        "url": "https://alibaba.com/llms.txt",
+        "sha256": "cb7a616001a69e4bada2d8d55e957a7288e3263307f98947be91b7e7919c74de",
+        "metadata": {
+            "source_domain": "alibaba.com",
+            "cf_categories": [
+                "Auctions & Marketplaces",
+                "Shopping & Auctions",
+                "Shopping",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:23Z"
+    },
+    {
+        "url": "https://spamhaus.org/llms.txt",
+        "sha256": "e06d7ebfb1d7dc0399dc2634684c134e793350c42bac0308cdbb72be41e743ed",
+        "metadata": {
+            "source_domain": "spamhaus.org",
+            "cf_categories": [
+                "Information Security",
+                "Internet Communication"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:25Z"
+    },
+    {
+        "url": "https://shopee.com.br/llms.txt",
+        "sha256": "87cabd92a84637036d05efd30600bd4b7ba0549c29befa4734fb675eb14224b8",
+        "metadata": {
+            "source_domain": "shopee.com.br",
+            "cf_categories": [
+                "Ecommerce",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:25Z"
+    },
+    {
+        "url": "https://ip-api.com/llms.txt",
+        "sha256": "a0e717801aad7c4d84760cca7228555b78228b8ce22b343af8cb3ac6c2414cf3",
+        "metadata": {
+            "source_domain": "ip-api.com",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:26Z"
+    },
+    {
+        "url": "https://bitdefender.net/llms.txt",
+        "sha256": "5f04fbd60fc62a4f7b0f6958dab4ed0f2037339d50fc03a82ee2f23b61c7e556",
+        "metadata": {
+            "source_domain": "bitdefender.net",
+            "cf_categories": [
+                "Information Security",
+                "Internet Communication",
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:27Z"
+    },
+    {
+        "url": "https://instagram.com/llms.txt",
+        "sha256": "aa3ef27d651a94c32b9ade050c95158dca7d2ce5c89b69b8abfa1e09cb0ca9f5",
+        "metadata": {
+            "source_domain": "instagram.com",
+            "cf_categories": [
+                "Social Networks",
+                "Society & Lifestyle"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:28Z"
+    },
+    {
+        "url": "https://mail.ru/llms.txt",
+        "sha256": "0868a1dd17fd049a4c09aa688a91ec8bf86ec6f102dff16c55ed1f87e3c401a1",
+        "metadata": {
+            "source_domain": "mail.ru",
+            "cf_categories": [
+                "Webmail",
+                "Internet Communication"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:30Z"
+    },
+    {
+        "url": "https://twitch.tv/llms-full.txt",
+        "sha256": "4f6f357347405f6528056dfec923a7af3774e400e07862f4f47e7443cea4f8f8",
+        "metadata": {
+            "source_domain": "twitch.tv",
+            "cf_categories": [
+                "Video Streaming",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:31Z"
+    },
+    {
+        "url": "https://yieldmo.com/llms.txt",
+        "sha256": "6bf46ff4ed3972a828e30783d6407dfb824089aa5212ca62124b2879d1107a86",
+        "metadata": {
+            "source_domain": "yieldmo.com",
+            "cf_categories": [
+                "Business",
+                "Business & Economy"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:32Z"
+    },
+    {
+        "url": "https://digicert.com/llms.txt",
+        "sha256": "10bd608462541e3834b1f91118166312d085daa1e2d74c191e63ef3082d74b60",
+        "metadata": {
+            "source_domain": "digicert.com",
+            "cf_categories": [
+                "Information Security",
+                "Internet Communication"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:33Z"
+    },
+    {
+        "url": "https://taobao.com/llms.txt",
+        "sha256": "8d3e25ddeacf8a88ce77fa49ccbfe7614df7f7b03da3b8a70d12384c1584ecbc",
+        "metadata": {
+            "source_domain": "taobao.com",
+            "cf_categories": [
+                "Ecommerce",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:37Z"
+    },
+    {
+        "url": "https://meethue.com/llms.txt",
+        "sha256": "fc4e4fd797b59ab5d0ba124b1b329ba3137c3261be5503a6a46f782e91d72fc0",
+        "metadata": {
+            "source_domain": "meethue.com",
+            "cf_categories": [
+                "Business",
+                "Business & Economy",
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:38Z"
+    },
+    {
+        "url": "https://fast.com/llms.txt",
+        "sha256": "b6471f8ddc8d98c81679220c67a7971b2fbc42d35e09ef8c9ad3f464eaac305e",
+        "metadata": {
+            "source_domain": "fast.com",
+            "cf_categories": [
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:39Z"
+    },
+    {
+        "url": "https://synology.com/llms.txt",
+        "sha256": "02f1393751847115bb040ecbb73efdb6fe504dcac4dd4f969564de9c67bf4ad8",
+        "metadata": {
+            "source_domain": "synology.com",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:42Z"
+    },
+    {
+        "url": "https://qq.com/llms.txt",
+        "sha256": "64eaac26acda78e1b4cf910bbe958eefd9458f349936036df644b82f836df182",
+        "metadata": {
+            "source_domain": "qq.com",
+            "cf_categories": [
+                "News & Media",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:45Z"
+    },
+    {
+        "url": "https://synology.com/llms-full.txt",
+        "sha256": "02f1393751847115bb040ecbb73efdb6fe504dcac4dd4f969564de9c67bf4ad8",
+        "metadata": {
+            "source_domain": "synology.com",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:46Z"
+    },
+    {
+        "url": "https://facebook.com/llms-full.txt",
+        "sha256": "5f0a6dee1cef4b9f89c04b5997bc5c616c730b3ece3e164240f4f007e56f4562",
+        "metadata": {
+            "source_domain": "facebook.com",
+            "cf_categories": [
+                "Social Networks",
+                "Society & Lifestyle"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:49Z"
+    },
+    {
+        "url": "https://viber.com/llms-full.txt",
+        "sha256": "1828df9748e7ec4f0247c0ceb7baf0481c76857bdf2311cdddea20df0d1c007d",
+        "metadata": {
+            "source_domain": "viber.com",
+            "cf_categories": [
+                "Instant Messengers",
+                "Internet Communication",
+                "Internet Phone & VOIP",
+                "Internet Communication"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:50Z"
+    },
+    {
+        "url": "https://smartadserver.com/llms.txt",
+        "sha256": "0c247dd27f1a0f498622be0e93d2aadb8289890f987e8e4042655888d2069b4b",
+        "metadata": {
+            "source_domain": "smartadserver.com",
+            "cf_categories": [
+                "Advertisements",
+                "Ads"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:52Z"
+    },
+    {
+        "url": "https://reddit.com/llms.txt",
+        "sha256": "b43fa60d1a91afef18edbf31e83441180e14d50be69c34a278b09e3354459c74",
+        "metadata": {
+            "source_domain": "reddit.com",
+            "cf_categories": [
+                "Forums",
+                "Internet Communication"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:53Z"
+    },
+    {
+        "url": "https://pinimg.com/llms.txt",
+        "sha256": "87aca18f2bc785bf2c19f836967971a3d881ce22611b5a07b35f28ef25b7fe38",
+        "metadata": {
+            "source_domain": "pinimg.com",
+            "cf_categories": [
+                "Social Networks",
+                "Society & Lifestyle",
+                "Photography",
+                "Society & Lifestyle"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:54Z"
+    },
+    {
+        "url": "https://qq.com/llms-full.txt",
+        "sha256": "64eaac26acda78e1b4cf910bbe958eefd9458f349936036df644b82f836df182",
+        "metadata": {
+            "source_domain": "qq.com",
+            "cf_categories": [
+                "News & Media",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:57Z"
+    },
+    {
+        "url": "https://discord.gg/llms.txt",
+        "sha256": "298e2a23c83d029115ac433ef2c0d1c0d94f70b96390c5c1e9fb940c6d619e1e",
+        "metadata": {
+            "source_domain": "discord.gg",
+            "cf_categories": [
+                "Instant Messengers",
+                "Internet Communication",
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:58Z"
+    },
+    {
+        "url": "https://cloudflareinsights.com/llms.txt",
+        "sha256": "508d8607891d71e7d33fbec82b11d5aa16817122d5a93673a92ae411bf18d4d7",
+        "metadata": {
+            "source_domain": "cloudflareinsights.com",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:58Z"
+    },
+    {
+        "url": "https://spotify.com/llms-full.txt",
+        "sha256": "9401453bbffae3235fe60d6505e5f399f6d803922268296703de7159818e9aac",
+        "metadata": {
+            "source_domain": "spotify.com",
+            "cf_categories": [
+                "Audio Streaming",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:14:59Z"
+    },
+    {
+        "url": "https://viber.com/llms.txt",
+        "sha256": "0a4ccaf07dde91b8e2f47443e9df0f956f7357f1c0bf424f51d140308e12898f",
+        "metadata": {
+            "source_domain": "viber.com",
+            "cf_categories": [
+                "Instant Messengers",
+                "Internet Communication",
+                "Internet Phone & VOIP",
+                "Internet Communication"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:00Z"
+    },
+    {
+        "url": "https://aliexpress.com/llms.txt",
+        "sha256": "a73dfd7839e44034c5cfe5fa32bf5ad356c19b634cef1c9025bd3418a488937a",
+        "metadata": {
+            "source_domain": "aliexpress.com",
+            "cf_categories": [
+                "Ecommerce",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:03Z"
+    },
+    {
+        "url": "https://instagram.com/llms-full.txt",
+        "sha256": "88c7726a19454bdcc9da03073144f4b69b276887678f72a937b136aff03ef60f",
+        "metadata": {
+            "source_domain": "instagram.com",
+            "cf_categories": [
+                "Social Networks",
+                "Society & Lifestyle"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:04Z"
+    },
+    {
+        "url": "https://telegram.org/llms-full.txt",
+        "sha256": "bcb724b420a34741474e45d5ecd79c006a560b354165abdd4dbf7bc1f74c17a9",
+        "metadata": {
+            "source_domain": "telegram.org",
+            "cf_categories": [
+                "Instant Messengers",
+                "Internet Communication"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:05Z"
+    },
+    {
+        "url": "https://riotgames.com/llms-full.txt",
+        "sha256": "004e0d12ac83fcbe986ff8eea5f8deebf2d63293f6f0a6c601fca849ded3a411",
+        "metadata": {
+            "source_domain": "riotgames.com",
+            "cf_categories": [
+                "Gaming",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:06Z"
+    },
+    {
+        "url": "https://reddit.com/llms-full.txt",
+        "sha256": "12a6993f38e198b10a4eeece10155e13e325e00ba39e5f78d132aba2a7507fef",
+        "metadata": {
+            "source_domain": "reddit.com",
+            "cf_categories": [
+                "Forums",
+                "Internet Communication"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:07Z"
+    },
+    {
+        "url": "https://shopeemobile.com/llms.txt",
+        "sha256": "19a1936c071b6cc4fd4f413d10cc672c11f6726e12b3e4a02f96c06915deae38",
+        "metadata": {
+            "source_domain": "shopeemobile.com",
+            "cf_categories": [
+                "Ecommerce",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:10Z"
+    },
+    {
+        "url": "https://hihonorcloud.com/llms.txt",
+        "sha256": "cf2a208bcc8aee287019bc3780b521e5f6149af64a9a9e78d2d5b6e67eef3aeb",
+        "metadata": {
+            "source_domain": "hihonorcloud.com",
+            "cf_categories": [
+                "Technology",
+                "Technology",
+                "Travel",
+                "Travel"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:11Z"
+    },
+    {
+        "url": "https://infisical.com/docs/llms-full.txt",
+        "sha256": "ba32983300391840342ac408a3ead64fde7154401c6121fb07f1849bdbc08579",
+        "metadata": {
+            "source_domain": "infisical.com",
+            "cf_categories": [
+                "Business",
+                "Business & Economy",
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:12Z"
+    },
+    {
+        "url": "https://firefox.com/llms.txt",
+        "sha256": "ad463823ea7980405263e2ba1a4ad3b0544365a7775b8bb876f79da59cd6ae2e",
+        "metadata": {
+            "source_domain": "firefox.com",
+            "cf_categories": [
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:13Z"
+    },
+    {
+        "url": "https://firefox.com/llms-full.txt",
+        "sha256": "ad463823ea7980405263e2ba1a4ad3b0544365a7775b8bb876f79da59cd6ae2e",
+        "metadata": {
+            "source_domain": "firefox.com",
+            "cf_categories": [
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:14Z"
+    },
+    {
+        "url": "https://duckduckgo.com/llms.txt",
+        "sha256": "59cdc8c937acbe8e8c993f67ee5e0a4bdf97b40f3a2990fc60ff79e371eb05e2",
+        "metadata": {
+            "source_domain": "duckduckgo.com",
+            "cf_categories": [
+                "Search Engines",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:15Z"
+    },
+    {
+        "url": "https://duolingo.com/llms-full.txt",
+        "sha256": "ae122dfddbe6503a2bfd572e5ba45877d344bcfa8192626c7d3ad2c4a279cd82",
+        "metadata": {
+            "source_domain": "duolingo.com",
+            "cf_categories": [
+                "Education",
+                "Education",
+                "Translator",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:16Z"
+    },
+    {
+        "url": "https://top1game.com/llms-full.txt",
+        "sha256": "80e7f4cc65448459cab1aaf9218ccc71ffdddbce57554b1fbe0e2a7ec2570287",
+        "metadata": {
+            "source_domain": "top1game.com",
+            "cf_categories": [
+                "Gaming",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:18Z"
+    },
+    {
+        "url": "https://sentry.io/llms-full.txt",
+        "sha256": "14a82de8121b569db50b4b6a6195e77d68c3fd61de372344bd4c752d4d141d1d",
+        "metadata": {
+            "source_domain": "sentry.io",
+            "cf_categories": [
+                "Business",
+                "Business & Economy"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:19Z"
+    },
+    {
+        "url": "https://lencr.org/llms-full.txt",
+        "sha256": "a37d6d12d95e61b8080b7080d14b495b78946dc16e4a1b4cd4c0a936dd7e7514",
+        "metadata": {
+            "source_domain": "lencr.org",
+            "cf_categories": [
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:20Z"
+    },
+    {
+        "url": "https://withgoogle.com/llms.txt",
+        "sha256": "d068ae9aa845bf3cdb28264343c3ef9b4bfb243f24d4224de1b19e1321d8e6c0",
+        "metadata": {
+            "source_domain": "withgoogle.com",
+            "cf_categories": [
+                "Search Engines",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:21Z"
+    },
+    {
+        "url": "https://spamhaus.org/llms-full.txt",
+        "sha256": "e06d7ebfb1d7dc0399dc2634684c134e793350c42bac0308cdbb72be41e743ed",
+        "metadata": {
+            "source_domain": "spamhaus.org",
+            "cf_categories": [
+                "Information Security",
+                "Internet Communication"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:22Z"
+    },
+    {
+        "url": "https://docs.zapier.com/llms-full.txt",
+        "sha256": "08e1316a786740c139237aef672dd06a40f05d2917f5300e890c98040a6d71c5",
+        "metadata": {
+            "source_domain": "docs.zapier.com",
+            "cf_categories": []
+        },
+        "last_checked_utc": "2025-04-02T05:15:22Z"
+    },
+    {
+        "url": "https://duckduckgo.com/llms-full.txt",
+        "sha256": "bda42ac11bf2df2a09d2b0f1c40d54382765afbd6f2a76e43e60267ff357b4f8",
+        "metadata": {
+            "source_domain": "duckduckgo.com",
+            "cf_categories": [
+                "Search Engines",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:23Z"
+    },
+    {
+        "url": "https://docs.play.ai/llms-full.txt",
+        "sha256": "9d1bb80ce7bd253001d85a72d90290c6b08c98e95866559975714098a93adc66",
+        "metadata": {
+            "source_domain": "docs.play.ai",
+            "cf_categories": []
+        },
+        "last_checked_utc": "2025-04-02T05:15:24Z"
+    },
+    {
+        "url": "https://modelcontextprotocol.io/llms-full.txt",
+        "sha256": "f0360fc4269b362c2953996303870bb46335d02365fa9cbd16b09211aa5e3c12",
+        "metadata": {
+            "source_domain": "modelcontextprotocol.io",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:25Z"
+    },
+    {
+        "url": "https://crashlytics.com/llms-full.txt",
+        "sha256": "0cf3fc2520f6de7ec3f0bd048ae59593a04d3032dc0b46ac6d650cd66c7a5594",
+        "metadata": {
+            "source_domain": "crashlytics.com",
+            "cf_categories": [
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:26Z"
+    },
+    {
+        "url": "https://lencr.org/llms.txt",
+        "sha256": "a37d6d12d95e61b8080b7080d14b495b78946dc16e4a1b4cd4c0a936dd7e7514",
+        "metadata": {
+            "source_domain": "lencr.org",
+            "cf_categories": [
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:27Z"
+    },
+    {
+        "url": "https://twitch.tv/llms.txt",
+        "sha256": "4f6f357347405f6528056dfec923a7af3774e400e07862f4f47e7443cea4f8f8",
+        "metadata": {
+            "source_domain": "twitch.tv",
+            "cf_categories": [
+                "Video Streaming",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:27Z"
+    },
+    {
+        "url": "https://teads.tv/llms-full.txt",
+        "sha256": "e95484810ffbed5388ddfc811bedd19bf3c40c7e9c44df2438cc9c567536f81c",
+        "metadata": {
+            "source_domain": "teads.tv",
+            "cf_categories": [
+                "Advertisements",
+                "Ads"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:29Z"
+    },
+    {
+        "url": "https://bitdefender.net/llms-full.txt",
+        "sha256": "5f04fbd60fc62a4f7b0f6958dab4ed0f2037339d50fc03a82ee2f23b61c7e556",
+        "metadata": {
+            "source_domain": "bitdefender.net",
+            "cf_categories": [
+                "Information Security",
+                "Internet Communication",
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:30Z"
+    },
+    {
+        "url": "https://shopee.com.br/llms-full.txt",
+        "sha256": "87cabd92a84637036d05efd30600bd4b7ba0549c29befa4734fb675eb14224b8",
+        "metadata": {
+            "source_domain": "shopee.com.br",
+            "cf_categories": [
+                "Ecommerce",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:31Z"
+    },
+    {
+        "url": "https://aliexpress.com/llms-full.txt",
+        "sha256": "1c3f174a17d1138f1f1848a4556f823d011ea2feeabadc5a66ae94152eb48487",
+        "metadata": {
+            "source_domain": "aliexpress.com",
+            "cf_categories": [
+                "Ecommerce",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:33Z"
+    },
+    {
+        "url": "https://segment.io/llms.txt",
+        "sha256": "6667391a7b59530f52e82aa8c4b1448b58ebc47dfefaa128dc95767543cd1f9b",
+        "metadata": {
+            "source_domain": "segment.io",
+            "cf_categories": [
+                "Business",
+                "Business & Economy"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:35Z"
+    },
+    {
+        "url": "https://temu.com/llms.txt",
+        "sha256": "7c5c55fe421d5cd6393039492d132e35ffeae90acf1c1ab0e0a31a9eaa769af3",
+        "metadata": {
+            "source_domain": "temu.com",
+            "cf_categories": [
+                "Ecommerce",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:37Z"
+    },
+    {
+        "url": "https://telegram.org/llms.txt",
+        "sha256": "0ec8d0a2de1c4e539246ce5610639d096e5808b004006ec7a525b42a1a07ab2f",
+        "metadata": {
+            "source_domain": "telegram.org",
+            "cf_categories": [
+                "Instant Messengers",
+                "Internet Communication"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:38Z"
+    },
+    {
+        "url": "https://duolingo.com/llms.txt",
+        "sha256": "b71e4a72189297b9331e4ad8362cb177dfd8bdacee822eb39bd855a4b0d60a51",
+        "metadata": {
+            "source_domain": "duolingo.com",
+            "cf_categories": [
+                "Education",
+                "Education",
+                "Translator",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:39Z"
+    },
+    {
+        "url": "https://taobao.com/llms-full.txt",
+        "sha256": "96a721eaa60f47d74336b1d7bf71fe50802785f7117bb258ef3568efc205c310",
+        "metadata": {
+            "source_domain": "taobao.com",
+            "cf_categories": [
+                "Ecommerce",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:42Z"
+    },
+    {
+        "url": "https://casalemedia.com/llms.txt",
+        "sha256": "dddc5c9af886102d11071e6e7ddf9631b2ec4e7dcb63c978c8aec045280908fe",
+        "metadata": {
+            "source_domain": "casalemedia.com",
+            "cf_categories": [
+                "Business",
+                "Business & Economy",
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:44Z"
+    },
+    {
+        "url": "https://temu.com/llms-full.txt",
+        "sha256": "ce11fb09d684118b768af06e6ce8756e1ee3b147dc742860ba5188a3f9c9ac2a",
+        "metadata": {
+            "source_domain": "temu.com",
+            "cf_categories": [
+                "Ecommerce",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:45Z"
+    },
+    {
+        "url": "https://crashlytics.com/llms.txt",
+        "sha256": "0231f4cdade5197784a89a1eb349ae0173ebb20710de5ea9c6d48869a8b9db4a",
+        "metadata": {
+            "source_domain": "crashlytics.com",
+            "cf_categories": [
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:46Z"
+    },
+    {
+        "url": "https://alibaba.com/llms-full.txt",
+        "sha256": "98fd65746d318b469045522592b16193901cbf148f5a32930bb22cfbaaf76f13",
+        "metadata": {
+            "source_domain": "alibaba.com",
+            "cf_categories": [
+                "Auctions & Marketplaces",
+                "Shopping & Auctions",
+                "Shopping",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:47Z"
+    },
+    {
+        "url": "https://fast.com/llms-full.txt",
+        "sha256": "b6471f8ddc8d98c81679220c67a7971b2fbc42d35e09ef8c9ad3f464eaac305e",
+        "metadata": {
+            "source_domain": "fast.com",
+            "cf_categories": [
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:48Z"
+    },
+    {
+        "url": "https://b-cdn.net/llms.txt",
+        "sha256": "8853ebc49ab80cbca2e92c932cef25374b126a670840076b6c170d7ea9df84da",
+        "metadata": {
+            "source_domain": "b-cdn.net",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:49Z"
+    },
+    {
+        "url": "https://docs.cursor.com/llms-full.txt",
+        "sha256": "c39a08e015147b9e187210b97e8e7c5dff203a0bc5e94f0d7d6f3be625a2010f",
+        "metadata": {
+            "source_domain": "docs.cursor.com",
+            "cf_categories": []
+        },
+        "last_checked_utc": "2025-04-02T05:15:50Z"
+    },
+    {
+        "url": "https://shopeemobile.com/llms-full.txt",
+        "sha256": "19a1936c071b6cc4fd4f413d10cc672c11f6726e12b3e4a02f96c06915deae38",
+        "metadata": {
+            "source_domain": "shopeemobile.com",
+            "cf_categories": [
+                "Ecommerce",
+                "Shopping & Auctions"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:53Z"
+    },
+    {
+        "url": "https://riotgames.com/llms.txt",
+        "sha256": "004e0d12ac83fcbe986ff8eea5f8deebf2d63293f6f0a6c601fca849ded3a411",
+        "metadata": {
+            "source_domain": "riotgames.com",
+            "cf_categories": [
+                "Gaming",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:54Z"
+    },
+    {
+        "url": "https://steampowered.com/llms-full.txt",
+        "sha256": "a9bbeb28dd71beb036af8f4acd47c865f4db1f37630002d0ed7b1053f28ae6e4",
+        "metadata": {
+            "source_domain": "steampowered.com",
+            "cf_categories": [
+                "Gaming",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:55Z"
+    },
+    {
+        "url": "https://meethue.com/llms-full.txt",
+        "sha256": "88203c3a5232fd414f997fe139d6178482305239cb411b7af5a0db92147ee265",
+        "metadata": {
+            "source_domain": "meethue.com",
+            "cf_categories": [
+                "Business",
+                "Business & Economy",
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:56Z"
+    },
+    {
+        "url": "https://pinterest.com/llms.txt",
+        "sha256": "9201d64962c6d3fa5c4272da14dcf35390eade8e028f9039aadf87db44913cea",
+        "metadata": {
+            "source_domain": "pinterest.com",
+            "cf_categories": [
+                "Photography",
+                "Society & Lifestyle",
+                "Social Networks",
+                "Society & Lifestyle"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:15:57Z"
+    },
+    {
+        "url": "https://windows.com/llms-full.txt",
+        "sha256": "d9a223ceb2f6394057d2035fd0a253d2e4c3f0fe52cccccfd69c3b8ffbe47fb2",
+        "metadata": {
+            "source_domain": "windows.com",
+            "cf_categories": [
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:04Z"
+    },
+    {
+        "url": "https://sentry.io/llms.txt",
+        "sha256": "0c506afbb59b27ead7c9849a128de0acb384055c53950c00c49459eceb7e9105",
+        "metadata": {
+            "source_domain": "sentry.io",
+            "cf_categories": [
+                "Business",
+                "Business & Economy"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:05Z"
+    },
+    {
+        "url": "https://teads.tv/llms.txt",
+        "sha256": "e95484810ffbed5388ddfc811bedd19bf3c40c7e9c44df2438cc9c567536f81c",
+        "metadata": {
+            "source_domain": "teads.tv",
+            "cf_categories": [
+                "Advertisements",
+                "Ads"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:06Z"
+    },
+    {
+        "url": "https://cloudflareinsights.com/llms-full.txt",
+        "sha256": "508d8607891d71e7d33fbec82b11d5aa16817122d5a93673a92ae411bf18d4d7",
+        "metadata": {
+            "source_domain": "cloudflareinsights.com",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:07Z"
+    },
+    {
+        "url": "https://fbcdn.net/llms.txt",
+        "sha256": "453d9ae69362f225ef228a759fe341543ebfd435c2855bedd2d798201dc2d607",
+        "metadata": {
+            "source_domain": "fbcdn.net",
+            "cf_categories": [
+                "Social Networks",
+                "Society & Lifestyle"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:08Z"
+    },
+    {
+        "url": "https://mediatek.com/llms-full.txt",
+        "sha256": "4caba8e61ccdc910b5d6192d143fed73a21b9a4c4b23f16d0779d026925c2ff1",
+        "metadata": {
+            "source_domain": "mediatek.com",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:10Z"
+    },
+    {
+        "url": "https://dotomi.com/llms.txt",
+        "sha256": "f3f160b809084f40ea95c6225749027552ea3db1dccf4d7a01eb550ec77aa606",
+        "metadata": {
+            "source_domain": "dotomi.com",
+            "cf_categories": [
+                "Business",
+                "Business & Economy"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:11Z"
+    },
+    {
+        "url": "https://facebook.com/llms.txt",
+        "sha256": "43e497ac2a7d7164ae55332fee1c35102e17e2b7ca2f6317d37519dda651f2d2",
+        "metadata": {
+            "source_domain": "facebook.com",
+            "cf_categories": [
+                "Social Networks",
+                "Society & Lifestyle"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:12Z"
+    },
+    {
+        "url": "https://steampowered.com/llms.txt",
+        "sha256": "922eda3f4359f83d5bfa6f5e01faa3f4a117019b42c93820dcb4a3e54412f4d0",
+        "metadata": {
+            "source_domain": "steampowered.com",
+            "cf_categories": [
+                "Gaming",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:13Z"
+    },
+    {
+        "url": "https://top1game.com/llms.txt",
+        "sha256": "80e7f4cc65448459cab1aaf9218ccc71ffdddbce57554b1fbe0e2a7ec2570287",
+        "metadata": {
+            "source_domain": "top1game.com",
+            "cf_categories": [
+                "Gaming",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:16Z"
+    },
+    {
+        "url": "https://pinterest.com/llms-full.txt",
+        "sha256": "ab99d8fef4836ea25c5792f9f1a19c0681cc6c65c6a0e4fb9ffe7bac6ccde1d4",
+        "metadata": {
+            "source_domain": "pinterest.com",
+            "cf_categories": [
+                "Photography",
+                "Society & Lifestyle",
+                "Social Networks",
+                "Society & Lifestyle"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:17Z"
+    },
+    {
+        "url": "https://discord.gg/llms-full.txt",
+        "sha256": "2fec6ee9632c81716f00de0ee5c69e19816f00a1613306111d2f0d6bb5005bad",
+        "metadata": {
+            "source_domain": "discord.gg",
+            "cf_categories": [
+                "Instant Messengers",
+                "Internet Communication",
+                "Information Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:18Z"
+    },
+    {
+        "url": "https://pinimg.com/llms-full.txt",
+        "sha256": "75346bbdffd306584d1268543a56c46fbab4308a8adc2cd5e69619a7ea6beb24",
+        "metadata": {
+            "source_domain": "pinimg.com",
+            "cf_categories": [
+                "Social Networks",
+                "Society & Lifestyle",
+                "Photography",
+                "Society & Lifestyle"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:19Z"
+    },
+    {
+        "url": "https://yieldmo.com/llms-full.txt",
+        "sha256": "6bf46ff4ed3972a828e30783d6407dfb824089aa5212ca62124b2879d1107a86",
+        "metadata": {
+            "source_domain": "yieldmo.com",
+            "cf_categories": [
+                "Business",
+                "Business & Economy"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:20Z"
+    },
+    {
+        "url": "https://ip-api.com/llms-full.txt",
+        "sha256": "a0e717801aad7c4d84760cca7228555b78228b8ce22b343af8cb3ac6c2414cf3",
+        "metadata": {
+            "source_domain": "ip-api.com",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:21Z"
+    },
+    {
+        "url": "https://withgoogle.com/llms-full.txt",
+        "sha256": "f3787a6aa9fcb7ef02f2e9026bac0b648df74922921cc49ecc0aa1c17c9ff389",
+        "metadata": {
+            "source_domain": "withgoogle.com",
+            "cf_categories": [
+                "Search Engines",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:21Z"
+    },
+    {
+        "url": "https://smartadserver.com/llms-full.txt",
+        "sha256": "0c247dd27f1a0f498622be0e93d2aadb8289890f987e8e4042655888d2069b4b",
+        "metadata": {
+            "source_domain": "smartadserver.com",
+            "cf_categories": [
+                "Advertisements",
+                "Ads"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:23Z"
+    },
+    {
+        "url": "https://fbcdn.net/llms-full.txt",
+        "sha256": "6f3ba6553e012be039d0da3f3bd779f39ec138f09128d9935b083dd33650c9be",
+        "metadata": {
+            "source_domain": "fbcdn.net",
+            "cf_categories": [
+                "Social Networks",
+                "Society & Lifestyle"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:24Z"
+    },
+    {
+        "url": "https://mail.ru/llms-full.txt",
+        "sha256": "9f0fe031eadaad4f6e8a6f6722686e8ae3481cfcb77b77486355a758ae31b581",
+        "metadata": {
+            "source_domain": "mail.ru",
+            "cf_categories": [
+                "Webmail",
+                "Internet Communication"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:25Z"
+    },
+    {
+        "url": "https://b-cdn.net/llms-full.txt",
+        "sha256": "8853ebc49ab80cbca2e92c932cef25374b126a670840076b6c170d7ea9df84da",
+        "metadata": {
+            "source_domain": "b-cdn.net",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:27Z"
+    },
+    {
+        "url": "https://office365.com/llms.txt",
+        "sha256": "5965b2c5472aaca1cd66ea5b0d07a971b961fee72fc27eb1f6c760042084b21b",
+        "metadata": {
+            "source_domain": "office365.com",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:28Z"
+    },
+    {
+        "url": "https://office365.com/llms-full.txt",
+        "sha256": "5965b2c5472aaca1cd66ea5b0d07a971b961fee72fc27eb1f6c760042084b21b",
+        "metadata": {
+            "source_domain": "office365.com",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:29Z"
+    },
+    {
+        "url": "https://dotomi.com/llms-full.txt",
+        "sha256": "f3f160b809084f40ea95c6225749027552ea3db1dccf4d7a01eb550ec77aa606",
+        "metadata": {
+            "source_domain": "dotomi.com",
+            "cf_categories": [
+                "Business",
+                "Business & Economy"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:30Z"
+    },
+    {
+        "url": "https://spotify.com/llms.txt",
+        "sha256": "9401453bbffae3235fe60d6505e5f399f6d803922268296703de7159818e9aac",
+        "metadata": {
+            "source_domain": "spotify.com",
+            "cf_categories": [
+                "Audio Streaming",
+                "Entertainment"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:31Z"
+    },
+    {
+        "url": "https://hihonorcloud.com/llms-full.txt",
+        "sha256": "cf2a208bcc8aee287019bc3780b521e5f6149af64a9a9e78d2d5b6e67eef3aeb",
+        "metadata": {
+            "source_domain": "hihonorcloud.com",
+            "cf_categories": [
+                "Technology",
+                "Technology",
+                "Travel",
+                "Travel"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:33Z"
+    },
+    {
+        "url": "https://casalemedia.com/llms-full.txt",
+        "sha256": "dddc5c9af886102d11071e6e7ddf9631b2ec4e7dcb63c978c8aec045280908fe",
+        "metadata": {
+            "source_domain": "casalemedia.com",
+            "cf_categories": [
+                "Business",
+                "Business & Economy",
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:34Z"
+    },
+    {
+        "url": "https://mediatek.com/llms.txt",
+        "sha256": "aa5a14881f6575c58e5b9f2f4420505126b9e94d36000c799e8fa0060e8f5cb2",
+        "metadata": {
+            "source_domain": "mediatek.com",
+            "cf_categories": [
+                "Technology",
+                "Technology"
+            ]
+        },
+        "last_checked_utc": "2025-04-02T05:16:35Z"
+    }
+]

@@ -1,0 +1,94 @@
+---
+// PerformanceOptimizer.astro
+// A component that adds performance optimizations to the site
+---
+
+<script is:inline>
+  // Intersection Observer for lazy loading
+  document.addEventListener('DOMContentLoaded', () => {
+    // Lazy load images that are marked with data-src
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            if (img.dataset.srcset) {
+              img.srcset = img.dataset.srcset;
+            }
+            img.classList.add('loaded');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+      
+      lazyImages.forEach(img => {
+        imageObserver.observe(img);
+      });
+    } else {
+      // Fallback for browsers without Intersection Observer
+      lazyImages.forEach(img => {
+        img.src = img.dataset.src;
+        if (img.dataset.srcset) {
+          img.srcset = img.dataset.srcset;
+        }
+      });
+    }
+    
+    // Prefetch links when hovering
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+      let prefetched = false;
+      
+      link.addEventListener('mouseenter', () => {
+        if (!prefetched && link.href && link.href.includes(window.location.origin)) {
+          const prefetchLink = document.createElement('link');
+          prefetchLink.rel = 'prefetch';
+          prefetchLink.href = link.href;
+          document.head.appendChild(prefetchLink);
+          prefetched = true;
+        }
+      });
+    });
+  });
+  
+  // Add dark mode toggle based on user preference
+  if (localStorage.getItem('color-theme') === 'dark' || 
+      (!('color-theme' in localStorage) && 
+       window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+  
+  // Measure and report performance metrics
+  if ('performance' in window && 'PerformanceObserver' in window) {
+    // Create performance observer
+    const perfObserver = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        // You could send these metrics to an analytics service
+        console.log(`[Performance] ${entry.name}: ${entry.startTime.toFixed(0)}ms`);
+      });
+    });
+    
+    // Observe different performance metrics
+    perfObserver.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+  }
+</script>
+
+<style is:global>
+  /* Add fade-in animation for lazy-loaded images */
+  img {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  img:not(.loaded) {
+    opacity: 0;
+  }
+  
+  img.loaded {
+    opacity: 1;
+  }
+</style>
