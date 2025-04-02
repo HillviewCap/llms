@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://llms-explorer.example.com',
+  site: 'https://llms-text.ai',
   trailingSlash: 'never',
   build: {
     format: 'file',
@@ -19,7 +19,7 @@ export default defineConfig({
       CSS: true,
       HTML: true,
       JavaScript: true,
-      Image: true,
+      Image: false,
       SVG: true,
     }),
   ],
