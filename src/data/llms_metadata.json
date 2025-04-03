@@ -1,5 +1,19 @@
 [
     {
+        "url": "https://docs.tilebox.com/llms-full.txt",
+        "domain": "docs.tilebox.com",
+        "status_code": 200,
+        "content_hash": "d7250a927db6a96ae00b0d3ea0a20c7edc61ffc98d39f61fdc3ffe58ca318081",
+        "metadata": {
+            "source_domain": "docs.tilebox.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:25:51Z",
+        "last_updated": "2025-04-02T18:25:51Z",
+        "fallback_title": "AI Assistance",
+        "fallback_summary": "Source: https://docs.tilebox.com/ai-assistance"
+    },
+    {
         "url": "https://python.langchain.com/llms.txt",
         "domain": "python.langchain.com",
         "status_code": 200,
@@ -7,55 +21,11 @@
         "metadata": {
             "source_domain": "python.langchain.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "Medium",
-        "title": "LangChain",
-        "summary": "These are the core building blocks you can use when building applications."
-    },
-    {
-        "url": "https://launchdarkly.com/docs/llms.txt",
-        "domain": "launchdarkly.com",
-        "status_code": 200,
-        "content_hash": "558aa6c3ea905321bba9ab160d4b05830117085afd884b8b946b2735180b231c",
-        "metadata": {
-            "source_domain": "launchdarkly.com"
-        },
-        "last_checked_utc": "2025-04-03T04:14:39Z",
-        "first_added": "2025-04-03T04:14:39Z",
-        "last_updated": "2025-04-03T04:14:39Z",
-        "quality": "Medium",
-        "title": "Welcome to LaunchDarkly docs",
-        "summary": "<div class=\"center\">"
-    },
-    {
-        "url": "https://theirstack.com/docs/llms.txt",
-        "domain": "theirstack.com",
-        "status_code": 200,
-        "content_hash": "ce155d521ddf408698c1dea16b9d369cd57c1bd2f6fbe14f5afa6f0f8bcbb1ef",
-        "metadata": {
-            "source_domain": "theirstack.com"
-        },
-        "last_checked_utc": "2025-04-03T04:27:40Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "High",
-        "title": "TheirStack"
-    },
-    {
-        "url": "https://www.plain.com/docs/llms.txt",
-        "domain": "www.plain.com",
-        "status_code": 200,
-        "content_hash": "f1987812d119f8ebc81969b8c5ba838ce77f331fe180586b8a502c8c3b45fe53",
-        "metadata": {
-            "source_domain": "www.plain.com"
-        },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "Medium",
-        "title": "Plain Docs"
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "fallback_title": "LangChain",
+        "fallback_summary": "These are the core building blocks you can use when building applications."
     },
     {
         "url": "https://langfuse.com/llms.txt",
@@ -65,186 +35,10 @@
         "metadata": {
             "source_domain": "langfuse.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "High",
-        "title": "Langfuse"
-    },
-    {
-        "url": "https://docs.tilebox.com/llms-full.txt",
-        "domain": "docs.tilebox.com",
-        "status_code": 200,
-        "content_hash": "d7250a927db6a96ae00b0d3ea0a20c7edc61ffc98d39f61fdc3ffe58ca318081",
-        "metadata": {
-            "source_domain": "docs.tilebox.com"
-        },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "Medium",
-        "title": "AI Assistance",
-        "summary": "Source: https://docs.tilebox.com/ai-assistance"
-    },
-    {
-        "url": "https://digicert.com/llms.txt",
-        "domain": "digicert.com",
-        "status_code": 200,
-        "content_hash": "10bd608462541e3834b1f91118166312d085daa1e2d74c191e63ef3082d74b60",
-        "metadata": {
-            "source_domain": "digicert.com"
-        },
-        "last_checked_utc": "2025-04-03T04:14:38Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "Medium",
-        "title": "DigiCert"
-    },
-    {
-        "url": "https://superwall.com/docs/llms.txt",
-        "domain": "superwall.com",
-        "status_code": 200,
-        "content_hash": "515127e9f831f8dffa1aad2411cc4ae1b7fb8c711771dfce110be578e94a7361",
-        "metadata": {
-            "source_domain": "superwall.com"
-        },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "Medium",
-        "title": "Superwall"
-    },
-    {
-        "url": "https://docs.zapier.com/llms-full.txt",
-        "domain": "docs.zapier.com",
-        "status_code": 200,
-        "content_hash": "08e1316a786740c139237aef672dd06a40f05d2917f5300e890c98040a6d71c5",
-        "metadata": {
-            "source_domain": "docs.zapier.com"
-        },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "Medium",
-        "title": "Get Action Details",
-        "summary": "Source: https://docs.zapier.com/ai-actions/api-reference/actions/get-action-details"
-    },
-    {
-        "url": "https://pinimg.com/llms/llms-full.txt",
-        "domain": "pinimg.com",
-        "status_code": 200,
-        "content_hash": "25e74c16a7f315b6dbae79bd1a91d18abfbd005efa4eaebfba01a58158ce0e67",
-        "metadata": {
-            "source_domain": "pinimg.com"
-        },
-        "last_checked_utc": "2025-04-03T04:14:38Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "High",
-        "title": "map_canvas img {\n  max-width: none;\n}"
-    },
-    {
-        "url": "https://pinterest.com/llms.txt",
-        "domain": "pinterest.com",
-        "status_code": 200,
-        "content_hash": "d84e529d52fec84fb62a02aa4af62a3bec92832141ee2978822ee79cd40170af",
-        "metadata": {
-            "source_domain": "pinterest.com"
-        },
-        "last_checked_utc": "2025-04-03T04:14:38Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "High",
-        "title": "map_canvas img {\n  max-width: none;\n}"
-    },
-    {
-        "url": "https://developers.cloudflare.com/agents/llms-full.txt",
-        "domain": "developers.cloudflare.com",
-        "status_code": 200,
-        "content_hash": "38f94b054f2c75a8ee990f422f9c42d2d471057bca2215ef9eaf5f52e6cb076d",
-        "metadata": {
-            "source_domain": "developers.cloudflare.com"
-        },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "Medium",
-        "title": "Build Agents on Cloudflare",
-        "summary": "URL: https://developers.cloudflare.com/agents/"
-    },
-    {
-        "url": "https://js.langchain.com/llms.txt",
-        "domain": "js.langchain.com",
-        "status_code": 200,
-        "content_hash": "5d76916216b25acc450e492ad042494e47bd745e1b566af7dccf034a2df1b931",
-        "metadata": {
-            "source_domain": "js.langchain.com"
-        },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "Medium",
-        "title": "LangChain JavaScript",
-        "summary": "This guide provides explanations of the key concepts behind the LangChain framework and AI applicati"
-    },
-    {
-        "url": "https://pinimg.com/docs/llms.txt",
-        "domain": "pinimg.com",
-        "status_code": 200,
-        "content_hash": "b056b884d1193d3ea58143972b05773eac91266c7632931d8ff57cab73b0073f",
-        "metadata": {
-            "source_domain": "pinimg.com"
-        },
-        "last_checked_utc": "2025-04-03T04:14:38Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "High",
-        "title": "map_canvas img {\n  max-width: none;\n}"
-    },
-    {
-        "url": "https://docs.ionq.com/llms.txt",
-        "domain": "docs.ionq.com",
-        "status_code": 200,
-        "content_hash": "a9dce6686cc78d5f3899b02fa59cd8317e12712bd0b06dca10b5a2bc43f97f34",
-        "metadata": {
-            "source_domain": "docs.ionq.com"
-        },
-        "last_checked_utc": "2025-04-03T04:27:40Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "Medium",
-        "title": "IonQ Quantum Cloud Documentation",
-        "summary": "This endpoint retrieves all jobs this API key is authorized to view."
-    },
-    {
-        "url": "https://www.answer.ai/llms.txt",
-        "domain": "www.answer.ai",
-        "status_code": 200,
-        "content_hash": "d4ec98294f9d919cc6b26c6f85480204ed7213d2898e499a229fec03ae06b9f1",
-        "metadata": {
-            "source_domain": "www.answer.ai"
-        },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "High",
-        "title": "Answer.AI company website",
-        "summary": "Answer.AI is a new kind of AI R&D lab which creates practical end-user products based on foundationa"
-    },
-    {
-        "url": "https://sdk.vercel.ai/llms.txt",
-        "domain": "sdk.vercel.ai",
-        "status_code": 200,
-        "content_hash": "f302cde978c452a06e3b3fc239065b7feda03b9e20c2f735469e55d47b9ee978",
-        "metadata": {
-            "source_domain": "sdk.vercel.ai"
-        },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "Medium",
-        "title": "Node.js HTTP Server",
-        "summary": "You can use the AI SDK in a Node.js HTTP server to generate text and stream it to the client."
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "parsed_title": "Langfuse"
     },
     {
         "url": "https://modelcontextprotocol.io/llms-full.txt",
@@ -254,82 +48,2708 @@
         "metadata": {
             "source_domain": "modelcontextprotocol.io"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "Medium",
-        "title": "Example Clients",
-        "summary": "Source: https://modelcontextprotocol.io/clients"
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
     },
     {
-        "url": "https://pinterest.com/llms/llms-full.txt",
-        "domain": "pinterest.com",
+        "url": "https://docs.ionq.com/llms.txt",
+        "domain": "docs.ionq.com",
         "status_code": 200,
-        "content_hash": "20c81be887cf87a68ed4fe9eab5925604bf077485ba152ce2560cebb1ff7b2cf",
+        "content_hash": "a9dce6686cc78d5f3899b02fa59cd8317e12712bd0b06dca10b5a2bc43f97f34",
         "metadata": {
-            "source_domain": "pinterest.com"
+            "source_domain": "docs.ionq.com"
         },
-        "last_checked_utc": "2025-04-03T04:14:38Z",
-        "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
-        "quality": "High",
-        "title": "map_canvas img {\n  max-width: none;\n}"
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "fallback_title": "IonQ Quantum Cloud Documentation",
+        "fallback_summary": "This endpoint retrieves all jobs this API key is authorized to view."
     },
     {
-        "url": "https://aserve1.net/data/llms.txt",
-        "domain": "aserve1.net",
+        "url": "https://www.websitellm.com/llms.txt",
+        "domain": "www.websitellm.com",
         "status_code": 200,
-        "content_hash": "eca8f65de1e637e8780ce149aae48f7d6c254aec83454f361ae4d3a2a0330670",
+        "content_hash": "da900230d1aa9ebd0c0b611f990b89e54d35be398476bfd13e0f903a36410d28",
         "metadata": {
-            "source_domain": "aserve1.net"
+            "source_domain": "www.websitellm.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:40Z",
-        "first_added": "2025-04-03T04:27:40Z",
-        "last_updated": "2025-04-03T04:27:40Z",
-        "quality": "High",
-        "title": "ajaxloaderHolder {\n\tdisplay: block;\n\twidth: 24px;\n\theight: 2"
+        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "fallback_title": "# Detailed Content"
     },
     {
-        "url": "https://pinimg.com/data/llms-full.txt",
+        "url": "https://docs.zapier.com/llms-full.txt",
+        "domain": "docs.zapier.com",
+        "status_code": 200,
+        "content_hash": "08e1316a786740c139237aef672dd06a40f05d2917f5300e890c98040a6d71c5",
+        "metadata": {
+            "source_domain": "docs.zapier.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "fallback_title": "Get Action Details",
+        "fallback_summary": "Source: https://docs.zapier.com/ai-actions/api-reference/actions/get-action-details"
+    },
+    {
+        "url": "https://www.answer.ai/llms.txt",
+        "domain": "www.answer.ai",
+        "status_code": 200,
+        "content_hash": "d4ec98294f9d919cc6b26c6f85480204ed7213d2898e499a229fec03ae06b9f1",
+        "metadata": {
+            "source_domain": "www.answer.ai"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "parsed_title": "Answer.AI company website",
+        "parsed_summary": "Answer.AI is a new kind of AI R&D lab which creates practical end-user products based on foundational research breakthroughs."
+    },
+    {
+        "url": "https://superwall.com/docs/llms.txt",
+        "domain": "superwall.com",
+        "status_code": 200,
+        "content_hash": "dbdb064873a3006293289b71ec350f1db281ce932d422e1e9300759280770220",
+        "metadata": {
+            "source_domain": "superwall.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "fallback_title": "Superwall"
+    },
+    {
+        "url": "https://launchdarkly.com/docs/llms.txt",
+        "domain": "launchdarkly.com",
+        "status_code": 200,
+        "content_hash": "558aa6c3ea905321bba9ab160d4b05830117085afd884b8b946b2735180b231c",
+        "metadata": {
+            "source_domain": "launchdarkly.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "parsed_title": "TheirStack"
+    },
+    {
+        "url": "https://sdk.vercel.ai/llms.txt",
+        "domain": "sdk.vercel.ai",
+        "status_code": 200,
+        "content_hash": "f302cde978c452a06e3b3fc239065b7feda03b9e20c2f735469e55d47b9ee978",
+        "metadata": {
+            "source_domain": "sdk.vercel.ai"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "fallback_title": "Node.js HTTP Server",
+        "fallback_summary": "You can use the AI SDK in a Node.js HTTP server to generate text and stream it to the client."
+    },
+    {
+        "url": "https://docs.tilebox.com/llms-full.txt",
+        "domain": "docs.tilebox.com",
+        "status_code": 200,
+        "content_hash": "d7250a927db6a96ae00b0d3ea0a20c7edc61ffc98d39f61fdc3ffe58ca318081",
+        "metadata": {
+            "source_domain": "docs.tilebox.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "fallback_title": "Plain Docs"
+    },
+    {
+        "url": "https://langfuse.com/llms.txt",
+        "domain": "langfuse.com",
+        "status_code": 200,
+        "content_hash": "b18771397c1b1683d10eb96ac8afc01b7b88a97a48e9adab389515299caa19db",
+        "metadata": {
+            "source_domain": "langfuse.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:25:50Z",
+        "last_updated": "2025-04-02T18:25:50Z",
+        "fallback_title": "LangChain JavaScript",
+        "fallback_summary": "This guide provides explanations of the key concepts behind the LangChain framework and AI applications more broadly."
+    },
+    {
+        "url": "https://pinimg.com/content/llms-full.txt",
         "domain": "pinimg.com",
         "status_code": 200,
-        "content_hash": "93fd1fa349335a976c553bf3207bf680c9683bb56722d5930c21a6cbaf159658",
+        "content_hash": "fc857702541355360b301bfaeeb7c0b8ee374c7baccc3d82dce16fc46090d887",
         "metadata": {
             "source_domain": "pinimg.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:27:41Z",
-        "last_updated": "2025-04-03T04:27:41Z",
-        "quality": "High",
-        "title": "map_canvas img {\n  max-width: none;\n}"
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:37:27Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "map_canvas img {\n  max-width: none;\n}"
     },
     {
-        "url": "https://zspeed-cdn.com/llms.txt",
-        "domain": "zspeed-cdn.com",
+        "url": "https://4strokemedia.com/public/llms.txt",
+        "domain": "4strokemedia.com",
         "status_code": 200,
-        "content_hash": "3146c47ba0fa70ebe69ae4d3114872751ca4a1b3d48e9d87ffc8ed811fc81c31",
+        "content_hash": "fbf9fcf4b3140e61c543903186e68d934ab1805006e734a78bf7ea8e8405f74f",
         "metadata": {
-            "source_domain": "zspeed-cdn.com"
+            "source_domain": "4strokemedia.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:27:41Z",
-        "last_updated": "2025-04-03T04:27:41Z",
-        "quality": "Medium",
-        "title": "Hola",
-        "summary": "Hola is the first community-powered (Peer-to-Peer) VPN network, allowing users to access content wit"
+        "last_checked_utc": "2025-04-02T18:37:27Z",
+        "first_added": "2025-04-02T18:37:27Z",
+        "last_updated": "2025-04-02T18:37:27Z",
+        "parsed_title": "login_error, .login .message, #loginform { margin-bottom: 20px; }\n</style>"
     },
     {
-        "url": "https://voiparound.com/content/llms.txt",
-        "domain": "voiparound.com",
+        "url": "https://sendbird.com/llms.txt",
+        "domain": "sendbird.com",
         "status_code": 200,
-        "content_hash": "20c2830f878b6b213a695684a2a4666ebb6059518d9aff321cd059b9413ce53b",
+        "content_hash": "5c62bfa8dcccac29aff039b2918e4f1c7ef8fae81c5046e2bcb7069c474d26f4",
         "metadata": {
-            "source_domain": "voiparound.com"
+            "source_domain": "sendbird.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
-        "first_added": "2025-04-03T04:27:41Z",
-        "last_updated": "2025-04-03T04:27:41Z",
-        "quality": "High",
-        "title": "ajaxloaderHolder {\n\tdisplay: block;\n\twidth: 24px;\n\theight: 2"
+        "last_checked_utc": "2025-04-02T18:37:27Z",
+        "first_added": "2025-04-02T18:37:27Z",
+        "last_updated": "2025-04-02T18:37:27Z",
+        "fallback_title": "Sendbird AI Agent and Chatbot Resources"
+    },
+    {
+        "url": "https://pinimg.com/content/llms.txt",
+        "domain": "pinimg.com",
+        "status_code": 200,
+        "content_hash": "43208173957475184c8dd76e07913f76817b2d950af9f4c96d6edb44ffc1b373",
+        "metadata": {
+            "source_domain": "pinimg.com"
+        },
+        "last_checked_utc": "2025-04-02T18:37:27Z",
+        "first_added": "2025-04-02T18:37:27Z",
+        "last_updated": "2025-04-02T18:37:27Z",
+        "parsed_title": "map_canvas img {\n  max-width: none;\n}"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/daytonaio/docs/9fc3b4878b0f90b8211352df9a4960c2cb89c758/public/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "8acd4cc6315aea880c2ebe8e6d1434bab10c6296ba35a1b2e460f6b2376efbe4",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "List files in a directory",
+        "fallback_summary": "files = sandbox.fs.list_files(\"/workspace\")"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/tinybird-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "89bcd66365717a4d68cdd0d4865cf209c9cfbaa7d0f3090448e54aead316aba6",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Tinybird Documentation (FWD)",
+        "fallback_summary": "Generated on: 2025-03-21T17:15:14.474Z"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/upstash-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "e115fe4322eac921c71765d152132260206935a98fe20c5531934c937c9aaac8",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Upstash Documentation"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/openrouter-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "c43f38b23f39b1f38ed07312867e06b1c07df19a45cb8f8818165398ad143ffb",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Quickstart",
+        "fallback_summary": "OpenRouter provides a unified API that gives you access to hundreds of AI models through a single endpoint, while automatically handling fallbacks and selecting the most cost-effective options. Get started with just a few lines of code using your preferred SDK or framework."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/svelte-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "24f83985df097e713e7bc577825c84870f985d0088cf497d7be474cab836dc6a",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Svelte Documentation for LLMs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/supabase-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "1833bd45d564c727657d71276e5da3466f2f9b0c43cb7100d0bd8053595f0cc3",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "parsed_title": "Supabase Docs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/openphone-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "aecd7d95380f11e10829779ec8b9dcee34e83e1ee217106e0f63fdd5809c6f51",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "OpenPhone Docs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/MammothGrowth/mg-mcp-weather/8e526bd58cfad52d0cbbf96aaaad0331c3e25cb7/context/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "1924fe837a1253aa851c9a26978528137285eff547ec08e03596c673803316b7",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/loops-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "f035707bbff1b5e6539c98419e40107947fc0794eb9ba1a2bcfc64f3d9fd7d2c",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Loops"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/screenshotone-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "b58931d0ae09664f47e5fcec6e0ae144eb02bfa70d23810d5b6e51c4fa6bf275",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "ScreenshotOne.com Full Documentation",
+        "fallback_summary": "import Alert from \"@/components/Alert.astro\";"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/worldcoin/world-id-docs/21ce018293c0afacb0843f0c76bcfd579d968975/public/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "21db2d070aa52604abadfc71eb32ce2b8f0b70195c74c815def1c9ec46694586",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "World Developer Docs",
+        "fallback_summary": "World Developer Docs provides comprehensive information about all World products and services, including integration guides, API references, and examples."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/platformsh/platformsh-docs/4241b0f23cc2e56c7bbfbe5e061a488f4a37841d/themes/psh-docs/layouts/_default/home.llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ab346ec4f41a0bf1274aac2a9db517d46ab4f4748dfd747e7233d415261a0dc2",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "{{ .Site.Params.vendor.name }}",
+        "fallback_summary": "Things to remember when deploying applications on the {{ .Site.Params.vendor.name }} Cloud Application Platform:"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/pscottdevos/nvim-ai/31c81965c22ebafd6a3461c90d9cf128d4811122/docs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "6f1a5e43dc68d497f45c63c5ecd1599a97ec6b9f05fc071697a7902362ab35ad",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Quickstart",
+        "fallback_summary": "OpenRouter provides a unified API that gives you access to hundreds of AI models through a single endpoint, while automatically handling fallbacks and selecting the most cost-effective options. Get started with just a few lines of code using your preferred SDK or framework."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/ast-grep-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "2a56a985af1b5ac53cf0d97ed5ddd7b6c64a7555a968cb232df505d9cd37e5e7",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "LLMs Documentation",
+        "fallback_summary": "This file contains links to all documentation sections."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/microsoft/semanticworkbench/1a7732e0b5fdb53fa67eb596e7a87650f57c6179/mcp-servers/ai-assist-content/mcp-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "5b92503b8218846d0c6feb187442d64a270fdd7501a502b1c336b27a1ee82649",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/permaweb/ao-cookbook/8b1dfea99fc6c8355d2fcc0d4d07ba19bdff7949/src/public/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "5cf0c72822e96632f7483cd66092c376e50cbb9106d798a871660f265d517bec",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "EN Technical Documentation",
+        "fallback_summary": "Generated: 2025-03-13T13:13:46.517Z"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/envoyer-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "e80fafe0c433cac9cd870ec3cee1fe9c5931adfbb31ba4e0112bc1d162c4da7d",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Envoyer"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/oxla-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "deb7d094b6325b9740e67bab9b4a56475d3f851f087c79407fe2d57ad12948f0",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Oxla Developer Hub"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/inkeep-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "708af9b8dc3dc85eb317290c7b7933163fe1a06da5b7e0a4eb70b19f973088b9",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Inkeep"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/chakra-ui-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "0b8b9c469a7bbc9bb898108abe6ce1f725c1abe82992fe0172e5df9ccbde4530",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Chakra UI v3 Documentation for LLMs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/stedi-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "d942a12887d0ad8be1e5af7eed34f95b5cab29bdf2e972a7b797e005ec96962f",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Stedi",
+        "fallback_summary": "Generally this endpoint is used to display a list of transactions in a UI."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/devhub-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "49c24418b30306327d09a2a95b562d285cdc2531b2dd18329460ff9d4a9d05d9",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "DevHub API Documentation"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/popsmash-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "adb935c328903a63a54fd74db0a437b35608f463d279e17f075692bc153d0e94",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "POPSMASH\r\r> POPSMASH is a Shopify app that helps merchants create AI-powered product recommendation quizzes to boost engagement, sales, and customer insights.\r\rImportant notes:\r\r- Designed specifically for Shopify merchants to integrate seamlessly with their stores.\r- Available exclusively in the [Shopify App Store here](https://apps.shopify.com/popsmash)\r- Uses AI to prioritize speed, simplicity and conversions over customization and manual setup. Best for Shopify stores that need multiple quizzes for collection pages, social posts, and product recommendations quizzes to grow sales.\r\r## Docs & Help site\r\r- [Documentation and Help Site](https://help.popsmash.com/en/): Guides, explainers and troubleshooting tips for using POPSMASH and getting the most out of its features.\r\r## Pages\r- [Homepage & Feature Overview](https://www.popsmash.com): Introduction to POPSMASH and its key features for Shopify merchants.\r- [Pricing Plans](https://www.popsmash.com/pricing): Details on subscription plans, pricing tiers, and features available in each plan.\r- [Shopify Quiz App Comparison and Reviews](www.popsmash.com/blog/shopify-quiz-apps-comparison-best-ecommerce-product-recommendation-funnel-tools-free-paid): A comparison of popular Shopify quiz apps.\r- [Shopify Quiz Examples](https://demo.popsmash.com/): A demo site showcasing examples of real, interactive Shopify quizzes to see how they drive customer engagement, boost sales and capture data.\r- [About the Company](https://www.popsmash.com/about): The story of POPSMASH and the team behind the app.\r- [Affiliate Program](https://www.popsmash.com/affiliates): Information about POPSMASH's affiliate program and how to join.\r- [How much could a quiz  grow your Shopify store?](https://www.popsmash.com/shopify-calculator): Estimate incremental growth from product recommendation quizzes on a Shopify store.\r- [Free Newsletter for Shopify Merchants](https://www.popsmash.com/newsletter): A free newsletter to help Shopify merchants do better marketing to grow their sales.\r- [Shopify Marketing Blog](https://www.popsmash.com/blog): Regularly updated articles with marketing tips for Shopify Merchants.\r- [Product Changelog](https://www.popsmash.com/changelog): Learn about the latest product improvements and updates for the POPSMASH Shopify quiz app.\r- [Privacy Policy](https://www.popsmash.com/lega/privacy): Explanation of how user data is collected, stored, and used.\r- [Terms of Service](https://www.popsmash.com/legal/tos): Legal terms governing the use of the POPSMASH app."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/Azure-Samples/semantic-kernel-advanced-usage/ac6aac9f7672800c03d76f5bc2b547aff291bace/templates/sk_mcp/mcp_docs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "2d6aec3d9fe8e02eaacbf237903ca6757b0264a2da0f7d5b5a2c80f3660b5b9e",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://love4porn.com/data/llms.txt",
+        "domain": "love4porn.com",
+        "status_code": 200,
+        "content_hash": "bdbfe8a5c69a22441e38d7f1847cc52e3c16e7e5d8f806427306ad08f9405022",
+        "metadata": {
+            "source_domain": "love4porn.com"
+        },
+        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "parsed_title": "label-container{\ndisplay: none;\n}\n</style>\n\t<link rel=\"icon\" href=\"https://love4porn.com/favicon.ico\" type=\"image/x-icon\">\n\t<link rel=\"shortcut icon\" href=\"https://love4porn.com/favicon.ico\" type=\"image/x-icon\">"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/glaforge/glaforge.github.io/3afcd23d734ac4145cd8f92224c08b5ef2b2cc2c/themes/glaforge-from-blank/layouts/_default/index.llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "3fb659bb00bb258ecf4c0ffcbbeedd8f8ce24d681bd23752ebfd3a9d7211a52e",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "parsed_title": "{{ .Title }}"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/trail-of-bits-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "4e5980c07bbed395968a7587d7bd1184aa6f598c5b80ec116d6145b578225f4e",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Trail of Bits",
+        "fallback_summary": "For historical content and publications prior to 2022, please refer to our [GitHub repository](https://github.com/trailofbits/publications)."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/prisma-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "274c99c27cfcee1ca7063db5e1f814869a4a0347cb4200eb62ea8cfc76ea985f",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Prisma Documentation"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/flatfile-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "fcf0c90dbaa13d93dec536cdb9312dda69a8be7eaec8eeae2f61594f25787111",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "flatfile.com"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/video-db/agent-toolkit/96930e172b8c775e43241b7e741f671c67f4558d/context/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "af31df34a2d7d45a473ef519e619c3d2e31d278720f718a1b169e72231f17b3b",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Task",
+        "fallback_summary": "You are an advanced assistant specialized in generating VideoDB Python code. You have deep knowledge of VideoDB's platform, SDK, and best practices."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/infisical-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "540a450ade8a63d97f8084447d9f146fdfc69f015ebd7a15cbaef488571bfa35",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Infisical"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/SamuelGuibor/dpvat_parana/056a1a951cde4a5786817e7bc64a2c7aa51d42a8/public/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "dfcedc11a94a26f13b297255db310aa3b100f7185176cb7ff4fc8f36d12e1f5b",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Guia Completo sobre o DPVAT - Paran\u00e1",
+        "fallback_summary": "Vers\u00e3o: 2.0"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/taranasus/pls/2646273cc74ba8cf37b01c9644efd6860b9bf1e2/OpenRouterDocs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "5432adae14c4a34ca15d18f78869f6a28e42fbfbe198e26adb172b2ec32960fb",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Quickstart",
+        "fallback_summary": "OpenRouter provides a unified API that gives you access to hundreds of AI models through a single endpoint, while automatically handling fallbacks and selecting the most cost-effective options. Get started with just a few lines of code using your preferred SDK or framework."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/embedchain-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "b881915f18f27b55b9ee0f7138b7ac7aedcb3dafc27ea740f2aed2264bc6b10a",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Custom configurations",
+        "fallback_summary": "Source: https://docs.embedchain.ai/api-reference/advanced/configuration"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/blocklet/mcp-server-demo/b1eeebe5e0991b8567b9edd7c858d93c86e39cb0/docs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "a209dbeb0da67421f965e2b6893eeaa29ac66822a321954ccbf7451222cc991d",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/axiom-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "8731d1fe8b8c95b8fb5a33bc25e9fb9d8a6d2ab3885cf2a78262398c05de4239",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Axiom Docs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/WorkflowAI/WorkflowAI/08cd533609424518cd8293e25a92a509132b5f76/api/api/templates/base.llms.txt.jinja2",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "33374881d65d0a5b88631e89c727f0d678346e55e355a3afe6cc7052fe1b8301",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T18:45:51Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "WorkflowAI LLMs Documentation",
+        "fallback_summary": "WorkflowAI is a platform for creating and managing structured AI workflows. This documentation describes the available LLM tasks and agents."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/xmtp/docs-xmtp-org/08e4a2414e3bb4f2e03d0861b1628622a6d33573/llms/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "77fb16b788dec6037cf4e44d3c2ac4f9b713aaeafe12d50e825bab5c3787238e",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "XMTP Full Documentation",
+        "fallback_summary": "This documentation includes code samples for multiple SDKs. Please use the code samples that correspond to the SDK you are working with:"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/turso-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "32c7faf72cd8a30cca5b6cb6338018a99f3e435b2a6402652845de8e39e4e41b",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "List Audit Logs",
+        "fallback_summary": "Source: https://docs.turso.tech/api-reference/audit-logs/list"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/galileo-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ddb5e26146033851454e8fabd56460070757f3010436c8262ddbba7894c83e74",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Galileo",
+        "fallback_summary": "Use this endpoint to create a new Evaluate run with workflows. The request body should contain the `workflows` to be ingested and evaluated."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/luxalgo-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "75fc18107715a66bfd4109b73694dc6d4a4765ab53e17f782db94ebd6892a8b0",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "LuxAlgo"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/velt-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "9151dbc56555be3481a1568c0cc8ebaeb1161e027da8e352b2ba26197c7753de",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Velt"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/ivan-meer/agents-sdk-web-ui/1413f9eb6bbb75d7afb77ef50b1dcd81508a6640/docs/cloudflare-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "7624b4f61aec0adc1bc8dc585c82fd4e76d4619606960bc263733d60fc946c6b",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Build Agents on Cloudflare",
+        "fallback_summary": "URL: https://developers.cloudflare.com/agents/"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/goldjunge91/mcp/f4850ef49a5e00c5d3df2d7de01b896fab7131b1/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "5c746ee9afa8999add12a83dd0bb0173cab3ca6df8be4df4e8d265ebb8bd6bbf",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "A list of applications that support MCP integrations"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/danielmeppiel/oracle-mcp-server/516fd8bcb2f566dfcc2d2ac098eed0d06b0790b6/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "58156cfab47c05347a218b001c7ccbaa7639061e65d576ceee5b2f76d607e3a5",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/win4r/Awesome-Claude-MCP-Servers/20acdf2f126e3a78dbd4773fd74d829c065d7058/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "bc9144eb9ccc3509a2cadcb827d0858b18b21104241e457920e3b3d7e26314e9",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Clients",
+        "fallback_summary": "A list of applications that support MCP integrations"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/campsite-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "5b9be2cfb41506d174e1d48db7c1796f1adc99c9161d63b9bf918ed602924943",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Campsite"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/anthropic-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "74e2f20e10cc7341733e134fb545caa2e58d69d062d867dae0aae7bda2124bb1",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:51Z",
+        "last_updated": "2025-04-02T18:45:51Z",
+        "fallback_title": "Anthropic",
+        "fallback_summary": "The number of canceled requests is specified in `request_counts`. To determine which requests were canceled, check the individual results within the batch. Note that cancellation may not result in any canceled requests if they were non-interruptible."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/electric-sql/electric/d278b9f8b51107f6d190f43918dbc36b43927ae7/website/llms.txt.template",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "10c5b6fbce7dd45d7ca029af9ca6d0e5006dc6502c8a3005e6625dd2db075b53",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "ElectricSQL - Instructions for LLMs",
+        "fallback_summary": "ElectricSQL is often called Electric SQL or Electric-SQL or just Electric. If you're prompted to generate code with Electric, it probably means ElectricSQL."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/stefanicjuraj/docs2llms/a971486fd3332b41dd3a795260308c6cecac78a1/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "4f4479c635d2e91fb75a9134f903533732b116c6d56a52f79b989b889081dbbf",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "docs2llms",
+        "fallback_summary": "<img src=\"./assets/docs2llms.gif\" alt=\"docs2llms\" width=\"700\">"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/docker/docs/a4eda2ced48476384e4a896a03aadbea4fc6433a/layouts/_default/index.llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "86f055a4fc89ce68a27e68b021d1d7d602f37a25f969ddec7952b2eda7627e3c",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Docker Documentation",
+        "fallback_summary": "{{ range $grouped }}"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/nkkko/agentscaffold/7d2f085bcd69f385e6e9ebb84170697672651fd3/mcp-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "216205135d0c257fdebe8e01930987033046722abe99b693352340f717a72fdc",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/hyperline-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "c02728580f603956e3d8c611a649577fcd6b809c9f689c96001680232b4617c5",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Hyperline",
+        "fallback_summary": "Retrieve all webhook messages sent."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/ionq-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "6d6ef9a627aed42aaa898b34fefde21a090134f120daa638ae819b9c937d7a13",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Get Backends",
+        "fallback_summary": "Source: https://docs.ionq.com/api-reference/v0.3/backends/get-backends"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/flowx-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ac8b9650dbce238efd8b95209ed681169c5af93efb1194e19df61160fc8fc73b",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Docs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/neptun-software/neptun.tools.docs/a9464a78b4208747e732f9a6a609658a891c9ac9/static/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "928412b3ddd3b0828b91e29bf4b56c112358747c61111c8b5742c1eb08562fe5",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "https://neptun-tools-docs.pages.dev/docs llms-full.txt"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/dotenvx-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "e3f00cf1c2ba375e2209298c8253f4e9b631b916708c1546e512b48049a44a35",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "dotenvx"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/roc-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "6dc490530c399d8f226b7b77b50ba2b0a74a7dca51e6e7b03011cdd0c666d187",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "The 'name' field is unused by add_and_stringify",
+        "fallback_summary": "Whenever you write `#` it means that the rest of the line is a comment, and will not affect the"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/plain-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "cf93dd28df644e74a0322f8bbf9db5e7cb9e7b46626be83de317e6472e539d55",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Plain Docs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/evalstate/mcp-miro/a8be11ed8794f420375093931224a598e91a39d3/prompts/ref/mcp-llms.txt.md",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ab968958cd6c325a5df7788e0110b7073d988c40c0525c4ea77a995b5c898d67",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Clients",
+        "fallback_summary": "A list of applications that support MCP integrations"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/fabric-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "c4eb84cd8376ce72643eb7b316397f6cd72a2905a03b8b51feb41dbef84a771f",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Fabric",
+        "fallback_summary": "The Cart ID from the [Create cart](/v3/cart-and-checkout/api-reference/carts-v3/carts/carts) endpoint is used in the path parameter."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/Effect-TS/website/a8c61d3efd9d64f00e0b4509b99fa8bd49d9cf0f/content/src/pages/llms-full.txt.ts",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "5959b4b35365848456954e6756ffeecdd8715341664fb939f30b8ccbe7377373",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "Start of Effect documentation"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/kws3media/ui/a549b4270c569fb5ec4baa2a5c11c61aff0b24d0/public/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "404ad2f2a006213f88f7f28d05075502cb0807a6f5d2fc71ade7d2ce5a96ce6b",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "ConfirmButton",
+        "fallback_summary": "| Name | Description | Default | Control |"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/fireproof-storage/use-fireproof-site/51e672fe2e6f0eb520b8168bcdf49007f1bd352c/static/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "7ebee75b049f016d8d042da7465f6a5149d956ee9413c6979a2c8dd89312c0e3",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Fireproof Database API Guide",
+        "fallback_summary": "Fireproof is a lightweight embedded document database with encrypted live sync, designed to make browser apps easy. Use it in any JavaScript environment with a unified API that works both in React (with hooks) and as a standalone core API."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/mintlify-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "616766cbd8469cb6a50a8f4f240b50fb5637c52ede5f936d42d44d5bef7bb03c",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Mintlify"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/onevcat/OneV-s-Den/1d0083352ca3a97ff8abe67cc63a4061ae71efcf/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "a9603c19ef64553567ef05a7f21f867fe98786ae0a359484e7294d83cf9e2369",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "The llms-full.txt\n# https://llmstxt.org/\nlayout: null\npermalink: llms-full.txt\n---"
+    },
+    {
+        "url": "https://vivo.com/content/llms.txt",
+        "domain": "vivo.com",
+        "status_code": 200,
+        "content_hash": "a1afadfe379d1cd8e47a07afc1ea4f8ebfaf8a785e0d851a821274f2178c5878",
+        "metadata": {
+            "source_domain": "vivo.com"
+        },
+        "last_checked_utc": "2025-04-02T18:45:54Z",
+        "first_added": "2025-04-02T18:45:54Z",
+        "last_updated": "2025-04-02T18:45:54Z",
+        "parsed_title": "vcm-v-consent-sdk * {\nfont-family: \"languageFont\",\"AvenirNext\",\"Microsoft YaHei\",\u5fae\u8f6f\u96c5\u9ed1,\"MicrosoftJhengHei\",\u534e\u6587\u7ec6\u9ed1,STHeiti,MingLiu,sans-serif,\"WebRupee\",\"ZAWGYI-ONE\";\n}\n</style>\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/common/css/vicon_28ffe74.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/include/vep-new-global/dist/css/vivo_7f76ff7.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/index/manage/dist/css/vivo_cd2ffde.css\" rel=\"stylesheet\" type=\"text/css\">\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/jquery.min.3.3.1_7679e5a.js\"></script>\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/global.pack_bcdfa40.js\"></script>\n<script>\nwindow.onload = function(){\nconst vcmHeaderLogo = $(\".vcm-v-header-logo>img\")\nconst vcmWin = $(\"#vcm-v-banner-sdk\")\nconst vcmBtn = $(\".vcm-v-group-btn\")\nif(globalVar.brandMark === 'jovi'){\n$('#vcm-v-dialog-sdk .vcm-v-header-logo')?.css({'width':'82px','height':'auto','margin-top':'28.3px','margin-right':'23px'})\n// vcmHeaderLogo?.attr('src','/static/img/icon/vcm-logo-jovi.svg')\nvcmHeaderLogo?.attr('src','/static/img/image/vcm-logo-jovi.png')\n}\nif(vcmWin.length) {\nvcmWin.attr('tabindex', '0').focus()\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-4, .portal-font-scale-5\")){\nvcmBtn?.css({\n'overflow':'hidden',\n'text-overflow':'ellipsis',\n'white-space':'nowrap',\n'display':'block'\n})\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-6, .portal-font-scale-7\")){\nvcmBtn?.css({\n'padding': '30px 20px'\n})\n}\n}\n</script>\n</head>\n<body class=\"veu-header-relative\" data-nav=\"Home\" data-app-page=\"none-cookie\">\n<script>\nwindow._env='\u975evivoapp'\n</script>\n<header id=\"header\" class=\"new-head-wrap\">\n<div class=\"vep-public vep-head vep-new-header vep-responsive\">\n<div class=\"vep-header-pc-box\">\n<div class=\"vep-pc-nav-box\">\n<div class=\"vep-pc-nav\">\n<p class=\"vep-pc-logo-box no-flip-over\">\n<a class=\"vep-pc-logo\" href=\"//www.vivo.com/en\" aria-label=\"vivo\" name=\"content\">\n<svg aria-hidden=\"true\" width=\"104px\" height=\"28px\" viewBox=\"0 0 103 28\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<g id=\"\u6d77\u5916\u4e00\u671f\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n<g id=\"F14-PC-\u8fd4\u56de\u9876\u90e8Normal\" transform=\"translate(-241.000000, -29.000000)\">\n<g id=\"\u7f16\u7ec4-6\">\n<g id=\"vivo\" transform=\"translate(240.000000, 29.000000)\">\n<g id=\"vivo-LOGO\" transform=\"translate(1.000000, 0.000000)\" fill=\"#ffffff\">\n<path class=\"vep-pc-logo-path\" d=\"M92.1201187,22.7773568 L83.3531521,22.7773568 C78.4247857,22.7773568 77.9864276,18.7356293 77.9864276,17.5007165 C77.9864276,16.2658037 78.4247857,12.2240763 83.3531521,12.2240763 L92.1201187,12.2240763 C97.0484851,12.2240763 97.4868432,16.2658037 97.4868432,17.5007165 C97.4868432,18.7356293 97.0484851,22.7773568 92.1201187,22.7773568 M92.1201187,7.77940186 L83.3531521,7.77940186 C74.2419976,7.77940186 73.4316287,15.2256518 73.4316287,17.5007165 C73.4316287,19.7759758 74.2419976,27.2222258 83.3531521,27.2222258 L92.1201187,27.2222258 C101.231468,27.2222258 102.041837,19.7759758 102.041837,17.5007165 C102.041837,15.2256518 101.231468,7.77940186 92.1201187,7.77940186\" id=\"Fill-1\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M71.6722232,8.23532926 L68.8307758,8.23532926 C67.6137631,8.23532926 67.362967,8.44312615 66.8934784,9.13947923 C66.4241842,9.83602688 58.2963682,22.2443033 58.2963682,22.2443033 C58.0372058,22.6258479 57.7622835,22.7801391 57.4200413,22.7801391 C57.0779936,22.7801391 56.8028767,22.6258479 56.5437143,22.2443033 C56.5437143,22.2443033 48.4158983,9.83602688 47.9466042,9.13947923 C47.4771155,8.44312615 47.2263194,8.23532926 46.0095013,8.23532926 L43.1678593,8.23532926 C42.5139217,8.23532926 42.2146786,8.74664971 42.6257973,9.37101323 C43.0369161,9.99537674 52.3331032,24.1107786 52.3331032,24.1107786 C53.8394361,26.3265005 54.9449623,27.2222841 57.4200413,27.2222841 C59.8951202,27.2222841 61.0008409,26.3265005 62.5073684,24.1107786 C62.5073684,24.1107786 71.8031664,9.99537674 72.2142852,9.37101323 C72.6254039,8.74664971 72.3263554,8.23532926 71.6722232,8.23532926\" id=\"Fill-4\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.9316764,9.43928657 C33.9316764,8.57716293 34.273335,8.2353098 35.1354586,8.2353098 L37.2832769,8.2353098 C38.1454005,8.2353098 38.4872537,8.57716293 38.4872537,9.43928657 L38.4872537,26.0182879 C38.4872537,26.8804115 38.1454005,27.2222647 37.2832769,27.2222647 L35.1354586,27.2222647 C34.273335,27.2222647 33.9316764,26.8804115 33.9316764,26.0182879 L33.9316764,9.43928657 Z\" id=\"Fill-7\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M29.2512459,8.23532926 L26.4097985,8.23532926 C25.1925912,8.23532926 24.9417952,8.44312615 24.4723065,9.13947923 C24.0030124,9.83602688 15.8753909,22.2443033 15.8753909,22.2443033 C15.6160339,22.6256534 15.3411116,22.7801391 14.9988694,22.7801391 C14.6566271,22.7801391 14.3817048,22.6256534 14.1225424,22.2443033 C14.1225424,22.2443033 5.9947264,9.83602688 5.52543229,9.13947923 C5.05613818,8.44312615 4.80514754,8.23532926 3.5883294,8.23532926 L0.746492834,8.23532926 C0.0162852061,8.23532926 -0.206687867,8.74664971 0.204625463,9.37101323 C0.615744226,9.99537674 9.91193135,24.1107786 9.91193135,24.1107786 C11.4180697,26.3265005 12.5237904,27.2222841 14.9988694,27.2222841 C17.4741429,27.2222841 18.5796691,26.3265005 20.0861965,24.1107786 C20.0861965,24.1107786 29.3821891,9.99537674 29.7931133,9.37101323 C30.2044266,8.74664971 29.9814536,8.23532926 29.2512459,8.23532926\" id=\"Fill-13\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.7359621,4.43800671 C33.0359123,3.73815144 33.0359123,3.18324812 33.7359621,2.48319828 L35.231983,0.987177377 C35.9318383,0.287127538 36.4869362,0.287127538 37.1867914,0.986982811 L38.6830069,2.48319828 C39.3828622,3.18324812 39.3828622,3.73815144 38.6830069,4.43800671 L37.1867914,5.93422218 C36.4869362,6.63427202 35.9318383,6.63427202 35.231983,5.93422218 L33.7359621,4.43800671 Z\" id=\"Fill-10\"></path>\n</g>\n</g>\n</g>\n</g>\n</g>\n</svg>\n</a>\n</p>\n<div role=\"navigation\" aria-label=\"Primary\">\n<ul class=\"vep-pc-nav-list\" data-include-view-stat=\"cfrom=1002\">\n<li class=\"vep-pc-nav-item\">\n<a aria-current=\"page\" class=\"vep-pc-nav-link no-flip-over\"\nhref=\"https://www.vivo.com/en\"\ndata-nav-home\ndata-include-click-stat=\"cfrom=1001&name=Home&position=1\"",
+        "parsed_summary": "Home</a>"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/bun-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ae2e8c61da8e283d79971ebcd3248d17834c19398a5f984b88098d3f2237e59b",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "Bun Documentation",
+        "parsed_summary": "Bun is a fast all-in-one JavaScript runtime & toolkit designed for speed, complete with a bundler, test runner, and Node.js-compatible package manager."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/airbytehq/airbyte/01c9c1a76bd4c4330e18185e789421ccdbd3090f/docusaurus/static/llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "2727bbf862d6df7ddee2e2ebcf1ea165ded05bc2afcd239d6c23650dd62014c4",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "docs.airbyte.com llms.txt",
+        "parsed_summary": "Airbyte is an open source platform designed for building and managing data pipelines, offering extensive connector options to facilitate data movement from various sources to destinations efficiently and effectively."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/lbnl-science-it/scienceit-docs/72a0b10b9fd4810c13d4833d3d95406a1b08697c/docs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "3b0fe2116a08a6b30ade22416939d8aeed935ebd1e0d1ff4851e411581105ff7",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Science IT Technical Documentation",
+        "fallback_summary": "<div class=\"grid cards\" markdown>"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/ucbepic/docetl/a9f35c00c88fead959269e2083290935051f5c2d/website/public/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "03a21e9327a78d4b7a5e51294192720047cbe45c8f1878fc493d7ee8df1c5173",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "DocETL System Description and LLM Instructions (Full)",
+        "fallback_summary": "DocETL is a system for creating and executing LLM-powered data processing pipelines, designed for complex document processing tasks. It provides a low-code, declarative YAML interface to define complex data operations on unstructured datasets."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/argil-ai-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ade5db3e9bfad872d0cded059ae18ab29f879a6430b19940b8ed1494e24c6711",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Argil"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/solid-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "88eea1d44926b16d19dcd1ef8f297694dcd4b804fc18087237870671b94c11b5",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Solid",
+        "fallback_summary": "1. Get a one-time PIN token"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/bonfire-networks/bonfire-app/eee457f5155d936f46de456803fe69a98fcc3bd1/.clinerules/live_select.llms.txt.md",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "1af3d4d35a6678d250a67ad6ca73de230a68122aa8759b299c43447c357687a5",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "live_select",
+        "fallback_summary": "The `LiveSelect` component is rendered by calling the `live_select/1` function and passing it a form field."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/hypermode-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "e93b902438ba27dfaff1b80b447baa6631d640d03f9ca833fe72a1fb86e18e41",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Hypermode"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/activepieces-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ce265f733f4cffc61a2b37cf30b906a5092933181cf404cede70e0da369bbc6e",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Breaking Changes",
+        "fallback_summary": "Source: https://www.activepieces.com/docs/about/breaking-changes"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/frigade-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "2ea64bbcebfe54875242022c083cfa82f73e179269442129ab231bc99fa13a75",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Frigade"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/primev-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "bd09137ed5ed79b4cc104a10285c136cee3baad80150e75af7242d2b5826791e",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Documentation",
+        "fallback_summary": "can specify the amount of ETH to be deposited in each window. The bidder can also specify the start window"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/panw3i/muppet/1d4a6ed493f85a3803e74a0062a666d1591761af/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "7131045c94d6217ffbb85258bf9d892f2bbbccac68be8b545461e7e59945267d",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "https://www.muppet.dev/docs llms-full.txt",
+        "fallback_summary": "Streamlining Your MCP Development"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/netlify-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "cf64174b2189bbf213bce485e2f47a263f85290a83424d4cf40da91afe939e03",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "LLM documentation for Netlify"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/DMontgomery40/deepseek-mcp-server/40398b613ffb1cace8eeb51a962b93625d0a7642/src/docs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "8bb1c3de1a50a864049d4ec45adadf1d3ff515ad0ffd70a233680908e0f5db4b",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Clients",
+        "fallback_summary": "A list of applications that support MCP integrations"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/conductor-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "e84781a2b625e6556afb2ff659539c9c112dc3d20c0ef94bdcec76c125b04a5b",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "What is Conductor?",
+        "fallback_summary": "Source: https://docs.conductor.is/about"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/unkey-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "143cc9fd46bf53a32a4b5839b197dfd3d91580f6933eac5ad86ce3aebf44c5ab",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Unkey Docs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/aporia-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "7becd6dc94e832000613ff356983fc5b9f7411416baed6c17b8b48c226c89c34",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Aporia"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/convex-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "6e639b3df1ac75091a202f9b2df188b73a6e1150125de0e2617d86d11f024cdd",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Convex",
+        "fallback_summary": "Convex is a great fit for building fullstack apps with Next.js for web and Expo for"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/smartcar-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "f335fe66be10b558e9ad9fe3ab70412a3ba6c6766fd8888328f9a66f1f3b54d6",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "smartcar"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/wcgordon1/TustinRecruiting/3e40c45906ed9ab59586d0f3f3920f3cbb0457c7/public/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "9a6aede1e66f772bea1015fa3cc73d7ebbb47029561a55ad1ef2b0032ea9ed31",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Tustin Recruiting",
+        "fallback_summary": "Tustin Recruiting provides tailored staffing solutions to help businesses attract and hire top-tier candidates. Our focus on Orange County ensures we understand the local market, making us the go-to partner for hiring needs."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/Ashish-Soni08/cohere-mcp-server/c97bcede24655950fc1e8abd0a9eec560da93b72/setup_to_build_mcp_with_llms/mcp-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "61426ae397a31bff15d21b4aca936809af47a897247733af3001a30e06043bdc",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/Vahor/vahor.fr/70d4e8b425a1b96a88f288ed614d4582bcc8c2b7/scripts/llms.txt.sh",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "37817c2ce0e4bdd317c094f74e6bea630633fb32c5d0729f1b85ecbd4613d94b",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "!/bin/bash\nset -e"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/tavus-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "10b80dc6501929e6320069312d266308e316b9a501f3bc8d443a154691eadf25",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Tavus",
+        "fallback_summary": "A `conversation` is a video call with a replica."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/nspady/google-calendar-mcp/e7bf63aa31b2d49db7a8112c9ab33b4868af2394/llm/mcp-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "8df96c431e87709142d4440a16e51077e4d08c30d3082937d8838283debe232c",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Clients",
+        "fallback_summary": "A list of applications that support MCP integrations"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/plain-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "a717394ed42808e36e81734451100265d661f3208d5c006b7aabe2d1e4df4c91",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Attachments",
+        "fallback_summary": "Source: https://www.plain.com/docs/api-reference/attachments"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/openpipe-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ce67f7f1f08238667f178ecc36bf95fe7691b3b561496a5ebd22b993bd33f233",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "OpenPipe"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/hyperb1iss/droidmind/d7c5b310e43204bb5ee7b0fea6ec47d8a58d391d/docs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "f31d18c4653d253ca1988ff5bfa989a0265c118dc73614f5ec7ea3e373edc1d9",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/dotenvx-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "eb88f1cd1d901636b88671a69821d393abb9cb9fe78fe656391475bbd654a2a1",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "from this:",
+        "fallback_summary": "./node_modules/.bin/dotenvx run --env-file .env -- yourcommand"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/viem-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "44a1fe4a1f18ab54a4b882e5fd4dac460b9bc211f09a9667e79147a482d49baf",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Viem",
+        "fallback_summary": "This Action will fill the required fields of the Authorization object if they are not provided (e.g. `nonce` and `chainId`)."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/wordlift-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "801e9d5ea7eab0659b3b4a0eba4f2182d378c6c3e9110c0f428e6588ce2cc0e2",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "WordLift",
+        "parsed_summary": "WordLift is an AI-powered Enterprise SEO platform that leverages Knowledge Graphs and Large Language Models to enhance website visibility, AI discovery and content relevance."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/nkkko/agentscaffold/7d2f085bcd69f385e6e9ebb84170697672651fd3/daytona-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "3f1ba6b2614755b143e1313a84c91023dff0fc1557f43267d78c132638cda340",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Daytona SDK Features",
+        "fallback_summary": "This document provides a comprehensive overview of all functions available in the Daytona Python SDK, with minimal examples for each feature."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/jchris/doggie-dating/8be75cc78ddb57d8f60f10078ca5df3e53b84568/docs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ba0f5b83cb966d89b5238896593de6536c241fc148635168a8ee5c237f23e5d9",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Jazz",
+        "fallback_summary": "Welcome to the Jazz documentation!"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/pinata-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "c190d8dbe6a9b7be5cf67a9d324a50c9dfce219a9c3fe0a082c54837a7514b01",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "Add File To Group\nSource: https://docs.pinata.cloud/api-reference/endpoint/add-file-to-group"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/lago-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "196db906afdee178c3ca6d60797603f38623e5fee35cc1b70f4dec817e006a9e",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Lago",
+        "fallback_summary": "This endpoint allows you to fetch the URL that can be embedded to provide customers access to a dedicated portal"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/santosmarco/llms.txt/d7fdd69b49ba93cd677594cfaeddd48bab3513c2/composio/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "23ef9c6aa567fd8064323e2a3b5eafc35e1b98e0515d48fd05b49c3d72bc33c9",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "https://docs.composio.dev/introduction/intro/overview llms-full.txt",
+        "fallback_summary": "Make my agents useful ..."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/cobo-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "4b038bc7e114c2f449be2b0307535cbd4cf8176cdb2302240a07f285c8613c32",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Developer Hub"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/Hats-Protocol/docs/27b7c5b68d0b92ddbc41bad35e3625105a68af7d/for-developers/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "3a673d16142a5a2332cd8e41b15c1474ed44d79dd032ffae5a58e535a6562b78",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Hats Protocol Documentation",
+        "fallback_summary": "Put on your hardhats and lets get into the nitty gritty of Hats Protocol!"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/permaweb/ao-cookbook/8b1dfea99fc6c8355d2fcc0d4d07ba19bdff7949/src/public/ja/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "b2ee14a9b7360d64963d9908b3673a38db3f7c7932b6e783a3664b571f1170a5",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "JA Technical Documentation",
+        "fallback_summary": "Generated: 2025-03-13T13:13:46.534Z"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/codeium-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "16b2e65c5b65a50469e92a05670cf941b940b529c5a3c98eaf87525888796faa",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Codeium Docs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/semicolonio/xero-mcp/2f14e199b6aba6a86018804348af27dc4383c7e6/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "e81473040ff4c1a7f6a1b1b62af6f03bdfaa8bf796eb15dcee4312729868288b",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "A list of applications that support MCP integrations"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/crewai-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ae145c8c9fccad5f1bafe609bf95d8f4ea354f27cd56bfe1613c6800bf42e160",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "CrewAI"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/unifygtm-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "e722c37a90ae10fdb255756fe3082bc56124fa18164e4e36705f4583ba1ca3f8",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Unify"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/FreePeak/db-mcp-server/86a230a4fe144ec855f06121fe6e93510616e3e4/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "77c50dba73170ed4aaf209e5ef016f45931221f6edba3899df82274205eb6daf",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://redpanda.com/llms.txt",
+        "domain": "redpanda.com",
+        "status_code": 200,
+        "content_hash": "104b1b959c89706a4ff8a72af2b2809ce5b7ca5773f2cf9fb3d3a08424308a32",
+        "metadata": {
+            "source_domain": "redpanda.com"
+        },
+        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Redpanda"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/envoyer-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "8ee812de554a724d577a975c4dee47893b34158edd493c59d139e24f9fa1514a",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Source Control",
+        "fallback_summary": "Connect to source control providers to deploy your projects."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/permaweb/ao-cookbook/8b1dfea99fc6c8355d2fcc0d4d07ba19bdff7949/src/public/zh/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "9de2884b15cb4fd10ebdc79fc595f7891a0b7181d61b0f459b8e4da5dc7a144f",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "ZH Technical Documentation",
+        "fallback_summary": "Generated: 2025-03-13T13:13:46.530Z"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/meshconnect-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "5e21ce7f1482070fe5ee2f2526557cd4eeec599a0f4819c79e8c6ebf484da757",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Get account balance",
+        "fallback_summary": "Source: https://docs.meshconnect.com/api-reference/balance/get-account-balance"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/arpitdalal/arpitdalal.dev/df2026e471e5c4c733bce45bec81390f6efbff6b/public/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "58e11b9c3157ade4852973098499897c92657b73bbd5812a0de1196e48912c31",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "https://arpitdalal.dev llms-full.txt",
+        "fallback_summary": "I'm a software engineer and a full-stack developerliving in the Greater Toronto Area, Canada. I have a passion for building web applications and have a strong background infront-end development."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/zapier-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "f26b626d7d1fa4cf3098160a8d0ffafb2873d42fbb54a706e6d9aac42aadcdb5",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Zapier",
+        "fallback_summary": "Returns `true` if the action was deleted, `false` if it was not found."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/tinybird-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "55a1ac6632a3cbc8e330f7d75eba1fefabc6b62d37b8bb2c3ec5c5460910ac60",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "Tinybird"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/mem0ai/mem0/039756abbe809b68b77d52b6624ad789676ab455/docs/llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ade73c34d2296b37330396e8ddc9b0d6b9f5eda52be476866e61419ffc29e25d",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Mem0"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/cursor-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "7e982bf87f2bc9434afb2c78cc81cc30faf87d26e791a02154914dd70351e878",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Billing",
+        "fallback_summary": "Source: https://docs.cursor.com/account/billing"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/perplexity-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "23f21808d8db2532ddf620dcae4715fde5c6441abd85f7032633ee574d21a213",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Chat Completions",
+        "fallback_summary": "Source: https://docs.perplexity.ai/api-reference/chat-completions"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/Cam10001110101/mcp-server-outlook-email/93181f33a94b82d1de5e0bcc97c63e313f6604f5/.context/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "148a40057b3ee4b1a87318de94f2dec6219bb4e29cdae5957281c17cba95da16",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "null",
+        "fallback_summary": "We as members, contributors, and leaders pledge to make participation in our"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/mkdocstrings/mkdocstrings.github.io/558d304a41ab73eeabd28595a27e8ad2079bef4a/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "21c115fe1947b65809c71e9d6442f9b843e4e869b78f9a88f1c36642aeac5b55",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "mkdocstrings",
+        "fallback_summary": "Automatic documentation from sources, for [MkDocs](https://www.mkdocs.org/). Come have a chat or ask questions on our [Gitter channel](https://gitter.im/mkdocstrings/community)."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/dkoosis/axe-handle/cdd0ce0a7a9561a0ba3e52d3fdb5e2ec45a2517c/reference/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "587b3d82fbf4ac63e1a4652b74cf9b79e3222ee42fede5f9ab355e2dd549f0f2",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/model-context-protocol--mcp--llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "dc929e1a94a0526c8fd05df3404f644ce998f9c9f3e688198e8c69f9a365af8e",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/mangopay-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "382c878623859dc0dc3705bdc57ee272a4da6071559c42f7fe8db2a5b497db68",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Mangopay docs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/platformsh/platformsh-docs/4241b0f23cc2e56c7bbfbe5e061a488f4a37841d/themes/psh-docs/layouts/_default/home.llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "efa5ca3c19f1b04adcfa3388265cdc82ed9248a3fe767940b984cc36071ca7ed",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "{{ .Site.Params.vendor.name }}",
+        "fallback_summary": "Things to remember when deploying applications on {{ .Site.Params.vendor.name }}:"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/datafold-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "0452ce76dff43b22f4c34e6cd340f551843bfa4c0423ac407c0989ee9ae6353c",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Datafold",
+        "fallback_summary": "Date fields also support ranges using the following syntax:"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/CleverCloud/documentation/cf827c94fcb34a952c41447ff264cd281b6f0e70/layouts/hextra-home.llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "ba4c2e819a41faedf060e10e2a22ece5f0d857668f9672fc452ecb8c2474abe7",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "{{ .Site.Title }}",
+        "fallback_summary": "{{- $mainSections := where .Site.Sections \"Type\" \"docs\" -}}"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/skydeck-ai-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "61293f1de090309a0f515e663d5b645f84f5adaabd466eb747ca83970fd09727",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "SkyDeck.ai LLM Ready Documentation",
+        "fallback_summary": "This document provides a comprehensive, consolidated reference of SkyDeck.ai's documentation, optimized for large language model (LLM) consumption. It combines various documentation sources into a single, easily accessible format, facilitating efficient information retrieval and processing by AI sys..."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/mamertofabian/elevenlabs-mcp-server/79f4d2e76b5b0fc3afe33adabb42487515f5103b/mcp-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "59572876349d61fa9b22d0b656560baa35d4ff6712a1d5f0655dbade1ebdb6e4",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "A list of applications that support MCP integrations"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/dub-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "c4668ba4c4d87cf7b7feb2557e8dd6096e787182a231df01cbb1a74f5e3f8a54",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Dub Docs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/dynamic-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "b9e392f08e9157bff7ba3bcb72cd9c737032515cf1d18c347edc6f2c157860cd",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Dynamic"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/alexander-zuev/supabase-mcp-server/d674529eb880c78340fa5d2f7a13c9813f1c7eb8/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "31d7f296a326c2b60605303e89201eff7cab696a3410110bbb9ba81c74ec9e0c",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/gitbutlerapp/gitbutler-docs/50b0b0aca9661d8e13ba5cff689344ca21318756/public/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "be66a74a8344ccf6a60b0dd4ac5964e00be95cd23a6506318be102fa46fbbe43",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "GitButler Documentation",
+        "fallback_summary": "Here is a quick overview of how to get started with GitButler. In this guide, we will:"
+    },
+    {
+        "url": "https://vivo.com/content/llms-full.txt",
+        "domain": "vivo.com",
+        "status_code": 200,
+        "content_hash": "0f73f4b7073e31a821c57075b4974cdf8e0374d926311e31f4088acc173fab3d",
+        "metadata": {
+            "source_domain": "vivo.com"
+        },
+        "last_checked_utc": "2025-04-02T18:45:54Z",
+        "first_added": "2025-04-02T18:45:54Z",
+        "last_updated": "2025-04-02T18:45:54Z",
+        "parsed_title": "vcm-v-consent-sdk * {\nfont-family: \"languageFont\",\"AvenirNext\",\"Microsoft YaHei\",\u5fae\u8f6f\u96c5\u9ed1,\"MicrosoftJhengHei\",\u534e\u6587\u7ec6\u9ed1,STHeiti,MingLiu,sans-serif,\"WebRupee\",\"ZAWGYI-ONE\";\n}\n</style>\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/common/css/vicon_28ffe74.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/include/vep-new-global/dist/css/vivo_7f76ff7.css\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"//asia-exstatic.vivoglobal.com/static/bus/index/manage/dist/css/vivo_cd2ffde.css\" rel=\"stylesheet\" type=\"text/css\">\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/jquery.min.3.3.1_7679e5a.js\"></script>\n<script src=\"//asia-exstatic.vivoglobal.com/static/bus/common/js/global.pack_bcdfa40.js\"></script>\n<script>\nwindow.onload = function(){\nconst vcmHeaderLogo = $(\".vcm-v-header-logo>img\")\nconst vcmWin = $(\"#vcm-v-banner-sdk\")\nconst vcmBtn = $(\".vcm-v-group-btn\")\nif(globalVar.brandMark === 'jovi'){\n$('#vcm-v-dialog-sdk .vcm-v-header-logo')?.css({'width':'82px','height':'auto','margin-top':'28.3px','margin-right':'23px'})\n// vcmHeaderLogo?.attr('src','/static/img/icon/vcm-logo-jovi.svg')\nvcmHeaderLogo?.attr('src','/static/img/image/vcm-logo-jovi.png')\n}\nif(vcmWin.length) {\nvcmWin.attr('tabindex', '0').focus()\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-4, .portal-font-scale-5\")){\nvcmBtn?.css({\n'overflow':'hidden',\n'text-overflow':'ellipsis',\n'white-space':'nowrap',\n'display':'block'\n})\n}\nif(vcmBtn.length && $('body').is(\".portal-font-scale-6, .portal-font-scale-7\")){\nvcmBtn?.css({\n'padding': '30px 20px'\n})\n}\n}\n</script>\n</head>\n<body class=\"veu-header-relative\" data-nav=\"Home\" data-app-page=\"none-cookie\">\n<script>\nwindow._env='\u975evivoapp'\n</script>\n<header id=\"header\" class=\"new-head-wrap\">\n<div class=\"vep-public vep-head vep-new-header vep-responsive\">\n<div class=\"vep-header-pc-box\">\n<div class=\"vep-pc-nav-box\">\n<div class=\"vep-pc-nav\">\n<p class=\"vep-pc-logo-box no-flip-over\">\n<a class=\"vep-pc-logo\" href=\"//www.vivo.com/en\" aria-label=\"vivo\" name=\"content\">\n<svg aria-hidden=\"true\" width=\"104px\" height=\"28px\" viewBox=\"0 0 103 28\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<g id=\"\u6d77\u5916\u4e00\u671f\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n<g id=\"F14-PC-\u8fd4\u56de\u9876\u90e8Normal\" transform=\"translate(-241.000000, -29.000000)\">\n<g id=\"\u7f16\u7ec4-6\">\n<g id=\"vivo\" transform=\"translate(240.000000, 29.000000)\">\n<g id=\"vivo-LOGO\" transform=\"translate(1.000000, 0.000000)\" fill=\"#ffffff\">\n<path class=\"vep-pc-logo-path\" d=\"M92.1201187,22.7773568 L83.3531521,22.7773568 C78.4247857,22.7773568 77.9864276,18.7356293 77.9864276,17.5007165 C77.9864276,16.2658037 78.4247857,12.2240763 83.3531521,12.2240763 L92.1201187,12.2240763 C97.0484851,12.2240763 97.4868432,16.2658037 97.4868432,17.5007165 C97.4868432,18.7356293 97.0484851,22.7773568 92.1201187,22.7773568 M92.1201187,7.77940186 L83.3531521,7.77940186 C74.2419976,7.77940186 73.4316287,15.2256518 73.4316287,17.5007165 C73.4316287,19.7759758 74.2419976,27.2222258 83.3531521,27.2222258 L92.1201187,27.2222258 C101.231468,27.2222258 102.041837,19.7759758 102.041837,17.5007165 C102.041837,15.2256518 101.231468,7.77940186 92.1201187,7.77940186\" id=\"Fill-1\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M71.6722232,8.23532926 L68.8307758,8.23532926 C67.6137631,8.23532926 67.362967,8.44312615 66.8934784,9.13947923 C66.4241842,9.83602688 58.2963682,22.2443033 58.2963682,22.2443033 C58.0372058,22.6258479 57.7622835,22.7801391 57.4200413,22.7801391 C57.0779936,22.7801391 56.8028767,22.6258479 56.5437143,22.2443033 C56.5437143,22.2443033 48.4158983,9.83602688 47.9466042,9.13947923 C47.4771155,8.44312615 47.2263194,8.23532926 46.0095013,8.23532926 L43.1678593,8.23532926 C42.5139217,8.23532926 42.2146786,8.74664971 42.6257973,9.37101323 C43.0369161,9.99537674 52.3331032,24.1107786 52.3331032,24.1107786 C53.8394361,26.3265005 54.9449623,27.2222841 57.4200413,27.2222841 C59.8951202,27.2222841 61.0008409,26.3265005 62.5073684,24.1107786 C62.5073684,24.1107786 71.8031664,9.99537674 72.2142852,9.37101323 C72.6254039,8.74664971 72.3263554,8.23532926 71.6722232,8.23532926\" id=\"Fill-4\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.9316764,9.43928657 C33.9316764,8.57716293 34.273335,8.2353098 35.1354586,8.2353098 L37.2832769,8.2353098 C38.1454005,8.2353098 38.4872537,8.57716293 38.4872537,9.43928657 L38.4872537,26.0182879 C38.4872537,26.8804115 38.1454005,27.2222647 37.2832769,27.2222647 L35.1354586,27.2222647 C34.273335,27.2222647 33.9316764,26.8804115 33.9316764,26.0182879 L33.9316764,9.43928657 Z\" id=\"Fill-7\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M29.2512459,8.23532926 L26.4097985,8.23532926 C25.1925912,8.23532926 24.9417952,8.44312615 24.4723065,9.13947923 C24.0030124,9.83602688 15.8753909,22.2443033 15.8753909,22.2443033 C15.6160339,22.6256534 15.3411116,22.7801391 14.9988694,22.7801391 C14.6566271,22.7801391 14.3817048,22.6256534 14.1225424,22.2443033 C14.1225424,22.2443033 5.9947264,9.83602688 5.52543229,9.13947923 C5.05613818,8.44312615 4.80514754,8.23532926 3.5883294,8.23532926 L0.746492834,8.23532926 C0.0162852061,8.23532926 -0.206687867,8.74664971 0.204625463,9.37101323 C0.615744226,9.99537674 9.91193135,24.1107786 9.91193135,24.1107786 C11.4180697,26.3265005 12.5237904,27.2222841 14.9988694,27.2222841 C17.4741429,27.2222841 18.5796691,26.3265005 20.0861965,24.1107786 C20.0861965,24.1107786 29.3821891,9.99537674 29.7931133,9.37101323 C30.2044266,8.74664971 29.9814536,8.23532926 29.2512459,8.23532926\" id=\"Fill-13\"></path>\n<path class=\"vep-pc-logo-path\" d=\"M33.7359621,4.43800671 C33.0359123,3.73815144 33.0359123,3.18324812 33.7359621,2.48319828 L35.231983,0.987177377 C35.9318383,0.287127538 36.4869362,0.287127538 37.1867914,0.986982811 L38.6830069,2.48319828 C39.3828622,3.18324812 39.3828622,3.73815144 38.6830069,4.43800671 L37.1867914,5.93422218 C36.4869362,6.63427202 35.9318383,6.63427202 35.231983,5.93422218 L33.7359621,4.43800671 Z\" id=\"Fill-10\"></path>\n</g>\n</g>\n</g>\n</g>\n</g>\n</svg>\n</a>\n</p>\n<div role=\"navigation\" aria-label=\"Primary\">\n<ul class=\"vep-pc-nav-list\" data-include-view-stat=\"cfrom=1002\">\n<li class=\"vep-pc-nav-item\">\n<a aria-current=\"page\" class=\"vep-pc-nav-link no-flip-over\"\nhref=\"https://www.vivo.com/en\"\ndata-nav-home\ndata-include-click-stat=\"cfrom=1001&name=Home&position=1\"",
+        "parsed_summary": "Home</a>"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/goody-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "141996f8bedd14bfa474a030716e83fe43c5eb4eed32ed26c28cccb6aa445c4e",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Goody"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/turso-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "430aa55d0f2392f3f7fd80c9f773917cdae846658371a0662ecf7f228b22b873",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Turso"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/vital-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "e3128ea70b03ac4e1062b28f2045be6abe63af06032c92b26adb5ecf13dbfdf8",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Junction",
+        "fallback_summary": "Information returned:"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/ionq-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "a9dce6686cc78d5f3899b02fa59cd8317e12712bd0b06dca10b5a2bc43f97f34",
+        "metadata": {
+            "source_domain": "docs.ionq.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "IonQ Quantum Cloud Documentation",
+        "fallback_summary": "This endpoint retrieves all jobs this API key is authorized to view."
+    },
+    {
+        "url": "https://www.answer.ai/llms.txt",
+        "domain": "www.answer.ai",
+        "status_code": 200,
+        "content_hash": "d4ec98294f9d919cc6b26c6f85480204ed7213d2898e499a229fec03ae06b9f1",
+        "metadata": {
+            "source_domain": "www.answer.ai"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Resend"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/pinata-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "f302cde978c452a06e3b3fc239065b7feda03b9e20c2f735469e55d47b9ee978",
+        "metadata": {
+            "source_domain": "sdk.vercel.ai"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Pinata Docs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/conductor-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "4ab407c14aab87941227b034da97ec55c5cdbad1f2dde8402e759790ca3abaa0",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Conductor Docs",
+        "fallback_summary": "There are two types of non-inventory items: 1. Materials or parts that are part of the business's overhead (for example, office supplies) 2. Materials or parts that the business buys to finish a specific job and then charges back to the customer."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/nkkko/daytona-claude-code-demo/2848916b214d7c8eb9ce726449c5c8b310868437/daytona-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "8457263ba85c7ebfa77e8e7a567b35dcdc50b80dd015fb758ed6e38dc017eb11",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Using npm",
+        "fallback_summary": "npm install @daytonaio/sdk"
+    },
+    {
+        "url": "https://tgju.org/content/llms-full.txt",
+        "domain": "tgju.org",
+        "status_code": 200,
+        "content_hash": "49524b663d56627f2526f6e6c5da17b31feb51f406e493e119279d27a78453ce",
+        "metadata": {
+            "source_domain": "tgju.org"
+        },
+        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "main {\n    width: 100%;\n}"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/intuned-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "867ddf790b4511461accab3534d229e9b641569554376bfe772fc28e03d5ac2c",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Intuned",
+        "fallback_summary": "This methods accepts the file."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/salesbricks-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "550c0563cddbfdd113cd5e83cefcbcf44164c39b81d03c866016c51e9a1d0ad9",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Authentication",
+        "fallback_summary": "Source: https://docs.salesbricks.com/api-reference/getting-started/authentication"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/mintlify-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "f1d8b7af417c1c82579c0893ec941039f4f26bbab3ba3f7e1bc98edc2f9c22ff",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Editor Permissions",
+        "fallback_summary": "Source: https://mintlify.com/docs/advanced/dashboard/permissions"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/spullara/mcp-server/76c39b1e494025bb70b431beff68e880e3b365c3/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "26906607292e68e7ab583024dbf796414c8d2d123e5fc405b54356fdfc7cd2d9",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Clients",
+        "fallback_summary": "A list of applications that support MCP integrations"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/Meh-S-Eze/ynab-mcp-client2/ad879ac8d4b32a0bcc398c2452a6f4ec74df8898/docs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "7af46fc5431498f90e2a77da1f384d1bb549f49811c9bf78c5383de60bf33223",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "A list of applications that support MCP integrations"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/sparesparrow/cursor-rules/53c530729aa2b5d37d3f7b7a065fa022db813626/misc/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "9f5d07122c41b059b846fe56fce771c3f95844b00a49644b8d6c3a48742a919d",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "null",
+        "fallback_summary": "We as members, contributors, and leaders pledge to make participation in our"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/scaffold-eth/se-2-docs/24d8ccd8cf3ffdeeab5ff92c5b4615d9b37138c6/static/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "a2fa4c8a1cfceae52d91ae58c4867f0e176d7ebe4eb97da718589bd5b84d78c0",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Scaffold-ETH 2",
+        "fallback_summary": "Everything you need to build dApps on Ethereum. A modern, clean version of Scaffold-ETH with NextJS, RainbowKit, Wagmi and Typescript. Supports Hardhat and Foundry."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/finch-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "9b69a8163435b52f33682f494996fbac440ee87d7fb5ae6c06eae72576eec26c",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Finch",
+        "fallback_summary": "Retrieve details of a specific document by its ID."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/fustilio/llms.txt-s/485df89594b1ce55f24fdece12349dede4eac41e/react/react-table/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "6f36d6181e5413b4fe88b6fb386f418b96598f6b7100ec39646258d350ba0111",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "TanStack Table v8 Documentation Compilation",
+        "fallback_summary": "TanStack Table is a Headless UI library for building powerful tables & datagrids for TS/JS, React, Vue, Solid, Qwik, and Svelte."
+    },
+    {
+        "url": "https://tgju.org/content/llms.txt",
+        "domain": "tgju.org",
+        "status_code": 200,
+        "content_hash": "abfab6d4a55eab5885c9f4ab81017b47144a57f75697f0ce6735edf69a91ed9e",
+        "metadata": {
+            "source_domain": "tgju.org"
+        },
+        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "main {\n    width: 100%;\n}"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/workflow-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "718263245e5b468653752b74096deb2a073ab12a49a62fca7facf79077b60e86",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Workflow Help"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/szktty/straw-mcp/ce1054db4c29cdc08786d94a0b58d735beedb664/doc/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "c1582f8df40c654f5c2cd8dc6a7fdf6bee43e73f446a28a42b93ca55ecb37ab4",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "StrawMCP: Basic Concepts and Introduction",
+        "fallback_summary": "StrawMcp is a Dart language implementation of the Model Context Protocol (MCP). This SDK enables easy integration between Dart/Flutter applications and MCP servers. It also allows Dart applications themselves to function as MCP servers."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/cbcruk/cbcruk.github.io/2cb7bb0e3c6ecbdbd73efe1aaccb2f33a0574c8a/src/pages/llms-full.txt.ts",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "10c1157e963959c480056869c3da098db04076c0e188595dd68ad8462130605f",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "\ubb38\uc11c \uc2dc\uc791\ud558\uae30",
+        "fallback_summary": "${memos"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/keboola/llms-txt/d73f895bf4cbdd32aac548ab8599b204cbf7f379/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "26aa3ff86d8418ab78111ca2902b782ba64bb3973912764c4a4681a9bda3a029",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Keboola Full Documentation",
+        "fallback_summary": "1. [Key Features](#key-features)"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/basehub-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "103276d2bd72a282d91d6d5ed7c6a85f8ffacd596f0fcad58e53f567f904dab8",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "BaseHub",
+        "fallback_summary": "OpenAPI Spec: https://cdn.jsdelivr.net/npm/@scalar/galaxy/dist/latest.yaml"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/YiyangLi/okta-mcp-server/6f05b54a2cbbc500d5451de69c48cef235d34952/assets/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "42bf78cd0073f502b6f8363b0dcff6bbc47acf06692a8473de674483b3555f84",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/rogervila/equipment/30ac2afdb553795e98172ab25f4ca1ab8a9637dc/website/static/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "42bb939e2b92dbd93280a906b1cb76ddaa091632233d003efb1bf3ca1c75e769",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Equipment Framework Documentation for LLMs",
+        "fallback_summary": "Equipment is a comprehensive Python scaffolding framework designed to simplify and streamline project development, providing a robust and flexible foundation for applications of any scale."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/supabase/supabase/5a2efd50318f183a956e00bf5e89fd112cb3f03c/apps/ui-library/public/llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "a48f924a0bd5b81c31b087bef514689d8c8bc36c5e119aa9c7ea6d1c4a2753e4",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Supabase UI Library",
+        "fallback_summary": "Last updated: 2025-03-28T12:17:05.978Z"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/medusajs/medusa/a8513019db08d1345e79a15aea7f11389b4918d4/www/apps/book/public/llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "da5834b11d684b3d314aa7cffbf370a7cbaa07135782929b25f13c57dc1905fa",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "Medusa",
+        "parsed_summary": "Medusa is a digital commerce platform with a built-in framework for customization. When you install Medusa, you get a fully fledged commerce platform with all the features you need to get off the ground. However, unlike other platforms, Medusa is built with customization in mind. You don't need to build hacky workarounds that are difficult to maintain and scale. Your efforts go into building features that brings your business's vision to life."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/minhleathvn/youtube_transcript/04babbdc47c7a7869e22814a828a9246de426a05/docs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "781292881bab50aab03d533014406b2effb2ebde74d4e72275d4a2ce38c93d8f",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/glama-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "e12e4981112bf90d7adb1a82d8e924660abac0dcab862479607ad5d25b0c7701",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T18:45:52Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "parsed_title": "glama.ai llms.txt"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/stemaide/stemaide.github.io/7171a19d2929748596bbeadfd3164ed3d0fd4938/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "7c499f68e6e00e6ada5a6570036f02b70aad434df7bb4aaeae4846558e87074d",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "www.stemaide.com llms-full.txt",
+        "fallback_summary": "STEMAIDE is a social enterprise focusing on providing top-quality STEM education across Africa. By delivering educational kits, tailored curricula, and hands-on training, we help young learners understand complex STEM concepts, develop problem-solving skills, and prepare for careers in the tech and ..."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/tavus-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "9afe42d1346c9a09899397a87aa5010ca412ffb8f59164cafce1c98b8aaa27bb",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Create Conversation",
+        "fallback_summary": "Source: https://docs.tavus.io/api-reference/conversations/create-conversation"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/flxbl-io/docs-sfp/cfc83ce552004b8a18b85fe3997ec0ea3b58a148/llms.txt.md",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "b7b08a5ac699eac3487f80e86d21a5c28f477669791417a473a9e6ae9b92aaab",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "LLMs.txt",
+        "fallback_summary": "A Salesforce Project (in a git repository)"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/stripe-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "4d05f5d11f831d4e0ecdeac77f1bfa8673e52daba4c1c4adfb0a58647c4e4d49",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Stripe Documentation",
+        "fallback_summary": "Build a low-code payment form and embed it on your site or host it on Stripe. Checkout creates a customizable form for collecting payments. You can redirect customers to a Stripe-hosted payment page, embed Checkout directly in your website, or create a customized checkout page with Stripe Elements. ..."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/axle-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "a1307ed1aff4aa4a6e28b554eca930cdcc459ddaa95425764e9f7922ebcc09ae",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Axle",
+        "fallback_summary": "Please note that this endpoint will NOT refresh the Account object with new data from the insurance carrier."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/ux-patterns-for-devs-llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "86ecf0b0cccfb87bf4cba7fb60eb57eb38d908aa9ae3206361dc4042ba7cad1a",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "GENERAL: [Books](https://ux-patterns-for-developers-khahu0xl3.vercel.app/en/patterns/general/books)",
+        "fallback_summary": "A curated list of essential UX books to help developers improve their design and implementation skills."
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/bucket-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "b66fa568477ca2e9ad6e95de2fef4570000053c17823288883ec33d883165c88",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Bucket docs"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/cursor-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "c97b0ada7a3b26554c35353b7a57c5028422c4c6b1f48c9286c7672c94db106e",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Cursor"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/bytebase/dbhub/688affa663c7b9f88ee73f94622aff2169bd5760/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "1c6996a919c17a06f204f41804c114203c47d9d528d6e5135951170f472b06f5",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T18:45:52Z",
+        "last_updated": "2025-04-02T18:45:52Z",
+        "fallback_title": "Example Clients",
+        "fallback_summary": "Source: https://modelcontextprotocol.io/clients"
+    },
+    {
+        "url": "https://redbutton.de/llms/llms-full.txt",
+        "domain": "redbutton.de",
+        "status_code": 200,
+        "content_hash": "26be75d102120059386c0003c7e809e1067b2645028c440722caeec665a8b926",
+        "metadata": {
+            "source_domain": "redbutton.de"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "rs-demo-id {}\n</style>\n<link rel='stylesheet' id='theme-styles-css'  href='wp-content/themes/jupiter/assets/stylesheet/min/full-styles.6.1.42298.css?ver=1531554132' type='text/css' media='all' />\n<style id='theme-styles-inline-css' type='text/css'>\nbody { background-color:#fff; } .hb-custom-header #mk-page-introduce, .mk-header { background:-webkit-linear-gradient(left,#0c1e2a 0%, #c5cace 100%);background:linear-gradient(to right,#0c1e2a 0%, #c5cace 100%) } .hb-custom-header > div, .mk-header-bg { background-color:rgba(25,51,69,0); } .mk-classic-nav-bg { background-color:rgba(25,51,69,0); } .master-holder-bg { background:-webkit-linear-gradient(left,#0c1e2a 0%, #c5cace 100%);background:linear-gradient(to right,#0c1e2a 0%, #c5cace 100%) } #mk-footer { background-color:#193345; } #mk-boxed-layout { -webkit-box-shadow:0 0 0px rgba(0, 0, 0, 0); -moz-box-shadow:0 0 0px rgba(0, 0, 0, 0); box-shadow:0 0 0px rgba(0, 0, 0, 0); } .mk-news-tab .mk-tabs-tabs .is-active a, .mk-fancy-title.pattern-style span, .mk-fancy-title.pattern-style.color-gradient span:after, .page-bg-color { background-color:#0c1e2a; } .page-title { font-size:20px; color:; text-transform:uppercase; font-weight:400; letter-spacing:2px; } .page-subtitle { font-size:14px; line-height:100%; color:; font-size:14px; text-transform:none; } body { font-family:HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, \"Lucida Grande\", sans-serif } body, h1, h2, h3, h4, h5, h6, p:not(.form-row):not(.woocommerce-mini-cart__empty-message):not(.woocommerce-mini-cart__total):not(.woocommerce-mini-cart__buttons):not(.mk-product-total-name):not(.woocommerce-result-count), .woocommerce-customer-details address, a, textarea,input,select,button, #mk-page-introduce, .the-title, .mk-edge-title, .edge-title, .mk-edge-desc, .edge-desc, .main-navigation-ul, .mk-vm-menuwrapper, #mk-footer-navigation ul li a, .vm-header-copyright, .mk-footer-copyright, .mk-content-box, .filter-portfolio a, .mk-button, .mk-blockquote, .mk-pricing-table .mk-offer-title, .mk-pricing-table .mk-pricing-plan, .mk-pricing-table .mk-pricing-price, .mk-tabs-tabs a, .mk-accordion-tab, .mk-toggle-title, .mk-dropcaps, .price, .mk-imagebox, .mk-event-countdown, .mk-fancy-title, .mk-button-gradient, .mk-iconBox-gradient, .mk-custom-box, .mk-ornamental-title, .mk-subscribe, .mk-timeline, .mk-blog-container .mk-blog-meta .the-title, .post .blog-single-title, .mk-blog-hero .content-holder .the-title, .blog-blockquote-content, .blog-twitter-content, .mk-blog-container .mk-blog-meta .the-excerpt p, .mk-single-content p, .mk-employees .mk-employee-item .team-info-wrapper .team-member-name, .mk-testimonial-quote, .mk-contact-form, .mk-contact-form input,.mk-contact-form button, .mk-box-icon .icon-box-title { font-family:Lato } @font-face { font-family:'star'; src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.eot'); src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/fontd41d.eot?#iefix') format('embedded-opentype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.woff') format('woff'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.ttf') format('truetype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.svg#star') format('svg'); font-weight:normal; font-style:normal; } @font-face { font-family:'WooCommerce'; src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.eot'); src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/fontd41d.eot?#iefix') format('embedded-opentype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.woff') format('woff'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.ttf') format('truetype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.svg#WooCommerce') format('svg'); font-weight:normal; font-style:normal; }\n</style>\n<link rel='stylesheet' id='mkhb-render-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-render1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mkhb-row-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-row1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mkhb-column-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-column1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='js_composer_front-css'  href='wp-content/plugins/js_composer_theme/assets/css/js_composer.min23da.css?ver=5.4.8' type='text/css' media='all' />\n<link rel='stylesheet' id='popup-maker-site-css'  href='wp-content/uploads/pum/pum-site-styles1c44.css?generated=1634283638&amp;ver=1.7.29' type='text/css' media='all' />\n<link rel='stylesheet' id='pum-videos-css'  href='wp-content/plugins/pum-videos.disabled/assets/css/site.min8a54.css?ver=1.0.0' type='text/css' media='all' />\n<link rel='stylesheet' id='theme-options-css'  href='wp-content/uploads/mk_assets/theme-options-production-1647357263180b.css?ver=1647357256' type='text/css' media='all' />\n<link rel='stylesheet' id='ms-main-css'  href='wp-content/plugins/masterslider/public/assets/css/masterslider.mainee9a.css?ver=3.2.2' type='text/css' media='all' />\n<link rel='stylesheet' id='ms-custom-css'  href='wp-content/uploads/masterslider/customad05.css?ver=1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mk-style-css'  href='wp-content/themes/jupiter-child/style4b0b.css?ver=4.9.20' type='text/css' media='all' />\n<script type='text/javascript' src='wp-content/themes/jupiter/assets/js/plugins/wp-enqueue/min/webfontloader4b0b.js?ver=4.9.20'></script>\n<script type='text/javascript'>\nWebFontConfig = {\n\ttimeout: 2000\n}"
+    },
+    {
+        "url": "https://redbutton.de/api/llms.txt",
+        "domain": "redbutton.de",
+        "status_code": 200,
+        "content_hash": "26be75d102120059386c0003c7e809e1067b2645028c440722caeec665a8b926",
+        "metadata": {
+            "source_domain": "redbutton.de"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "rs-demo-id {}\n</style>\n<link rel='stylesheet' id='theme-styles-css'  href='wp-content/themes/jupiter/assets/stylesheet/min/full-styles.6.1.42298.css?ver=1531554132' type='text/css' media='all' />\n<style id='theme-styles-inline-css' type='text/css'>\nbody { background-color:#fff; } .hb-custom-header #mk-page-introduce, .mk-header { background:-webkit-linear-gradient(left,#0c1e2a 0%, #c5cace 100%);background:linear-gradient(to right,#0c1e2a 0%, #c5cace 100%) } .hb-custom-header > div, .mk-header-bg { background-color:rgba(25,51,69,0); } .mk-classic-nav-bg { background-color:rgba(25,51,69,0); } .master-holder-bg { background:-webkit-linear-gradient(left,#0c1e2a 0%, #c5cace 100%);background:linear-gradient(to right,#0c1e2a 0%, #c5cace 100%) } #mk-footer { background-color:#193345; } #mk-boxed-layout { -webkit-box-shadow:0 0 0px rgba(0, 0, 0, 0); -moz-box-shadow:0 0 0px rgba(0, 0, 0, 0); box-shadow:0 0 0px rgba(0, 0, 0, 0); } .mk-news-tab .mk-tabs-tabs .is-active a, .mk-fancy-title.pattern-style span, .mk-fancy-title.pattern-style.color-gradient span:after, .page-bg-color { background-color:#0c1e2a; } .page-title { font-size:20px; color:; text-transform:uppercase; font-weight:400; letter-spacing:2px; } .page-subtitle { font-size:14px; line-height:100%; color:; font-size:14px; text-transform:none; } body { font-family:HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, \"Lucida Grande\", sans-serif } body, h1, h2, h3, h4, h5, h6, p:not(.form-row):not(.woocommerce-mini-cart__empty-message):not(.woocommerce-mini-cart__total):not(.woocommerce-mini-cart__buttons):not(.mk-product-total-name):not(.woocommerce-result-count), .woocommerce-customer-details address, a, textarea,input,select,button, #mk-page-introduce, .the-title, .mk-edge-title, .edge-title, .mk-edge-desc, .edge-desc, .main-navigation-ul, .mk-vm-menuwrapper, #mk-footer-navigation ul li a, .vm-header-copyright, .mk-footer-copyright, .mk-content-box, .filter-portfolio a, .mk-button, .mk-blockquote, .mk-pricing-table .mk-offer-title, .mk-pricing-table .mk-pricing-plan, .mk-pricing-table .mk-pricing-price, .mk-tabs-tabs a, .mk-accordion-tab, .mk-toggle-title, .mk-dropcaps, .price, .mk-imagebox, .mk-event-countdown, .mk-fancy-title, .mk-button-gradient, .mk-iconBox-gradient, .mk-custom-box, .mk-ornamental-title, .mk-subscribe, .mk-timeline, .mk-blog-container .mk-blog-meta .the-title, .post .blog-single-title, .mk-blog-hero .content-holder .the-title, .blog-blockquote-content, .blog-twitter-content, .mk-blog-container .mk-blog-meta .the-excerpt p, .mk-single-content p, .mk-employees .mk-employee-item .team-info-wrapper .team-member-name, .mk-testimonial-quote, .mk-contact-form, .mk-contact-form input,.mk-contact-form button, .mk-box-icon .icon-box-title { font-family:Lato } @font-face { font-family:'star'; src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.eot'); src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/fontd41d.eot?#iefix') format('embedded-opentype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.woff') format('woff'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.ttf') format('truetype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.svg#star') format('svg'); font-weight:normal; font-style:normal; } @font-face { font-family:'WooCommerce'; src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.eot'); src:url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/fontd41d.eot?#iefix') format('embedded-opentype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.woff') format('woff'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.ttf') format('truetype'), url('wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.svg#WooCommerce') format('svg'); font-weight:normal; font-style:normal; }\n</style>\n<link rel='stylesheet' id='mkhb-render-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-render1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mkhb-row-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-row1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mkhb-column-css'  href='wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-column1b46.css?ver=6.1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='js_composer_front-css'  href='wp-content/plugins/js_composer_theme/assets/css/js_composer.min23da.css?ver=5.4.8' type='text/css' media='all' />\n<link rel='stylesheet' id='popup-maker-site-css'  href='wp-content/uploads/pum/pum-site-styles1c44.css?generated=1634283638&amp;ver=1.7.29' type='text/css' media='all' />\n<link rel='stylesheet' id='pum-videos-css'  href='wp-content/plugins/pum-videos.disabled/assets/css/site.min8a54.css?ver=1.0.0' type='text/css' media='all' />\n<link rel='stylesheet' id='theme-options-css'  href='wp-content/uploads/mk_assets/theme-options-production-1647357263180b.css?ver=1647357256' type='text/css' media='all' />\n<link rel='stylesheet' id='ms-main-css'  href='wp-content/plugins/masterslider/public/assets/css/masterslider.mainee9a.css?ver=3.2.2' type='text/css' media='all' />\n<link rel='stylesheet' id='ms-custom-css'  href='wp-content/uploads/masterslider/customad05.css?ver=1.4' type='text/css' media='all' />\n<link rel='stylesheet' id='mk-style-css'  href='wp-content/themes/jupiter-child/style4b0b.css?ver=4.9.20' type='text/css' media='all' />\n<script type='text/javascript' src='wp-content/themes/jupiter/assets/js/plugins/wp-enqueue/min/webfontloader4b0b.js?ver=4.9.20'></script>\n<script type='text/javascript'>\nWebFontConfig = {\n\ttimeout: 2000\n}"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/quill-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "5dfcf2c4fba8d4ba93abff41ce8a59f3bf225c658d6b72439dd1519c7fc502a0",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T20:06:11Z",
+        "last_updated": "2025-04-02T20:06:11Z",
+        "fallback_title": "Quill"
+    },
+    {
+        "url": "https://4strokemedia.com/api/llms.txt",
+        "domain": "4strokemedia.com",
+        "status_code": 200,
+        "content_hash": "6d7e176ca3ded6cc28c69b9a221ff5c63eddecb287045fe915b9a3e87e718c62",
+        "metadata": {
+            "source_domain": "4strokemedia.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "login_error, .login .message, #loginform { margin-bottom: 20px; }\n</style>"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/demo-time-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "02ef2ec036f0046d2ef5d999a90f12b131e3ee6476e76965aa32b3e19a3e11d9",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "Demo Time - Live demos & slides in VS Code"
+    },
+    {
+        "url": "https://yahoobix.com/content/llms.txt",
+        "domain": "yahoobix.com",
+        "status_code": 200,
+        "content_hash": "b822db41cc58efac7005d05763f7a6bb1cc51ba9ba4919cd084b75688e552609",
+        "metadata": {
+            "source_domain": "yahoobix.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "ajaxloaderHolder {\n\tdisplay: block;\n\twidth: 24px;\n\theight: 24px;\n\tbackground: #fff;\n\tpadding: 8px 0 0 8px;\n\tmargin:10px auto;\n\t-webkit-border-radius: 4px;\n\t-moz-border-radius: 4px;\n\tborder-radius: 4px;\n}</style>    <style media=\"screen\">\n* {\n    margin:0;padding:0\n}"
+    },
+    {
+        "url": "https://developers.cloudflare.com/llms.txt",
+        "domain": "developers.cloudflare.com",
+        "status_code": 200,
+        "content_hash": "d80b18918218266afc9dbe59d1fb8ffa73b0df6d5482cab9e5ad3592152d040f",
+        "metadata": {
+            "source_domain": "developers.cloudflare.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:11Z",
+        "first_added": "2025-04-02T20:06:11Z",
+        "last_updated": "2025-04-02T20:06:11Z",
+        "parsed_title": "Cloudflare Developer Documentation"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/warp-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "10a44c79487f89e7d9c4d36db6f81f7d2f33cdf54766089433a59d51e8233573",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "fallback_title": "Warp documentation"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/lbnl-science-it/scienceit-docs/62e7b3d92d5b530729c3487bbf19206a50b3c322/docs/llms-full.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "3b0fe2116a08a6b30ade22416939d8aeed935ebd1e0d1ff4851e411581105ff7",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "fallback_title": "Science IT Technical Documentation",
+        "fallback_summary": "<div class=\"grid cards\" markdown>"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/thedaviddias/llms-txt-hub/df85aa12b5463fa043b2b924868c094e52bf7dc3/apps/chatbot/public/llms-cache/answer-ai-llms.txt",
+        "domain": "raw.githubusercontent.com",
+        "status_code": 200,
+        "content_hash": "d4ec98294f9d919cc6b26c6f85480204ed7213d2898e499a229fec03ae06b9f1",
+        "metadata": {
+            "source_domain": "raw.githubusercontent.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "Answer.AI company website",
+        "parsed_summary": "Answer.AI is a new kind of AI R&D lab which creates practical end-user products based on foundational research breakthroughs."
+    },
+    {
+        "url": "https://4strokemedia.com/assets/llms-full.txt",
+        "domain": "4strokemedia.com",
+        "status_code": 200,
+        "content_hash": "ffdb2b972ab8122f1ecb170c5740508cca95fb29b98776b0ea1523b731a948c5",
+        "metadata": {
+            "source_domain": "4strokemedia.com"
+        },
+        "last_checked_utc": "2025-04-02T20:06:12Z",
+        "first_added": "2025-04-02T20:06:12Z",
+        "last_updated": "2025-04-02T20:06:12Z",
+        "parsed_title": "login_error, .login .message, #loginform { margin-bottom: 20px; }\n</style>"
     }
 ]
