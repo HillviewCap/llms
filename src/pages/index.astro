@@ -23,6 +23,15 @@ const filteredLlmsData = llmsData.filter(entry => {
   );
 });
 
+// Sort the filtered data by quality (High > Medium > Low)
+const sortedLlmsData = [...filteredLlmsData].sort((a, b) => {
+  const qualityOrder = { 'High': 0, 'Medium': 1, 'Low': 2 };
+  const qualityA = a.quality || 'Medium'; // Default to Medium if quality is not specified
+  const qualityB = b.quality || 'Medium'; // Default to Medium if quality is not specified
+  
+  return qualityOrder[qualityA] - qualityOrder[qualityB];
+});
+
 // Function to get unique categories from all entries
 function getUniqueCategories(data) {
   const categoriesSet = new Set();
@@ -39,10 +48,10 @@ function getUniqueCategories(data) {
 }
 
 // Get unique categories for filtering from the filtered data
-const uniqueCategories = getUniqueCategories(filteredLlmsData);
+const uniqueCategories = getUniqueCategories(sortedLlmsData);
 
 // Get unique domains for filtering from the filtered data
-const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.source_domain))].sort();
+const uniqueDomains = [...new Set(sortedLlmsData.map(entry => entry.metadata.source_domain))].sort();
 ---
 
 <Layout
@@ -72,7 +81,7 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
         <div class="circuit-pattern"></div>
         <h1 class="text-5xl font-bold text-white mb-4">LLMS.txt Explorer</h1>
         <p class="text-xl text-primary-100 max-w-3xl mx-auto">
-          Discover and analyze LLMS.txt files from <span class="font-bold">{filteredLlmsData.length}</span> domains across the web
+          Discover and analyze LLMS.txt files from <span class="font-bold">{sortedLlmsData.length}</span> domains across the web
         </p>
       </div>
     </header>
@@ -116,20 +125,26 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
           </select>
         </div>
       </div>
-      
       <div class="flex justify-between items-center mt-4">
         <p id="results-count" class="text-sm text-neutral-600 dark:text-neutral-400">
-          Showing <span class="font-medium">{filteredLlmsData.length}</span> results
+          Showing <span class="font-medium">{sortedLlmsData.length}</span> results
         </p>
-        <button
-          id="toggle-view"
-          class="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors flex items-center glow-button"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-          </svg>
-          Switch to Table View
-        </button>
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center">
+            <input type="checkbox" id="show-low-quality" class="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500 dark:bg-neutral-700 dark:border-neutral-600" checked>
+            <label for="show-low-quality" class="ml-2 block text-sm text-neutral-700 dark:text-neutral-300">Include Low Quality</label>
+          </div>
+          <button
+            id="toggle-view"
+            class="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors flex items-center glow-button"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            </svg>
+            Switch to Table View
+          </button>
+        </div>
+      </div>
       </div>
     </div>
 
@@ -150,66 +165,107 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
       </div>
     </section>
 
-    <div id="table-view" class="overflow-x-auto bg-white dark:bg-neutral-800 rounded-lg shadow-md enhanced-table hidden">
+    <div id="table-view" class="mt-8 overflow-x-auto bg-white dark:bg-neutral-800 rounded-lg shadow-md enhanced-table hidden">
       <table class="min-w-full divide-y divide-neutral-200 dark:divide-neutral-700">
         <thead class="bg-neutral-50 dark:bg-neutral-800">
           <tr>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">Domain</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">Title / Domain</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">Quality</th>
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">URL</th>
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">Categories</th>
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">Last Checked</th>
           </tr>
         </thead>
         <tbody class="bg-white divide-y divide-neutral-200 dark:bg-neutral-900 dark:divide-neutral-700" id="table-body">
-          {filteredLlmsData.map((entry, index) => (
-            <tr class={index % 2 === 0 ? 'bg-white dark:bg-neutral-900' : 'bg-neutral-50 dark:bg-neutral-800'} data-domain={entry.metadata.source_domain} data-categories={entry.metadata.cf_categories?.join(',')}>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-900 dark:text-white">{entry.metadata.source_domain}</td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
-                <a href={entry.url} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">
-                  {entry.url}
-                </a>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
-                <div class="flex flex-wrap gap-1">
-                  {entry.metadata.cf_categories?.map(category => (
-                    <span class="ai-tag">
-                      {category}
-                    </span>
-                  ))}
-                </div>
-              </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
-                {new Date(entry.last_checked_utc).toLocaleString('en-US')}
-              </td>
-            </tr>
-          ))}
+          {sortedLlmsData.map((entry, index) => {
+            // Use the quality field from the JSON, defaulting to 'Medium' if not present
+            const quality = (entry.quality || 'Medium').toLowerCase();
+            const title = entry.parsed_title || entry.fallback_title || entry.domain;
+
+            return (
+              <tr
+                class:list={[
+                  index % 2 === 0 ? 'bg-white dark:bg-neutral-900' : 'bg-neutral-50 dark:bg-neutral-800',
+                  { 'opacity-50': quality === 'low' }
+                ]}
+                data-domain={entry.domain}
+                data-categories={entry.metadata?.cf_categories?.join(',')}
+                data-quality={quality}
+              >
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-900 dark:text-white">{title}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm">
+                  {quality === 'high' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">High</span>}
+                  {quality === 'medium' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>}
+                  {quality === 'low' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Low</span>}
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
+                  <a href={entry.url} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 truncate" style="max-width: 200px; display: inline-block;">
+                    {entry.url}
+                  </a>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
+                  <div class="flex flex-wrap gap-1">
+                    {entry.metadata?.cf_categories?.map(category => (
+                      <span class="ai-tag">
+                        {category}
+                      </span>
+                    ))}
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-400">
+                  {new Date(entry.last_checked_utc).toLocaleString('en-US')}
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
 
-    <div id="card-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
-      {filteredLlmsData.map(entry => (
-    <div id="card-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {llmsData.map(entry => (
-        <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden enhanced-card" data-domain={entry.metadata.source_domain} data-categories={entry.metadata.cf_categories?.join(',')}>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-neutral-900 dark:text-white mb-2">{entry.metadata.source_domain}</h3>
-            <a href={entry.url} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 text-sm mb-4 block truncate">
-              {entry.url}
-            </a>
-            <div class="flex flex-wrap gap-1 mb-4">
-              {entry.metadata.cf_categories?.map(category => (
-                <span class="ai-tag">
-                  {category}
-                </span>
-              ))}
-            </div>
-            <div class="text-xs text-neutral-500 dark:text-neutral-400">
-              Last checked: {new Date(entry.last_checked_utc).toLocaleString('en-US')}
+    <div id="card-view" class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {sortedLlmsData.map(entry => {
+        // Use the quality field from the JSON, defaulting to 'Medium' if not present
+        const quality = (entry.quality || 'Medium').toLowerCase();
+        const title = entry.parsed_title || entry.fallback_title || entry.domain;
+        const summary = entry.parsed_summary || entry.fallback_summary;
+
+        return (
+          <div
+            class:list={[
+              "bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden enhanced-card",
+              { 'opacity-60 border border-red-500 dark:border-red-700': quality === 'low' }
+            ]}
+            data-domain={entry.domain}
+            data-categories={entry.metadata?.cf_categories?.join(',')}
+            data-quality={quality}
+          >
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-lg font-semibold text-neutral-900 dark:text-white flex-1 mr-2">{title}</h3>
+                <div>
+                  {quality === 'high' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">High</span>}
+                  {quality === 'medium' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>}
+                  {quality === 'low' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Low</span>}
+                </div>
+              </div>
+              {summary && <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-3 line-clamp-3">{summary}</p>}
+              <a href={entry.url} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 text-sm mb-4 block truncate">
+                {entry.url}
+              </a>
+              <div class="flex flex-wrap gap-1 mb-4">
+                {entry.metadata?.cf_categories?.map(category => (
+                  <span class="ai-tag">
+                    {category}
+                  </span>
+                ))}
+              </div>
+              <div class="text-xs text-neutral-500 dark:text-neutral-400">
+                Last checked: {new Date(entry.last_checked_utc).toLocaleString('en-US')}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
     
     <div class="mt-12 bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md enhanced-about">
@@ -223,7 +279,7 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
         </p>
         <h3>Key Features</h3>
         <ul>
-          <li>Browse and search LLMS.txt files from {filteredLlmsData.length} domains</li>
+          <li>Browse and search LLMS.txt files from {sortedLlmsData.length} domains</li>
           <li>Filter by category or domain</li>
           <li>View detailed information about each implementation</li>
           <li>Compare different approaches to AI training permissions</li>
@@ -241,6 +297,7 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
     const searchInput = document.getElementById('search');
     const categoryFilter = document.getElementById('category-filter');
     const domainFilter = document.getElementById('domain-filter');
+    const showLowQualityCheckbox = document.getElementById('show-low-quality'); // Get the new checkbox
     const resultsCount = document.getElementById('results-count');
     const toggleViewBtn = document.getElementById('toggle-view');
     const tableView = document.getElementById('table-view');
@@ -248,26 +305,35 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
     
     // Get references to table rows and cards after DOM is loaded
     const tableRows = Array.from(document.querySelectorAll('#table-body tr'));
-    const cards = Array.from(document.querySelectorAll('#card-view > div'));
+    const cards = Array.from(document.querySelectorAll('#card-view > div.enhanced-card')); // Ensure we select the correct card divs
     
     // Toggle view function
     toggleViewBtn.addEventListener('click', () => {
-      if (tableView.classList.contains('hidden')) {
-        tableView.classList.remove('hidden');
-        cardView.classList.add('hidden');
-        toggleViewBtn.textContent = 'Switch to Card View';
-      } else {
-        tableView.classList.add('hidden');
-        cardView.classList.remove('hidden');
-        toggleViewBtn.textContent = 'Switch to Table View';
+      const isTableView = !tableView.classList.contains('hidden');
+      tableView.classList.toggle('hidden', isTableView);
+      cardView.classList.toggle('hidden', !isTableView);
+      // Update button text and icon based on the *new* state
+      if (!isTableView) { // If table view was hidden, it's now shown
+        toggleViewBtn.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V3zm0 6a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V9zm0 6a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3z" clip-rule="evenodd" />
+          </svg>
+          Switch to Card View`;
+      } else { // If table view was shown, it's now hidden (card view shown)
+        toggleViewBtn.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+          </svg>
+          Switch to Table View`;
       }
     });
     
     // Filter function
     function applyFilters() {
       const searchTerm = searchInput.value.toLowerCase();
-      const categoryValue = categoryFilter.value.toLowerCase();
-      const domainValue = domainFilter.value.toLowerCase();
+      const categoryValue = categoryFilter.value; // Keep case for potential exact matches if needed later
+      const domainValue = domainFilter.value; // Keep case
+      const showLowQuality = showLowQualityCheckbox.checked;
       
       let visibleCount = 0;
       
@@ -275,13 +341,15 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
       tableRows.forEach(row => {
         const domain = row.getAttribute('data-domain').toLowerCase();
         const categories = (row.getAttribute('data-categories') || '').toLowerCase();
+        const quality = row.getAttribute('data-quality');
         
-        const matchesSearch = domain.includes(searchTerm);
-        const matchesCategory = !categoryValue || categories.includes(categoryValue);
-        const matchesDomain = !domainValue || domain === domainValue;
+        const matchesSearch = domain.includes(searchTerm) || row.cells[0].textContent.toLowerCase().includes(searchTerm); // Search title/domain cell
+        const matchesCategory = !categoryValue || (categories && categories.split(',').map(c=>c.trim().toLowerCase()).includes(categoryValue.toLowerCase()));
+        const matchesDomain = !domainValue || domain === domainValue.toLowerCase();
+        const matchesQuality = showLowQuality || quality !== 'low';
         
-        const isVisible = matchesSearch && matchesCategory && matchesDomain;
-        row.classList.toggle('hidden', !isVisible);
+        const isVisible = matchesSearch && matchesCategory && matchesDomain && matchesQuality;
+        row.style.display = isVisible ? '' : 'none'; // Use style.display instead of class toggle for simplicity here
         
         if (isVisible) visibleCount++;
       });
@@ -290,23 +358,33 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
       cards.forEach(card => {
         const domain = card.getAttribute('data-domain').toLowerCase();
         const categories = (card.getAttribute('data-categories') || '').toLowerCase();
+        const quality = card.getAttribute('data-quality');
+        const cardTitle = card.querySelector('h3')?.textContent.toLowerCase() || '';
+        const cardSummary = card.querySelector('p')?.textContent.toLowerCase() || '';
+
+        const matchesSearch = domain.includes(searchTerm) || cardTitle.includes(searchTerm) || cardSummary.includes(searchTerm);
+        const matchesCategory = !categoryValue || (categories && categories.split(',').map(c=>c.trim().toLowerCase()).includes(categoryValue.toLowerCase()));
+        const matchesDomain = !domainValue || domain === domainValue.toLowerCase();
+        const matchesQuality = showLowQuality || quality !== 'low';
         
-        const matchesSearch = domain.includes(searchTerm);
-        const matchesCategory = !categoryValue || categories.includes(categoryValue);
-        const matchesDomain = !domainValue || domain === domainValue;
-        
-        const isVisible = matchesSearch && matchesCategory && matchesDomain;
-        card.classList.toggle('hidden', !isVisible);
+        const isVisible = matchesSearch && matchesCategory && matchesDomain && matchesQuality;
+        card.style.display = isVisible ? '' : 'none'; // Use style.display
       });
       
-      // Update results count
-      resultsCount.innerHTML = `Showing <span class="font-medium">${visibleCount}</span> results`;
+      // Update results count - only count visible items in the *currently active* view
+      const activeViewItems = tableView.classList.contains('hidden') ? cards : tableRows;
+      const currentVisibleCount = activeViewItems.filter(item => item.style.display !== 'none').length;
+      resultsCount.innerHTML = `Showing <span class="font-medium">${currentVisibleCount}</span> results`;
     }
     
     // Add event listeners
     searchInput.addEventListener('input', applyFilters);
     categoryFilter.addEventListener('change', applyFilters);
     domainFilter.addEventListener('change', applyFilters);
+    showLowQualityCheckbox.addEventListener('change', applyFilters); // Add listener for the new checkbox
+
+    // Initial filter application in case of pre-filled values or default states
+    applyFilters();
   });
 </script>
 </Layout>

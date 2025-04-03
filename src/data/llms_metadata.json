@@ -1,1234 +1,278 @@
 [
     {
-        "url": "https://1024tera.com/llms.txt",
-        "domain": "1024tera.com",
-        "status_code": 200,
-        "content_hash": "099bbef3d925d0dbd16b0306cb61d1ef691ce35bf3f243913420bc826210d133",
-        "metadata": {
-            "source_domain": "1024tera.com",
-            "cf_categories": [
-                "File Sharing",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://aternity.com/llms.txt",
-        "domain": "aternity.com",
-        "status_code": 200,
-        "content_hash": "3e7ca82e8675c9e9fdb8273b2036f9f987f8b85e90df3165b958601fee680215",
-        "metadata": {
-            "source_domain": "aternity.com",
-            "cf_categories": [
-                "Technology",
-                "Technology",
-                "Business",
-                "Business & Economy"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://1337x.org/llms.txt",
-        "domain": "1337x.org",
-        "status_code": 200,
-        "content_hash": "083cdaac3185db0d826936b7a263b50a67efe93de5103b0584ba3d5360ec3863",
-        "metadata": {
-            "source_domain": "1337x.org",
-            "cf_categories": [
-                "Questionable Activities",
-                "Questionable Content",
-                "CIPA Filter",
-                "CIPA",
-                "P2P",
-                "Internet Communication"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://ertelecom.ru/llms.txt",
-        "domain": "ertelecom.ru",
-        "status_code": 200,
-        "content_hash": "f6a96c080c6e266ad1fffbaee7ef6cb54a36fe3c07c61a9de8a4bc37e7cfc8b5",
-        "metadata": {
-            "source_domain": "ertelecom.ru",
-            "cf_categories": [
-                "Information Technology",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://state.gov/llms.txt",
-        "domain": "state.gov",
-        "status_code": 200,
-        "content_hash": "359e3b8b6b844d69fa29bd39c40f970af1586af0500dcda1f98a302721eafe1d",
-        "metadata": {
-            "source_domain": "state.gov",
-            "cf_categories": [
-                "Government",
-                "Government & Politics"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://startpage.com/llms.txt",
-        "domain": "startpage.com",
-        "status_code": 200,
-        "content_hash": "85a95009b560ebdfb0095551d05a346367277eb3231ad6781c16dc8a999d89f6",
-        "metadata": {
-            "source_domain": "startpage.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://origin.com/llms.txt",
-        "domain": "origin.com",
-        "status_code": 200,
-        "content_hash": "e7484339f99f11f3ea85d2aefe8eb87e50f7a2963d01440ac80f2722e2a3a4b9",
-        "metadata": {
-            "source_domain": "origin.com",
-            "cf_categories": [
-                "Ecommerce",
-                "Shopping & Auctions",
-                "Gaming",
-                "Entertainment"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://sinch.com/llms.txt",
-        "domain": "sinch.com",
-        "status_code": 200,
-        "content_hash": "c3de54de5b28d2eaa8d599ff3722e9f7ad208ed8e5344276526bbcab40989d1a",
-        "metadata": {
-            "source_domain": "sinch.com",
-            "cf_categories": [
-                "Business",
-                "Business & Economy",
-                "Messaging",
-                "Internet Communication",
-                "Technology",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://shareaholic.net/llms.txt",
-        "domain": "shareaholic.net",
-        "status_code": 200,
-        "content_hash": "a608fd91f172c3d3f63c7c671629abbb1366a85ebdcbfbb1644d9df665164de6",
-        "metadata": {
-            "source_domain": "shareaholic.net",
-            "cf_categories": [
-                "Business",
-                "Business & Economy"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://notion.site/llms.txt",
-        "domain": "notion.site",
-        "status_code": 200,
-        "content_hash": "41d260c1c7174ce07771d4720b66a054d0cb39cae26ba9c0e29e1752aef23c0d",
-        "metadata": {
-            "source_domain": "notion.site",
-            "cf_categories": [
-                "Business",
-                "Business & Economy",
-                "Technology",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://temu.com/llms.txt",
-        "domain": "temu.com",
-        "status_code": 200,
-        "content_hash": "bbc2035e71ae4892ae66a82291188ff1a4c21cf101b5bbf95732beee1bf3203b",
-        "metadata": {
-            "source_domain": "temu.com",
-            "cf_categories": [
-                "Ecommerce",
-                "Shopping & Auctions"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://files.fm/llms.txt",
-        "domain": "files.fm",
-        "status_code": 200,
-        "content_hash": "668143b3a9509622900cb0633e71128cf88fb196db086263052bd7b1f3e36ea1",
-        "metadata": {
-            "source_domain": "files.fm",
-            "cf_categories": [
-                "File Sharing",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://mywebcamroom.com/llms.txt",
-        "domain": "mywebcamroom.com",
-        "status_code": 200,
-        "content_hash": "13ae6f4484aefd060e7605ec582e640b8c753f6d181e0a3baa00220a09d037a9",
-        "metadata": {
-            "source_domain": "mywebcamroom.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://163.com/llms.txt",
-        "domain": "163.com",
-        "status_code": 200,
-        "content_hash": "e3eaae722a8ede8ffe9a786337805d8e43cd44f14eb38c1dee56fee02b604077",
-        "metadata": {
-            "source_domain": "163.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:25Z",
-        "first_added": "2025-04-02T07:18:25Z",
-        "last_updated": "2025-04-02T07:18:25Z"
-    },
-    {
-        "url": "https://bedbathandbeyond.com/llms.txt",
-        "domain": "bedbathandbeyond.com",
-        "status_code": 200,
-        "content_hash": "aae913c26c73ea5d93a314859875eaf0acdb62bda6e7dbca11c4604489b547ea",
-        "metadata": {
-            "source_domain": "bedbathandbeyond.com",
-            "cf_categories": [
-                "Ecommerce",
-                "Shopping & Auctions"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://internalfb.com/llms.txt",
-        "domain": "internalfb.com",
-        "status_code": 200,
-        "content_hash": "2a49c3ef5afaa21701afcf3beea02e8d4a92d7021a75baa4c2da5421172ce1ad",
-        "metadata": {
-            "source_domain": "internalfb.com",
-            "cf_categories": [
-                "Social Networks",
-                "Society & Lifestyle"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
         "url": "https://docs.zapier.com/llms-full.txt",
         "domain": "docs.zapier.com",
         "status_code": 200,
         "content_hash": "08e1316a786740c139237aef672dd06a40f05d2917f5300e890c98040a6d71c5",
         "metadata": {
-            "source_domain": "docs.zapier.com",
-            "cf_categories": []
+            "source_domain": "docs.zapier.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "Get Action Details",
+        "summary": "Source: https://docs.zapier.com/ai-actions/api-reference/actions/get-action-details"
     },
     {
-        "url": "https://divvy.co/llms.txt",
-        "domain": "divvy.co",
+        "url": "https://pinimg.com/llms.txt",
+        "domain": "pinimg.com",
         "status_code": 200,
-        "content_hash": "3d092b23849027ee802c5748ac0d621fe830fcfd353bc65ba217d62e87e0b7a3",
+        "content_hash": "2a95e14c1a600211097b1fafbb22bfc3e07c82a8589fe24567f084bf88f95163",
         "metadata": {
-            "source_domain": "divvy.co",
-            "cf_categories": [
-                "Content Servers",
-                "Technology"
-            ]
+            "source_domain": "pinimg.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
+        "last_checked_utc": "2025-04-03T03:28:39Z",
+        "first_added": "2025-04-03T03:28:39Z",
+        "last_updated": "2025-04-03T03:28:39Z",
+        "quality": "High",
+        "title": "map_canvas img {\n  max-width: none;\n}"
     },
     {
-        "url": "https://porn13.com/llms.txt",
-        "domain": "porn13.com",
+        "url": "https://theirstack.com/docs/llms.txt",
+        "domain": "theirstack.com",
         "status_code": 200,
-        "content_hash": "11588e716e9cfbf7ce4ec7079e4b16438c1d7e85c6532ca334a9cf9d7d8dad5e",
+        "content_hash": "ce155d521ddf408698c1dea16b9d369cd57c1bd2f6fbe14f5afa6f0f8bcbb1ef",
         "metadata": {
-            "source_domain": "porn13.com",
-            "cf_categories": [
-                "CIPA Filter",
-                "CIPA",
-                "Pornography",
-                "Adult Themes"
-            ]
+            "source_domain": "theirstack.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "High",
+        "title": "TheirStack"
     },
     {
-        "url": "https://libero.it/llms.txt",
-        "domain": "libero.it",
+        "url": "https://launchdarkly.com/docs/llms.txt",
+        "domain": "launchdarkly.com",
         "status_code": 200,
-        "content_hash": "921f3c4710829d42eca963d5ec7b5b5039e2f9a4958fe7d9acf804fca6db2bbf",
+        "content_hash": "558aa6c3ea905321bba9ab160d4b05830117085afd884b8b946b2735180b231c",
         "metadata": {
-            "source_domain": "libero.it",
-            "cf_categories": [
-                "News & Media",
-                "Entertainment"
-            ]
+            "source_domain": "launchdarkly.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:24Z",
-        "first_added": "2025-04-02T07:18:24Z",
-        "last_updated": "2025-04-02T07:18:24Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "Welcome to LaunchDarkly docs",
+        "summary": "<div class=\"center\">"
     },
     {
-        "url": "https://oath.com/llms.txt",
-        "domain": "oath.com",
+        "url": "https://superwall.com/docs/llms.txt",
+        "domain": "superwall.com",
         "status_code": 200,
-        "content_hash": "85437bd0991f5ab476769f5be3254baeb370b0b26419003b359f4b91b8873fdb",
+        "content_hash": "515127e9f831f8dffa1aad2411cc4ae1b7fb8c711771dfce110be578e94a7361",
         "metadata": {
-            "source_domain": "oath.com",
-            "cf_categories": [
-                "Business",
-                "Business & Economy",
-                "Technology",
-                "Technology"
-            ]
+            "source_domain": "superwall.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "Superwall"
     },
     {
-        "url": "https://realtime.email/llms.txt",
-        "domain": "realtime.email",
+        "url": "https://docs.tilebox.com/llms-full.txt",
+        "domain": "docs.tilebox.com",
         "status_code": 200,
-        "content_hash": "fc13fbbd3d7f420532d8c687cb905e1679135584854de3d1a93f8530b5b9891f",
+        "content_hash": "d7250a927db6a96ae00b0d3ea0a20c7edc61ffc98d39f61fdc3ffe58ca318081",
         "metadata": {
-            "source_domain": "realtime.email",
-            "cf_categories": []
+            "source_domain": "docs.tilebox.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "AI Assistance",
+        "summary": "Source: https://docs.tilebox.com/ai-assistance"
     },
     {
-        "url": "https://terabox.app/llms.txt",
-        "domain": "terabox.app",
+        "url": "https://js.langchain.com/llms.txt",
+        "domain": "js.langchain.com",
         "status_code": 200,
-        "content_hash": "099bbef3d925d0dbd16b0306cb61d1ef691ce35bf3f243913420bc826210d133",
+        "content_hash": "5d76916216b25acc450e492ad042494e47bd745e1b566af7dccf034a2df1b931",
         "metadata": {
-            "source_domain": "terabox.app",
-            "cf_categories": [
-                "File Sharing",
-                "Technology"
-            ]
+            "source_domain": "js.langchain.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "LangChain JavaScript",
+        "summary": "This guide provides explanations of the key concepts behind the LangChain framework and AI applicati"
     },
     {
-        "url": "https://whatfix.com/llms.txt",
-        "domain": "whatfix.com",
+        "url": "https://pinterest.com/docs/llms-full.txt",
+        "domain": "pinterest.com",
         "status_code": 200,
-        "content_hash": "effa4f31e77faefc04c71b517b530851015a0174a91b90fedcfb9f580c1f4134",
+        "content_hash": "12ce4ba30f7b2eb23e192bf2aa1fb0e0b973bbd657abc01c03d97eceb7888f6a",
         "metadata": {
-            "source_domain": "whatfix.com",
-            "cf_categories": [
-                "Technology",
-                "Technology"
-            ]
+            "source_domain": "pinterest.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
+        "last_checked_utc": "2025-04-03T03:28:37Z",
+        "first_added": "2025-04-03T03:28:37Z",
+        "last_updated": "2025-04-03T03:28:37Z",
+        "quality": "High",
+        "title": "map_canvas img {\n  max-width: none;\n}"
     },
     {
-        "url": "https://imo.im/llms.txt",
-        "domain": "imo.im",
+        "url": "https://www.plain.com/docs/llms.txt",
+        "domain": "www.plain.com",
         "status_code": 200,
-        "content_hash": "36a9069602364a89320f67b8e851a9eacae851e0dcdb2120bd7c0957fb7397ee",
+        "content_hash": "f1987812d119f8ebc81969b8c5ba838ce77f331fe180586b8a502c8c3b45fe53",
         "metadata": {
-            "source_domain": "imo.im",
-            "cf_categories": [
-                "Instant Messengers",
-                "Internet Communication"
-            ]
+            "source_domain": "www.plain.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "Plain Docs"
     },
     {
-        "url": "https://dealerinspire.com/llms.txt",
-        "domain": "dealerinspire.com",
+        "url": "https://digicert.com/llms.txt",
+        "domain": "digicert.com",
         "status_code": 200,
-        "content_hash": "dee2952290b655ef399b8d0d27e282b2a333c7cef91df74ae1a4428c53463331",
+        "content_hash": "10bd608462541e3834b1f91118166312d085daa1e2d74c191e63ef3082d74b60",
         "metadata": {
-            "source_domain": "dealerinspire.com",
-            "cf_categories": [
-                "Business",
-                "Business & Economy"
-            ]
+            "source_domain": "digicert.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://jixie.io/llms.txt",
-        "domain": "jixie.io",
-        "status_code": 200,
-        "content_hash": "f85496a91652e53841aef29e5938a9f0eabce93e2db8dc2adae4ff6dbce41a2c",
-        "metadata": {
-            "source_domain": "jixie.io",
-            "cf_categories": [
-                "Technology",
-                "Technology",
-                "Business",
-                "Business & Economy"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:24Z",
-        "first_added": "2025-04-02T07:18:24Z",
-        "last_updated": "2025-04-02T07:18:24Z"
-    },
-    {
-        "url": "https://spotify.com/llms.txt",
-        "domain": "spotify.com",
-        "status_code": 200,
-        "content_hash": "9401453bbffae3235fe60d6505e5f399f6d803922268296703de7159818e9aac",
-        "metadata": {
-            "source_domain": "spotify.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://opensubtitles.com/llms.txt",
-        "domain": "opensubtitles.com",
-        "status_code": 200,
-        "content_hash": "85d140e1c4fd0657c08b5686bc7a03eb1e9b1f2ead045f630925708708cfa440",
-        "metadata": {
-            "source_domain": "opensubtitles.com",
-            "cf_categories": [
-                "Movies",
-                "Entertainment",
-                "Television",
-                "Entertainment"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://kiwibrowser.com/llms.txt",
-        "domain": "kiwibrowser.com",
-        "status_code": 200,
-        "content_hash": "506f09f058a30468132b5b1ca1a4109f0bde8d4f3feced3eb8867608d72b350b",
-        "metadata": {
-            "source_domain": "kiwibrowser.com",
-            "cf_categories": [
-                "Technology",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://1337x.org/llms-full.txt",
-        "domain": "1337x.org",
-        "status_code": 200,
-        "content_hash": "083cdaac3185db0d826936b7a263b50a67efe93de5103b0584ba3d5360ec3863",
-        "metadata": {
-            "source_domain": "1337x.org",
-            "cf_categories": [
-                "Questionable Activities",
-                "Questionable Content",
-                "CIPA Filter",
-                "CIPA",
-                "P2P",
-                "Internet Communication"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "DigiCert"
     },
     {
         "url": "https://modelcontextprotocol.io/llms-full.txt",
         "domain": "modelcontextprotocol.io",
         "status_code": 200,
-        "content_hash": "f0360fc4269b362c2953996303870bb46335d02365fa9cbd16b09211aa5e3c12",
+        "content_hash": "bd8d85c785147db67fc1c8d03b2a8e72c4643b04aff5024fcfe979d1ffafd988",
         "metadata": {
-            "source_domain": "modelcontextprotocol.io",
-            "cf_categories": [
-                "Technology",
-                "Technology"
-            ]
+            "source_domain": "modelcontextprotocol.io"
         },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "Example Clients",
+        "summary": "Source: https://modelcontextprotocol.io/clients"
     },
     {
-        "url": "https://21cn.com/llms-full.txt",
-        "domain": "21cn.com",
+        "url": "https://langfuse.com/llms.txt",
+        "domain": "langfuse.com",
         "status_code": 200,
-        "content_hash": "0671da3cbb3c3c3cc23587a3c4c54c56772405f5cd771acac5544c1de8f32409",
+        "content_hash": "b18771397c1b1683d10eb96ac8afc01b7b88a97a48e9adab389515299caa19db",
         "metadata": {
-            "source_domain": "21cn.com",
-            "cf_categories": [
-                "News & Media",
-                "Entertainment"
-            ]
+            "source_domain": "langfuse.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "High",
+        "title": "Langfuse"
     },
     {
-        "url": "https://brightvpn.com/llms.txt",
-        "domain": "brightvpn.com",
+        "url": "https://docs.ionq.com/llms.txt",
+        "domain": "docs.ionq.com",
         "status_code": 200,
-        "content_hash": "a4c578d2b01500af806629fcd7f11c8f465fef8d99feff1eac2a97fce851abc7",
+        "content_hash": "a9dce6686cc78d5f3899b02fa59cd8317e12712bd0b06dca10b5a2bc43f97f34",
         "metadata": {
-            "source_domain": "brightvpn.com",
-            "cf_categories": [
-                "Information Security",
-                "Internet Communication",
-                "P2P",
-                "Internet Communication",
-                "CIPA Filter",
-                "CIPA"
-            ]
+            "source_domain": "docs.ionq.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "IonQ Quantum Cloud Documentation",
+        "summary": "This endpoint retrieves all jobs this API key is authorized to view."
     },
     {
-        "url": "https://24smi.net/llms.txt",
-        "domain": "24smi.net",
+        "url": "https://www.answer.ai/llms.txt",
+        "domain": "www.answer.ai",
         "status_code": 200,
-        "content_hash": "8f1ba9b79fe7f540f439c9d890c5db696d70999775a9cd8ecadfbab66874527c",
+        "content_hash": "d4ec98294f9d919cc6b26c6f85480204ed7213d2898e499a229fec03ae06b9f1",
         "metadata": {
-            "source_domain": "24smi.net",
-            "cf_categories": []
+            "source_domain": "www.answer.ai"
         },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "High",
+        "title": "Answer.AI company website",
+        "summary": "Answer.AI is a new kind of AI R&D lab which creates practical end-user products based on foundationa"
     },
     {
-        "url": "https://lululemonlikenew.com/llms.txt",
-        "domain": "lululemonlikenew.com",
+        "url": "https://sdk.vercel.ai/llms.txt",
+        "domain": "sdk.vercel.ai",
         "status_code": 200,
-        "content_hash": "99322ddb241875919fafd7274c071aee9547beaf6501405623bf6e3d7959d5d6",
+        "content_hash": "f302cde978c452a06e3b3fc239065b7feda03b9e20c2f735469e55d47b9ee978",
         "metadata": {
-            "source_domain": "lululemonlikenew.com",
-            "cf_categories": []
+            "source_domain": "sdk.vercel.ai"
         },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "Node.js HTTP Server",
+        "summary": "You can use the AI SDK in a Node.js HTTP server to generate text and stream it to the client."
     },
     {
-        "url": "https://vzw.com/llms.txt",
-        "domain": "vzw.com",
+        "url": "https://pinimg.com/docs/llms-full.txt",
+        "domain": "pinimg.com",
         "status_code": 200,
-        "content_hash": "36bf4cd3b3afd14bf2f77863529b1d1c7cb589aa99c5fd398b480416393f4b5c",
+        "content_hash": "cc3eba040e817a2cac9591a64c9af1760c5772812266bc4d58de191441b68df5",
         "metadata": {
-            "source_domain": "vzw.com",
-            "cf_categories": []
+            "source_domain": "pinimg.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "High",
+        "title": "map_canvas img {\n  max-width: none;\n}"
     },
     {
-        "url": "https://connatix.com/llms.txt",
-        "domain": "connatix.com",
+        "url": "https://docs.servicestack.net/llms.txt",
+        "domain": "docs.servicestack.net",
         "status_code": 200,
-        "content_hash": "374b954a7cfceef59a065b1f52f8591c189fdb681d2a8125ebc9bcb783f231ae",
+        "content_hash": "cd5749eb5f077b7fb03826f3d209c4317275c64618d5c37d188792740c80a82b",
         "metadata": {
-            "source_domain": "connatix.com",
-            "cf_categories": [
-                "Business",
-                "Business & Economy"
-            ]
+            "source_domain": "docs.servicestack.net"
         },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "ServiceStack",
+        "summary": "Overview"
     },
     {
-        "url": "https://163.com/llms-full.txt",
-        "domain": "163.com",
+        "url": "https://python.langchain.com/llms.txt",
+        "domain": "python.langchain.com",
         "status_code": 200,
-        "content_hash": "e3eaae722a8ede8ffe9a786337805d8e43cd44f14eb38c1dee56fee02b604077",
+        "content_hash": "930b0d3a72e668aa4e32bbb3d1c4bbfa009b32d4e3bba750423c492760334ec8",
         "metadata": {
-            "source_domain": "163.com",
-            "cf_categories": []
+            "source_domain": "python.langchain.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:25Z",
-        "first_added": "2025-04-02T07:18:25Z",
-        "last_updated": "2025-04-02T07:18:25Z"
+        "last_checked_utc": "2025-04-03T03:28:36Z",
+        "first_added": "2025-04-03T03:28:36Z",
+        "last_updated": "2025-04-03T03:28:36Z",
+        "quality": "Medium",
+        "title": "LangChain",
+        "summary": "These are the core building blocks you can use when building applications."
     },
     {
-        "url": "https://workers.dev/llms.txt",
-        "domain": "workers.dev",
+        "url": "https://pinterest.com/llms.txt",
+        "domain": "pinterest.com",
         "status_code": 200,
-        "content_hash": "a21725c66bf35851b7d82151cc2b8a9dfc5227d08a01b2a53347ac0ea6cee5d2",
+        "content_hash": "62b3dfa8fa968b39b0e65fc7684e5e6bb3d3aadf924a1aef6d72d060dc3aefb5",
         "metadata": {
-            "source_domain": "workers.dev",
-            "cf_categories": [
-                "Technology",
-                "Technology",
-                "Information Technology",
-                "Technology"
-            ]
+            "source_domain": "pinterest.com"
         },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://stape.gl/llms.txt",
-        "domain": "stape.gl",
-        "status_code": 200,
-        "content_hash": "2a359f48b04fdfba12da430cd1925539b61bdf1605f04000b595d6ed91c55ead",
-        "metadata": {
-            "source_domain": "stape.gl",
-            "cf_categories": [
-                "Technology",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://love4porn.com/llms.txt",
-        "domain": "love4porn.com",
-        "status_code": 200,
-        "content_hash": "56cfab3d06765514a007cb4747ebae1c926da9b44439be8d6d1c8fb1deb12fb3",
-        "metadata": {
-            "source_domain": "love4porn.com",
-            "cf_categories": [
-                "Pornography",
-                "Adult Themes",
-                "CIPA Filter",
-                "CIPA"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://1password.eu/llms.txt",
-        "domain": "1password.eu",
-        "status_code": 200,
-        "content_hash": "0c2fe54bfd8b054d8ca26120bed8b1cb9eaaf70a226fbedec30fed338bfe30f8",
-        "metadata": {
-            "source_domain": "1password.eu",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:24Z",
-        "first_added": "2025-04-02T07:18:24Z",
-        "last_updated": "2025-04-02T07:18:24Z"
-    },
-    {
-        "url": "https://trafficjunky.net/llms.txt",
-        "domain": "trafficjunky.net",
-        "status_code": 200,
-        "content_hash": "96bdc0dd62f71a42de6f1dc87ada8cbdec5ae1e35712aa41394a23538d89ae89",
-        "metadata": {
-            "source_domain": "trafficjunky.net",
-            "cf_categories": [
-                "Advertisements",
-                "Ads"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://nxvms.com/llms.txt",
-        "domain": "nxvms.com",
-        "status_code": 200,
-        "content_hash": "a3c4575960a9f95ae7cb4c3143b5649b5e240507defd947d26a4a8013123e665",
-        "metadata": {
-            "source_domain": "nxvms.com",
-            "cf_categories": [
-                "Technology",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://1024tera.com/llms-full.txt",
-        "domain": "1024tera.com",
-        "status_code": 200,
-        "content_hash": "099bbef3d925d0dbd16b0306cb61d1ef691ce35bf3f243913420bc826210d133",
-        "metadata": {
-            "source_domain": "1024tera.com",
-            "cf_categories": [
-                "File Sharing",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://qq.com/llms.txt",
-        "domain": "qq.com",
-        "status_code": 200,
-        "content_hash": "64eaac26acda78e1b4cf910bbe958eefd9458f349936036df644b82f836df182",
-        "metadata": {
-            "source_domain": "qq.com",
-            "cf_categories": [
-                "News & Media",
-                "Entertainment"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:24Z",
-        "first_added": "2025-04-02T07:18:24Z",
-        "last_updated": "2025-04-02T07:18:24Z"
-    },
-    {
-        "url": "https://24smi.net/llms-full.txt",
-        "domain": "24smi.net",
-        "status_code": 200,
-        "content_hash": "8f1ba9b79fe7f540f439c9d890c5db696d70999775a9cd8ecadfbab66874527c",
-        "metadata": {
-            "source_domain": "24smi.net",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://shopee.com/llms.txt",
-        "domain": "shopee.com",
-        "status_code": 200,
-        "content_hash": "19a1936c071b6cc4fd4f413d10cc672c11f6726e12b3e4a02f96c06915deae38",
-        "metadata": {
-            "source_domain": "shopee.com",
-            "cf_categories": [
-                "Advertisements",
-                "Ads",
-                "Ecommerce",
-                "Shopping & Auctions"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://1688.com/llms.txt",
-        "domain": "1688.com",
-        "status_code": 200,
-        "content_hash": "56548653352e055129363dac2c71cbc6f0d59cee65c86df89938561b416f9ccc",
-        "metadata": {
-            "source_domain": "1688.com",
-            "cf_categories": [
-                "Ecommerce",
-                "Shopping & Auctions"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:25Z",
-        "first_added": "2025-04-02T07:18:25Z",
-        "last_updated": "2025-04-02T07:18:25Z"
-    },
-    {
-        "url": "https://1688.com/llms-full.txt",
-        "domain": "1688.com",
-        "status_code": 200,
-        "content_hash": "b2f6a646315a5243e8565e7c0ce95409de47717a22f14a2cb2afe42b89ae3462",
-        "metadata": {
-            "source_domain": "1688.com",
-            "cf_categories": [
-                "Ecommerce",
-                "Shopping & Auctions"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:25Z",
-        "first_added": "2025-04-02T07:18:25Z",
-        "last_updated": "2025-04-02T07:18:25Z"
-    },
-    {
-        "url": "https://21cn.com/llms.txt",
-        "domain": "21cn.com",
-        "status_code": 200,
-        "content_hash": "0671da3cbb3c3c3cc23587a3c4c54c56772405f5cd771acac5544c1de8f32409",
-        "metadata": {
-            "source_domain": "21cn.com",
-            "cf_categories": [
-                "News & Media",
-                "Entertainment"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://mobileiron.com/llms.txt",
-        "domain": "mobileiron.com",
-        "status_code": 200,
-        "content_hash": "747fec29ffeb8fae08c5eff309b301a6b56bc0a8ec64ef9e8325f34c91aa05cc",
-        "metadata": {
-            "source_domain": "mobileiron.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://pho.to/llms.txt",
-        "domain": "pho.to",
-        "status_code": 200,
-        "content_hash": "7a2d86744cdddb655bf16f869adf8027ed874fc8e3861474b57ed69afe6279f4",
-        "metadata": {
-            "source_domain": "pho.to",
-            "cf_categories": [
-                "Technology",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://remult.dev/llms.txt",
-        "domain": "remult.dev",
-        "status_code": 200,
-        "content_hash": "0c81353c9652c1d91ebddeaeb62b19ba0b25644e358ffef1ca73b23ea7cab5b8",
-        "metadata": {
-            "source_domain": "remult.dev",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://nhle.com/llms.txt",
-        "domain": "nhle.com",
-        "status_code": 200,
-        "content_hash": "3426ddd7f1cfba5ba8b70f769082e3ad399b571c95111b18968dc8a04c959f1e",
-        "metadata": {
-            "source_domain": "nhle.com",
-            "cf_categories": [
-                "Sports",
-                "Sports"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://popcap.com/llms.txt",
-        "domain": "popcap.com",
-        "status_code": 200,
-        "content_hash": "0ec857d90db9358b358bbc3c0f8a01f3b952367074e9e5a672811d8ae02475dd",
-        "metadata": {
-            "source_domain": "popcap.com",
-            "cf_categories": [
-                "Gaming",
-                "Entertainment"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://logentries.com/llms.txt",
-        "domain": "logentries.com",
-        "status_code": 200,
-        "content_hash": "e02e44e1d9bc4711e5eae22c70afdcd2b3c3cc5c06431e4a4272e795ba3f1fc9",
-        "metadata": {
-            "source_domain": "logentries.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://docs.play.ai/llms-full.txt",
-        "domain": "docs.play.ai",
-        "status_code": 200,
-        "content_hash": "9d1bb80ce7bd253001d85a72d90290c6b08c98e95866559975714098a93adc66",
-        "metadata": {
-            "source_domain": "docs.play.ai",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://1password.eu/llms-full.txt",
-        "domain": "1password.eu",
-        "status_code": 200,
-        "content_hash": "31f04450c8546b21c3b5928ddeef4353050a95ed7d2dd6973287e9b4ffe19ec2",
-        "metadata": {
-            "source_domain": "1password.eu",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://admost.com/llms.txt",
-        "domain": "admost.com",
-        "status_code": 200,
-        "content_hash": "85a1d980dc82d312574bc8707a5a176482328f3a0ebbe87b5b58cbb402818cb6",
-        "metadata": {
-            "source_domain": "admost.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://uw0.xyz/llms.txt",
-        "domain": "uw0.xyz",
-        "status_code": 200,
-        "content_hash": "83f77441310d822af2fbb306ff7dcf3bf8c7f80b53e7f80c3c602c307ceaeaeb",
-        "metadata": {
-            "source_domain": "uw0.xyz",
-            "cf_categories": [
-                "Content Servers",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://intellij.net/llms.txt",
-        "domain": "intellij.net",
-        "status_code": 200,
-        "content_hash": "7e814e126b1641b2415d23741ce2d602b550af23bd8fb44c99423a9039f2e290",
-        "metadata": {
-            "source_domain": "intellij.net",
-            "cf_categories": [
-                "Technology",
-                "Technology",
-                "Information Technology",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://pointandplace.com/llms-full.txt",
-        "domain": "pointandplace.com",
-        "status_code": 200,
-        "content_hash": "a3a3cec5ee3f4dccf04e267d56aafbff4ce4d04b1cbb4fa55b135e4236bce315",
-        "metadata": {
-            "source_domain": "pointandplace.com",
-            "cf_categories": [
-                "Information Technology",
-                "Technology",
-                "Technology",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://kbb.com/llms.txt",
-        "domain": "kbb.com",
-        "status_code": 200,
-        "content_hash": "13afe3e1edfdb7a5f118d7b8a8c22566847a4a5a51ce5ed7fbf797e115faffb6",
-        "metadata": {
-            "source_domain": "kbb.com",
-            "cf_categories": [
-                "Vehicles",
-                "Vehicles"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://moonactive.net/llms.txt",
-        "domain": "moonactive.net",
-        "status_code": 200,
-        "content_hash": "ae21e39dd5f46599b92fdbe9b551a661ab4ce9bb0eb79e7720c266bee0eea047",
-        "metadata": {
-            "source_domain": "moonactive.net",
-            "cf_categories": [
-                "Gaming",
-                "Entertainment"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://efipay.com.br/llms.txt",
-        "domain": "efipay.com.br",
-        "status_code": 200,
-        "content_hash": "581967b6abf12ef8ca6f94f1c352f7852a52deb13c81ae67e0f3f00f9d6bc5b8",
-        "metadata": {
-            "source_domain": "efipay.com.br",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://slideshare.net/llms.txt",
-        "domain": "slideshare.net",
-        "status_code": 200,
-        "content_hash": "c9cfcdc1ead11bc91c7e913332a95bed3c06892d9915e65ee2f33db57b2028cf",
-        "metadata": {
-            "source_domain": "slideshare.net",
-            "cf_categories": [
-                "File Sharing",
-                "Technology",
-                "Education",
-                "Education"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://protectmyapp.com/llms.txt",
-        "domain": "protectmyapp.com",
-        "status_code": 200,
-        "content_hash": "259d9a1a1abb534e4730861aa5b9fd8d485d888c7e76a6a986f3f8560d9c7089",
-        "metadata": {
-            "source_domain": "protectmyapp.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://infisical.com/docs/llms-full.txt",
-        "domain": "infisical.com",
-        "status_code": 200,
-        "content_hash": "ba32983300391840342ac408a3ead64fde7154401c6121fb07f1849bdbc08579",
-        "metadata": {
-            "source_domain": "infisical.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://clockify.me/llms.txt",
-        "domain": "clockify.me",
-        "status_code": 200,
-        "content_hash": "f5b7fac90c8bdee6e3204d2ff5a1900ae8ad0f59503a7f68703447eafde2e93e",
-        "metadata": {
-            "source_domain": "clockify.me",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://wearychallengeraise.com/llms.txt",
-        "domain": "wearychallengeraise.com",
-        "status_code": 200,
-        "content_hash": "5b50f784d584c280ad3f4027290be7784cc7825b1f489d3358c864f9794cd4c5",
-        "metadata": {
-            "source_domain": "wearychallengeraise.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://pages.dev/llms.txt",
-        "domain": "pages.dev",
-        "status_code": 200,
-        "content_hash": "c21851e1d58ad77c43bbda4512208b424835162f3bbfd013d12079b8eac84dc9",
-        "metadata": {
-            "source_domain": "pages.dev",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://windy.com/llms.txt",
-        "domain": "windy.com",
-        "status_code": 200,
-        "content_hash": "5528c9986b134b51e5034b7646beb6ccc08c7e1126db191775c25070c8819dee",
-        "metadata": {
-            "source_domain": "windy.com",
-            "cf_categories": [
-                "Weather",
-                "Weather",
-                "Education",
-                "Education"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://docs.cursor.com/llms-full.txt",
-        "domain": "docs.cursor.com",
-        "status_code": 200,
-        "content_hash": "c39a08e015147b9e187210b97e8e7c5dff203a0bc5e94f0d7d6f3be625a2010f",
-        "metadata": {
-            "source_domain": "docs.cursor.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://wbd.ms/llms.txt",
-        "domain": "wbd.ms",
-        "status_code": 200,
-        "content_hash": "bacf10de27b04c5538a72adb3ded6966eecb2dcc2937b507220131dd28d8f717",
-        "metadata": {
-            "source_domain": "wbd.ms",
-            "cf_categories": [
-                "Content Servers",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
-    },
-    {
-        "url": "https://pointandplace.com/llms.txt",
-        "domain": "pointandplace.com",
-        "status_code": 200,
-        "content_hash": "a3a3cec5ee3f4dccf04e267d56aafbff4ce4d04b1cbb4fa55b135e4236bce315",
-        "metadata": {
-            "source_domain": "pointandplace.com",
-            "cf_categories": [
-                "Information Technology",
-                "Technology",
-                "Technology",
-                "Technology"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://vzw.com/llms-full.txt",
-        "domain": "vzw.com",
-        "status_code": 200,
-        "content_hash": "36bf4cd3b3afd14bf2f77863529b1d1c7cb589aa99c5fd398b480416393f4b5c",
-        "metadata": {
-            "source_domain": "vzw.com",
-            "cf_categories": []
-        },
-        "last_checked_utc": "2025-04-02T07:18:22Z",
-        "first_added": "2025-04-02T07:18:22Z",
-        "last_updated": "2025-04-02T07:18:22Z"
-    },
-    {
-        "url": "https://mixcloud.com/llms.txt",
-        "domain": "mixcloud.com",
-        "status_code": 200,
-        "content_hash": "178227b077d45863ce2b96d6bb0df0a6ed4572f74ab9fc03e327e8440426662e",
-        "metadata": {
-            "source_domain": "mixcloud.com",
-            "cf_categories": [
-                "Audio Streaming",
-                "Entertainment"
-            ]
-        },
-        "last_checked_utc": "2025-04-02T07:18:23Z",
-        "first_added": "2025-04-02T07:18:23Z",
-        "last_updated": "2025-04-02T07:18:23Z"
+        "last_checked_utc": "2025-04-03T03:28:37Z",
+        "first_added": "2025-04-03T03:28:37Z",
+        "last_updated": "2025-04-03T03:28:37Z",
+        "quality": "High",
+        "title": "map_canvas img {\n  max-width: none;\n}"
     }
 ]
