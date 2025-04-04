@@ -7,7 +7,7 @@
         "metadata": {
             "source_domain": "python.langchain.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
+        "last_checked_utc": "2025-04-04T09:44:46Z",
         "first_added": "2025-04-03T04:14:38Z",
         "last_updated": "2025-04-03T04:14:38Z",
         "quality": "Medium",
@@ -30,30 +30,30 @@
         "summary": "<div class=\"center\">"
     },
     {
-        "url": "https://launchdarkly.com/docs/llms.txt",
-        "domain": "launchdarkly.com",
+        "url": "https://theirstack.com/docs/llms.txt",
+        "domain": "theirstack.com",
         "status_code": 200,
-        "content_hash": "558aa6c3ea905321bba9ab160d4b05830117085afd884b8b946b2735180b231c",
+        "content_hash": "ce155d521ddf408698c1dea16b9d369cd57c1bd2f6fbe14f5afa6f0f8bcbb1ef",
         "metadata": {
-            "source_domain": "launchdarkly.com"
+            "source_domain": "theirstack.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:40Z",
+        "last_checked_utc": "2025-04-04T09:44:46Z",
         "first_added": "2025-04-03T04:14:38Z",
         "last_updated": "2025-04-03T04:14:38Z",
         "quality": "High",
         "title": "TheirStack"
     },
     {
-        "url": "https://docs.tilebox.com/llms-full.txt",
-        "domain": "docs.tilebox.com",
+        "url": "https://www.plain.com/docs/llms.txt",
+        "domain": "www.plain.com",
         "status_code": 200,
-        "content_hash": "d7250a927db6a96ae00b0d3ea0a20c7edc61ffc98d39f61fdc3ffe58ca318081",
+        "content_hash": "93a04a59354d53fde5a203e044a37f7f044f17324f2fca341092d32e8390985d",
         "metadata": {
-            "source_domain": "docs.tilebox.com"
+            "source_domain": "www.plain.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
+        "last_checked_utc": "2025-04-04T09:44:46Z",
         "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
+        "last_updated": "2025-04-04T09:44:46Z",
         "quality": "Medium",
         "title": "Plain Docs"
     },
@@ -65,7 +65,7 @@
         "metadata": {
             "source_domain": "langfuse.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
+        "last_checked_utc": "2025-04-04T09:44:46Z",
         "first_added": "2025-04-03T04:14:38Z",
         "last_updated": "2025-04-03T04:14:38Z",
         "quality": "High",
@@ -79,7 +79,7 @@
         "metadata": {
             "source_domain": "docs.tilebox.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
+        "last_checked_utc": "2025-04-04T09:44:47Z",
         "first_added": "2025-04-03T04:14:38Z",
         "last_updated": "2025-04-03T04:14:38Z",
         "quality": "Medium",
@@ -104,13 +104,13 @@
         "url": "https://superwall.com/docs/llms.txt",
         "domain": "superwall.com",
         "status_code": 200,
-        "content_hash": "515127e9f831f8dffa1aad2411cc4ae1b7fb8c711771dfce110be578e94a7361",
+        "content_hash": "539a665b3ec78a337154a6e80dad30abd0143d186e70085956845557d70fea85",
         "metadata": {
             "source_domain": "superwall.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
+        "last_checked_utc": "2025-04-04T09:44:46Z",
         "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
+        "last_updated": "2025-04-04T02:20:11Z",
         "quality": "Medium",
         "title": "Superwall"
     },
@@ -118,13 +118,13 @@
         "url": "https://docs.zapier.com/llms-full.txt",
         "domain": "docs.zapier.com",
         "status_code": 200,
-        "content_hash": "08e1316a786740c139237aef672dd06a40f05d2917f5300e890c98040a6d71c5",
+        "content_hash": "f0a2b9f338bd629b40eb28fcf085d414914823803b5abd5eab4cd40c46c20eca",
         "metadata": {
             "source_domain": "docs.zapier.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
+        "last_checked_utc": "2025-04-04T09:44:46Z",
         "first_added": "2025-04-03T04:14:38Z",
-        "last_updated": "2025-04-03T04:14:38Z",
+        "last_updated": "2025-04-04T09:44:46Z",
         "quality": "Medium",
         "title": "Get Action Details",
         "summary": "Source: https://docs.zapier.com/ai-actions/api-reference/actions/get-action-details"
@@ -180,7 +180,7 @@
         "metadata": {
             "source_domain": "js.langchain.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
+        "last_checked_utc": "2025-04-04T09:44:46Z",
         "first_added": "2025-04-03T04:14:38Z",
         "last_updated": "2025-04-03T04:14:38Z",
         "quality": "Medium",
@@ -209,7 +209,7 @@
         "metadata": {
             "source_domain": "docs.ionq.com"
         },
-        "last_checked_utc": "2025-04-03T04:27:40Z",
+        "last_checked_utc": "2025-04-04T09:44:47Z",
         "first_added": "2025-04-03T04:14:38Z",
         "last_updated": "2025-04-03T04:14:38Z",
         "quality": "Medium",
@@ -224,7 +224,7 @@
         "metadata": {
             "source_domain": "www.answer.ai"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
+        "last_checked_utc": "2025-04-04T09:44:46Z",
         "first_added": "2025-04-03T04:14:38Z",
         "last_updated": "2025-04-03T04:14:38Z",
         "quality": "High",
@@ -239,7 +239,7 @@
         "metadata": {
             "source_domain": "sdk.vercel.ai"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
+        "last_checked_utc": "2025-04-04T09:44:46Z",
         "first_added": "2025-04-03T04:14:38Z",
         "last_updated": "2025-04-03T04:14:38Z",
         "quality": "Medium",
@@ -254,7 +254,7 @@
         "metadata": {
             "source_domain": "modelcontextprotocol.io"
         },
-        "last_checked_utc": "2025-04-03T04:27:41Z",
+        "last_checked_utc": "2025-04-04T09:44:46Z",
         "first_added": "2025-04-03T04:14:38Z",
         "last_updated": "2025-04-03T04:14:38Z",
         "quality": "Medium",
@@ -331,5 +331,90 @@
         "last_updated": "2025-04-03T04:27:41Z",
         "quality": "High",
         "title": "ajaxloaderHolder {\n\tdisplay: block;\n\twidth: 24px;\n\theight: 2"
+    },
+    {
+        "url": "https://developers.cloudflare.com/llms.txt",
+        "domain": "developers.cloudflare.com",
+        "status_code": 200,
+        "content_hash": "a65b96f43b9b6bac2b5b22c78d7363391482653066e8542b585367355d6fa9f1",
+        "metadata": {
+            "source_domain": "developers.cloudflare.com"
+        },
+        "last_checked_utc": "2025-04-04T09:44:46Z",
+        "first_added": "2025-04-04T02:20:09Z",
+        "last_updated": "2025-04-04T02:20:09Z",
+        "quality": "High",
+        "title": "Cloudflare Developer Documentation"
+    },
+    {
+        "url": "https://bazaarvoice.com/static/llms-full.txt",
+        "domain": "bazaarvoice.com",
+        "status_code": 200,
+        "content_hash": "2ab4379e63aa6b098fa1e62290947a9ccfdc42d5debfc7a5013ace5145c5f9a9",
+        "metadata": {
+            "source_domain": "bazaarvoice.com"
+        },
+        "last_checked_utc": "2025-04-04T02:32:28Z",
+        "first_added": "2025-04-04T02:32:28Z",
+        "last_updated": "2025-04-04T02:32:28Z",
+        "quality": "High",
+        "title": "ajaxloaderHolder {\n\tdisplay: block;\n\twidth: 24px;\n\theight: 2"
+    },
+    {
+        "url": "https://pinterest.com/content/llms-full.txt",
+        "domain": "pinterest.com",
+        "status_code": 200,
+        "content_hash": "e66c8e0e7a1d70cfc7ecf20de7b281668ef61a813e1aa9751e34e827efaf48e2",
+        "metadata": {
+            "source_domain": "pinterest.com"
+        },
+        "last_checked_utc": "2025-04-04T02:32:28Z",
+        "first_added": "2025-04-04T02:32:28Z",
+        "last_updated": "2025-04-04T02:32:28Z",
+        "quality": "High",
+        "title": "map_canvas img {\n  max-width: none;\n}"
+    },
+    {
+        "url": "https://sinch.com/llms.txt",
+        "domain": "sinch.com",
+        "status_code": 200,
+        "content_hash": "c3de54de5b28d2eaa8d599ff3722e9f7ad208ed8e5344276526bbcab40989d1a",
+        "metadata": {
+            "source_domain": "sinch.com"
+        },
+        "last_checked_utc": "2025-04-04T02:32:28Z",
+        "first_added": "2025-04-04T02:32:28Z",
+        "last_updated": "2025-04-04T02:32:28Z",
+        "quality": "Medium",
+        "title": "SMS Messaging, Voice, Email, Video & Verification APIs | Sin",
+        "summary": "Não deixe a oportunidade passar! - Sinch](https://sinch.com/pt/connections/chapter/o-tempo-e-tudo-na"
+    },
+    {
+        "url": "https://tgju.org/content/llms.txt",
+        "domain": "tgju.org",
+        "status_code": 200,
+        "content_hash": "e5f25d6d0c3fcc56820969e03e9b4da5695894f0ce134f6bfc432b733e3cb59e",
+        "metadata": {
+            "source_domain": "tgju.org"
+        },
+        "last_checked_utc": "2025-04-04T02:32:28Z",
+        "first_added": "2025-04-04T02:32:28Z",
+        "last_updated": "2025-04-04T02:32:28Z",
+        "quality": "High",
+        "title": "main {\n    width: 100%;\n}"
+    },
+    {
+        "url": "https://tgju.org/content/llms-full.txt",
+        "domain": "tgju.org",
+        "status_code": 200,
+        "content_hash": "333c76c274f0cddcbef8f18753a8e4e4f786609f4ace50db8787de52ebd61613",
+        "metadata": {
+            "source_domain": "tgju.org"
+        },
+        "last_checked_utc": "2025-04-04T02:32:28Z",
+        "first_added": "2025-04-04T02:32:28Z",
+        "last_updated": "2025-04-04T02:32:28Z",
+        "quality": "High",
+        "title": "main {\n    width: 100%;\n}"
     }
 ]
