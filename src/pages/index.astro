@@ -23,6 +23,15 @@ const filteredLlmsData = llmsData.filter(entry => {
   );
 });
 
+// Sort the filtered data by quality (High > Medium > Low)
+const sortedLlmsData = [...filteredLlmsData].sort((a, b) => {
+  const qualityOrder = { 'High': 0, 'Medium': 1, 'Low': 2 };
+  const qualityA = a.quality || 'Medium'; // Default to Medium if quality is not specified
+  const qualityB = b.quality || 'Medium'; // Default to Medium if quality is not specified
+  
+  return qualityOrder[qualityA] - qualityOrder[qualityB];
+});
+
 // Function to get unique categories from all entries
 function getUniqueCategories(data) {
   const categoriesSet = new Set();
@@ -39,10 +48,10 @@ function getUniqueCategories(data) {
 }
 
 // Get unique categories for filtering from the filtered data
-const uniqueCategories = getUniqueCategories(filteredLlmsData);
+const uniqueCategories = getUniqueCategories(sortedLlmsData);
 
 // Get unique domains for filtering from the filtered data
-const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.source_domain))].sort();
+const uniqueDomains = [...new Set(sortedLlmsData.map(entry => entry.metadata.source_domain))].sort();
 ---
 
 <Layout
@@ -72,7 +81,7 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
         <div class="circuit-pattern"></div>
         <h1 class="text-5xl font-bold text-white mb-4">LLMS.txt Explorer</h1>
         <p class="text-xl text-primary-100 max-w-3xl mx-auto">
-          Discover and analyze LLMS.txt files from <span class="font-bold">{filteredLlmsData.length}</span> domains across the web
+          Discover and analyze LLMS.txt files from <span class="font-bold">{sortedLlmsData.length}</span> domains across the web
         </p>
       </div>
     </header>
@@ -118,7 +127,7 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
       </div>
       <div class="flex justify-between items-center mt-4">
         <p id="results-count" class="text-sm text-neutral-600 dark:text-neutral-400">
-          Showing <span class="font-medium">{filteredLlmsData.length}</span> results
+          Showing <span class="font-medium">{sortedLlmsData.length}</span> results
         </p>
         <div class="flex items-center space-x-4">
           <div class="flex items-center">
@@ -168,17 +177,16 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
           </tr>
         </thead>
         <tbody class="bg-white divide-y divide-neutral-200 dark:bg-neutral-900 dark:divide-neutral-700" id="table-body">
-          {filteredLlmsData.map((entry, index) => {
-            const isHighQuality = entry.parsed_title && entry.parsed_summary;
-            const isLowQuality = entry.domain === 'raw.githubusercontent.com';
-            const quality = isHighQuality ? 'high' : (isLowQuality ? 'low' : 'medium');
+          {sortedLlmsData.map((entry, index) => {
+            // Use the quality field from the JSON, defaulting to 'Medium' if not present
+            const quality = (entry.quality || 'Medium').toLowerCase();
             const title = entry.parsed_title || entry.fallback_title || entry.domain;
 
             return (
               <tr
                 class:list={[
                   index % 2 === 0 ? 'bg-white dark:bg-neutral-900' : 'bg-neutral-50 dark:bg-neutral-800',
-                  { 'opacity-50': isLowQuality }
+                  { 'opacity-50': quality === 'low' }
                 ]}
                 data-domain={entry.domain}
                 data-categories={entry.metadata?.cf_categories?.join(',')}
@@ -186,9 +194,9 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
               >
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-900 dark:text-white">{title}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm">
-                  {isHighQuality && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">High</span>}
-                  {!isHighQuality && !isLowQuality && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>}
-                  {isLowQuality && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Low</span>}
+                  {quality === 'high' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">High</span>}
+                  {quality === 'medium' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>}
+                  {quality === 'low' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Low</span>}
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
                   <a href={entry.url} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 truncate" style="max-width: 200px; display: inline-block;">
@@ -215,10 +223,9 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
     </div>
 
     <div id="card-view" class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {filteredLlmsData.map(entry => {
-        const isHighQuality = entry.parsed_title && entry.parsed_summary;
-        const isLowQuality = entry.domain === 'raw.githubusercontent.com';
-        const quality = isHighQuality ? 'high' : (isLowQuality ? 'low' : 'medium');
+      {sortedLlmsData.map(entry => {
+        // Use the quality field from the JSON, defaulting to 'Medium' if not present
+        const quality = (entry.quality || 'Medium').toLowerCase();
         const title = entry.parsed_title || entry.fallback_title || entry.domain;
         const summary = entry.parsed_summary || entry.fallback_summary;
 
@@ -226,7 +233,7 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
           <div
             class:list={[
               "bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden enhanced-card",
-              { 'opacity-60 border border-red-500 dark:border-red-700': isLowQuality }
+              { 'opacity-60 border border-red-500 dark:border-red-700': quality === 'low' }
             ]}
             data-domain={entry.domain}
             data-categories={entry.metadata?.cf_categories?.join(',')}
@@ -236,9 +243,9 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
               <div class="flex justify-between items-start mb-2">
                 <h3 class="text-lg font-semibold text-neutral-900 dark:text-white flex-1 mr-2">{title}</h3>
                 <div>
-                  {isHighQuality && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">High</span>}
-                  {!isHighQuality && !isLowQuality && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>}
-                  {isLowQuality && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Low</span>}
+                  {quality === 'high' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">High</span>}
+                  {quality === 'medium' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>}
+                  {quality === 'low' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Low</span>}
                 </div>
               </div>
               {summary && <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-3 line-clamp-3">{summary}</p>}
@@ -272,7 +279,7 @@ const uniqueDomains = [...new Set(filteredLlmsData.map(entry => entry.metadata.s
         </p>
         <h3>Key Features</h3>
         <ul>
-          <li>Browse and search LLMS.txt files from {filteredLlmsData.length} domains</li>
+          <li>Browse and search LLMS.txt files from {sortedLlmsData.length} domains</li>
           <li>Filter by category or domain</li>
           <li>View detailed information about each implementation</li>
           <li>Compare different approaches to AI training permissions</li>
