@@ -30,12 +30,12 @@
         "summary": "<div class=\"center\">"
     },
     {
-        "url": "https://theirstack.com/docs/llms.txt",
-        "domain": "theirstack.com",
+        "url": "https://launchdarkly.com/docs/llms.txt",
+        "domain": "launchdarkly.com",
         "status_code": 200,
-        "content_hash": "ce155d521ddf408698c1dea16b9d369cd57c1bd2f6fbe14f5afa6f0f8bcbb1ef",
+        "content_hash": "558aa6c3ea905321bba9ab160d4b05830117085afd884b8b946b2735180b231c",
         "metadata": {
-            "source_domain": "theirstack.com"
+            "source_domain": "launchdarkly.com"
         },
         "last_checked_utc": "2025-04-03T04:27:40Z",
         "first_added": "2025-04-03T04:14:38Z",
@@ -44,12 +44,12 @@
         "title": "TheirStack"
     },
     {
-        "url": "https://www.plain.com/docs/llms.txt",
-        "domain": "www.plain.com",
+        "url": "https://docs.tilebox.com/llms-full.txt",
+        "domain": "docs.tilebox.com",
         "status_code": 200,
-        "content_hash": "f1987812d119f8ebc81969b8c5ba838ce77f331fe180586b8a502c8c3b45fe53",
+        "content_hash": "d7250a927db6a96ae00b0d3ea0a20c7edc61ffc98d39f61fdc3ffe58ca318081",
         "metadata": {
-            "source_domain": "www.plain.com"
+            "source_domain": "docs.tilebox.com"
         },
         "last_checked_utc": "2025-04-03T04:27:41Z",
         "first_added": "2025-04-03T04:14:38Z",
