@@ -205,3 +205,25 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 }
+
+/* New and Updated badges */
+.badge-new,
+.badge-updated {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  z-index: 10;
+}
+
+.badge-new {
+  background-color: #22c55e; /* Green */
+}
+
+.badge-updated {
+  background-color: #3b82f6; /* Blue */
+}

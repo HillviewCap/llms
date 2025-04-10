@@ -197,24 +197,40 @@ const uniqueDomains: string[] = [...new Set(sortedLlmsData.map(entry => entry.me
     <div id="card-view" class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {sortedLlmsData.map((entry: LlmEntry) => {
         const quality = (entry.quality ?? 'Medium').toLowerCase();
-        const title: string = entry.parsed_title ?? entry.fallback_title ?? entry.title ?? entry.metadata.source_domain; // Explicitly type title
+        const title: string = entry.parsed_title ?? entry.fallback_title ?? entry.title ?? entry.metadata.source_domain;
         const summary = entry.parsed_summary ?? entry.fallback_summary ?? entry.summary;
+
+        // Calculate new/updated status
+        const now = new Date();
+        const firstAdded = new Date(entry.first_added);
+        const lastUpdated = new Date(entry.last_updated);
+
+        const isNew = (now.getTime() - firstAdded.getTime()) / (1000 * 60 * 60 * 24) <= 7;
+        const isUpdated = !isNew && (now.getTime() - lastUpdated.getTime()) / (1000 * 60 * 60 * 24) <= 30;
 
         return (
           <div
             class:list={[
-              "bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden enhanced-card",
-              { 'opacity-60 border border-red-500 dark:border-red-700': quality === 'low' }
+              "relative bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden enhanced-card",
+              { 'border border-red-500 dark:border-red-700': quality === 'low' }
             ]}
             data-domain={entry.metadata.source_domain}
             data-quality={quality}
             data-title={title.toLowerCase()}
             data-summary={(summary ?? '').toLowerCase()}
           >
+            {/* New or Updated badge */}
+            {isNew && (
+              <span class="badge-new">New</span>
+            )}
+            {!isNew && isUpdated && (
+              <span class="badge-updated">Updated</span>
+            )}
+
             <div class="p-6">
               <div class="flex justify-between items-start mb-2">
                 <h3 class="text-lg font-semibold text-neutral-900 dark:text-white flex-1 mr-2 truncate" title={title}>{title}</h3>
-                <div>
+                <div class="flex items-center space-x-1">
                   {quality === 'high' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">High</span>}
                   {quality === 'medium' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>}
                   {quality === 'low' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Low</span>}
