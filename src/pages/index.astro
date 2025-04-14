@@ -1,17 +1,22 @@
 ---
-// Add TypeScript interface for the window object
+/**
+ * LLMS.txt Explorer Frontmatter
+ * - Types, helpers, and data extraction for maintainability and clarity.
+ */
+
+// TypeScript: Make window.sortedLlmsData available with correct type
 declare global {
   interface Window {
-    sortedLlmsData: any[];
+    sortedLlmsData: LlmEntry[];
   }
 }
+
 import Layout from "../layouts/Layout.astro";
 import StructuredData from "../components/StructuredData.astro";
-// Import the JSON data
 import llmsDataJson from "../data/llms_metadata.json";
 import backgroundSvg from "../assets/background.svg";
 
-// Define TypeScript interfaces for the data
+// Data types
 type Quality = "High" | "Medium" | "Low";
 
 interface LlmMetadata {
@@ -19,61 +24,54 @@ interface LlmMetadata {
   url_topic_ranking?: [string, number][];
   domain_purpose_ranking?: string[];
   domain_topic_ranking?: [string, number][];
-  // cf_categories removed as it's not in the JSON data
 }
 
 interface LlmEntry {
   url: string;
-  domain: string; // Original domain from the URL, might differ from source_domain
+  domain: string;
   status_code: number;
   content_hash: string;
-  metadata: LlmMetadata; // Contains the source_domain
+  metadata: LlmMetadata;
   last_checked_utc: string;
   first_added: string;
   last_updated: string;
   quality?: Quality;
   title?: string;
   summary?: string;
-  parsed_title?: string; // Added based on TS errors
-  fallback_title?: string; // Added based on TS errors
-  parsed_summary?: string; // Added based on TS errors
-  fallback_summary?: string; // Added based on TS errors
+  parsed_title?: string;
+  fallback_title?: string;
+  parsed_summary?: string;
+  fallback_summary?: string;
 }
 
-// Assert the type of the imported JSON data
+// Data extraction and transformation
 const llmsData: LlmEntry[] = llmsDataJson as unknown as LlmEntry[];
 
-// Sort the data by quality (High > Medium > Low)
-// Make sortedLlmsData available to the client-side script
 const sortedLlmsData: LlmEntry[] = [...llmsData].sort((a, b) => {
   const qualityOrder: Record<Quality, number> = { High: 0, Medium: 1, Low: 2 };
-  // Assert type Quality for indexing and provide default
   const qualityA = (a.quality ?? "Medium") as Quality;
   const qualityB = (b.quality ?? "Medium") as Quality;
   return qualityOrder[qualityA] - qualityOrder[qualityB];
 });
 
-// Get unique source domains for filtering from the filtered data
 const uniqueDomains: string[] = [
   ...new Set(sortedLlmsData.map((entry) => entry.metadata.source_domain)),
 ].sort();
 
-// Extract unique URL Topics
 const allUrlTopics = sortedLlmsData.flatMap(
   (entry) => entry.metadata.url_topic_ranking?.map(([topic]) => topic) || []
 );
 const uniqueUrlTopics: string[] = [...new Set(allUrlTopics)].sort();
 
-// Extract unique Domain Topics
 const allDomainTopics = sortedLlmsData.flatMap(
   (entry) => entry.metadata.domain_topic_ranking?.map(([topic]) => topic) || []
 );
 const uniqueDomainTopics: string[] = [...new Set(allDomainTopics)].sort();
-// Helper function to strip HTML tags
+
+// Helpers
 const stripHtml = (html: string | undefined | null): string =>
   html?.replace(/<[^>]*>?/gm, "") ?? "";
 
-// Helper function for date formatting
 const formatDate = (dateString: string | undefined | null): string => {
   if (!dateString) return "N/A";
   try {
@@ -82,22 +80,19 @@ const formatDate = (dateString: string | undefined | null): string => {
       month: "short",
       day: "numeric",
     });
-  } catch (e) {
-    console.error("Error formatting date:", e);
+  } catch {
     return "Invalid Date";
   }
 };
 
-// Map for quality badge styling
-const qualityStyles = {
+const qualityStyles: Record<string, string> = {
   high: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
   medium:
     "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
   low: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
 };
 
-// Color classes for topic pills
-const pillColorClasses = [
+const pillColorClasses: string[] = [
   "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
   "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
   "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
@@ -158,7 +153,6 @@ const pillColorClasses = [
       </h2>
       <div class="flex flex-col md:flex-row gap-4 mb-6">
         <div class="w-full md:w-1/2">
-          {/* Adjusted width */}
           <label
             for="search"
             class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
@@ -169,6 +163,7 @@ const pillColorClasses = [
             id="search"
             placeholder="Search by title, domain, summary..."
             class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+            aria-label="Search by title, domain, summary"
           />
         </div>
 
@@ -181,6 +176,7 @@ const pillColorClasses = [
           <select
             id="domain-filter"
             class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+            aria-label="Filter by Source Domain"
           >
             <option value="">All Source Domains</option>
             {
@@ -201,6 +197,7 @@ const pillColorClasses = [
             <select
               id="url-topic-filter"
               class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+              aria-label="Filter by URL Topics"
             >
               <option value="">All URL Topics</option>
               {
@@ -209,7 +206,6 @@ const pillColorClasses = [
                 ))
               }
             </select>
-            {/* Removed pill container */}
           </div>
         </div>
 
@@ -223,6 +219,7 @@ const pillColorClasses = [
             <select
               id="domain-topic-filter"
               class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+              aria-label="Filter by Domain Topics"
             >
               <option value="">All Domain Topics</option>
               {
@@ -231,7 +228,6 @@ const pillColorClasses = [
                 ))
               }
             </select>
-            {/* Removed pill container */}
           </div>
         </div>
       </div>
@@ -249,6 +245,7 @@ const pillColorClasses = [
               id="show-low-quality"
               class="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500 dark:bg-neutral-700 dark:border-neutral-600"
               checked
+              aria-checked="true"
             />
             <label
               for="show-low-quality"
@@ -256,13 +253,10 @@ const pillColorClasses = [
               >Include Low Quality</label
             >
           </div>
-          {/* Toggle button removed */}
         </div>
       </div>
     </div>
-    {/* Closing enhanced-filter div */}
 
-    {/* Table View */}
     <div
       id="table-view"
       class="mt-8 overflow-x-auto bg-white dark:bg-neutral-800 rounded-lg shadow-md enhanced-table"
@@ -359,6 +353,7 @@ const pillColorClasses = [
                         rel="noopener noreferrer"
                         class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 truncate"
                         style="max-width: 400px; display: inline-block;"
+                        aria-label={`Open LLMS.txt URL for ${title}`}
                       >
                         {entry.url}
                       </a>
@@ -372,7 +367,6 @@ const pillColorClasses = [
                         : "N/A"}
                     </td>
                   </tr>
-                  {/* New row for additional metadata */}
                   {(entry.metadata.url_topic_ranking?.length ||
                     entry.metadata.domain_purpose_ranking?.length ||
                     entry.metadata.domain_topic_ranking?.length) && (
@@ -382,7 +376,7 @@ const pillColorClasses = [
                           ? "bg-white dark:bg-neutral-900"
                           : "bg-neutral-50 dark:bg-neutral-800",
                         { "opacity-50": quality === "low" },
-                        "metadata-row", // Add class for potential styling/filtering
+                        "metadata-row",
                       ]}
                       data-domain={entry.metadata.source_domain}
                       data-quality={quality}
@@ -408,7 +402,6 @@ const pillColorClasses = [
                                   URL Topics:
                                 </h4>
                                 <div class="flex flex-wrap gap-1">
-                                  {/* Add explicit check here */}
                                   {entry.metadata.url_topic_ranking?.map(
                                     ([topic, score], topicIndex) => (
                                       <span
@@ -435,7 +428,6 @@ const pillColorClasses = [
                                   Domain Purposes:
                                 </h4>
                                 <ul class="list-disc list-inside space-y-0.5">
-                                  {/* Add explicit check here */}
                                   {entry.metadata.domain_purpose_ranking?.map(
                                     (purpose) => (
                                       <li>{purpose}</li>
@@ -452,7 +444,6 @@ const pillColorClasses = [
                                   Domain Topics:
                                 </h4>
                                 <div class="flex flex-wrap gap-1">
-                                  {/* Add explicit check here */}
                                   {entry.metadata.domain_topic_ranking?.map(
                                     ([topic, score], topicIndex) => (
                                       <span
@@ -481,9 +472,6 @@ const pillColorClasses = [
         </tbody>
       </table>
     </div>
-
-    {/* Card View Removed */}
-    {/* About This Project Section Removed */}
   </div>
   <!-- Hidden element to store data for client-side script -->
 
@@ -495,15 +483,11 @@ const pillColorClasses = [
     const domainFilter = document.getElementById("domain-filter");
     const urlTopicFilter = document.getElementById("url-topic-filter");
     const domainTopicFilter = document.getElementById("domain-topic-filter");
-    // Removed topic selected containers as pills are no longer used
     const showLowQualityCheckbox = document.getElementById("show-low-quality");
     const resultsCount = document.getElementById("results-count");
-    // const cardView = document.getElementById("card-view") as HTMLElement; // Removed
     const tableView = document.getElementById("table-view");
     const tableBody = document.getElementById("table-body");
-    // const toggleViewButton = document.getElementById("toggle-view") as HTMLButtonElement; // Removed
 
-    // const allCards = Array.from(cardView.querySelectorAll<HTMLElement>("[data-domain]")); // Removed
     const allTableRows = Array.from(
       tableBody.querySelectorAll<HTMLElement>(
         "tr[data-domain]:not(.metadata-row)"
@@ -513,42 +497,35 @@ const pillColorClasses = [
       tableBody.querySelectorAll<HTMLElement>("tr.metadata-row")
     );
 
-    // let isCardView = true; // Removed - Table view is now default
-
+    // Filters table rows based on search and filter controls
     function filterEntries() {
       const searchTerm = searchInput.value.toLowerCase();
       const selectedDomain = domainFilter.value;
       const showLowQuality = showLowQualityCheckbox.checked;
 
-      // Get selected URL topic (single select)
       const selectedUrlTopic = urlTopicFilter.value;
 
-      // Get selected Domain topic (single select)
       const selectedDomainTopic = domainTopicFilter.value;
 
       let visibleCount = 0;
 
-      // Filter Table Rows
       allTableRows.forEach((row) => {
         const domain = row.dataset.domain || "";
         const quality = row.dataset.quality || "";
         const title = row.dataset.title || "";
         const summary = row.dataset.summary || ""; // Assuming summary is in data attribute for consistency
 
-        // Get the corresponding entry from the data
         const entryIndex = parseInt(row.dataset.index || "0");
         const entry = window.sortedLlmsData?.[entryIndex] || {};
 
-        // Check if entry matches URL topic filter
         const matchesUrlTopics =
-          !selectedUrlTopic || // "All URL Topics" selected
+          !selectedUrlTopic ||
           entry.metadata?.url_topic_ranking?.some(
             ([topic]) => topic === selectedUrlTopic
           );
 
-        // Check if entry matches Domain topic filter
         const matchesDomainTopics =
-          !selectedDomainTopic || // "All Domain Topics" selected
+          !selectedDomainTopic ||
           entry.metadata?.domain_topic_ranking?.some(
             ([topic]) => topic === selectedDomainTopic
           );
@@ -577,27 +554,18 @@ const pillColorClasses = [
         }
       });
 
-      // Update results count
       resultsCount.innerHTML = `Showing <span class="font-medium">${visibleCount}</span> results`;
     }
 
-    // function toggleView() { ... } // Removed
-
-    // Removed createTopicPill and updateSelectedTopics functions as they are no longer needed
-
-    // Event Listeners
     searchInput.addEventListener("input", filterEntries);
     domainFilter.addEventListener("change", filterEntries);
     showLowQualityCheckbox.addEventListener("change", filterEntries);
 
-    urlTopicFilter.addEventListener("change", filterEntries); // Directly filter on change
+    urlTopicFilter.addEventListener("change", filterEntries);
 
-    domainTopicFilter.addEventListener("change", filterEntries); // Directly filter on change
+    domainTopicFilter.addEventListener("change", filterEntries);
 
-    // Initial filter on load
     filterEntries();
-
-    // Removed initialization calls for topic pills
   </script>
 </Layout>
 
@@ -635,7 +603,6 @@ const pillColorClasses = [
     pointer-events: none;
   }
 
-  /* Enhanced Filter/About/Table Styling */
   .enhanced-filter,
   .enhanced-about,
   .enhanced-table {
@@ -647,7 +614,6 @@ const pillColorClasses = [
     border: 1px solid var(--color-neutral-700);
   }
 
-  /* Glow Button Effect */
   .glow-button {
     position: relative;
     overflow: hidden;
@@ -660,7 +626,6 @@ const pillColorClasses = [
     box-shadow: 0 0 15px 5px var(--color-primary-400);
   }
 
-  /* Ensure line-clamp works */
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -674,16 +639,14 @@ const pillColorClasses = [
     overflow: hidden;
   }
 
-  /* Focus state for cards */
   [data-domain][tabindex="0"]:focus {
-    outline: none; /* Remove default outline */
+    outline: none;
   }
 
-  /* Style table rows for low quality */
   #table-body tr[data-quality="low"] {
     opacity: 0.6;
   }
   #table-body tr[data-quality="low"]:hover {
-    opacity: 1; /* Restore opacity on hover */
+    opacity: 1;
   }
 </style>
