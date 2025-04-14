@@ -25,6 +25,9 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ['tailwindcss'], // Explicitly include tailwind to potentially stabilize optimization
+    },
     build: {
       cssCodeSplit: true,
       minify: 'terser',
