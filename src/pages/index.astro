@@ -405,12 +405,11 @@ const pillColorClasses: string[] = [
                                   {entry.metadata.url_topic_ranking?.map(
                                     ([topic, score], topicIndex) => (
                                       <span
-                                        class:list={[
-                                          "inline-block text-xs font-semibold mr-2 mb-1 px-2.5 py-0.5 rounded-full", // Added mb-1
+                                        class={`inline-block text-xs font-semibold mr-2 mb-1 px-2.5 py-0.5 rounded-full ${
                                           pillColorClasses[
                                             topicIndex % pillColorClasses.length
-                                          ],
-                                        ]}
+                                          ]
+                                        }`}
                                       >
                                         {topic}
                                       </span>
@@ -447,12 +446,11 @@ const pillColorClasses: string[] = [
                                   {entry.metadata.domain_topic_ranking?.map(
                                     ([topic, score], topicIndex) => (
                                       <span
-                                        class:list={[
-                                          "inline-block text-xs font-semibold mr-2 mb-1 px-2.5 py-0.5 rounded-full", // Added mb-1
+                                        class={`inline-block text-xs font-semibold mr-2 mb-1 px-2.5 py-0.5 rounded-full ${
                                           pillColorClasses[
                                             topicIndex % pillColorClasses.length
-                                          ],
-                                        ]}
+                                          ]
+                                        }`}
                                       >
                                         {topic}
                                       </span>
@@ -479,6 +477,11 @@ const pillColorClasses: string[] = [
     // Client-side script for filtering, view toggling, etc.
     // Data is directly available via the sortedLlmsData variable defined by define:vars
     window.sortedLlmsData = sortedLlmsData;
+    console.log(
+      `Loaded ${sortedLlmsData.length} entries into window.sortedLlmsData`
+    );
+
+    // Get DOM elements with error checking
     const searchInput = document.getElementById("search");
     const domainFilter = document.getElementById("domain-filter");
     const urlTopicFilter = document.getElementById("url-topic-filter");
@@ -488,17 +491,26 @@ const pillColorClasses: string[] = [
     const tableView = document.getElementById("table-view");
     const tableBody = document.getElementById("table-body");
 
+    // Check if all elements were found
+    if (!tableBody) {
+      console.error("Could not find table body element");
+      return;
+    }
+
     const allTableRows = Array.from(
-      tableBody.querySelectorAll<HTMLElement>(
-        "tr[data-domain]:not(.metadata-row)"
-      ) // Exclude metadata rows from main filtering logic
+      tableBody.querySelectorAll("tr[data-domain]:not(.metadata-row)") // Exclude metadata rows from main filtering logic
     );
     const allMetadataRows = Array.from(
-      tableBody.querySelectorAll<HTMLElement>("tr.metadata-row")
+      tableBody.querySelectorAll("tr.metadata-row")
+    );
+
+    console.log(
+      `Found ${allTableRows.length} table rows and ${allMetadataRows.length} metadata rows`
     );
 
     // Filters table rows based on search and filter controls
     function filterEntries() {
+      console.log("Running filterEntries function");
       const searchTerm = searchInput.value.toLowerCase();
       const selectedDomain = domainFilter.value;
       const showLowQuality = showLowQualityCheckbox.checked;
@@ -506,8 +518,15 @@ const pillColorClasses: string[] = [
       const selectedUrlTopic = urlTopicFilter.value;
 
       const selectedDomainTopic = domainTopicFilter.value;
-
       let visibleCount = 0;
+
+      console.log("Filter values:", {
+        searchTerm,
+        selectedDomain,
+        showLowQuality,
+        selectedUrlTopic,
+        selectedDomainTopic,
+      });
 
       allTableRows.forEach((row) => {
         const domain = row.dataset.domain || "";
@@ -517,6 +536,11 @@ const pillColorClasses: string[] = [
 
         const entryIndex = parseInt(row.dataset.index || "0");
         const entry = window.sortedLlmsData[entryIndex];
+
+        if (!entry) {
+          console.error(`Could not find entry for index ${entryIndex}`);
+          return;
+        }
 
         // Check if the entry has URL topics that match the selected URL topic
         const matchesUrlTopics =
@@ -564,20 +588,47 @@ const pillColorClasses: string[] = [
         }
       });
 
+      console.log(`Found ${visibleCount} visible rows`);
       resultsCount.innerHTML = `Showing <span class="font-medium">${visibleCount}</span> results`;
     }
 
-    searchInput.addEventListener("input", filterEntries);
-    domainFilter.addEventListener("change", filterEntries);
-    showLowQualityCheckbox.addEventListener("change", filterEntries);
+    // Add event listeners with error checking
+    if (searchInput) {
+      console.log("Adding event listener to search input");
+      searchInput.addEventListener("input", filterEntries);
+    }
 
-    urlTopicFilter.addEventListener("change", filterEntries);
+    if (domainFilter) {
+      console.log("Adding event listener to domain filter");
+      domainFilter.addEventListener("change", filterEntries);
+    }
 
-    domainTopicFilter.addEventListener("change", filterEntries);
+    if (showLowQualityCheckbox) {
+      console.log("Adding event listener to show low quality checkbox");
+      showLowQualityCheckbox.addEventListener("change", filterEntries);
+    }
 
-    // Ensure filtering runs after DOM is fully loaded
-    document.addEventListener("DOMContentLoaded", filterEntries);
+    if (urlTopicFilter) {
+      console.log("Adding event listener to URL topic filter");
+      urlTopicFilter.addEventListener("change", filterEntries);
+    }
+
+    if (domainTopicFilter) {
+      console.log("Adding event listener to domain topic filter");
+      domainTopicFilter.addEventListener("change", filterEntries);
+    }
+
+    // Check if DOM is already loaded
+    if (document.readyState === "loading") {
+      // DOM is still loading, add event listener
+      document.addEventListener("DOMContentLoaded", filterEntries);
+    } else {
+      // DOM is already loaded, run filterEntries immediately
+      setTimeout(filterEntries, 0);
+    }
+
     // Also run it immediately in case the script runs after DOM is already loaded
+    console.log("Running filterEntries immediately");
     filterEntries();
   </script>
 </Layout>
@@ -587,10 +638,9 @@ const pillColorClasses: string[] = [
   .enhanced-header {
     /* Light theme gradient */
     background: linear-gradient(
-        rgba(245, 245, 245, 0.8),
-        rgba(229, 229, 229, 0.95)
-      ),
-      url({backgroundSvg.src});
+      rgba(245, 245, 245, 0.8),
+      rgba(229, 229, 229, 0.95)
+    );
     background-size: cover;
     background-position: center;
     position: relative;
