@@ -9,7 +9,7 @@ body {
 /* Enhanced header with more dynamic gradient and glow effect */
 .enhanced-header {
   /* Use a solid dark background, e.g., neutral-900 */
-  @apply bg-neutral-900;
+  @apply bg-gray-900;
   position: relative;
   overflow: hidden;
   /* Removed shadow with transparency */
