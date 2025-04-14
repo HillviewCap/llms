@@ -1,11 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import StructuredData from '../components/StructuredData.astro';
+import Layout from "../layouts/Layout.astro";
+import StructuredData from "../components/StructuredData.astro";
 // Import the JSON data
-import llmsDataJson from '../data/llms_metadata.json';
+import llmsDataJson from "../data/llms_metadata.json";
 
 // Define TypeScript interfaces for the data
-type Quality = 'High' | 'Medium' | 'Low';
+type Quality = "High" | "Medium" | "Low";
 
 interface LlmMetadata {
   source_domain: string;
@@ -35,15 +35,43 @@ const llmsData: LlmEntry[] = llmsDataJson as LlmEntry[];
 
 // Sort the data by quality (High > Medium > Low)
 const sortedLlmsData: LlmEntry[] = [...llmsData].sort((a, b) => {
-  const qualityOrder: Record<Quality, number> = { 'High': 0, 'Medium': 1, 'Low': 2 };
+  const qualityOrder: Record<Quality, number> = { High: 0, Medium: 1, Low: 2 };
   // Assert type Quality for indexing and provide default
-  const qualityA = (a.quality ?? 'Medium') as Quality;
-  const qualityB = (b.quality ?? 'Medium') as Quality;
+  const qualityA = (a.quality ?? "Medium") as Quality;
+  const qualityB = (b.quality ?? "Medium") as Quality;
   return qualityOrder[qualityA] - qualityOrder[qualityB];
 });
 
 // Get unique source domains for filtering from the filtered data
-const uniqueDomains: string[] = [...new Set(sortedLlmsData.map(entry => entry.metadata.source_domain))].sort();
+const uniqueDomains: string[] = [
+  ...new Set(sortedLlmsData.map((entry) => entry.metadata.source_domain)),
+].sort();
+// Helper function to strip HTML tags
+const stripHtml = (html: string | undefined | null): string =>
+  html?.replace(/<[^>]*>?/gm, "") ?? "";
+
+// Helper function for date formatting
+const formatDate = (dateString: string | undefined | null): string => {
+  if (!dateString) return "N/A";
+  try {
+    return new Date(dateString).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  } catch (e) {
+    console.error("Error formatting date:", e);
+    return "Invalid Date";
+  }
+};
+
+// Map for quality badge styling
+const qualityStyles = {
+  high: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+  medium:
+    "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
+  low: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
+};
 ---
 
 <Layout
@@ -53,36 +81,50 @@ const uniqueDomains: string[] = [...new Set(sortedLlmsData.map(entry => entry.me
   <StructuredData
     type="Dataset"
     data={{
-      "name": "LLMS.txt Explorer Dataset",
-      "description": "A comprehensive collection of LLMS.txt files from various domains across the web",
-      "keywords": "LLMS.txt, AI, machine learning, language models, web crawling",
-      "url": "https://llms-explorer.example.com", // Replace with actual URL if available
-      "sameAs": "https://github.com/example/llms-explorer", // Replace with actual repo if available
-      "creator": {
+      name: "LLMS.txt Explorer Dataset",
+      description:
+        "A comprehensive collection of LLMS.txt files from various domains across the web",
+      keywords: "LLMS.txt, AI, machine learning, language models, web crawling",
+      url: "https://llms-explorer.example.com", // Replace with actual URL if available
+      sameAs: "https://github.com/example/llms-explorer", // Replace with actual repo if available
+      creator: {
         "@type": "Organization",
-        "name": "LLMS.txt Explorer Team" // Replace if needed
+        name: "LLMS.txt Explorer Team", // Replace if needed
       },
-      "datePublished": new Date().toISOString().split('T')[0],
-      "license": "https://creativecommons.org/licenses/by/4.0/" // Verify license
+      datePublished: new Date().toISOString().split("T")[0],
+      license: "https://creativecommons.org/licenses/by/4.0/", // Verify license
     }}
   />
 
   <div class="mx-auto px-4 py-8">
     <header class="mb-10 text-center">
-      <div class="enhanced-header py-12 px-4 rounded-lg shadow-lg mb-8 relative">
+      <div
+        class="enhanced-header py-12 px-4 rounded-lg shadow-lg mb-8 relative"
+      >
         <div class="circuit-pattern"></div>
         <h1 class="text-5xl font-bold text-white mb-4">LLMS.txt Explorer</h1>
         <p class="text-xl text-primary-100 max-w-3xl mx-auto">
-          Discover and analyze LLMS.txt files from <span class="font-bold">{sortedLlmsData.length}</span> domains across the web
+          Discover and analyze LLMS.txt files from <span class="font-bold"
+            >{sortedLlmsData.length}</span
+          > domains across the web
         </p>
       </div>
     </header>
 
-    <div class="mb-8 bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md enhanced-filter">
-      <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4">Search & Filter</h2>
+    <div
+      class="mb-8 bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md enhanced-filter"
+    >
+      <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4">
+        Search &amp; Filter
+      </h2>
       <div class="flex flex-col md:flex-row gap-4 mb-6">
-        <div class="w-full md:w-1/2"> {/* Adjusted width */}
-          <label for="search" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Search</label>
+        <div class="w-full md:w-1/2">
+          {/* Adjusted width */}
+          <label
+            for="search"
+            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+            >Search</label
+          >
           <input
             type="text"
             id="search"
@@ -92,52 +134,101 @@ const uniqueDomains: string[] = [...new Set(sortedLlmsData.map(entry => entry.me
         </div>
 
         <div class="w-full md:w-1/2">
-          <label for="domain-filter" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Filter by Source Domain</label>
+          <label
+            for="domain-filter"
+            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+            >Filter by Source Domain</label
+          >
           <select
             id="domain-filter"
             class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
           >
             <option value="">All Source Domains</option>
-            {uniqueDomains.map((domain: string) => (
-              <option value={domain}>{domain}</option>
-            ))}
+            {
+              uniqueDomains.map((domain: string) => (
+                <option value={domain}>{domain}</option>
+              ))
+            }
           </select>
         </div>
       </div>
       <div class="flex justify-between items-center mt-4">
-        <p id="results-count" class="text-sm text-neutral-600 dark:text-neutral-400">
+        <p
+          id="results-count"
+          class="text-sm text-neutral-600 dark:text-neutral-400"
+        >
           Showing <span class="font-medium">{sortedLlmsData.length}</span> results
         </p>
         <div class="flex items-center space-x-4">
           <div class="flex items-center">
-            <input type="checkbox" id="show-low-quality" class="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500 dark:bg-neutral-700 dark:border-neutral-600" checked>
-            <label for="show-low-quality" class="ml-2 block text-sm text-neutral-700 dark:text-neutral-300">Include Low Quality</label>
+            <input
+              type="checkbox"
+              id="show-low-quality"
+              class="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500 dark:bg-neutral-700 dark:border-neutral-600"
+              checked
+            />
+            <label
+              for="show-low-quality"
+              class="ml-2 block text-sm text-neutral-700 dark:text-neutral-300"
+              >Include Low Quality</label
+            >
           </div>
           <button
             id="toggle-view"
             class="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors flex items-center glow-button"
           >
-            {/* Initial state: Card view active, button shows "Switch to Table View" */}
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            {
+              /* Initial state: Card view active, button shows "Switch to Table View" */
+            }
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+              ></path>
             </svg>
             Switch to Table View
           </button>
         </div>
       </div>
-    </div> {/* Closing enhanced-filter div */}
+    </div>
+    {/* Closing enhanced-filter div */}
 
-    <section class="mt-10 max-w-3xl mx-auto bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md">
-      <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4">About LLMS.txt</h2>
+    <section
+      class="mt-10 max-w-3xl mx-auto bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md"
+    >
+      <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4">
+        About LLMS.txt
+      </h2>
       <p class="text-neutral-700 dark:text-neutral-300 mb-4">
-        LLMS.txt is an emerging standard that helps websites communicate their preferences for AI training and crawling.
-        This explorer provides insights into how different domains implement this standard.
+        LLMS.txt is an emerging standard that helps websites communicate their
+        preferences for AI training and crawling. This explorer provides
+        insights into how different domains implement this standard.
       </p>
       <div class="flex justify-center">
-        <a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors glow-button">
-          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd"></path>
-            <path fill-rule="evenodd" d="M10 6a1 1 0 011 1v3.586l2.707 2.707a1 1 0 01-1.414 1.414l-3-3A1 1 0 019 11V7a1 1 0 011-1z" clip-rule="evenodd"></path>
+        <a
+          href="https://llmstxt.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors glow-button"
+        >
+          <svg
+            class="w-5 h-5 mr-2"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 100-12 6 6 0 000 12z"
+              clip-rule="evenodd"></path>
+            <path
+              fill-rule="evenodd"
+              d="M10 6a1 1 0 011 1v3.586l2.707 2.707a1 1 0 01-1.414 1.414l-3-3A1 1 0 019 11V7a1 1 0 011-1z"
+              clip-rule="evenodd"></path>
           </svg>
           Learn More About LLMS.txt
         </a>
@@ -145,248 +236,505 @@ const uniqueDomains: string[] = [...new Set(sortedLlmsData.map(entry => entry.me
     </section>
 
     {/* Table View - Initially hidden */}
-    <div id="table-view" class="mt-8 overflow-x-auto bg-white dark:bg-neutral-800 rounded-lg shadow-md enhanced-table hidden">
-      <table class="min-w-full divide-y divide-neutral-200 dark:divide-neutral-700">
+    <div
+      id="table-view"
+      class="mt-8 overflow-x-auto bg-white dark:bg-neutral-800 rounded-lg shadow-md enhanced-table hidden"
+    >
+      <table
+        class="min-w-full divide-y divide-neutral-200 dark:divide-neutral-700"
+      >
         <thead class="bg-neutral-50 dark:bg-neutral-800">
           <tr>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">Title / Source Domain</th>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">Quality</th>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">LLMS.txt URL</th>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">Last Checked</th>
+            <th
+              scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider"
+              >Title / Source Domain</th
+            >
+            <th
+              scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider"
+              >Quality</th
+            >
+            <th
+              scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider"
+              >LLMS.txt URL</th
+            >
+            <th
+              scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider"
+              >Last Checked</th
+            >
           </tr>
         </thead>
-        <tbody class="bg-white divide-y divide-neutral-200 dark:bg-neutral-900 dark:divide-neutral-700" id="table-body">
-          {sortedLlmsData.map((entry: LlmEntry, index: number) => {
-            const quality = (entry.quality ?? 'Medium').toLowerCase();
-            const title: string = entry.parsed_title ?? entry.fallback_title ?? entry.title ?? entry.metadata.source_domain; // Explicitly type title
-            const displayTitle = title.length > 60 ? title.substring(0, 57) + '...' : title; // Truncate long titles
+        <tbody
+          class="bg-white divide-y divide-neutral-200 dark:bg-neutral-900 dark:divide-neutral-700"
+          id="table-body"
+        >
+          {
+            sortedLlmsData.map((entry: LlmEntry, index: number) => {
+              const quality = (entry.quality ?? "Medium").toLowerCase();
+              const title: string =
+                entry.parsed_title ??
+                entry.fallback_title ??
+                entry.title ??
+                entry.metadata.source_domain; // Explicitly type title
+              const displayTitle =
+                title.length > 60 ? title.substring(0, 57) + "..." : title; // Truncate long titles
 
-            return (
-              <tr
-                class:list={[
-                  index % 2 === 0 ? 'bg-white dark:bg-neutral-900' : 'bg-neutral-50 dark:bg-neutral-800',
-                  { 'opacity-50': quality === 'low' }
-                ]}
-                data-domain={entry.metadata.source_domain}
-                data-quality={quality}
-                data-title={title.toLowerCase()}
-                data-summary={(entry.parsed_summary ?? entry.fallback_summary ?? entry.summary ?? '').toLowerCase()}
-              >
-                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-900 dark:text-white" title={title}>{displayTitle}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm">
-                  {quality === 'high' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">High</span>}
-                  {quality === 'medium' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>}
-                  {quality === 'low' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Low</span>}
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
-                  <a href={entry.url} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 truncate" style="max-width: 200px; display: inline-block;">
-                    {entry.url}
-                  </a>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-400">
-                  {entry.last_checked_utc ? new Date(entry.last_checked_utc).toLocaleString('en-US', { dateStyle: 'short', timeStyle: 'short' }) : 'N/A'}
-                </td>
-              </tr>
-            );
-          })}
+              return (
+                <tr
+                  class:list={[
+                    index % 2 === 0
+                      ? "bg-white dark:bg-neutral-900"
+                      : "bg-neutral-50 dark:bg-neutral-800",
+                    { "opacity-50": quality === "low" },
+                  ]}
+                  data-domain={entry.metadata.source_domain}
+                  data-quality={quality}
+                  data-title={title.toLowerCase()}
+                  data-summary={(
+                    entry.parsed_summary ??
+                    entry.fallback_summary ??
+                    entry.summary ??
+                    ""
+                  ).toLowerCase()}
+                >
+                  <td
+                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-900 dark:text-white"
+                    title={title}
+                  >
+                    {displayTitle}
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm">
+                    {quality === "high" && (
+                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                        High
+                      </span>
+                    )}
+                    {quality === "medium" && (
+                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
+                        Medium
+                      </span>
+                    )}
+                    {quality === "low" && (
+                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
+                        Low
+                      </span>
+                    )}
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
+                    <a
+                      href={entry.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 truncate"
+                      style="max-width: 200px; display: inline-block;"
+                    >
+                      {entry.url}
+                    </a>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-400">
+                    {entry.last_checked_utc
+                      ? new Date(entry.last_checked_utc).toLocaleString(
+                          "en-US",
+                          { dateStyle: "short", timeStyle: "short" }
+                        )
+                      : "N/A"}
+                  </td>
+                </tr>
+              );
+            })
+          }
         </tbody>
       </table>
     </div>
 
     {/* Card View - Initially shown */}
-    <div id="card-view" class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {sortedLlmsData.map((entry: LlmEntry) => {
-        const quality = (entry.quality ?? 'Medium').toLowerCase();
-        const title: string = entry.parsed_title ?? entry.fallback_title ?? entry.title ?? entry.metadata.source_domain;
-        const summary = entry.parsed_summary ?? entry.fallback_summary ?? entry.summary;
+    <div
+      id="card-view"
+      class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+    >
+      {
+        sortedLlmsData.map((entry: LlmEntry) => {
+          // --- Card Redesign Start ---
+          const quality = (
+            entry.quality ?? "Medium"
+          ).toLowerCase() as keyof typeof qualityStyles;
+          const title: string =
+            entry.parsed_title ??
+            entry.fallback_title ??
+            entry.title ??
+            entry.metadata.source_domain;
+          const summary =
+            entry.parsed_summary ?? entry.fallback_summary ?? entry.summary;
+          const sourceDomain = entry.metadata.source_domain;
 
-        // Calculate new/updated status
-        const now = new Date();
-        const firstAdded = new Date(entry.first_added);
-        const lastUpdated = new Date(entry.last_updated);
+          // Use helper functions defined in frontmatter
+          const plainSummary = stripHtml(summary);
+          const formattedDate = formatDate(entry.last_checked_utc);
+          const qualityClass = qualityStyles[quality] ?? qualityStyles.medium; // Default to medium if quality is unexpected
 
-        const isNew = (now.getTime() - firstAdded.getTime()) / (1000 * 60 * 60 * 24) <= 7;
-        const isUpdated = !isNew && (now.getTime() - lastUpdated.getTime()) / (1000 * 60 * 60 * 24) <= 30;
+          // Determine card background color based on quality
+          const cardBgClass =
+            quality === "high"
+              ? "bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20"
+              : "bg-white dark:bg-neutral-800";
 
-        return (
-          <div
-            class:list={[
-              "relative bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden enhanced-card",
-              { 'border border-red-500 dark:border-red-700': quality === 'low' }
-            ]}
-            data-domain={entry.metadata.source_domain}
-            data-quality={quality}
-            data-title={title.toLowerCase()}
-            data-summary={(summary ?? '').toLowerCase()}
-          >
-            {/* New or Updated badge */}
-            {isNew && (
-              <span class="badge-new">New</span>
-            )}
-            {!isNew && isUpdated && (
-              <span class="badge-updated">Updated</span>
-            )}
+          return (
+            <div
+              class:list={[
+                "flex flex-col rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ease-in-out overflow-hidden border border-neutral-200 dark:border-neutral-700 h-full w-full max-w-xs mx-auto hover:translate-y-[-2px]",
+                { "opacity-75": quality === "low" },
+              ]}
+              data-domain={sourceDomain}
+              data-quality={quality}
+              data-title={title.toLowerCase()}
+              data-summary={plainSummary.toLowerCase()}
+              tabindex="0"
+              style="max-height: 280px;"
+            >
+              {/* Card Header */}
+              <div class={`p-5 flex-grow flex flex-col ${cardBgClass}`}>
+                {/* Quality Badge - Top Right */}
+                <div class="flex justify-between items-start mb-3">
+                  <div class="flex items-center">
+                    {/* Domain Icon/Avatar */}
+                    <div class="w-8 h-8 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-700 dark:text-primary-300 mr-3 flex-shrink-0">
+                      {sourceDomain.charAt(0).toUpperCase()}
+                    </div>
 
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-lg font-semibold text-neutral-900 dark:text-white flex-1 mr-2 truncate" title={title}>{title}</h3>
-                <div class="flex items-center space-x-1">
-                  {quality === 'high' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">High</span>}
-                  {quality === 'medium' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>}
-                  {quality === 'low' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Low</span>}
+                    {/* Domain */}
+                    <span class="text-xs text-neutral-500 dark:text-neutral-400 truncate font-medium">
+                      {sourceDomain}
+                    </span>
+                  </div>
+
+                  <span
+                    class={`inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded-full text-xs font-medium ${qualityClass}`}
+                  >
+                    {quality.charAt(0).toUpperCase() + quality.slice(1)}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3
+                  class="text-base font-semibold text-neutral-900 dark:text-white mb-2 line-clamp-2"
+                  title={title}
+                >
+                  {title}
+                </h3>
+
+                {/* Summary */}
+                <p
+                  class="text-sm text-neutral-600 dark:text-neutral-300 mb-4 line-clamp-2 flex-grow overflow-hidden"
+                  title={plainSummary}
+                >
+                  {plainSummary || (
+                    <span class="italic text-neutral-400">
+                      No summary available
+                    </span>
+                  )}
+                </p>
+
+                {/* Card Footer */}
+                <div class="flex justify-between items-center mt-auto pt-3 border-t border-neutral-200 dark:border-neutral-700/50">
+                  {/* View Link Button */}
+                  <a
+                    href={entry.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium flex items-center"
+                    aria-label={`View llms.txt for ${sourceDomain}`}
+                  >
+                    <span>View Link</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 ml-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
+
+                  {/* Last Checked Date */}
+                  <span
+                    class="text-xs text-neutral-500 dark:text-neutral-400 flex items-center"
+                    title={`Last checked: ${formattedDate}`}
+                  >
+                    <span>Last Checked:</span>
+                    <span class="ml-1 font-medium">{formattedDate}</span>
+                  </span>
                 </div>
               </div>
-              {summary && <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-3 line-clamp-3">{summary}</p>}
-              <a href={entry.url} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 text-sm mb-4 block truncate">
-                {entry.url}
-              </a>
-              <div class="text-xs text-neutral-500 dark:text-neutral-400">
-                Last checked: {entry.last_checked_utc ? new Date(entry.last_checked_utc).toLocaleString('en-US', { dateStyle: 'short', timeStyle: 'short' }) : 'N/A'}
-              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+          // --- Card Redesign End ---
+        })
+      }
     </div>
 
-    <div class="mt-12 bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md enhanced-about">
-      <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4">About This Project</h2>
+    <div
+      class="mt-12 bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md enhanced-about"
+    >
+      <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4">
+        About This Project
+      </h2>
       <div class="prose dark:prose-invert max-w-none">
         <p>
-          The LLMS.txt Explorer is a tool designed to help developers, researchers, and website owners understand how the LLMS.txt standard is being implemented across the web.
+          The LLMS.txt Explorer is a tool designed to help developers,
+          researchers, and website owners understand how the LLMS.txt standard
+          is being implemented across the web.
         </p>
         <p>
-          By analyzing LLMS.txt files from various domains, we can gain insights into how different organizations are approaching AI training permissions and restrictions.
+          By analyzing LLMS.txt files from various domains, we can gain insights
+          into how different organizations are approaching AI training
+          permissions and restrictions.
         </p>
-        <h3>Key Features</h3>
-        <ul>
-          <li>Browse and search LLMS.txt files from {sortedLlmsData.length} domains</li>
-          <li>Filter by source domain</li> {/* Updated text */}
-          <li>View detailed information about each implementation</li>
-          <li>Compare different approaches to AI training permissions</li>
+        <p>
+          This project utilizes Astro for the frontend framework and Tailwind
+          CSS for styling. The data is sourced from a regularly updated JSON
+          file containing metadata extracted from LLMS.txt files found across
+          the web.
+        </p>
+        <h3 class="text-xl font-semibold mt-6 mb-2">Features</h3>
+        <ul class="list-disc list-inside">
+          <li>Display of LLMS.txt entries in card and table views.</li>
+          <li>Search functionality across titles, domains, and summaries.</li>
+          <li>Filtering by source domain and quality rating.</li>
+          <li>Responsive design for various screen sizes.</li>
+          <li>Dark mode support.</li>
         </ul>
+        <h3 class="text-xl font-semibold mt-6 mb-2">Contributing</h3>
         <p>
-          This project is open source and contributions are welcome. Visit our <a href="https://github.com/example/llms-explorer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">GitHub repository</a> to learn more.
+          Contributions are welcome! Please refer to the project's GitHub
+          repository for contribution guidelines and to report issues.
         </p>
+        <div class="flex justify-center mt-6">
+          <a
+            href="https://github.com/example/llms-explorer"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center px-4 py-2 bg-neutral-700 text-white rounded-md hover:bg-neutral-900 dark:bg-neutral-600 dark:hover:bg-neutral-700 transition-colors"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              ></path>
+            </svg>
+            View on GitHub
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
-<script>
-  // Client-side filtering and view toggle logic
-  document.addEventListener('DOMContentLoaded', () => {
-    // Get DOM elements with type assertions and null checks
-    const searchInput = document.getElementById('search') as HTMLInputElement | null;
-    const domainFilter = document.getElementById('domain-filter') as HTMLSelectElement | null;
-    const showLowQualityCheckbox = document.getElementById('show-low-quality') as HTMLInputElement | null;
-    const resultsCount = document.getElementById('results-count') as HTMLElement | null;
-    const toggleViewBtn = document.getElementById('toggle-view') as HTMLButtonElement | null;
-    const tableView = document.getElementById('table-view') as HTMLElement | null;
-    const cardView = document.getElementById('card-view') as HTMLElement | null;
+  <script>
+    // Client-side script for filtering, view toggling, etc.
+    const searchInput = document.getElementById("search") as HTMLInputElement;
+    const domainFilter = document.getElementById(
+      "domain-filter"
+    ) as HTMLSelectElement;
+    const showLowQualityCheckbox = document.getElementById(
+      "show-low-quality"
+    ) as HTMLInputElement;
+    const resultsCount = document.getElementById(
+      "results-count"
+    ) as HTMLElement;
+    const cardView = document.getElementById("card-view") as HTMLElement;
+    const tableView = document.getElementById("table-view") as HTMLElement;
+    const tableBody = document.getElementById("table-body") as HTMLElement;
+    const toggleViewButton = document.getElementById(
+      "toggle-view"
+    ) as HTMLButtonElement;
 
-    // Ensure essential elements exist before proceeding
-    if (!tableView || !cardView) {
-      console.error("Table view or Card view element not found!");
-      return;
-    }
+    const allCards = Array.from(
+      cardView.querySelectorAll<HTMLElement>("[data-domain]")
+    );
+    const allTableRows = Array.from(
+      tableBody.querySelectorAll<HTMLElement>("tr[data-domain]")
+    );
 
-    // Get references to table rows and cards
-    const tableRows = Array.from(tableView.querySelectorAll('#table-body tr')) as HTMLTableRowElement[];
-    const cards = Array.from(cardView.querySelectorAll('div.enhanced-card')) as HTMLElement[];
+    let isCardView = true; // Start with card view
 
-    // --- Filter Function ---
-    function applyFilters() {
-      const searchTerm = searchInput?.value.toLowerCase() ?? '';
-      const domainValue = domainFilter?.value ?? '';
-      const showLowQuality = showLowQualityCheckbox?.checked ?? true; // Default to showing low quality
+    function filterEntries() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const selectedDomain = domainFilter.value;
+      const showLowQuality = showLowQualityCheckbox.checked;
 
-      // Filter table rows
-      tableRows.forEach((row: HTMLTableRowElement) => {
-        const rowDomain = row.getAttribute('data-domain')?.toLowerCase() ?? '';
-        const rowQuality = row.getAttribute('data-quality');
-        const rowTitle = row.getAttribute('data-title') ?? ''; // Already lowercase from data attribute
-        const rowSummary = row.getAttribute('data-summary') ?? ''; // Already lowercase from data attribute
+      let visibleCount = 0;
 
-        const matchesSearch = rowDomain.includes(searchTerm) || rowTitle.includes(searchTerm) || rowSummary.includes(searchTerm);
-        const matchesDomain = !domainValue || rowDomain === domainValue.toLowerCase(); // Match against selected domain value (lowercase)
-        const matchesQuality = showLowQuality || rowQuality !== 'low';
+      // Filter Cards
+      allCards.forEach((card) => {
+        const domain = card.dataset.domain || "";
+        const quality = card.dataset.quality || "";
+        const title = card.dataset.title || "";
+        const summary = card.dataset.summary || "";
 
-        const isVisible = matchesSearch && matchesDomain && matchesQuality;
-        row.style.display = isVisible ? '' : 'none';
-      });
-
-      // Filter cards
-      cards.forEach((card: HTMLElement) => {
-        const cardDomain = card.getAttribute('data-domain')?.toLowerCase() ?? '';
-        const cardQuality = card.getAttribute('data-quality');
-        const cardTitle = card.getAttribute('data-title') ?? ''; // Already lowercase from data attribute
-        const cardSummary = card.getAttribute('data-summary') ?? ''; // Already lowercase from data attribute
-
-        const matchesSearch = cardDomain.includes(searchTerm) || cardTitle.includes(searchTerm) || cardSummary.includes(searchTerm);
-        const matchesDomain = !domainValue || cardDomain === domainValue.toLowerCase(); // Match against selected domain value (lowercase)
-        const matchesQuality = showLowQuality || cardQuality !== 'low';
+        const matchesSearch =
+          title.includes(searchTerm) ||
+          domain.includes(searchTerm) ||
+          summary.includes(searchTerm);
+        const matchesDomain = !selectedDomain || domain === selectedDomain;
+        const matchesQuality = showLowQuality || quality !== "low";
 
         const isVisible = matchesSearch && matchesDomain && matchesQuality;
-        card.style.display = isVisible ? '' : 'none';
-      });
-
-      // Update results count based on the *currently visible* items in the *active* view
-      updateResultsCount();
-    }
-
-    // --- Update Results Count Function ---
-    function updateResultsCount() {
-      if (!resultsCount || !tableView || !cardView) return; // Guard clause
-
-      const activeViewIsCard = !cardView.classList.contains('hidden');
-      const activeItems = activeViewIsCard ? cards : tableRows;
-      const currentVisibleCount = activeItems.filter(item => item.style.display !== 'none').length;
-
-      resultsCount.innerHTML = `Showing <span class="font-medium">${currentVisibleCount}</span> results`;
-    }
-
-
-    // --- Toggle View Function ---
-    function toggleView() {
-        if (!toggleViewBtn || !tableView || !cardView) return; // Guard clause
-
-        const isCurrentlyTableView = !tableView.classList.contains('hidden');
-
-        if (isCurrentlyTableView) {
-          // Switch TO Card View
-          tableView.classList.add('hidden');
-          cardView.classList.remove('hidden');
-          toggleViewBtn.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-            </svg>
-            Switch to Table View`;
-        } else {
-          // Switch TO Table View
-          tableView.classList.remove('hidden');
-          cardView.classList.add('hidden');
-          toggleViewBtn.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V3zm0 6a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V9zm0 6a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3z" clip-rule="evenodd" />
-            </svg>
-            Switch to Card View`;
+        card.style.display = isVisible ? "" : "none";
+        if (isVisible) {
+          visibleCount++;
         }
-        // Update results count after view switch
-        updateResultsCount();
+      });
+
+      // Filter Table Rows (only needs to happen if table is visible, but keep logic simple)
+      allTableRows.forEach((row) => {
+        const domain = row.dataset.domain || "";
+        const quality = row.dataset.quality || "";
+        const title = row.dataset.title || "";
+        const summary = row.dataset.summary || ""; // Assuming summary is in data attribute for consistency
+
+        const matchesSearch =
+          title.includes(searchTerm) ||
+          domain.includes(searchTerm) ||
+          summary.includes(searchTerm);
+        const matchesDomain = !selectedDomain || domain === selectedDomain;
+        const matchesQuality = showLowQuality || quality !== "low";
+
+        const isVisible = matchesSearch && matchesDomain && matchesQuality;
+        row.style.display = isVisible ? "" : "none";
+        // Count is based on cards, table visibility mirrors card visibility
+      });
+
+      // Update results count
+      resultsCount.innerHTML = `Showing <span class="font-medium">${visibleCount}</span> results`;
     }
 
-    // --- Add Event Listeners ---
-    searchInput?.addEventListener('input', applyFilters);
-    domainFilter?.addEventListener('change', applyFilters);
-    showLowQualityCheckbox?.addEventListener('change', applyFilters);
-    toggleViewBtn?.addEventListener('click', toggleView);
+    function toggleView() {
+      isCardView = !isCardView;
+      if (isCardView) {
+        cardView.classList.remove("hidden");
+        tableView.classList.add("hidden");
+        toggleViewButton.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+          </svg>
+          Switch to Table View
+        `;
+      } else {
+        cardView.classList.add("hidden");
+        tableView.classList.remove("hidden");
+        toggleViewButton.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+             <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+          </svg>
+          Switch to Card View
+        `;
+        // Ensure table rows reflect current filter state upon switching
+        filterEntries();
+      }
+    }
 
-    // --- Initial Setup ---
-    // Apply initial filters to hide/show items based on default settings
-    applyFilters();
-    // Update the count based on the initial view (Card view) and filters
-    // updateResultsCount is called within applyFilters, so no need to call it separately here.
+    // Event Listeners
+    searchInput.addEventListener("input", filterEntries);
+    domainFilter.addEventListener("change", filterEntries);
+    showLowQualityCheckbox.addEventListener("change", filterEntries);
+    toggleViewButton.addEventListener("click", toggleView);
 
-  });
-</script>
+    // Initial filter on load
+    filterEntries();
+  </script>
 </Layout>
+
+<style is:global>
+  /* Enhanced Header Styling */
+  .enhanced-header {
+    background: linear-gradient(rgba(13, 37, 63, 0.8), rgba(13, 37, 63, 0.95)),
+      url("/assets/background.svg"); /* Ensure background.svg is in public/assets */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .circuit-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+        var(--color-primary-500) 0.5px,
+        transparent 0.5px
+      ),
+      radial-gradient(var(--color-primary-500) 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+    background-position:
+      0 0,
+      10px 10px;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+
+  /* Enhanced Filter/About/Table Styling */
+  .enhanced-filter,
+  .enhanced-about,
+  .enhanced-table {
+    border: 1px solid var(--color-neutral-200);
+  }
+  .dark .enhanced-filter,
+  .dark .enhanced-about,
+  .dark .enhanced-table {
+    border: 1px solid var(--color-neutral-700);
+  }
+
+  /* Glow Button Effect */
+  .glow-button {
+    position: relative;
+    overflow: hidden;
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .glow-button:hover {
+    box-shadow: 0 0 15px 5px var(--color-primary-400);
+  }
+
+  /* Ensure line-clamp works */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  /* Focus state for cards */
+  [data-domain][tabindex="0"]:focus {
+    outline: none; /* Remove default outline */
+  }
+
+  /* Style table rows for low quality */
+  #table-body tr[data-quality="low"] {
+    opacity: 0.6;
+  }
+  #table-body tr[data-quality="low"]:hover {
+    opacity: 1; /* Restore opacity on hover */
+  }
+</style>

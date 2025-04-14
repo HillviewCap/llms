@@ -2,16 +2,19 @@
 
 /* Add a subtle tech pattern background to the body */
 body {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%236d28d9' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  /* Updated background pattern color to a subtle teal */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230D7377' fill-opacity='0.04'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
 }
 
 /* Enhanced header with more dynamic gradient and glow effect */
 .enhanced-header {
-  background: linear-gradient(135deg, #0068c6 0%, #6d28d9 50%, #108a9c 100%);
+  /* Updated header gradient to teal/cyan/blue */
+  background: linear-gradient(135deg, #0D7377 0%, #14FFEC 50%, #00A8CC 100%);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(13, 40, 95, 0.2);
+  /* Adjusted shadow color */
+  box-shadow: 0 4px 20px rgba(13, 115, 119, 0.2);
 }
 
 .enhanced-header::before {
@@ -45,7 +48,8 @@ body {
 
 /* Enhanced card styles */
 .enhanced-card {
-  border: 1px solid #d1d5db; /* Added border */
+  /* Updated border color to a subtle teal-gray */
+  border: 1px solid #cce0e1;
   padding: 1rem; /* Added padding */
   transition: all 0.3s ease;
   /* background: linear-gradient(to right, rgba(108, 43, 217, 0.05) 0%, rgba(255, 255, 255, 0) 100%); */ /* Removed gradient */
@@ -54,21 +58,24 @@ body {
 
 .enhanced-card:hover {
   /* border-left-color removed as border-left was removed */
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px); /* Slightly increased lift */
+  /* Refined shadow */
+  box-shadow: 0 12px 20px -4px rgba(13, 115, 119, 0.15), 0 5px 8px -3px rgba(13, 115, 119, 0.1);
 }
 
 /* Enhanced table styles */
 .enhanced-table thead th {
-  background: linear-gradient(to right, #0c87e8 0%, #6d28d9 100%);
+  /* Updated table header gradient */
+  background: linear-gradient(to right, #0D7377 0%, #00A8CC 100%);
   color: white !important;
-  font-weight: 600;
+  font-weight: 600; /* Kept font-weight */
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.075em; /* Increased letter spacing */
 }
 
 .enhanced-table tbody tr:hover {
-  background-color: rgba(108, 43, 217, 0.05) !important;
+  /* Updated table row hover background color */
+  background-color: rgba(13, 115, 119, 0.05) !important;
 }
 
 /* Glowing effect for buttons */
@@ -98,15 +105,18 @@ body {
 
 /* Enhanced filter section */
 .enhanced-filter {
-  background: linear-gradient(to right, rgba(12, 135, 232, 0.05) 0%, rgba(108, 43, 217, 0.05) 100%);
+  /* Updated filter background gradient */
+  background: linear-gradient(to right, rgba(13, 115, 119, 0.05) 0%, rgba(0, 168, 204, 0.05) 100%);
   border-radius: 0.5rem;
-  border: 1px solid rgba(108, 43, 217, 0.1);
+  /* Updated filter border color */
+  border: 1px solid rgba(13, 115, 119, 0.1);
 }
 
 .enhanced-filter input:focus,
 .enhanced-filter select:focus {
-  border-color: #6d28d9;
-  box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.2);
+  /* Updated filter focus styles */
+  border-color: #00A8CC; /* Use accent blue */
+  box-shadow: 0 0 0 3px rgba(0, 168, 204, 0.2);
 }
 
 /* Animated background for the about section */
@@ -122,7 +132,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%236d28d9' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  /* Updated about section background pattern color */
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230D7377' fill-opacity='0.04' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
   z-index: 0;
 }
 
@@ -134,12 +145,15 @@ body {
 /* Dark mode enhancements */
 .dark .enhanced-card {
   /* background: linear-gradient(to right, rgba(109, 40, 217, 0.1) 0%, rgba(0, 0, 0, 0) 100%); */ /* Removed gradient */
-  background-color: #1e293b; /* Added solid background for dark mode (neutral-800) */
+  background-color: #1e293b; /* Kept solid background for dark mode (neutral-800) */
+  border-color: #2c3e50; /* Adjusted dark mode border color */
 }
 
 .dark .enhanced-filter {
-  background: linear-gradient(to right, rgba(12, 135, 232, 0.1) 0%, rgba(109, 40, 217, 0.1) 100%);
-  border: 1px solid rgba(109, 40, 217, 0.2);
+  /* Updated dark mode filter background */
+  background: linear-gradient(to right, rgba(13, 115, 119, 0.1) 0%, rgba(0, 168, 204, 0.1) 100%);
+  /* Updated dark mode filter border */
+  border: 1px solid rgba(13, 115, 119, 0.2);
 }
 
 /* Animations */
@@ -154,7 +168,8 @@ body {
 
 /* AI-themed category tags */
 .ai-tag {
-  background: linear-gradient(to right, #0c87e8, #6d28d9);
+  /* Updated ai-tag gradient */
+  background: linear-gradient(to right, #0D7377, #00A8CC);
   color: white;
   font-weight: 500;
   padding: 0.25rem 0.75rem;
@@ -162,7 +177,8 @@ body {
   font-size: 0.75rem;
   display: inline-flex;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Updated ai-tag shadow */
+  box-shadow: 0 2px 4px rgba(13, 115, 119, 0.15);
 }
 
 .ai-tag::before {
