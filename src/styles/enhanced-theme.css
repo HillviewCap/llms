@@ -127,7 +127,8 @@ body {
 /* AI-themed category tags */
 .ai-tag {
   /* Use solid blue background */
-  @apply bg-primary-600 text-white;
+  background-color: #1e40af;
+  color: #fff;
   font-weight: 500;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
@@ -193,9 +194,9 @@ body {
 }
 
 .badge-new {
-  background-color: #22c55e; /* Green */
+  background-color: #15803d; /* Darker green for better contrast */
 }
 
 .badge-updated {
-  background-color: #3b82f6; /* Blue */
+  background-color: #1e40af; /* Darker blue for better contrast */
 }
