@@ -103,7 +103,7 @@ const qualityStyles = {
       >
         <div class="circuit-pattern"></div>
         <h1 class="text-5xl font-bold text-white mb-4">LLMS.txt Explorer</h1>
-        <p class="text-xl text-primary-100 max-w-3xl mx-auto">
+        <p class="text-xl !text-neutral-800 max-w-3xl mx-auto">
           Discover and analyze LLMS.txt files from <span class="font-bold"
             >{sortedLlmsData.length}</span
           > domains across the web
@@ -173,25 +173,7 @@ const qualityStyles = {
               >Include Low Quality</label
             >
           </div>
-          <button
-            id="toggle-view"
-            class="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors flex items-center glow-button"
-          >
-            {
-              /* Initial state: Card view active, button shows "Switch to Table View" */
-            }
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 mr-2"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-              ></path>
-            </svg>
-            Switch to Table View
-          </button>
+          {/* Toggle button removed */}
         </div>
       </div>
     </div>
@@ -235,10 +217,10 @@ const qualityStyles = {
       </div>
     </section>
 
-    {/* Table View - Initially hidden */}
+    {/* Table View */}
     <div
       id="table-view"
-      class="mt-8 overflow-x-auto bg-white dark:bg-neutral-800 rounded-lg shadow-md enhanced-table hidden"
+      class="mt-8 overflow-x-auto bg-white dark:bg-neutral-800 rounded-lg shadow-md enhanced-table"
     >
       <table
         class="min-w-full divide-y divide-neutral-200 dark:divide-neutral-700"
@@ -247,7 +229,7 @@ const qualityStyles = {
           <tr>
             <th
               scope="col"
-              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider"
+              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider w-1/3"
               >Title / Source Domain</th
             >
             <th
@@ -257,7 +239,7 @@ const qualityStyles = {
             >
             <th
               scope="col"
-              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider"
+              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider w-2/5"
               >LLMS.txt URL</th
             >
             <th
@@ -301,7 +283,7 @@ const qualityStyles = {
                   ).toLowerCase()}
                 >
                   <td
-                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-900 dark:text-white"
+                    class="px-6 py-4 text-sm font-medium text-neutral-900 dark:text-white"
                     title={title}
                   >
                     {displayTitle}
@@ -329,7 +311,7 @@ const qualityStyles = {
                       target="_blank"
                       rel="noopener noreferrer"
                       class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 truncate"
-                      style="max-width: 200px; display: inline-block;"
+                      style="max-width: 400px; display: inline-block;"
                     >
                       {entry.url}
                     </a>
@@ -350,136 +332,7 @@ const qualityStyles = {
       </table>
     </div>
 
-    {/* Card View - Initially shown */}
-    <div
-      id="card-view"
-      class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
-    >
-      {
-        sortedLlmsData.map((entry: LlmEntry) => {
-          // --- Card Redesign Start ---
-          const quality = (
-            entry.quality ?? "Medium"
-          ).toLowerCase() as keyof typeof qualityStyles;
-          const title: string =
-            entry.parsed_title ??
-            entry.fallback_title ??
-            entry.title ??
-            entry.metadata.source_domain;
-          const summary =
-            entry.parsed_summary ?? entry.fallback_summary ?? entry.summary;
-          const sourceDomain = entry.metadata.source_domain;
-
-          // Use helper functions defined in frontmatter
-          const plainSummary = stripHtml(summary);
-          const formattedDate = formatDate(entry.last_checked_utc);
-          const qualityClass = qualityStyles[quality] ?? qualityStyles.medium; // Default to medium if quality is unexpected
-
-          // Determine card background color based on quality
-          const cardBgClass =
-            quality === "high"
-              ? "bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20"
-              : "bg-white dark:bg-neutral-800";
-
-          return (
-            <div
-              class:list={[
-                "flex flex-col rounded-xl shadow-md hover:shadow-xl transition-all duration-300 ease-in-out overflow-hidden border border-neutral-200 dark:border-neutral-700 h-full w-full max-w-xs mx-auto hover:translate-y-[-2px]",
-                { "opacity-75": quality === "low" },
-              ]}
-              data-domain={sourceDomain}
-              data-quality={quality}
-              data-title={title.toLowerCase()}
-              data-summary={plainSummary.toLowerCase()}
-              tabindex="0"
-              style="max-height: 280px;"
-            >
-              {/* Card Header */}
-              <div class={`p-5 flex-grow flex flex-col ${cardBgClass}`}>
-                {/* Quality Badge - Top Right */}
-                <div class="flex justify-between items-start mb-3">
-                  <div class="flex items-center">
-                    {/* Domain Icon/Avatar */}
-                    <div class="w-8 h-8 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-700 dark:text-primary-300 mr-3 flex-shrink-0">
-                      {sourceDomain.charAt(0).toUpperCase()}
-                    </div>
-
-                    {/* Domain */}
-                    <span class="text-xs text-neutral-500 dark:text-neutral-400 truncate font-medium">
-                      {sourceDomain}
-                    </span>
-                  </div>
-
-                  <span
-                    class={`inline-flex flex-shrink-0 items-center px-2 py-0.5 rounded-full text-xs font-medium ${qualityClass}`}
-                  >
-                    {quality.charAt(0).toUpperCase() + quality.slice(1)}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h3
-                  class="text-base font-semibold text-neutral-900 dark:text-white mb-2 line-clamp-2"
-                  title={title}
-                >
-                  {title}
-                </h3>
-
-                {/* Summary */}
-                <p
-                  class="text-sm text-neutral-600 dark:text-neutral-300 mb-4 line-clamp-2 flex-grow overflow-hidden"
-                  title={plainSummary}
-                >
-                  {plainSummary || (
-                    <span class="italic text-neutral-400">
-                      No summary available
-                    </span>
-                  )}
-                </p>
-
-                {/* Card Footer */}
-                <div class="flex justify-between items-center mt-auto pt-3 border-t border-neutral-200 dark:border-neutral-700/50">
-                  {/* View Link Button */}
-                  <a
-                    href={entry.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-sm text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium flex items-center"
-                    aria-label={`View llms.txt for ${sourceDomain}`}
-                  >
-                    <span>View Link</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-4 w-4 ml-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-
-                  {/* Last Checked Date */}
-                  <span
-                    class="text-xs text-neutral-500 dark:text-neutral-400 flex items-center"
-                    title={`Last checked: ${formattedDate}`}
-                  >
-                    <span>Last Checked:</span>
-                    <span class="ml-1 font-medium">{formattedDate}</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          );
-          // --- Card Redesign End ---
-        })
-      }
-    </div>
+    {/* Card View Removed */}
 
     <div
       class="mt-12 bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md enhanced-about"
@@ -506,7 +359,7 @@ const qualityStyles = {
         </p>
         <h3 class="text-xl font-semibold mt-6 mb-2">Features</h3>
         <ul class="list-disc list-inside">
-          <li>Display of LLMS.txt entries in card and table views.</li>
+          <li>Display of LLMS.txt entries in a table view.</li>
           <li>Search functionality across titles, domains, and summaries.</li>
           <li>Filtering by source domain and quality rating.</li>
           <li>Responsive design for various screen sizes.</li>
@@ -553,21 +406,17 @@ const qualityStyles = {
     const resultsCount = document.getElementById(
       "results-count"
     ) as HTMLElement;
-    const cardView = document.getElementById("card-view") as HTMLElement;
+    // const cardView = document.getElementById("card-view") as HTMLElement; // Removed
     const tableView = document.getElementById("table-view") as HTMLElement;
     const tableBody = document.getElementById("table-body") as HTMLElement;
-    const toggleViewButton = document.getElementById(
-      "toggle-view"
-    ) as HTMLButtonElement;
+    // const toggleViewButton = document.getElementById("toggle-view") as HTMLButtonElement; // Removed
 
-    const allCards = Array.from(
-      cardView.querySelectorAll<HTMLElement>("[data-domain]")
-    );
+    // const allCards = Array.from(cardView.querySelectorAll<HTMLElement>("[data-domain]")); // Removed
     const allTableRows = Array.from(
       tableBody.querySelectorAll<HTMLElement>("tr[data-domain]")
     );
 
-    let isCardView = true; // Start with card view
+    // let isCardView = true; // Removed - Table view is now default
 
     function filterEntries() {
       const searchTerm = searchInput.value.toLowerCase();
@@ -576,28 +425,7 @@ const qualityStyles = {
 
       let visibleCount = 0;
 
-      // Filter Cards
-      allCards.forEach((card) => {
-        const domain = card.dataset.domain || "";
-        const quality = card.dataset.quality || "";
-        const title = card.dataset.title || "";
-        const summary = card.dataset.summary || "";
-
-        const matchesSearch =
-          title.includes(searchTerm) ||
-          domain.includes(searchTerm) ||
-          summary.includes(searchTerm);
-        const matchesDomain = !selectedDomain || domain === selectedDomain;
-        const matchesQuality = showLowQuality || quality !== "low";
-
-        const isVisible = matchesSearch && matchesDomain && matchesQuality;
-        card.style.display = isVisible ? "" : "none";
-        if (isVisible) {
-          visibleCount++;
-        }
-      });
-
-      // Filter Table Rows (only needs to happen if table is visible, but keep logic simple)
+      // Filter Table Rows
       allTableRows.forEach((row) => {
         const domain = row.dataset.domain || "";
         const quality = row.dataset.quality || "";
@@ -613,43 +441,22 @@ const qualityStyles = {
 
         const isVisible = matchesSearch && matchesDomain && matchesQuality;
         row.style.display = isVisible ? "" : "none";
-        // Count is based on cards, table visibility mirrors card visibility
+        if (isVisible) {
+          visibleCount++; // Count visible rows
+        }
       });
 
       // Update results count
       resultsCount.innerHTML = `Showing <span class="font-medium">${visibleCount}</span> results`;
     }
 
-    function toggleView() {
-      isCardView = !isCardView;
-      if (isCardView) {
-        cardView.classList.remove("hidden");
-        tableView.classList.add("hidden");
-        toggleViewButton.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
-          </svg>
-          Switch to Table View
-        `;
-      } else {
-        cardView.classList.add("hidden");
-        tableView.classList.remove("hidden");
-        toggleViewButton.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-             <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
-          </svg>
-          Switch to Card View
-        `;
-        // Ensure table rows reflect current filter state upon switching
-        filterEntries();
-      }
-    }
+    // function toggleView() { ... } // Removed
 
     // Event Listeners
     searchInput.addEventListener("input", filterEntries);
     domainFilter.addEventListener("change", filterEntries);
     showLowQualityCheckbox.addEventListener("change", filterEntries);
-    toggleViewButton.addEventListener("click", toggleView);
+    // toggleViewButton.addEventListener("click", toggleView); // Removed
 
     // Initial filter on load
     filterEntries();
