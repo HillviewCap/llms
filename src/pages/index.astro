@@ -516,25 +516,32 @@ const pillColorClasses: string[] = [
         const summary = row.dataset.summary || ""; // Assuming summary is in data attribute for consistency
 
         const entryIndex = parseInt(row.dataset.index || "0");
-        const entry = window.sortedLlmsData?.[entryIndex] || {};
+        const entry = window.sortedLlmsData[entryIndex];
 
+        // Check if the entry has URL topics that match the selected URL topic
         const matchesUrlTopics =
           !selectedUrlTopic ||
-          entry.metadata?.url_topic_ranking?.some(
-            ([topic]) => topic === selectedUrlTopic
-          );
+          (entry?.metadata?.url_topic_ranking &&
+            entry.metadata.url_topic_ranking.some(
+              ([topic]) => topic === selectedUrlTopic
+            ));
 
+        // Check if the entry has domain topics that match the selected domain topic
         const matchesDomainTopics =
           !selectedDomainTopic ||
-          entry.metadata?.domain_topic_ranking?.some(
-            ([topic]) => topic === selectedDomainTopic
-          );
+          (entry?.metadata?.domain_topic_ranking &&
+            entry.metadata.domain_topic_ranking.some(
+              ([topic]) => topic === selectedDomainTopic
+            ));
 
         const matchesSearch =
           title.includes(searchTerm) ||
           domain.includes(searchTerm) ||
           summary.includes(searchTerm);
-        const matchesDomain = !selectedDomain || domain === selectedDomain;
+        // Fix domain matching to ensure exact match with selected domain
+        const matchesDomain =
+          !selectedDomain ||
+          domain.toLowerCase() === selectedDomain.toLowerCase();
         const matchesQuality = showLowQuality || quality !== "low";
 
         const isVisible =
@@ -544,11 +551,14 @@ const pillColorClasses: string[] = [
           matchesUrlTopics &&
           matchesDomainTopics;
         row.style.display = isVisible ? "" : "none";
-        // Also hide/show the corresponding metadata row if it exists
-        const metadataRow = row.nextElementSibling;
-        if (metadataRow && metadataRow.classList.contains("metadata-row")) {
-          metadataRow.style.display = isVisible ? "" : "none";
-        }
+        // Find and show/hide the corresponding metadata row using the data-index attribute
+        // This is more robust than assuming it's the next sibling
+        const metadataRows = allMetadataRows.filter(
+          (metaRow) => metaRow.dataset.index === row.dataset.index
+        );
+        metadataRows.forEach((metaRow) => {
+          metaRow.style.display = isVisible ? "" : "none";
+        });
         if (isVisible) {
           visibleCount++; // Count visible rows (only count main rows)
         }
@@ -565,6 +575,9 @@ const pillColorClasses: string[] = [
 
     domainTopicFilter.addEventListener("change", filterEntries);
 
+    // Ensure filtering runs after DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", filterEntries);
+    // Also run it immediately in case the script runs after DOM is already loaded
     filterEntries();
   </script>
 </Layout>
