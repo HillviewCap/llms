@@ -1,3 +1,20 @@
+/* LLMS.txt Explorer text color adjustments for dark theme */
+body {
+  color: #F3F4F6;
+}
+
+.llms-explorer-table th {
+  color: #E5E7EB;
+}
+
+.llms-explorer-table td {
+  color: #F3F4F6;
+}
+
+.llms-explorer-filter, .llms-explorer-tag {
+  color: #F9FAFB;
+}
+
 /* Enhanced theme for LLMS.txt Explorer */
 
 /* Add a subtle tech pattern background to the body */
