@@ -9,7 +9,7 @@ body {
 /* Enhanced header with more dynamic gradient and glow effect */
 .enhanced-header {
   /* Use a solid dark background, e.g., neutral-900 */
-  @apply bg-neutral-900;
+  @apply bg-gray-900;
   position: relative;
   overflow: hidden;
   /* Removed shadow with transparency */
@@ -28,7 +28,7 @@ body {
 /* Enhanced card styles */
 .enhanced-card {
   /* Use Tailwind classes for dark background, border, and rounded corners */
-  @apply bg-neutral-800 border border-neutral-700 rounded-lg p-4; /* Increased padding */
+  @apply bg-gray-800 border border-gray-700 rounded-lg p-4; /* Increased padding */
   transition: all 0.3s ease;
   /* Removed light mode background and specific border */
 }
@@ -51,7 +51,7 @@ body {
 
 .enhanced-table tbody tr:hover {
   /* Use a slightly lighter neutral for hover, fully opaque */
-  @apply bg-neutral-700;
+  @apply bg-gray-700;
 }
 
 /* Glowing effect for buttons */
@@ -67,7 +67,7 @@ body {
 /* Enhanced filter section */
 .enhanced-filter {
   /* Use solid dark background and border, consistent with cards */
-  @apply bg-neutral-800 border border-neutral-700 rounded-lg p-4;
+  @apply bg-gray-800 border border-gray-700 rounded-lg p-4;
   /* Removed gradient background and transparent border */
 }
 
