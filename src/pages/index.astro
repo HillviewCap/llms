@@ -9,6 +9,9 @@ type Quality = "High" | "Medium" | "Low";
 
 interface LlmMetadata {
   source_domain: string;
+  url_topic_ranking?: [string, number][];
+  domain_purpose_ranking?: string[];
+  domain_topic_ranking?: [string, number][];
   // cf_categories removed as it's not in the JSON data
 }
 
@@ -31,7 +34,7 @@ interface LlmEntry {
 }
 
 // Assert the type of the imported JSON data
-const llmsData: LlmEntry[] = llmsDataJson as LlmEntry[];
+const llmsData: LlmEntry[] = llmsDataJson as unknown as LlmEntry[];
 
 // Sort the data by quality (High > Medium > Low)
 const sortedLlmsData: LlmEntry[] = [...llmsData].sort((a, b) => {
@@ -231,66 +234,157 @@ const qualityStyles = {
                 title.length > 60 ? title.substring(0, 57) + "..." : title; // Truncate long titles
 
               return (
-                <tr
-                  class:list={[
-                    index % 2 === 0
-                      ? "bg-white dark:bg-neutral-900"
-                      : "bg-neutral-50 dark:bg-neutral-800",
-                    { "opacity-50": quality === "low" },
-                  ]}
-                  data-domain={entry.metadata.source_domain}
-                  data-quality={quality}
-                  data-title={title.toLowerCase()}
-                  data-summary={(
-                    entry.parsed_summary ??
-                    entry.fallback_summary ??
-                    entry.summary ??
-                    ""
-                  ).toLowerCase()}
-                >
-                  <td
-                    class="px-6 py-4 text-sm font-medium text-neutral-900 dark:text-white"
-                    title={title}
+                <>
+                  <tr
+                    class:list={[
+                      index % 2 === 0
+                        ? "bg-white dark:bg-neutral-900"
+                        : "bg-neutral-50 dark:bg-neutral-800",
+                      { "opacity-50": quality === "low" },
+                    ]}
+                    data-domain={entry.metadata.source_domain}
+                    data-quality={quality}
+                    data-title={title.toLowerCase()}
+                    data-summary={(
+                      entry.parsed_summary ??
+                      entry.fallback_summary ??
+                      entry.summary ??
+                      ""
+                    ).toLowerCase()}
                   >
-                    {displayTitle}
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm">
-                    {quality === "high" && (
-                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                        High
-                      </span>
-                    )}
-                    {quality === "medium" && (
-                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
-                        Medium
-                      </span>
-                    )}
-                    {quality === "low" && (
-                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
-                        Low
-                      </span>
-                    )}
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
-                    <a
-                      href={entry.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 truncate"
-                      style="max-width: 400px; display: inline-block;"
+                    <td
+                      class="px-6 py-4 text-sm font-medium text-neutral-900 dark:text-white"
+                      title={title}
                     >
-                      {entry.url}
-                    </a>
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-400">
-                    {entry.last_checked_utc
-                      ? new Date(entry.last_checked_utc).toLocaleString(
-                          "en-US",
-                          { dateStyle: "short", timeStyle: "short" }
-                        )
-                      : "N/A"}
-                  </td>
-                </tr>
+                      {displayTitle}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm">
+                      {quality === "high" && (
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                          High
+                        </span>
+                      )}
+                      {quality === "medium" && (
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
+                          Medium
+                        </span>
+                      )}
+                      {quality === "low" && (
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
+                          Low
+                        </span>
+                      )}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
+                      <a
+                        href={entry.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 truncate"
+                        style="max-width: 400px; display: inline-block;"
+                      >
+                        {entry.url}
+                      </a>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-400">
+                      {entry.last_checked_utc
+                        ? new Date(entry.last_checked_utc).toLocaleString(
+                            "en-US",
+                            { dateStyle: "short", timeStyle: "short" }
+                          )
+                        : "N/A"}
+                    </td>
+                  </tr>
+                  {/* New row for additional metadata */}
+                  {(entry.metadata.url_topic_ranking?.length ||
+                    entry.metadata.domain_purpose_ranking?.length ||
+                    entry.metadata.domain_topic_ranking?.length) && (
+                    <tr
+                      class:list={[
+                        index % 2 === 0
+                          ? "bg-white dark:bg-neutral-900"
+                          : "bg-neutral-50 dark:bg-neutral-800",
+                        { "opacity-50": quality === "low" },
+                        "metadata-row", // Add class for potential styling/filtering
+                      ]}
+                      data-domain={entry.metadata.source_domain}
+                      data-quality={quality}
+                      data-title={title.toLowerCase()}
+                      data-summary={(
+                        entry.parsed_summary ??
+                        entry.fallback_summary ??
+                        entry.summary ??
+                        ""
+                      ).toLowerCase()}
+                    >
+                      <td
+                        colspan="4"
+                        class="px-6 py-3 text-xs text-neutral-700 dark:text-neutral-400 border-t border-neutral-200 dark:border-neutral-700"
+                      >
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2">
+                          {/* URL Topics */}
+                          {entry.metadata.url_topic_ranking &&
+                            entry.metadata.url_topic_ranking.length > 0 && (
+                              <div class="metadata-section">
+                                <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
+                                  URL Topics:
+                                </h4>
+                                <ul class="list-disc list-inside space-y-0.5">
+                                  {/* Add explicit check here */}
+                                  {entry.metadata.url_topic_ranking?.map(
+                                    ([topic, score]) => (
+                                      <li>
+                                        <span class="font-medium">{topic}</span>
+                                        : {score}
+                                      </li>
+                                    )
+                                  )}
+                                </ul>
+                              </div>
+                            )}
+                          {/* Domain Purposes */}
+                          {entry.metadata.domain_purpose_ranking &&
+                            entry.metadata.domain_purpose_ranking.length >
+                              0 && (
+                              <div class="metadata-section">
+                                <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
+                                  Domain Purposes:
+                                </h4>
+                                <ul class="list-disc list-inside space-y-0.5">
+                                  {/* Add explicit check here */}
+                                  {entry.metadata.domain_purpose_ranking?.map(
+                                    (purpose) => (
+                                      <li>{purpose}</li>
+                                    )
+                                  )}
+                                </ul>
+                              </div>
+                            )}
+                          {/* Domain Topics */}
+                          {entry.metadata.domain_topic_ranking &&
+                            entry.metadata.domain_topic_ranking.length > 0 && (
+                              <div class="metadata-section">
+                                <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
+                                  Domain Topics:
+                                </h4>
+                                <ul class="list-disc list-inside space-y-0.5">
+                                  {/* Add explicit check here */}
+                                  {entry.metadata.domain_topic_ranking?.map(
+                                    ([topic, score]) => (
+                                      <li>
+                                        <span class="font-medium">{topic}</span>
+                                        : {score}
+                                      </li>
+                                    )
+                                  )}
+                                </ul>
+                              </div>
+                            )}
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </>
               );
             })
           }
@@ -321,7 +415,12 @@ const qualityStyles = {
 
     // const allCards = Array.from(cardView.querySelectorAll<HTMLElement>("[data-domain]")); // Removed
     const allTableRows = Array.from(
-      tableBody.querySelectorAll<HTMLElement>("tr[data-domain]")
+      tableBody.querySelectorAll<HTMLElement>(
+        "tr[data-domain]:not(.metadata-row)"
+      ) // Exclude metadata rows from main filtering logic
+    );
+    const allMetadataRows = Array.from(
+      tableBody.querySelectorAll<HTMLElement>("tr.metadata-row")
     );
 
     // let isCardView = true; // Removed - Table view is now default
@@ -349,8 +448,13 @@ const qualityStyles = {
 
         const isVisible = matchesSearch && matchesDomain && matchesQuality;
         row.style.display = isVisible ? "" : "none";
+        // Also hide/show the corresponding metadata row if it exists
+        const metadataRow = row.nextElementSibling as HTMLElement | null;
+        if (metadataRow && metadataRow.classList.contains("metadata-row")) {
+          metadataRow.style.display = isVisible ? "" : "none";
+        }
         if (isVisible) {
-          visibleCount++; // Count visible rows
+          visibleCount++; // Count visible rows (only count main rows)
         }
       });
 
