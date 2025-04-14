@@ -75,6 +75,18 @@ const qualityStyles = {
     "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
   low: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
 };
+
+// Color classes for topic pills
+const pillColorClasses = [
+  "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+  "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+  "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
+  "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
+  "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300",
+  "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+  "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
+  "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300",
+];
 ---
 
 <Layout
@@ -329,17 +341,23 @@ const qualityStyles = {
                                 <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
                                   URL Topics:
                                 </h4>
-                                <ul class="list-disc list-inside space-y-0.5">
+                                <div class="flex flex-wrap gap-1">
                                   {/* Add explicit check here */}
                                   {entry.metadata.url_topic_ranking?.map(
-                                    ([topic, score]) => (
-                                      <li>
-                                        <span class="font-medium">{topic}</span>
-                                        : {score}
-                                      </li>
+                                    ([topic, score], topicIndex) => (
+                                      <span
+                                        class:list={[
+                                          "inline-block text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full",
+                                          pillColorClasses[
+                                            topicIndex % pillColorClasses.length
+                                          ],
+                                        ]}
+                                      >
+                                        {topic}
+                                      </span>
                                     )
                                   )}
-                                </ul>
+                                </div>
                               </div>
                             )}
                           {/* Domain Purposes */}
@@ -367,17 +385,23 @@ const qualityStyles = {
                                 <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
                                   Domain Topics:
                                 </h4>
-                                <ul class="list-disc list-inside space-y-0.5">
+                                <div class="flex flex-wrap gap-1">
                                   {/* Add explicit check here */}
                                   {entry.metadata.domain_topic_ranking?.map(
-                                    ([topic, score]) => (
-                                      <li>
-                                        <span class="font-medium">{topic}</span>
-                                        : {score}
-                                      </li>
+                                    ([topic, score], topicIndex) => (
+                                      <span
+                                        class:list={[
+                                          "inline-block text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full",
+                                          pillColorClasses[
+                                            topicIndex % pillColorClasses.length
+                                          ],
+                                        ]}
+                                      >
+                                        {topic}
+                                      </span>
                                     )
                                   )}
-                                </ul>
+                                </div>
                               </div>
                             )}
                         </div>
