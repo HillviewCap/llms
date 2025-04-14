@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import StructuredData from "../components/StructuredData.astro";
 // Import the JSON data
 import llmsDataJson from "../data/llms_metadata.json";
+import backgroundSvg from "../assets/background.svg";
 
 // Define TypeScript interfaces for the data
 type Quality = "High" | "Medium" | "Low";
@@ -507,7 +508,7 @@ const pillColorClasses = [
         rgba(245, 245, 245, 0.8),
         rgba(229, 229, 229, 0.95)
       ),
-      url("/assets/background.svg"); /* Ensure background.svg is in public/assets */
+      url(${backgroundSvg.src});
     background-size: cover;
     background-position: center;
     position: relative;
