@@ -20,7 +20,7 @@ const {
 } = Astro.props;
 
 // Base URL for production
-const siteUrl = "https://llms-explorer.example.com";
+const siteUrl = "https://llms-text.ai";
 const fullCanonicalUrl = new URL(canonicalUrl, siteUrl).toString();
 ---
 
@@ -80,12 +80,12 @@ const fullCanonicalUrl = new URL(canonicalUrl, siteUrl).toString();
 	
 	<!-- Add performance optimizer -->
 	<PerformanceOptimizer />
-	<body class="min-h-screen bg-neutral-50 dark:bg-neutral-900 flex flex-col">
+	<body class="min-h-screen flex flex-col">
 		<main class="flex-grow">
 			<slot />
 		</main>
 		
-		      <footer class="mt-12 py-6 border-t border-gray-200 dark:border-gray-700 text-center text-sm text-gray-600 dark:text-gray-400">
+		      <footer class="mt-12 py-6 border-t border-neutral-300 dark:border-neutral-700 text-center text-sm text-neutral-600 dark:text-neutral-400">
 		        <div class="container mx-auto px-4">
 		          <nav class="flex justify-center space-x-4">
 		            <a href="/resources" class="hover:underline">Resources</a> <!-- Assuming a /resources page will exist -->

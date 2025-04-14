@@ -1,49 +1,106 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import StructuredData from '../components/StructuredData.astro';
-// Import the JSON data
-import llmsDataJson from '../data/llms_metadata.json';
+/**
+ * LLMS.txt Explorer Frontmatter
+ * - Types, helpers, and data extraction for maintainability and clarity.
+ */
 
-// Define TypeScript interfaces for the data
-type Quality = 'High' | 'Medium' | 'Low';
+// TypeScript: Make window.sortedLlmsData available with correct type
+declare global {
+  interface Window {
+    sortedLlmsData: LlmEntry[];
+  }
+}
+
+import Layout from "../layouts/Layout.astro";
+import StructuredData from "../components/StructuredData.astro";
+import llmsDataJson from "../data/llms_metadata.json";
+import backgroundSvg from "../assets/background.svg";
+
+// Data types
+type Quality = "High" | "Medium" | "Low";
 
 interface LlmMetadata {
   source_domain: string;
-  // cf_categories removed as it's not in the JSON data
+  url_topic_ranking?: [string, number][];
+  domain_purpose_ranking?: string[];
+  domain_topic_ranking?: [string, number][];
 }
 
 interface LlmEntry {
   url: string;
-  domain: string; // Original domain from the URL, might differ from source_domain
+  domain: string;
   status_code: number;
   content_hash: string;
-  metadata: LlmMetadata; // Contains the source_domain
+  metadata: LlmMetadata;
   last_checked_utc: string;
   first_added: string;
   last_updated: string;
   quality?: Quality;
   title?: string;
   summary?: string;
-  parsed_title?: string; // Added based on TS errors
-  fallback_title?: string; // Added based on TS errors
-  parsed_summary?: string; // Added based on TS errors
-  fallback_summary?: string; // Added based on TS errors
+  parsed_title?: string;
+  fallback_title?: string;
+  parsed_summary?: string;
+  fallback_summary?: string;
 }
 
-// Assert the type of the imported JSON data
-const llmsData: LlmEntry[] = llmsDataJson as LlmEntry[];
+// Data extraction and transformation
+const llmsData: LlmEntry[] = llmsDataJson as unknown as LlmEntry[];
 
-// Sort the data by quality (High > Medium > Low)
 const sortedLlmsData: LlmEntry[] = [...llmsData].sort((a, b) => {
-  const qualityOrder: Record<Quality, number> = { 'High': 0, 'Medium': 1, 'Low': 2 };
-  // Assert type Quality for indexing and provide default
-  const qualityA = (a.quality ?? 'Medium') as Quality;
-  const qualityB = (b.quality ?? 'Medium') as Quality;
+  const qualityOrder: Record<Quality, number> = { High: 0, Medium: 1, Low: 2 };
+  const qualityA = (a.quality ?? "Medium") as Quality;
+  const qualityB = (b.quality ?? "Medium") as Quality;
   return qualityOrder[qualityA] - qualityOrder[qualityB];
 });
 
-// Get unique source domains for filtering from the filtered data
-const uniqueDomains: string[] = [...new Set(sortedLlmsData.map(entry => entry.metadata.source_domain))].sort();
+const uniqueDomains: string[] = [
+  ...new Set(sortedLlmsData.map((entry) => entry.metadata.source_domain)),
+].sort();
+
+const allUrlTopics = sortedLlmsData.flatMap(
+  (entry) => entry.metadata.url_topic_ranking?.map(([topic]) => topic) || []
+);
+const uniqueUrlTopics: string[] = [...new Set(allUrlTopics)].sort();
+
+const allDomainTopics = sortedLlmsData.flatMap(
+  (entry) => entry.metadata.domain_topic_ranking?.map(([topic]) => topic) || []
+);
+const uniqueDomainTopics: string[] = [...new Set(allDomainTopics)].sort();
+
+// Helpers
+const stripHtml = (html: string | undefined | null): string =>
+  html?.replace(/<[^>]*>?/gm, "") ?? "";
+
+const formatDate = (dateString: string | undefined | null): string => {
+  if (!dateString) return "N/A";
+  try {
+    return new Date(dateString).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  } catch {
+    return "Invalid Date";
+  }
+};
+
+const qualityStyles: Record<string, string> = {
+  high: "bg-green-100 text-green-800 bg-green-900 text-green-200",
+  medium: "bg-yellow-100 text-yellow-800 bg-yellow-900 text-yellow-200",
+  low: "bg-red-100 text-red-800 bg-red-900 text-red-200",
+};
+
+const pillColorClasses: string[] = [
+  "bg-blue-100 text-blue-800 bg-blue-900 text-blue-300",
+  "bg-green-100 text-green-800 bg-green-900 text-green-300",
+  "bg-indigo-100 text-indigo-800 bg-indigo-900 text-indigo-300",
+  "bg-pink-100 text-pink-800 bg-pink-900 text-pink-300",
+  "bg-yellow-100 text-yellow-800 bg-yellow-900 text-yellow-300",
+  "bg-purple-100 text-purple-800 bg-purple-900 text-purple-300",
+  "bg-red-100 text-red-800 bg-red-900 text-red-300",
+  "bg-gray-100 text-gray-800 bg-gray-700 text-gray-300",
+];
 ---
 
 <Layout
@@ -53,324 +110,524 @@ const uniqueDomains: string[] = [...new Set(sortedLlmsData.map(entry => entry.me
   <StructuredData
     type="Dataset"
     data={{
-      "name": "LLMS.txt Explorer Dataset",
-      "description": "A comprehensive collection of LLMS.txt files from various domains across the web",
-      "keywords": "LLMS.txt, AI, machine learning, language models, web crawling",
-      "url": "https://llms-explorer.example.com", // Replace with actual URL if available
-      "sameAs": "https://github.com/example/llms-explorer", // Replace with actual repo if available
-      "creator": {
+      name: "LLMS.txt Explorer Dataset",
+      description:
+        "A comprehensive collection of LLMS.txt files from various domains across the web",
+      keywords: "LLMS.txt, AI, machine learning, language models, web crawling",
+      url: "https://llms-explorer.example.com", // Replace with actual URL if available
+      sameAs: "https://github.com/example/llms-explorer", // Replace with actual repo if available
+      creator: {
         "@type": "Organization",
-        "name": "LLMS.txt Explorer Team" // Replace if needed
+        name: "LLMS.txt Explorer Team", // Replace if needed
       },
-      "datePublished": new Date().toISOString().split('T')[0],
-      "license": "https://creativecommons.org/licenses/by/4.0/" // Verify license
+      datePublished: new Date().toISOString().split("T")[0],
+      license: "https://creativecommons.org/licenses/by/4.0/", // Verify license
     }}
   />
 
   <div class="mx-auto px-4 py-8">
     <header class="mb-10 text-center">
-      <div class="enhanced-header py-12 px-4 rounded-lg shadow-lg mb-8 relative">
-        <div class="circuit-pattern"></div>
-        <h1 class="text-5xl font-bold text-white mb-4">LLMS.txt Explorer</h1>
-        <p class="text-xl text-primary-100 max-w-3xl mx-auto">
-          Discover and analyze LLMS.txt files from <span class="font-bold">{sortedLlmsData.length}</span> domains across the web
+      <div
+        class="bg-neutral-800 border border-neutral-700 rounded-lg p-8 shadow-lg mb-8 relative"
+      >
+        {/* Removed circuit-pattern div */}
+        <h1 class="text-5xl font-bold text-white-900 text-white mb-4">
+          LLMS.txt Explorer
+        </h1>
+        <p class="text-xl text-white-700 text-white-300 max-w-3xl mx-auto">
+          Discover and analyze LLMS.txt files from <span class="font-bold"
+            >{sortedLlmsData.length}</span
+          > domains across the web
         </p>
       </div>
     </header>
 
-    <div class="mb-8 bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md enhanced-filter">
-      <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4">Search & Filter</h2>
+    <div
+      class="mb-8 bg-white bg-neutral-800 p-6 rounded-lg shadow-md enhanced-filter"
+    >
+      <h2 class="text-2xl font-bold text-white-900 text-white mb-4">
+        Search &amp; Filter
+      </h2>
       <div class="flex flex-col md:flex-row gap-4 mb-6">
-        <div class="w-full md:w-1/2"> {/* Adjusted width */}
-          <label for="search" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Search</label>
+        <div class="w-full md:w-1/2">
+          <label
+            for="search"
+            class="block text-sm font-medium text-white-700 text-white-300 mb-1"
+            >Search</label
+          >
           <input
             type="text"
             id="search"
             placeholder="Search by title, domain, summary..."
-            class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+            class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 bg-neutral-800 border-neutral-600 text-white"
+            aria-label="Search by title, domain, summary"
           />
         </div>
 
-        <div class="w-full md:w-1/2">
-          <label for="domain-filter" class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">Filter by Source Domain</label>
+        <div class="w-full md:w-1/3">
+          <label
+            for="domain-filter"
+            class="block text-sm font-medium text-white-700 text-white-300 mb-1"
+            >Filter by Source Domain</label
+          >
           <select
             id="domain-filter"
-            class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+            class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 bg-neutral-800 border-neutral-600 text-white"
+            aria-label="Filter by Source Domain"
           >
             <option value="">All Source Domains</option>
-            {uniqueDomains.map((domain: string) => (
-              <option value={domain}>{domain}</option>
-            ))}
+            {
+              uniqueDomains.map((domain: string) => (
+                <option value={domain}>{domain}</option>
+              ))
+            }
           </select>
+        </div>
+
+        <div class="w-full md:w-1/3">
+          <label
+            for="url-topic-filter"
+            class="block text-sm font-medium text-white-700 text-white-300 mb-1"
+            >Filter by LLMs.txt Topics</label
+          >
+          <div class="relative">
+            <select
+              id="url-topic-filter"
+              class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 bg-neutral-800 border-neutral-600 text-white"
+              aria-label="Filter by LLMs.txt Topics"
+            >
+              <option value="">All LLMs.txt Topics</option>
+              {
+                uniqueUrlTopics.map((topic: string) => (
+                  <option value={topic}>{topic}</option>
+                ))
+              }
+            </select>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/3">
+          <label
+            for="domain-topic-filter"
+            class="block text-sm font-medium text-white-700 text-white-300 mb-1"
+            >Filter by Domain Topics</label
+          >
+          <div class="relative">
+            <select
+              id="domain-topic-filter"
+              class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 bg-neutral-800 border-neutral-600 text-white"
+              aria-label="Filter by Domain Topics"
+            >
+              <option value="">All Domain Topics</option>
+              {
+                uniqueDomainTopics.map((topic: string) => (
+                  <option value={topic}>{topic}</option>
+                ))
+              }
+            </select>
+          </div>
         </div>
       </div>
       <div class="flex justify-between items-center mt-4">
-        <p id="results-count" class="text-sm text-neutral-600 dark:text-neutral-400">
+        <p id="results-count" class="text-sm text-white-600 text-white-400">
           Showing <span class="font-medium">{sortedLlmsData.length}</span> results
         </p>
         <div class="flex items-center space-x-4">
           <div class="flex items-center">
-            <input type="checkbox" id="show-low-quality" class="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500 dark:bg-neutral-700 dark:border-neutral-600" checked>
-            <label for="show-low-quality" class="ml-2 block text-sm text-neutral-700 dark:text-neutral-300">Include Low Quality</label>
+            <input
+              type="checkbox"
+              id="show-low-quality"
+              class="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500 bg-neutral-700 border-neutral-600"
+              checked
+              aria-checked="true"
+            />
+            <label
+              for="show-low-quality"
+              class="ml-2 block text-sm text-white-700 text-white-300"
+              >Include Low Quality</label
+            >
           </div>
-          <button
-            id="toggle-view"
-            class="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors flex items-center glow-button"
-          >
-            {/* Initial state: Card view active, button shows "Switch to Table View" */}
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-            </svg>
-            Switch to Table View
-          </button>
         </div>
       </div>
-    </div> {/* Closing enhanced-filter div */}
+    </div>
 
-    <section class="mt-10 max-w-3xl mx-auto bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md">
-      <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4">About LLMS.txt</h2>
-      <p class="text-neutral-700 dark:text-neutral-300 mb-4">
-        LLMS.txt is an emerging standard that helps websites communicate their preferences for AI training and crawling.
-        This explorer provides insights into how different domains implement this standard.
-      </p>
-      <div class="flex justify-center">
-        <a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors glow-button">
-          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd"></path>
-            <path fill-rule="evenodd" d="M10 6a1 1 0 011 1v3.586l2.707 2.707a1 1 0 01-1.414 1.414l-3-3A1 1 0 019 11V7a1 1 0 011-1z" clip-rule="evenodd"></path>
-          </svg>
-          Learn More About LLMS.txt
-        </a>
-      </div>
-    </section>
-
-    {/* Table View - Initially hidden */}
-    <div id="table-view" class="mt-8 overflow-x-auto bg-white dark:bg-neutral-800 rounded-lg shadow-md enhanced-table hidden">
-      <table class="min-w-full divide-y divide-neutral-200 dark:divide-neutral-700">
-        <thead class="bg-neutral-50 dark:bg-neutral-800">
+    <div
+      id="table-view"
+      class="mt-8 overflow-x-auto bg-white bg-neutral-800 rounded-lg shadow-md enhanced-table"
+    >
+      <table class="min-w-full divide-y divide-neutral-200 divide-neutral-700">
+        <thead class="bg-neutral-50 bg-neutral-800">
           <tr>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">Title / Source Domain</th>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">Quality</th>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">LLMS.txt URL</th>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider">Last Checked</th>
+            <th
+              scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-white-500 text-white-300 uppercase tracking-wider w-1/3"
+              >Title / Source Domain</th
+            >
+            <th
+              scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-white-500 text-white-300 uppercase tracking-wider"
+              >Quality</th
+            >
+            <th
+              scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-white-500 text-white-300 uppercase tracking-wider w-2/5"
+              >LLMS.txt URL</th
+            >
+            <th
+              scope="col"
+              class="px-6 py-3 text-left text-xs font-medium text-white-500 text-white-300 uppercase tracking-wider"
+              >Last Checked</th
+            >
           </tr>
         </thead>
-        <tbody class="bg-white divide-y divide-neutral-200 dark:bg-neutral-900 dark:divide-neutral-700" id="table-body">
-          {sortedLlmsData.map((entry: LlmEntry, index: number) => {
-            const quality = (entry.quality ?? 'Medium').toLowerCase();
-            const title: string = entry.parsed_title ?? entry.fallback_title ?? entry.title ?? entry.metadata.source_domain; // Explicitly type title
-            const displayTitle = title.length > 60 ? title.substring(0, 57) + '...' : title; // Truncate long titles
+        <tbody
+          class="bg-white divide-y divide-neutral-200 bg-gray-900 divide-neutral-700"
+          id="table-body"
+        >
+          {
+            sortedLlmsData.map((entry: LlmEntry, index: number) => {
+              const quality = (entry.quality ?? "Medium").toLowerCase();
+              const title: string =
+                entry.parsed_title ??
+                entry.fallback_title ??
+                entry.title ??
+                entry.metadata.source_domain; // Explicitly type title
+              const displayTitle =
+                title.length > 60 ? title.substring(0, 57) + "..." : title; // Truncate long titles
 
-            return (
-              <tr
-                class:list={[
-                  index % 2 === 0 ? 'bg-white dark:bg-neutral-900' : 'bg-neutral-50 dark:bg-neutral-800',
-                  { 'opacity-50': quality === 'low' }
-                ]}
-                data-domain={entry.metadata.source_domain}
-                data-quality={quality}
-                data-title={title.toLowerCase()}
-                data-summary={(entry.parsed_summary ?? entry.fallback_summary ?? entry.summary ?? '').toLowerCase()}
-              >
-                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-900 dark:text-white" title={title}>{displayTitle}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm">
-                  {quality === 'high' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">High</span>}
-                  {quality === 'medium' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>}
-                  {quality === 'low' && <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Low</span>}
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
-                  <a href={entry.url} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 truncate" style="max-width: 200px; display: inline-block;">
-                    {entry.url}
-                  </a>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-400">
-                  {entry.last_checked_utc ? new Date(entry.last_checked_utc).toLocaleString('en-US', { dateStyle: 'short', timeStyle: 'short' }) : 'N/A'}
-                </td>
-              </tr>
-            );
-          })}
+              return (
+                <>
+                  <tr
+                    class:list={[
+                      index % 2 === 0
+                        ? "bg-white bg-gray-900"
+                        : "bg-neutral-50 bg-neutral-800",
+                      /* Removed opacity class */
+                    ]}
+                    data-domain={entry.metadata.source_domain}
+                    data-quality={quality}
+                    data-title={title.toLowerCase()}
+                    data-index={index}
+                    data-summary={(
+                      entry.parsed_summary ??
+                      entry.fallback_summary ??
+                      entry.summary ??
+                      ""
+                    ).toLowerCase()}
+                  >
+                    <td
+                      class="px-6 py-4 text-sm font-medium text-white-100 text-white"
+                      title={title}
+                    >
+                      {displayTitle}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm">
+                      {quality === "high" && (
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 bg-green-900 text-green-200">
+                          High
+                        </span>
+                      )}
+                      {quality === "medium" && (
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 bg-yellow-900 text-yellow-200">
+                          Medium
+                        </span>
+                      )}
+                      {quality === "low" && (
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 bg-red-900 text-red-200">
+                          Low
+                        </span>
+                      )}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-white-500 text-white-300">
+                      <a
+                        href={entry.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-primary-600 hover:text-primary-800 text-primary-400 hover:text-primary-300 truncate"
+                        style="max-width: 400px; display: inline-block;"
+                        aria-label={`Open LLMS.txt URL for ${title}`}
+                      >
+                        {entry.url}
+                      </a>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-white-500 text-white-400">
+                      {entry.last_checked_utc
+                        ? new Date(entry.last_checked_utc).toLocaleString(
+                            "en-US",
+                            { dateStyle: "short", timeStyle: "short" }
+                          )
+                        : "N/A"}
+                    </td>
+                  </tr>
+                  {(entry.metadata.url_topic_ranking?.length ||
+                    entry.metadata.domain_purpose_ranking?.length ||
+                    entry.metadata.domain_topic_ranking?.length) && (
+                    <tr
+                      class:list={[
+                        index % 2 === 0
+                          ? "bg-white bg-gray-900"
+                          : "bg-neutral-50 bg-neutral-800",
+                        /* Removed opacity class */
+                        "metadata-row",
+                      ]}
+                      data-domain={entry.metadata.source_domain}
+                      data-quality={quality}
+                      data-title={title.toLowerCase()}
+                      data-index={index}
+                      data-summary={(
+                        entry.parsed_summary ??
+                        entry.fallback_summary ??
+                        entry.summary ??
+                        ""
+                      ).toLowerCase()}
+                    >
+                      <td
+                        colspan="4"
+                        class="px-6 py-3 text-xs text-white-700 text-white-400 border-t border-neutral-200 border-neutral-700"
+                      >
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2 md:divide-x md:divide-neutral-200 md:divide-neutral-700">
+                          {/* URL Topics */}
+                          {entry.metadata.url_topic_ranking &&
+                            entry.metadata.url_topic_ranking.length > 0 && (
+                              <div class="metadata-section md:pr-6">
+                                <h4 class="font-semibold text-white-800 text-white-200 mb-1">
+                                  LLMs Text Topics:
+                                </h4>
+                                <div class="flex flex-wrap gap-1">
+                                  {entry.metadata.url_topic_ranking?.map(
+                                    ([topic], topicIndex) => (
+                                      <span
+                                        class={`inline-block text-xs font-semibold mr-2 mb-1 px-2.5 py-0.5 rounded-full ${
+                                          pillColorClasses[
+                                            topicIndex % pillColorClasses.length
+                                          ]
+                                        }`}
+                                      >
+                                        {topic}
+                                      </span>
+                                    )
+                                  )}
+                                </div>
+                              </div>
+                            )}
+                          {/* Domain Purposes */}
+                          {entry.metadata.domain_purpose_ranking &&
+                            entry.metadata.domain_purpose_ranking.length >
+                              0 && (
+                              <div class="metadata-section md:px-6">
+                                <h4 class="font-semibold text-white-800 text-white-200 mb-1">
+                                  Domain Purposes:
+                                </h4>
+                                <ul class="list-disc list-inside space-y-0.5">
+                                  {entry.metadata.domain_purpose_ranking?.map(
+                                    (purpose) => (
+                                      <li>{purpose}</li>
+                                    )
+                                  )}
+                                </ul>
+                              </div>
+                            )}
+                          {/* Domain Topics */}
+                          {entry.metadata.domain_topic_ranking &&
+                            entry.metadata.domain_topic_ranking.length > 0 && (
+                              <div class="metadata-section md:pl-6">
+                                <h4 class="font-semibold text-white-800 text-white-200 mb-1">
+                                  Domain Topics:
+                                </h4>
+                                <div class="flex flex-wrap gap-1">
+                                  {entry.metadata.domain_topic_ranking?.map(
+                                    ([topic], topicIndex) => (
+                                      <span
+                                        class={`inline-block text-xs font-semibold mr-2 mb-1 px-2.5 py-0.5 rounded-full ${
+                                          pillColorClasses[
+                                            topicIndex % pillColorClasses.length
+                                          ]
+                                        }`}
+                                      >
+                                        {topic}
+                                      </span>
+                                    )
+                                  )}
+                                </div>
+                              </div>
+                            )}
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </>
+              );
+            })
+          }
         </tbody>
       </table>
     </div>
-
-    {/* Card View - Initially shown */}
-    <div id="card-view" class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {sortedLlmsData.map((entry: LlmEntry) => {
-        const quality = (entry.quality ?? 'Medium').toLowerCase();
-        const title: string = entry.parsed_title ?? entry.fallback_title ?? entry.title ?? entry.metadata.source_domain; // Explicitly type title
-        const summary = entry.parsed_summary ?? entry.fallback_summary ?? entry.summary;
-
-        return (
-          <div
-            class:list={[
-              "bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden enhanced-card",
-              { 'opacity-60 border border-red-500 dark:border-red-700': quality === 'low' }
-            ]}
-            data-domain={entry.metadata.source_domain}
-            data-quality={quality}
-            data-title={title.toLowerCase()}
-            data-summary={(summary ?? '').toLowerCase()}
-          >
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-lg font-semibold text-neutral-900 dark:text-white flex-1 mr-2 truncate" title={title}>{title}</h3>
-                <div>
-                  {quality === 'high' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">High</span>}
-                  {quality === 'medium' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Medium</span>}
-                  {quality === 'low' && <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Low</span>}
-                </div>
-              </div>
-              {summary && <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-3 line-clamp-3">{summary}</p>}
-              <a href={entry.url} target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 text-sm mb-4 block truncate">
-                {entry.url}
-              </a>
-              <div class="text-xs text-neutral-500 dark:text-neutral-400">
-                Last checked: {entry.last_checked_utc ? new Date(entry.last_checked_utc).toLocaleString('en-US', { dateStyle: 'short', timeStyle: 'short' }) : 'N/A'}
-              </div>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-
-    <div class="mt-12 bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md enhanced-about">
-      <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4">About This Project</h2>
-      <div class="prose dark:prose-invert max-w-none">
-        <p>
-          The LLMS.txt Explorer is a tool designed to help developers, researchers, and website owners understand how the LLMS.txt standard is being implemented across the web.
-        </p>
-        <p>
-          By analyzing LLMS.txt files from various domains, we can gain insights into how different organizations are approaching AI training permissions and restrictions.
-        </p>
-        <h3>Key Features</h3>
-        <ul>
-          <li>Browse and search LLMS.txt files from {sortedLlmsData.length} domains</li>
-          <li>Filter by source domain</li> {/* Updated text */}
-          <li>View detailed information about each implementation</li>
-          <li>Compare different approaches to AI training permissions</li>
-        </ul>
-        <p>
-          This project is open source and contributions are welcome. Visit our <a href="https://github.com/example/llms-explorer" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">GitHub repository</a> to learn more.
-        </p>
-      </div>
-    </div>
+  </div>
+  {/* Hidden div for Tailwind JIT - Ensures these classes are generated */}
+  <div class="hidden">
+    {pillColorClasses.map((cls) => <div class={cls} />)}
   </div>
 
-<script>
-  // Client-side filtering and view toggle logic
-  document.addEventListener('DOMContentLoaded', () => {
-    // Get DOM elements with type assertions and null checks
-    const searchInput = document.getElementById('search') as HTMLInputElement | null;
-    const domainFilter = document.getElementById('domain-filter') as HTMLSelectElement | null;
-    const showLowQualityCheckbox = document.getElementById('show-low-quality') as HTMLInputElement | null;
-    const resultsCount = document.getElementById('results-count') as HTMLElement | null;
-    const toggleViewBtn = document.getElementById('toggle-view') as HTMLButtonElement | null;
-    const tableView = document.getElementById('table-view') as HTMLElement | null;
-    const cardView = document.getElementById('card-view') as HTMLElement | null;
+  <!-- Hidden element to store data for client-side script -->
 
-    // Ensure essential elements exist before proceeding
-    if (!tableView || !cardView) {
-      console.error("Table view or Card view element not found!");
+  <script define:vars={{ sortedLlmsData }}>
+    // Client-side script for filtering, view toggling, etc.
+    // Data is directly available via the sortedLlmsData variable defined by define:vars
+    window.sortedLlmsData = sortedLlmsData;
+    console.log(
+      `Loaded ${sortedLlmsData.length} entries into window.sortedLlmsData`
+    );
+
+    // Get DOM elements with error checking
+    const searchInput = document.getElementById("search");
+    const domainFilter = document.getElementById("domain-filter");
+    const urlTopicFilter = document.getElementById("url-topic-filter");
+    const domainTopicFilter = document.getElementById("domain-topic-filter");
+    const showLowQualityCheckbox = document.getElementById("show-low-quality");
+    const resultsCount = document.getElementById("results-count");
+    const tableView = document.getElementById("table-view");
+    const tableBody = document.getElementById("table-body");
+
+    // Check if all elements were found
+    if (!tableBody) {
+      console.error("Could not find table body element");
       return;
     }
 
-    // Get references to table rows and cards
-    const tableRows = Array.from(tableView.querySelectorAll('#table-body tr')) as HTMLTableRowElement[];
-    const cards = Array.from(cardView.querySelectorAll('div.enhanced-card')) as HTMLElement[];
+    const allTableRows = Array.from(
+      tableBody.querySelectorAll("tr[data-domain]:not(.metadata-row)") // Exclude metadata rows from main filtering logic
+    );
+    const allMetadataRows = Array.from(
+      tableBody.querySelectorAll("tr.metadata-row")
+    );
 
-    // --- Filter Function ---
-    function applyFilters() {
-      const searchTerm = searchInput?.value.toLowerCase() ?? '';
-      const domainValue = domainFilter?.value ?? '';
-      const showLowQuality = showLowQualityCheckbox?.checked ?? true; // Default to showing low quality
+    console.log(
+      `Found ${allTableRows.length} table rows and ${allMetadataRows.length} metadata rows`
+    );
 
-      // Filter table rows
-      tableRows.forEach((row: HTMLTableRowElement) => {
-        const rowDomain = row.getAttribute('data-domain')?.toLowerCase() ?? '';
-        const rowQuality = row.getAttribute('data-quality');
-        const rowTitle = row.getAttribute('data-title') ?? ''; // Already lowercase from data attribute
-        const rowSummary = row.getAttribute('data-summary') ?? ''; // Already lowercase from data attribute
+    // Filters table rows based on search and filter controls
+    function filterEntries() {
+      console.log("Running filterEntries function");
+      const searchTerm = searchInput.value.toLowerCase();
+      const selectedDomain = domainFilter.value;
+      const showLowQuality = showLowQualityCheckbox.checked;
 
-        const matchesSearch = rowDomain.includes(searchTerm) || rowTitle.includes(searchTerm) || rowSummary.includes(searchTerm);
-        const matchesDomain = !domainValue || rowDomain === domainValue.toLowerCase(); // Match against selected domain value (lowercase)
-        const matchesQuality = showLowQuality || rowQuality !== 'low';
+      const selectedUrlTopic = urlTopicFilter.value;
 
-        const isVisible = matchesSearch && matchesDomain && matchesQuality;
-        row.style.display = isVisible ? '' : 'none';
+      const selectedDomainTopic = domainTopicFilter.value;
+      let visibleCount = 0;
+
+      console.log("Filter values:", {
+        searchTerm,
+        selectedDomain,
+        showLowQuality,
+        selectedUrlTopic,
+        selectedDomainTopic,
       });
 
-      // Filter cards
-      cards.forEach((card: HTMLElement) => {
-        const cardDomain = card.getAttribute('data-domain')?.toLowerCase() ?? '';
-        const cardQuality = card.getAttribute('data-quality');
-        const cardTitle = card.getAttribute('data-title') ?? ''; // Already lowercase from data attribute
-        const cardSummary = card.getAttribute('data-summary') ?? ''; // Already lowercase from data attribute
+      allTableRows.forEach((row) => {
+        const domain = row.dataset.domain || "";
+        const quality = row.dataset.quality || "";
+        const title = row.dataset.title || "";
+        const summary = row.dataset.summary || ""; // Assuming summary is in data attribute for consistency
 
-        const matchesSearch = cardDomain.includes(searchTerm) || cardTitle.includes(searchTerm) || cardSummary.includes(searchTerm);
-        const matchesDomain = !domainValue || cardDomain === domainValue.toLowerCase(); // Match against selected domain value (lowercase)
-        const matchesQuality = showLowQuality || cardQuality !== 'low';
+        const entryIndex = parseInt(row.dataset.index || "0");
+        const entry = window.sortedLlmsData[entryIndex];
 
-        const isVisible = matchesSearch && matchesDomain && matchesQuality;
-        card.style.display = isVisible ? '' : 'none';
-      });
-
-      // Update results count based on the *currently visible* items in the *active* view
-      updateResultsCount();
-    }
-
-    // --- Update Results Count Function ---
-    function updateResultsCount() {
-      if (!resultsCount || !tableView || !cardView) return; // Guard clause
-
-      const activeViewIsCard = !cardView.classList.contains('hidden');
-      const activeItems = activeViewIsCard ? cards : tableRows;
-      const currentVisibleCount = activeItems.filter(item => item.style.display !== 'none').length;
-
-      resultsCount.innerHTML = `Showing <span class="font-medium">${currentVisibleCount}</span> results`;
-    }
-
-
-    // --- Toggle View Function ---
-    function toggleView() {
-        if (!toggleViewBtn || !tableView || !cardView) return; // Guard clause
-
-        const isCurrentlyTableView = !tableView.classList.contains('hidden');
-
-        if (isCurrentlyTableView) {
-          // Switch TO Card View
-          tableView.classList.add('hidden');
-          cardView.classList.remove('hidden');
-          toggleViewBtn.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-            </svg>
-            Switch to Table View`;
-        } else {
-          // Switch TO Table View
-          tableView.classList.remove('hidden');
-          cardView.classList.add('hidden');
-          toggleViewBtn.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V3zm0 6a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V9zm0 6a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3z" clip-rule="evenodd" />
-            </svg>
-            Switch to Card View`;
+        if (!entry) {
+          console.error(`Could not find entry for index ${entryIndex}`);
+          return;
         }
-        // Update results count after view switch
-        updateResultsCount();
+
+        // Check if the entry has URL topics that match the selected URL topic
+        const matchesUrlTopics =
+          !selectedUrlTopic ||
+          (entry?.metadata?.url_topic_ranking &&
+            entry.metadata.url_topic_ranking.some(
+              ([topic]) => topic === selectedUrlTopic
+            ));
+
+        // Check if the entry has domain topics that match the selected domain topic
+        const matchesDomainTopics =
+          !selectedDomainTopic ||
+          (entry?.metadata?.domain_topic_ranking &&
+            entry.metadata.domain_topic_ranking.some(
+              ([topic]) => topic === selectedDomainTopic
+            ));
+
+        const matchesSearch =
+          title.includes(searchTerm) ||
+          domain.includes(searchTerm) ||
+          summary.includes(searchTerm);
+        // Fix domain matching to ensure exact match with selected domain
+        const matchesDomain =
+          !selectedDomain ||
+          domain.toLowerCase() === selectedDomain.toLowerCase();
+        const matchesQuality = showLowQuality || quality !== "low";
+
+        const isVisible =
+          matchesSearch &&
+          matchesDomain &&
+          matchesQuality &&
+          matchesUrlTopics &&
+          matchesDomainTopics;
+        row.style.display = isVisible ? "" : "none";
+        // Find and show/hide the corresponding metadata row using the data-index attribute
+        // This is more robust than assuming it's the next sibling
+        const metadataRows = allMetadataRows.filter(
+          (metaRow) => metaRow.dataset.index === row.dataset.index
+        );
+        metadataRows.forEach((metaRow) => {
+          metaRow.style.display = isVisible ? "" : "none";
+        });
+        if (isVisible) {
+          visibleCount++; // Count visible rows (only count main rows)
+        }
+      });
+
+      console.log(`Found ${visibleCount} visible rows`);
+      resultsCount.innerHTML = `Showing <span class="font-medium">${visibleCount}</span> results`;
     }
 
-    // --- Add Event Listeners ---
-    searchInput?.addEventListener('input', applyFilters);
-    domainFilter?.addEventListener('change', applyFilters);
-    showLowQualityCheckbox?.addEventListener('change', applyFilters);
-    toggleViewBtn?.addEventListener('click', toggleView);
+    // Add event listeners with error checking
+    if (searchInput) {
+      console.log("Adding event listener to search input");
+      searchInput.addEventListener("input", filterEntries);
+    }
 
-    // --- Initial Setup ---
-    // Apply initial filters to hide/show items based on default settings
-    applyFilters();
-    // Update the count based on the initial view (Card view) and filters
-    // updateResultsCount is called within applyFilters, so no need to call it separately here.
+    if (domainFilter) {
+      console.log("Adding event listener to domain filter");
+      domainFilter.addEventListener("change", filterEntries);
+    }
 
-  });
-</script>
+    if (showLowQualityCheckbox) {
+      console.log("Adding event listener to show low quality checkbox");
+      showLowQualityCheckbox.addEventListener("change", filterEntries);
+    }
+
+    if (urlTopicFilter) {
+      console.log("Adding event listener to URL topic filter");
+      urlTopicFilter.addEventListener("change", filterEntries);
+    }
+
+    if (domainTopicFilter) {
+      console.log("Adding event listener to domain topic filter");
+      domainTopicFilter.addEventListener("change", filterEntries);
+    }
+
+    // Check if DOM is already loaded
+    if (document.readyState === "loading") {
+      // DOM is still loading, add event listener
+      document.addEventListener("DOMContentLoaded", filterEntries);
+    } else {
+      // DOM is already loaded, run filterEntries immediately
+      setTimeout(filterEntries, 0);
+    }
+
+    // Also run it immediately in case the script runs after DOM is already loaded
+    console.log("Running filterEntries immediately");
+    filterEntries();
+  </script>
 </Layout>
+
+{/* Removed entire <style is:global> block */}
