@@ -129,9 +129,9 @@ const pillColorClasses: string[] = [
   <div class="mx-auto px-4 py-8">
     <header class="mb-10 text-center">
       <div
-        class="enhanced-header py-12 px-4 rounded-lg shadow-lg mb-8 relative"
+        class="bg-neutral-800 border border-neutral-700 rounded-lg p-8 shadow-lg mb-8 relative"
       >
-        <div class="circuit-pattern"></div>
+        {/* Removed circuit-pattern div */}
         <h1 class="text-5xl font-bold text-neutral-900 dark:text-white mb-4">
           LLMS.txt Explorer
         </h1>
@@ -310,7 +310,7 @@ const pillColorClasses: string[] = [
                       index % 2 === 0
                         ? "bg-white dark:bg-neutral-900"
                         : "bg-neutral-50 dark:bg-neutral-800",
-                      { "opacity-50": quality === "low" },
+                      /* Removed opacity class */
                     ]}
                     data-domain={entry.metadata.source_domain}
                     data-quality={quality}
@@ -324,7 +324,7 @@ const pillColorClasses: string[] = [
                     ).toLowerCase()}
                   >
                     <td
-                      class="px-6 py-4 text-sm font-medium text-neutral-900 dark:text-white bg-neutral-100 dark:bg-neutral-800 border-l-4 border-primary-500 dark:border-primary-400"
+                      class="px-6 py-4 text-sm font-medium text-neutral-100 dark:text-white"
                       title={title}
                     >
                       {displayTitle}
@@ -375,7 +375,7 @@ const pillColorClasses: string[] = [
                         index % 2 === 0
                           ? "bg-white dark:bg-neutral-900"
                           : "bg-neutral-50 dark:bg-neutral-800",
-                        { "opacity-50": quality === "low" },
+                        /* Removed opacity class */
                         "metadata-row",
                       ]}
                       data-domain={entry.metadata.source_domain}
@@ -640,83 +640,4 @@ const pillColorClasses: string[] = [
   </script>
 </Layout>
 
-<style is:global>
-  /* Enhanced Header Styling */
-  .enhanced-header {
-    /* Light theme gradient */
-    background: linear-gradient(
-      rgba(245, 245, 245, 0.8),
-      rgba(229, 229, 229, 0.95)
-    );
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .circuit-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(
-        var(--color-primary-500) 0.5px,
-        transparent 0.5px
-      ),
-      radial-gradient(var(--color-primary-500) 0.5px, transparent 0.5px);
-    background-size: 20px 20px;
-    background-position:
-      0 0,
-      10px 10px;
-    opacity: 0.05;
-    pointer-events: none;
-  }
-
-  .enhanced-filter,
-  .enhanced-about,
-  .enhanced-table {
-    border: 1px solid var(--color-neutral-200);
-  }
-  .dark .enhanced-filter,
-  .dark .enhanced-about,
-  .dark .enhanced-table {
-    border: 1px solid var(--color-neutral-700);
-  }
-
-  .glow-button {
-    position: relative;
-    overflow: hidden;
-    transition:
-      background-color 0.3s ease,
-      box-shadow 0.3s ease;
-  }
-
-  .glow-button:hover {
-    box-shadow: 0 0 15px 5px var(--color-primary-400);
-  }
-
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-  }
-
-  [data-domain][tabindex="0"]:focus {
-    outline: none;
-  }
-
-  #table-body tr[data-quality="low"] {
-    opacity: 0.6;
-  }
-  #table-body tr[data-quality="low"]:hover {
-    opacity: 1;
-  }
-</style>
+{/* Removed entire <style is:global> block */}
