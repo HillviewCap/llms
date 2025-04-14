@@ -86,21 +86,20 @@ const formatDate = (dateString: string | undefined | null): string => {
 };
 
 const qualityStyles: Record<string, string> = {
-  high: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-  medium:
-    "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
-  low: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
+  high: "bg-green-100 text-green-800 bg-green-900 text-green-200",
+  medium: "bg-yellow-100 text-yellow-800 bg-yellow-900 text-yellow-200",
+  low: "bg-red-100 text-red-800 bg-red-900 text-red-200",
 };
 
 const pillColorClasses: string[] = [
-  "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-  "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
-  "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
-  "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
-  "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300",
-  "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-  "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
-  "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300",
+  "bg-blue-100 text-blue-800 bg-blue-900 text-blue-300",
+  "bg-green-100 text-green-800 bg-green-900 text-green-300",
+  "bg-indigo-100 text-indigo-800 bg-indigo-900 text-indigo-300",
+  "bg-pink-100 text-pink-800 bg-pink-900 text-pink-300",
+  "bg-yellow-100 text-yellow-800 bg-yellow-900 text-yellow-300",
+  "bg-purple-100 text-purple-800 bg-purple-900 text-purple-300",
+  "bg-red-100 text-red-800 bg-red-900 text-red-300",
+  "bg-gray-100 text-gray-800 bg-gray-700 text-gray-300",
 ];
 ---
 
@@ -132,12 +131,10 @@ const pillColorClasses: string[] = [
         class="bg-neutral-800 border border-neutral-700 rounded-lg p-8 shadow-lg mb-8 relative"
       >
         {/* Removed circuit-pattern div */}
-        <h1 class="text-5xl font-bold text-neutral-900 dark:text-white mb-4">
+        <h1 class="text-5xl font-bold text-white-900 text-white mb-4">
           LLMS.txt Explorer
         </h1>
-        <p
-          class="text-xl text-neutral-700 dark:text-neutral-300 max-w-3xl mx-auto"
-        >
+        <p class="text-xl text-white-700 text-white-300 max-w-3xl mx-auto">
           Discover and analyze LLMS.txt files from <span class="font-bold"
             >{sortedLlmsData.length}</span
           > domains across the web
@@ -146,23 +143,23 @@ const pillColorClasses: string[] = [
     </header>
 
     <div
-      class="mb-8 bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md enhanced-filter"
+      class="mb-8 bg-white bg-neutral-800 p-6 rounded-lg shadow-md enhanced-filter"
     >
-      <h2 class="text-2xl font-bold text-neutral-900 dark:text-white mb-4">
+      <h2 class="text-2xl font-bold text-white-900 text-white mb-4">
         Search &amp; Filter
       </h2>
       <div class="flex flex-col md:flex-row gap-4 mb-6">
         <div class="w-full md:w-1/2">
           <label
             for="search"
-            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+            class="block text-sm font-medium text-white-700 text-white-300 mb-1"
             >Search</label
           >
           <input
             type="text"
             id="search"
             placeholder="Search by title, domain, summary..."
-            class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+            class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 bg-neutral-800 border-neutral-600 text-white"
             aria-label="Search by title, domain, summary"
           />
         </div>
@@ -170,12 +167,12 @@ const pillColorClasses: string[] = [
         <div class="w-full md:w-1/3">
           <label
             for="domain-filter"
-            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+            class="block text-sm font-medium text-white-700 text-white-300 mb-1"
             >Filter by Source Domain</label
           >
           <select
             id="domain-filter"
-            class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+            class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 bg-neutral-800 border-neutral-600 text-white"
             aria-label="Filter by Source Domain"
           >
             <option value="">All Source Domains</option>
@@ -190,13 +187,13 @@ const pillColorClasses: string[] = [
         <div class="w-full md:w-1/3">
           <label
             for="url-topic-filter"
-            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+            class="block text-sm font-medium text-white-700 text-white-300 mb-1"
             >Filter by LLMs.txt Topics</label
           >
           <div class="relative">
             <select
               id="url-topic-filter"
-              class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+              class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 bg-neutral-800 border-neutral-600 text-white"
               aria-label="Filter by LLMs.txt Topics"
             >
               <option value="">All LLMs.txt Topics</option>
@@ -212,13 +209,13 @@ const pillColorClasses: string[] = [
         <div class="w-full md:w-1/3">
           <label
             for="domain-topic-filter"
-            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+            class="block text-sm font-medium text-white-700 text-white-300 mb-1"
             >Filter by Domain Topics</label
           >
           <div class="relative">
             <select
               id="domain-topic-filter"
-              class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+              class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 bg-neutral-800 border-neutral-600 text-white"
               aria-label="Filter by Domain Topics"
             >
               <option value="">All Domain Topics</option>
@@ -232,10 +229,7 @@ const pillColorClasses: string[] = [
         </div>
       </div>
       <div class="flex justify-between items-center mt-4">
-        <p
-          id="results-count"
-          class="text-sm text-neutral-600 dark:text-neutral-400"
-        >
+        <p id="results-count" class="text-sm text-white-600 text-white-400">
           Showing <span class="font-medium">{sortedLlmsData.length}</span> results
         </p>
         <div class="flex items-center space-x-4">
@@ -243,13 +237,13 @@ const pillColorClasses: string[] = [
             <input
               type="checkbox"
               id="show-low-quality"
-              class="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500 dark:bg-neutral-700 dark:border-neutral-600"
+              class="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500 bg-neutral-700 border-neutral-600"
               checked
               aria-checked="true"
             />
             <label
               for="show-low-quality"
-              class="ml-2 block text-sm text-neutral-700 dark:text-neutral-300"
+              class="ml-2 block text-sm text-white-700 text-white-300"
               >Include Low Quality</label
             >
           </div>
@@ -259,37 +253,35 @@ const pillColorClasses: string[] = [
 
     <div
       id="table-view"
-      class="mt-8 overflow-x-auto bg-white dark:bg-neutral-800 rounded-lg shadow-md enhanced-table"
+      class="mt-8 overflow-x-auto bg-white bg-neutral-800 rounded-lg shadow-md enhanced-table"
     >
-      <table
-        class="min-w-full divide-y divide-neutral-200 dark:divide-neutral-700"
-      >
-        <thead class="bg-neutral-50 dark:bg-neutral-800">
+      <table class="min-w-full divide-y divide-neutral-200 divide-neutral-700">
+        <thead class="bg-neutral-50 bg-neutral-800">
           <tr>
             <th
               scope="col"
-              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider w-1/3"
+              class="px-6 py-3 text-left text-xs font-medium text-white-500 text-white-300 uppercase tracking-wider w-1/3"
               >Title / Source Domain</th
             >
             <th
               scope="col"
-              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider"
+              class="px-6 py-3 text-left text-xs font-medium text-white-500 text-white-300 uppercase tracking-wider"
               >Quality</th
             >
             <th
               scope="col"
-              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider w-2/5"
+              class="px-6 py-3 text-left text-xs font-medium text-white-500 text-white-300 uppercase tracking-wider w-2/5"
               >LLMS.txt URL</th
             >
             <th
               scope="col"
-              class="px-6 py-3 text-left text-xs font-medium text-neutral-500 dark:text-neutral-300 uppercase tracking-wider"
+              class="px-6 py-3 text-left text-xs font-medium text-white-500 text-white-300 uppercase tracking-wider"
               >Last Checked</th
             >
           </tr>
         </thead>
         <tbody
-          class="bg-white divide-y divide-neutral-200 dark:bg-gray-900 dark:divide-neutral-700"
+          class="bg-white divide-y divide-neutral-200 bg-gray-900 divide-neutral-700"
           id="table-body"
         >
           {
@@ -308,8 +300,8 @@ const pillColorClasses: string[] = [
                   <tr
                     class:list={[
                       index % 2 === 0
-                        ? "bg-white dark:bg-gray-900"
-                        : "bg-neutral-50 dark:bg-neutral-800",
+                        ? "bg-white bg-gray-900"
+                        : "bg-neutral-50 bg-neutral-800",
                       /* Removed opacity class */
                     ]}
                     data-domain={entry.metadata.source_domain}
@@ -324,41 +316,41 @@ const pillColorClasses: string[] = [
                     ).toLowerCase()}
                   >
                     <td
-                      class="px-6 py-4 text-sm font-medium text-neutral-100 dark:text-white"
+                      class="px-6 py-4 text-sm font-medium text-white-100 text-white"
                       title={title}
                     >
                       {displayTitle}
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm">
                       {quality === "high" && (
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 bg-green-900 text-green-200">
                           High
                         </span>
                       )}
                       {quality === "medium" && (
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 bg-yellow-900 text-yellow-200">
                           Medium
                         </span>
                       )}
                       {quality === "low" && (
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 bg-red-900 text-red-200">
                           Low
                         </span>
                       )}
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-300">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-white-500 text-white-300">
                       <a
                         href={entry.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 truncate"
+                        class="text-primary-600 hover:text-primary-800 text-primary-400 hover:text-primary-300 truncate"
                         style="max-width: 400px; display: inline-block;"
                         aria-label={`Open LLMS.txt URL for ${title}`}
                       >
                         {entry.url}
                       </a>
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-400">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-white-500 text-white-400">
                       {entry.last_checked_utc
                         ? new Date(entry.last_checked_utc).toLocaleString(
                             "en-US",
@@ -373,8 +365,8 @@ const pillColorClasses: string[] = [
                     <tr
                       class:list={[
                         index % 2 === 0
-                          ? "bg-white dark:bg-gray-900"
-                          : "bg-neutral-50 dark:bg-neutral-800",
+                          ? "bg-white bg-gray-900"
+                          : "bg-neutral-50 bg-neutral-800",
                         /* Removed opacity class */
                         "metadata-row",
                       ]}
@@ -391,16 +383,15 @@ const pillColorClasses: string[] = [
                     >
                       <td
                         colspan="4"
-                        class="px-6 py-3 text-xs text-neutral-700 dark:text-neutral-400 border-t border-neutral-200 dark:border-neutral-700"
+                        class="px-6 py-3 text-xs text-white-700 text-white-400 border-t border-neutral-200 border-neutral-700"
                       >
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2 md:divide-x md:divide-neutral-200 dark:md:divide-neutral-700">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2 md:divide-x md:divide-neutral-200 md:divide-neutral-700">
                           {/* URL Topics */}
                           {entry.metadata.url_topic_ranking &&
                             entry.metadata.url_topic_ranking.length > 0 && (
                               <div class="metadata-section md:pr-6">
-                                >
-                                <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
-                                  URL Topics:
+                                <h4 class="font-semibold text-white-800 text-white-200 mb-1">
+                                  LLMs Text Topics:
                                 </h4>
                                 <div class="flex flex-wrap gap-1">
                                   {entry.metadata.url_topic_ranking?.map(
@@ -424,7 +415,7 @@ const pillColorClasses: string[] = [
                             entry.metadata.domain_purpose_ranking.length >
                               0 && (
                               <div class="metadata-section md:px-6">
-                                <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
+                                <h4 class="font-semibold text-white-800 text-white-200 mb-1">
                                   Domain Purposes:
                                 </h4>
                                 <ul class="list-disc list-inside space-y-0.5">
@@ -440,8 +431,7 @@ const pillColorClasses: string[] = [
                           {entry.metadata.domain_topic_ranking &&
                             entry.metadata.domain_topic_ranking.length > 0 && (
                               <div class="metadata-section md:pl-6">
-                                >
-                                <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
+                                <h4 class="font-semibold text-white-800 text-white-200 mb-1">
                                   Domain Topics:
                                 </h4>
                                 <div class="flex flex-wrap gap-1">
