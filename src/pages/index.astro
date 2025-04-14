@@ -398,12 +398,13 @@ const pillColorClasses: string[] = [
                           {entry.metadata.url_topic_ranking &&
                             entry.metadata.url_topic_ranking.length > 0 && (
                               <div class="metadata-section md:pr-6">
+                                >
                                 <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
                                   URL Topics:
                                 </h4>
                                 <div class="flex flex-wrap gap-1">
                                   {entry.metadata.url_topic_ranking?.map(
-                                    ([topic, score], topicIndex) => (
+                                    ([topic], topicIndex) => (
                                       <span
                                         class={`inline-block text-xs font-semibold mr-2 mb-1 px-2.5 py-0.5 rounded-full ${
                                           pillColorClasses[
@@ -439,12 +440,13 @@ const pillColorClasses: string[] = [
                           {entry.metadata.domain_topic_ranking &&
                             entry.metadata.domain_topic_ranking.length > 0 && (
                               <div class="metadata-section md:pl-6">
+                                >
                                 <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
                                   Domain Topics:
                                 </h4>
                                 <div class="flex flex-wrap gap-1">
                                   {entry.metadata.domain_topic_ranking?.map(
-                                    ([topic, score], topicIndex) => (
+                                    ([topic], topicIndex) => (
                                       <span
                                         class={`inline-block text-xs font-semibold mr-2 mb-1 px-2.5 py-0.5 rounded-full ${
                                           pillColorClasses[
