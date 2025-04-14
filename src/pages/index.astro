@@ -183,9 +183,11 @@ const pillColorClasses = [
             class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
           >
             <option value="">All Source Domains</option>
-            {uniqueDomains.map((domain: string) => (
-              <option value={domain}>{domain}</option>
-            ))}
+            {
+              uniqueDomains.map((domain: string) => (
+                <option value={domain}>{domain}</option>
+              ))
+            }
           </select>
         </div>
 
@@ -201,9 +203,11 @@ const pillColorClasses = [
               class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
             >
               <option value="">All URL Topics</option>
-              {uniqueUrlTopics.map((topic: string) => (
-                <option value={topic}>{topic}</option>
-              ))}
+              {
+                uniqueUrlTopics.map((topic: string) => (
+                  <option value={topic}>{topic}</option>
+                ))
+              }
             </select>
             {/* Removed pill container */}
           </div>
@@ -221,9 +225,11 @@ const pillColorClasses = [
               class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
             >
               <option value="">All Domain Topics</option>
-              {uniqueDomainTopics.map((topic: string) => (
-                <option value={topic}>{topic}</option>
-              ))}
+              {
+                uniqueDomainTopics.map((topic: string) => (
+                  <option value={topic}>{topic}</option>
+                ))
+              }
             </select>
             {/* Removed pill container */}
           </div>
@@ -479,35 +485,22 @@ const pillColorClasses = [
     {/* Card View Removed */}
     {/* About This Project Section Removed */}
   </div>
-<!-- Hidden element to store data for client-side script -->
-<script id="llms-data" type="application/json">
-  {JSON.stringify(sortedLlmsData).replace(/</g, '\\u003c')}
-</script>
+  <!-- Hidden element to store data for client-side script -->
 
-<script>
-  // Client-side script for filtering, view toggling, etc.
-  // Make data available to the client-side script
-  window.sortedLlmsData = JSON.parse(document.getElementById('llms-data')?.textContent || '[]');
-    const searchInput = document.getElementById("search") as HTMLInputElement;
-    const domainFilter = document.getElementById(
-      "domain-filter"
-    ) as HTMLSelectElement;
-    const urlTopicFilter = document.getElementById(
-      "url-topic-filter"
-    ) as HTMLSelectElement;
-    const domainTopicFilter = document.getElementById(
-      "domain-topic-filter"
-    ) as HTMLSelectElement;
+  <script define:vars={{ sortedLlmsData }}>
+    // Client-side script for filtering, view toggling, etc.
+    // Data is directly available via the sortedLlmsData variable defined by define:vars
+    window.sortedLlmsData = sortedLlmsData;
+    const searchInput = document.getElementById("search");
+    const domainFilter = document.getElementById("domain-filter");
+    const urlTopicFilter = document.getElementById("url-topic-filter");
+    const domainTopicFilter = document.getElementById("domain-topic-filter");
     // Removed topic selected containers as pills are no longer used
-    const showLowQualityCheckbox = document.getElementById(
-      "show-low-quality"
-    ) as HTMLInputElement;
-    const resultsCount = document.getElementById(
-      "results-count"
-    ) as HTMLElement;
+    const showLowQualityCheckbox = document.getElementById("show-low-quality");
+    const resultsCount = document.getElementById("results-count");
     // const cardView = document.getElementById("card-view") as HTMLElement; // Removed
-    const tableView = document.getElementById("table-view") as HTMLElement;
-    const tableBody = document.getElementById("table-body") as HTMLElement;
+    const tableView = document.getElementById("table-view");
+    const tableBody = document.getElementById("table-body");
     // const toggleViewButton = document.getElementById("toggle-view") as HTMLButtonElement; // Removed
 
     // const allCards = Array.from(cardView.querySelectorAll<HTMLElement>("[data-domain]")); // Removed
@@ -550,14 +543,14 @@ const pillColorClasses = [
         const matchesUrlTopics =
           !selectedUrlTopic || // "All URL Topics" selected
           entry.metadata?.url_topic_ranking?.some(
-            ([topic]: [string, number]) => topic === selectedUrlTopic
+            ([topic]) => topic === selectedUrlTopic
           );
 
         // Check if entry matches Domain topic filter
         const matchesDomainTopics =
           !selectedDomainTopic || // "All Domain Topics" selected
           entry.metadata?.domain_topic_ranking?.some(
-            ([topic]: [string, number]) => topic === selectedDomainTopic
+            ([topic]) => topic === selectedDomainTopic
           );
 
         const matchesSearch =
@@ -575,7 +568,7 @@ const pillColorClasses = [
           matchesDomainTopics;
         row.style.display = isVisible ? "" : "none";
         // Also hide/show the corresponding metadata row if it exists
-        const metadataRow = row.nextElementSibling as HTMLElement | null;
+        const metadataRow = row.nextElementSibling;
         if (metadataRow && metadataRow.classList.contains("metadata-row")) {
           metadataRow.style.display = isVisible ? "" : "none";
         }
