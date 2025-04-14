@@ -1,4 +1,10 @@
 ---
+// Add TypeScript interface for the window object
+declare global {
+  interface Window {
+    sortedLlmsData: any[];
+  }
+}
 import Layout from "../layouts/Layout.astro";
 import StructuredData from "../components/StructuredData.astro";
 // Import the JSON data
@@ -38,6 +44,7 @@ interface LlmEntry {
 const llmsData: LlmEntry[] = llmsDataJson as unknown as LlmEntry[];
 
 // Sort the data by quality (High > Medium > Low)
+// Make sortedLlmsData available to the client-side script
 const sortedLlmsData: LlmEntry[] = [...llmsData].sort((a, b) => {
   const qualityOrder: Record<Quality, number> = { High: 0, Medium: 1, Low: 2 };
   // Assert type Quality for indexing and provide default
@@ -50,6 +57,18 @@ const sortedLlmsData: LlmEntry[] = [...llmsData].sort((a, b) => {
 const uniqueDomains: string[] = [
   ...new Set(sortedLlmsData.map((entry) => entry.metadata.source_domain)),
 ].sort();
+
+// Extract unique URL Topics
+const allUrlTopics = sortedLlmsData.flatMap(
+  (entry) => entry.metadata.url_topic_ranking?.map(([topic]) => topic) || []
+);
+const uniqueUrlTopics: string[] = [...new Set(allUrlTopics)].sort();
+
+// Extract unique Domain Topics
+const allDomainTopics = sortedLlmsData.flatMap(
+  (entry) => entry.metadata.domain_topic_ranking?.map(([topic]) => topic) || []
+);
+const uniqueDomainTopics: string[] = [...new Set(allDomainTopics)].sort();
 // Helper function to strip HTML tags
 const stripHtml = (html: string | undefined | null): string =>
   html?.replace(/<[^>]*>?/gm, "") ?? "";
@@ -153,7 +172,7 @@ const pillColorClasses = [
           />
         </div>
 
-        <div class="w-full md:w-1/2">
+        <div class="w-full md:w-1/3">
           <label
             for="domain-filter"
             class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
@@ -170,6 +189,54 @@ const pillColorClasses = [
               ))
             }
           </select>
+        </div>
+
+        <div class="w-full md:w-1/3">
+          <label
+            for="url-topic-filter"
+            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+            >Filter by URL Topics</label
+          >
+          <div class="relative">
+            <select
+              id="url-topic-filter"
+              multiple
+              class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+              size="1"
+            >
+              {
+                uniqueUrlTopics.map((topic: string) => (
+                  <option value={topic}>{topic}</option>
+                ))
+              }
+            </select>
+            <div id="url-topic-selected" class="mt-2 flex flex-wrap gap-2">
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/3">
+          <label
+            for="domain-topic-filter"
+            class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+            >Filter by Domain Topics</label
+          >
+          <div class="relative">
+            <select
+              id="domain-topic-filter"
+              multiple
+              class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-800 dark:border-neutral-600 dark:text-white"
+              size="1"
+            >
+              {
+                uniqueDomainTopics.map((topic: string) => (
+                  <option value={topic}>{topic}</option>
+                ))
+              }
+            </select>
+            <div id="domain-topic-selected" class="mt-2 flex flex-wrap gap-2">
+            </div>
+          </div>
         </div>
       </div>
       <div class="flex justify-between items-center mt-4">
@@ -258,6 +325,7 @@ const pillColorClasses = [
                     data-domain={entry.metadata.source_domain}
                     data-quality={quality}
                     data-title={title.toLowerCase()}
+                    data-index={index}
                     data-summary={(
                       entry.parsed_summary ??
                       entry.fallback_summary ??
@@ -323,6 +391,7 @@ const pillColorClasses = [
                       data-domain={entry.metadata.source_domain}
                       data-quality={quality}
                       data-title={title.toLowerCase()}
+                      data-index={index}
                       data-summary={(
                         entry.parsed_summary ??
                         entry.fallback_summary ??
@@ -420,13 +489,31 @@ const pillColorClasses = [
     {/* Card View Removed */}
     {/* About This Project Section Removed */}
   </div>
+<!-- Hidden element to store data for client-side script -->
+<script id="llms-data" type="application/json">
+  {JSON.stringify(sortedLlmsData)}
+</script>
 
-  <script>
-    // Client-side script for filtering, view toggling, etc.
+<script>
+  // Client-side script for filtering, view toggling, etc.
+  // Make data available to the client-side script
+  window.sortedLlmsData = JSON.parse(document.getElementById('llms-data')?.textContent || '[]');
     const searchInput = document.getElementById("search") as HTMLInputElement;
     const domainFilter = document.getElementById(
       "domain-filter"
     ) as HTMLSelectElement;
+    const urlTopicFilter = document.getElementById(
+      "url-topic-filter"
+    ) as HTMLSelectElement;
+    const domainTopicFilter = document.getElementById(
+      "domain-topic-filter"
+    ) as HTMLSelectElement;
+    const urlTopicSelectedContainer = document.getElementById(
+      "url-topic-selected"
+    ) as HTMLElement;
+    const domainTopicSelectedContainer = document.getElementById(
+      "domain-topic-selected"
+    ) as HTMLElement;
     const showLowQualityCheckbox = document.getElementById(
       "show-low-quality"
     ) as HTMLInputElement;
@@ -455,6 +542,16 @@ const pillColorClasses = [
       const selectedDomain = domainFilter.value;
       const showLowQuality = showLowQualityCheckbox.checked;
 
+      // Get selected URL topics
+      const selectedUrlTopics = Array.from(urlTopicFilter.selectedOptions).map(
+        (option) => option.value
+      );
+
+      // Get selected Domain topics
+      const selectedDomainTopics = Array.from(
+        domainTopicFilter.selectedOptions
+      ).map((option) => option.value);
+
       let visibleCount = 0;
 
       // Filter Table Rows
@@ -464,6 +561,28 @@ const pillColorClasses = [
         const title = row.dataset.title || "";
         const summary = row.dataset.summary || ""; // Assuming summary is in data attribute for consistency
 
+        // Get the corresponding entry from the data
+        const entryIndex = parseInt(row.dataset.index || "0");
+        const entry = window.sortedLlmsData?.[entryIndex] || {};
+
+        // Check if entry matches URL topics filter
+        const matchesUrlTopics =
+          selectedUrlTopics.length === 0 ||
+          selectedUrlTopics.some((selectedTopic) =>
+            entry.metadata?.url_topic_ranking?.some(
+              ([topic]: [string, number]) => topic === selectedTopic
+            )
+          );
+
+        // Check if entry matches Domain topics filter
+        const matchesDomainTopics =
+          selectedDomainTopics.length === 0 ||
+          selectedDomainTopics.some((selectedTopic) =>
+            entry.metadata?.domain_topic_ranking?.some(
+              ([topic]: [string, number]) => topic === selectedTopic
+            )
+          );
+
         const matchesSearch =
           title.includes(searchTerm) ||
           domain.includes(searchTerm) ||
@@ -471,7 +590,12 @@ const pillColorClasses = [
         const matchesDomain = !selectedDomain || domain === selectedDomain;
         const matchesQuality = showLowQuality || quality !== "low";
 
-        const isVisible = matchesSearch && matchesDomain && matchesQuality;
+        const isVisible =
+          matchesSearch &&
+          matchesDomain &&
+          matchesQuality &&
+          matchesUrlTopics &&
+          matchesDomainTopics;
         row.style.display = isVisible ? "" : "none";
         // Also hide/show the corresponding metadata row if it exists
         const metadataRow = row.nextElementSibling as HTMLElement | null;
@@ -489,14 +613,85 @@ const pillColorClasses = [
 
     // function toggleView() { ... } // Removed
 
+    // Function to create a pill for selected topics
+    function createTopicPill(topic: string, filterType: string) {
+      const pill = document.createElement("span");
+      pill.className =
+        "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200";
+      pill.textContent = topic;
+
+      // Add remove button
+      const removeBtn = document.createElement("button");
+      removeBtn.className =
+        "ml-1.5 text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-100";
+      removeBtn.innerHTML = "×";
+      removeBtn.setAttribute("aria-label", `Remove ${topic}`);
+      removeBtn.onclick = () => {
+        // Deselect the option in the select element
+        if (filterType === "url") {
+          for (let i = 0; i < urlTopicFilter.options.length; i++) {
+            if (urlTopicFilter.options[i].value === topic) {
+              urlTopicFilter.options[i].selected = false;
+              break;
+            }
+          }
+          updateSelectedTopics("url");
+        } else {
+          for (let i = 0; i < domainTopicFilter.options.length; i++) {
+            if (domainTopicFilter.options[i].value === topic) {
+              domainTopicFilter.options[i].selected = false;
+              break;
+            }
+          }
+          updateSelectedTopics("domain");
+        }
+        filterEntries();
+      };
+
+      pill.appendChild(removeBtn);
+      return pill;
+    }
+
+    // Function to update the selected topics display
+    function updateSelectedTopics(filterType: string) {
+      if (filterType === "url") {
+        urlTopicSelectedContainer.innerHTML = "";
+        Array.from(urlTopicFilter.selectedOptions).forEach((option) => {
+          urlTopicSelectedContainer.appendChild(
+            createTopicPill(option.value, "url")
+          );
+        });
+      } else {
+        domainTopicSelectedContainer.innerHTML = "";
+        Array.from(domainTopicFilter.selectedOptions).forEach((option) => {
+          domainTopicSelectedContainer.appendChild(
+            createTopicPill(option.value, "domain")
+          );
+        });
+      }
+    }
+
     // Event Listeners
     searchInput.addEventListener("input", filterEntries);
     domainFilter.addEventListener("change", filterEntries);
     showLowQualityCheckbox.addEventListener("change", filterEntries);
-    // toggleViewButton.addEventListener("click", toggleView); // Removed
+
+    urlTopicFilter.addEventListener("change", () => {
+      updateSelectedTopics("url");
+      filterEntries();
+    });
+
+    domainTopicFilter.addEventListener("change", () => {
+      updateSelectedTopics("domain");
+      filterEntries();
+    });
 
     // Initial filter on load
     filterEntries();
+
+    // Initialize the selected topics display
+    updateSelectedTopics("url");
+    updateSelectedTopics("domain");
   </script>
 </Layout>
 
