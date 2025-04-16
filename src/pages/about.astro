@@ -8,6 +8,20 @@ import Layout from '../layouts/Layout.astro';
     <p class="mb-4">
       This project provides tools and resources related to the llmstxt.org initiative, which aims to standardize interactions with Large Language Models. You can learn more at the main project site: <a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">https://llmstxt.org/</a>.
     </p>
+    <h2 class="text-2xl font-semibold mb-2">Our Data Collection Process</h2>
+    <p class="mb-4">
+      To provide comprehensive insights, we regularly crawl the top 1 million websites (updated every few days) to find `llms.txt` and `llms-full.txt` files. The collected data is then enriched with additional metrics, including website category and a quality score.
+    </p>
+    <p class="mb-4">
+      The quality score is derived by validating the discovered `llms.txt` and `llms-full.txt` files against the official specification using the <code class="bg-gray-200 px-1 rounded">llms_text</code> module available from <a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">llmstxt.org</a>.
+    </p>
+    <h2 class="text-2xl font-semibold mb-2">About the llmstxt Standard</h2>
+    <p class="mb-4">
+      The `llmstxt` standard aims to provide a structured way for website owners to communicate instructions and permissions to Large Language Models (LLMs) and other AI agents interacting with their sites. It complements existing standards like `robots.txt` (which focuses on crawlers) and `sitemap.xml` (which aids discovery).
+    </p>
+    <p class="mb-4">
+      An `llms.txt` file is a simple plain text file, typically located in the root directory of a website, containing directives in a key-value format. These directives can specify preferred interaction models, data usage policies, contact information for AI-related inquiries, and more. The goal is to foster clearer communication and responsible AI interactions online.
+    </p>
     <h2 class="text-2xl font-semibold mb-2">Key Features</h2>
     <ul class="list-disc list-inside mb-4">
       <li>[Feature 1 placeholder]</li>
