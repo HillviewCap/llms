@@ -18,7 +18,6 @@ The standard consists of two primary file formats that serve different purposes.
 
 This innovative approach addresses several challenges LLMs face when processing traditional web content, including wasted processing power parsing irrelevant HTML/JavaScript, difficulty distinguishing between core content and supplementary elements, and missing important context between pages. Unlike robots.txt (which controls crawling permissions) or sitemap.xml (which lists indexable pages), llms.txt specifically focuses on helping AI systems understand your content when users request information related to your site.
 
-*7 sources*
 
 ## File Structure Guidelines
 
@@ -33,7 +32,6 @@ A properly formatted llms.txt includes:
 
 This standardized structure ensures LLMs can efficiently parse your content's hierarchy and understand relationships between different sections of your website, making it easier for AI systems to provide accurate information about your offerings when queried by users.
 
-*6 sources*
 
 ## Implementation Steps
 
@@ -41,7 +39,6 @@ Implementing llms.txt on your website involves a three-step process that begins 
 
 The second step requires providing markdown versions of key pages by appending .md to original URLs (e.g., https://example.com/blog/important-article.md). For URLs without filenames, append index.html.md instead. Finally, upload the llms.txt file to your server's root directory and ensure all markdown versions of your pages are accessible at their respective URLs. This standardized implementation allows any website, regardless of size or complexity, to make their content more accessible to AI systems in a structured, machine-readable format.
 
-*3 sources*
 
 ## Benefits and Adoption
 
