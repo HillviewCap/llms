@@ -69,6 +69,27 @@ const allDomainTopics = sortedLlmsData.flatMap(
 const uniqueDomainTopics: string[] = [...new Set(allDomainTopics)].sort();
 
 // Helpers
+
+// Find the earliest first_added date for datePublished
+const earliestDate = llmsData.reduce((earliest, current) => {
+  // Ensure first_added exists and is a valid date string before parsing
+  if (current.first_added && !isNaN(new Date(current.first_added).getTime())) {
+      const currentDate = new Date(current.first_added);
+      // Check if earliest is valid before comparing
+      if (!isNaN(earliest.getTime()) && currentDate < earliest) {
+          return currentDate;
+      }
+  }
+  return earliest;
+  // Initialize with a potentially valid date or a very future date if none are valid initially
+}, new Date(llmsData.find(entry => entry.first_added && !isNaN(new Date(entry.first_added).getTime()))?.first_added || '9999-12-31'));
+
+// Format the date, handle case where no valid date was found
+const formattedDatePublished = !isNaN(earliestDate.getTime()) && earliestDate.getFullYear() !== 9999
+  ? earliestDate.toISOString().split("T")[0]
+  : new Date().toISOString().split("T")[0]; // Fallback to today if no valid date found
+
+
 const stripHtml = (html: string | undefined | null): string =>
   html?.replace(/<[^>]*>?/gm, "") ?? "";
 
@@ -113,15 +134,15 @@ const pillColorClasses: string[] = [
       name: "LLMS.txt Explorer Dataset",
       description:
         "A comprehensive collection of LLMS.txt files from various domains across the web",
-      keywords: "LLMS.txt, AI, machine learning, language models, web crawling",
-      url: "https://llms-explorer.example.com", // Replace with actual URL if available
-      sameAs: "https://github.com/example/llms-explorer", // Replace with actual repo if available
+      keywords: ["LLMS.txt", "AI", "machine learning", "language models", "web crawling", "structured data", "dataset"], // Added keywords as array
+      url: "https://llms-text.ai/", // Use actual site URL
+      // sameAs removed as no actual repo URL is available
       creator: {
         "@type": "Organization",
-        name: "LLMS.txt Explorer Team", // Replace if needed
+        name: "LLMS.txt Explorer Team",
       },
-      datePublished: new Date().toISOString().split("T")[0],
-      license: "https://creativecommons.org/licenses/by/4.0/", // Verify license
+      datePublished: formattedDatePublished, // Use earliest date from data
+      license: "https://creativecommons.org/licenses/by/4.0/", // Assuming CC BY 4.0 is correct
     }}
   />
 
