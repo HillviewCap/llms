@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="API Documentation">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Search API Documentation</h1>
+
+    <p class="mb-4">
+      This page documents the usage of the LLM search API endpoint.
+    </p>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3">Endpoint: `/api/search-llms`</h2>
+      <p><strong class="font-medium">Method:</strong> <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">GET</code></p>
+      <p class="mt-2">
+        This endpoint allows you to search through the available LLM metadata based on a query string.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3">Query Parameters</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>
+          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">q</code> (<strong>required</strong>): The search term to query against LLM titles and summaries.
+        </li>
+        <li>
+          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">fileType</code> (optional): Filters the search based on source file type. Allowed values: <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'llms.txt'</code>, <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'llms-full.txt'</code>, <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'both'</code>. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'both'</code>. (Note: Current implementation searches all JSON data regardless of this parameter, but it is validated).
+        </li>
+        <li>
+          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">page</code> (optional): The page number for pagination. Must be a positive integer. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">1</code>.
+        </li>
+        <li>
+          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">limit</code> (optional): The maximum number of results per page. Must be a positive integer. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">10</code>, maximum allowed is <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">50</code>.
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3">Example Request</h2>
+      <p>Search for "example model" on page 2 with 5 results per page:</p>
+      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>GET /api/search-llms?q=example%20model&page=2&limit=5</code></pre>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-3">Example Response (Success - 200 OK)</h2>
+      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
+  "totalResults": 15,
+  "page": 2,
+  "limit": 5,
+  "results": [
+    {
+      "url": "https://example.com/model-a",
+      "domain": "example.com",
+      "title": "Example Model A",
+      "summary": "An example language model.",
+      "last_updated": "2024-01-15"
+    },
+    {
+      "url": "https://example.org/model-b",
+      "domain": "example.org",
+      "title": "Example Model B",
+      "summary": "Another example language model.",
+      "last_updated": "2024-02-20"
+    }
+    // ... more results up to the limit
+  ]
+&rbrace;`}</code></pre>
+    </section>
+
+     <section class="mt-8">
+      <h2 class="text-2xl font-semibold mb-3">Example Response (Error - 400 Bad Request)</h2>
+      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
+  "error": "Missing or empty search query parameter \"q\"."
+&rbrace;`}</code></pre>
+      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
+  "error": "Invalid page parameter. Must be a positive integer."
+&rbrace;`}</code></pre>
+    </section>
+  </main>
+</Layout>

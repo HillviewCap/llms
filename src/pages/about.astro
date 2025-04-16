@@ -2,21 +2,36 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About This Project">
+<Layout title="About LLMS.txt Explorer" description="Learn about the LLMS.txt Explorer project, its goals, features, and the technology behind this tool for analyzing LLMS.txt files.">
   <main class="container mx-auto px-4 py-8">
     <h1 class="text-3xl font-bold mb-4">About This Project</h1>
     <p class="mb-4">
       This project provides tools and resources related to the llmstxt.org initiative, which aims to standardize interactions with Large Language Models. You can learn more at the main project site: <a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">https://llmstxt.org/</a>.
     </p>
+    <h2 class="text-2xl font-semibold mb-2">Our Data Collection Process</h2>
+    <p class="mb-4">
+      To provide comprehensive insights, we regularly crawl the top 1 million websites (updated every few days) to find `llms.txt` and `llms-full.txt` files. The collected data is then enriched with additional metrics, including website category and a quality score.
+    </p>
+    <p class="mb-4">
+      The quality score is derived by validating the discovered `llms.txt` and `llms-full.txt` files against the official specification using the <code class="bg-gray-700 px-1 rounded">llms_text</code> module available from <a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">llmstxt.org</a>.
+    </p>
+    <h2 class="text-2xl font-semibold mb-2">About the llmstxt Standard</h2>
+    <p class="mb-4">
+      The `llmstxt` standard aims to provide a structured way for website owners to communicate instructions and permissions to Large Language Models (LLMs) and other AI agents interacting with their sites. It complements existing standards like `robots.txt` (which focuses on crawlers) and `sitemap.xml` (which aids discovery).
+    </p>
+    <p class="mb-4">
+      An `llms.txt` file is a simple plain text file, typically located in the root directory of a website, containing directives in a key-value format. These directives can specify preferred interaction models, data usage policies, contact information for AI-related inquiries, and more. The goal is to foster clearer communication and responsible AI interactions online.
+    </p>
     <h2 class="text-2xl font-semibold mb-2">Key Features</h2>
     <ul class="list-disc list-inside mb-4">
-      <li>[Feature 1 placeholder]</li>
-      <li>[Feature 2 placeholder]</li>
-      <li>[Feature 3 placeholder]</li>
+      <li>Comprehensive database of `llms.txt` and `llms-full.txt` files.</li>
+      <li>Regular updates sourced from crawling top websites.</li>
+      <li>Data enrichment with website category and quality score metrics.</li>
+      <li>Validation against the official llmstxt.org standard.</li>
     </ul>
     <h2 class="text-2xl font-semibold mb-2">Technology Stack</h2>
     <p class="mb-4">
-      Built with Astro, Tailwind CSS, and [mention other key technologies if applicable].
+      Built with Astro, Tailwind CSS.
     </p>
   </main>
 </Layout>
