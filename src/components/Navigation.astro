@@ -1,0 +1,36 @@
+---
+// src/components/Navigation.astro
+---
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/resources">Resources</a></li>
+    <li><a href="/request">Request</a></li>
+    <li><a href="/legal">Legal</a></li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    background-color: #f0f0f0;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  a:hover {
+    color: #007bff;
+  }
+</style>

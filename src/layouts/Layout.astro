@@ -3,6 +3,7 @@ import '../styles/global.css';
 import '../styles/enhanced-theme.css';
 import PerformanceOptimizer from '../components/PerformanceOptimizer.astro';
 import StructuredData from '../components/StructuredData.astro'; // Import the component
+import Navigation from '../components/Navigation.astro';
 
 interface Props {
 	title?: string;
@@ -89,6 +90,7 @@ const fullCanonicalUrl = new URL(canonicalUrl, siteUrl).toString();
 	<!-- Add performance optimizer -->
 	<PerformanceOptimizer />
 	<body class="min-h-screen flex flex-col">
+		<Navigation />
 		<main class="flex-grow">
 			<slot />
 		</main>
