@@ -12,7 +12,7 @@ import Layout from '../layouts/Layout.astro';
 
     <section class="mb-8">
       <h2 class="text-2xl font-semibold mb-3">Endpoint: `/api/search-llms`</h2>
-      <p><strong class="font-medium">Method:</strong> <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">GET</code></p>
+      <p><strong class="font-medium">Method:</strong> <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">GET</code></p>
       <p class="mt-2">
         This endpoint allows you to search through the available LLM metadata based on a query string.
       </p>
@@ -22,16 +22,16 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="text-2xl font-semibold mb-3">Query Parameters</h2>
       <ul class="list-disc list-inside space-y-2">
         <li>
-          <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">q</code> (<strong>required</strong>): The search term to query against LLM titles and summaries.
+          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">q</code> (<strong>required</strong>): The search term to query against LLM titles and summaries.
         </li>
         <li>
-          <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">fileType</code> (optional): Filters the search based on source file type. Allowed values: <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">'llms.txt'</code>, <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">'llms-full.txt'</code>, <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">'both'</code>. Defaults to <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">'both'</code>. (Note: Current implementation searches all JSON data regardless of this parameter, but it is validated).
+          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">fileType</code> (optional): Filters the search based on source file type. Allowed values: <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'llms.txt'</code>, <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'llms-full.txt'</code>, <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'both'</code>. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'both'</code>. (Note: Current implementation searches all JSON data regardless of this parameter, but it is validated).
         </li>
         <li>
-          <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">page</code> (optional): The page number for pagination. Must be a positive integer. Defaults to <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">1</code>.
+          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">page</code> (optional): The page number for pagination. Must be a positive integer. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">1</code>.
         </li>
         <li>
-          <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">limit</code> (optional): The maximum number of results per page. Must be a positive integer. Defaults to <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">10</code>, maximum allowed is <code class="bg-gray-200 dark:bg-gray-700 px-1 rounded">50</code>.
+          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">limit</code> (optional): The maximum number of results per page. Must be a positive integer. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">10</code>, maximum allowed is <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">50</code>.
         </li>
       </ul>
     </section>
