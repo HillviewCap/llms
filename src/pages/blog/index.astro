@@ -1,0 +1,35 @@
+---
+// src/pages/blog/index.astro
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+// Get all blog posts, sorted by publication date
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const pageTitle = "Blog";
+const pageDescription = "Read the latest updates and articles.";
+---
+<Layout title={pageTitle} description={pageDescription}>
+  <section class="py-8">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold mb-8">{pageTitle}</h1>
+      <ul class="space-y-6">
+        {posts.map((post) => (
+          <li class="border-b border-gray-700 pb-4">
+            <h2 class="text-2xl font-semibold mb-2">
+              <a href={`/blog/${post.slug}/`} class="hover:text-blue-400 transition-colors duration-200">
+                {post.data.title}
+              </a>
+            </h2>
+            <p class="text-gray-400 mb-2">{post.data.description}</p>
+            <p class="text-sm text-gray-500">
+              Published on: <time datetime={post.data.pubDate.toISOString()}>{post.data.pubDate.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })}</time>
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Layout>

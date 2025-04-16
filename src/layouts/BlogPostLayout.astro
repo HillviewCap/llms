@@ -1,0 +1,14 @@
+---
+// src/layouts/BlogPostLayout.astro
+import Layout from './Layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <article class="prose prose-invert max-w-none">
+    <h1>{frontmatter.title}</h1>
+    <p>Published on: <time datetime={frontmatter.pubDate.toISOString()}>{frontmatter.pubDate.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })}</time></p>
+    <hr/>
+    <slot /> <!-- Blog post content will be injected here -->
+  </article>
+</Layout>

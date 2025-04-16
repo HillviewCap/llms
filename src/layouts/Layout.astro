@@ -31,6 +31,7 @@ const fullCanonicalUrl = new URL(canonicalUrl, siteUrl).toString();
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RR4PS3WGCB"></script>
 		<script>
+		  // @ts-nocheck
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
@@ -95,10 +96,11 @@ const fullCanonicalUrl = new URL(canonicalUrl, siteUrl).toString();
 		      <footer class="mt-12 py-6 border-t border-neutral-300 dark:border-neutral-700 text-center text-sm text-neutral-600 dark:text-neutral-400">
 		        <div class="container mx-auto px-4">
 		          <nav class="flex justify-center space-x-4">
+		            <a href="/blog" class="hover:underline">Blog</a>
 		            <a href="/resources" class="hover:underline">Resources</a> <!-- Assuming a /resources page will exist -->
 		            <a href="/legal" class="hover:underline">Legal</a>       <!-- Assuming a /legal page will exist -->
 		            <a href="/sitemap.xml" class="hover:underline">Sitemap</a>
-            <a href="/request" class="hover:underline">Request/Report Site</a>
+		          <a href="/request" class="hover:underline">Request/Report Site</a>
 		          </nav>
 		          <p class="mt-4">&copy; {new Date().getFullYear()} llmstxt Project. All rights reserved.</p>
 		        </div>
