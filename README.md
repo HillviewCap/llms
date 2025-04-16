@@ -1,290 +1,110 @@
 # LLMS.txt Explorer
 
-A comprehensive explorer for LLMS.txt files from various domains across the web. This project helps developers, researchers, and website owners understand how the LLMS.txt standard is being implemented.
+A web application to discover, explore, and analyze `llms.txt` files from across the web. This project supports the [llmstxt.org](https://llmstxt.org/) initiative, which aims to standardize how websites communicate instructions and permissions to Large Language Models (LLMs).
 
 ## Project Overview
 
-The LLMS.txt Explorer is an Astro-based web application that collects, analyzes, and displays LLMS.txt files from websites across the internet. LLMS.txt is an emerging standard that helps websites communicate their preferences for AI training and crawling. This project provides insights into how different organizations are approaching AI training permissions and restrictions.
+The LLMS.txt Explorer provides a comprehensive, searchable database of `llms.txt` and `llms-full.txt` files found on the internet. The `llmstxt` standard allows website owners to specify preferences for AI interactions, data usage policies, and more, complementing standards like `robots.txt`.
+
+This explorer helps developers, researchers, and website owners understand the adoption and implementation patterns of the `llmstxt` standard.
+
+## Data Collection and Processing
+
+- **Crawling:** We regularly crawl the top 1 million websites to discover `llms.txt` and `llms-full.txt` files.
+- **Enrichment:** The collected data (`src/data/llms_metadata.json`) is enriched with additional metadata, including website category (domain purpose/topics) and LLMS.txt-specific topics.
+- **Quality Score:** Each discovered file is validated against the official `llmstxt.org` specification using the `llms_text` module. Based on this validation, a quality score (High, Medium, Low) is assigned.
+
+*Note: The data acquisition and processing happen in a separate backend process. The updated data is periodically integrated into this repository.*
 
 ## Features
 
-- Browse and search LLMS.txt files from multiple domains
-- Filter by category or domain
-- View detailed information about each implementation
-- Compare different approaches to AI training permissions
-- Responsive design with dark mode support
-- SEO optimized with structured data
-- Performance optimized with lazy loading and prefetching
+- **Comprehensive Database:** Explore `llms.txt` data from a large number of domains.
+- **Search:** Find entries by title, domain, or summary content.
+- **Filtering:**
+    - Filter by Source Domain.
+    - Filter by topics extracted from the `llms.txt` file (`LLMs.txt Topics`).
+    - Filter by general topics associated with the domain (`Domain Topics`).
+    - Option to include or exclude low-quality entries.
+- **Detailed View:** See the `llms.txt` URL, last checked date, quality score, and extracted metadata (topics, domain purposes).
+- **Regular Updates:** The database is kept current through periodic crawling and processing.
+- **Responsive Design:** Accessible on various devices.
+- **Built with Astro:** Modern and performant web framework.
 
 ## Project Structure
 
 ```
-astro-llms-explorer/
-├── public/                 # Static assets and files
-│   ├── _headers            # Netlify/Cloudflare headers configuration
-│   ├── .htaccess           # Apache server configuration
-│   ├── favicon.svg         # Site favicon
-│   ├── og-image.png        # Open Graph image for social sharing
-│   ├── robots.txt          # Search engine crawling instructions
-│   └── sitemap.xml         # Site structure for search engines
+.
+├── public/                 # Static assets (favicon, headers, etc.)
 ├── src/
-│   ├── assets/             # Project assets (images, etc.)
-│   ├── components/         # Reusable Astro components
-│   │   ├── PerformanceOptimizer.astro  # Performance enhancements
-│   │   ├── StructuredData.astro        # SEO structured data
-│   │   └── Welcome.astro               # Welcome component
+│   ├── assets/             # Project assets (images, fonts, etc.)
+│   ├── components/         # Reusable Astro components (Navigation, StructuredData, etc.)
+│   ├── content/            # Content collections (e.g., blog posts)
 │   ├── data/               # Data files
-│   │   └── llms_metadata_enriched.json # Processed LLMS.txt data
-│   ├── layouts/            # Page layouts
-│   │   └── Layout.astro    # Main site layout
-│   ├── pages/              # Astro pages
-│   │   ├── 404.astro       # Custom 404 error page
-│   │   └── index.astro     # Homepage
-│   └── styles/             # Global styles
-│       └── global.css      # TailwindCSS imports
+│   │   └── llms_metadata.json # Core LLMS.txt data
+│   ├── layouts/            # Page layouts (Layout.astro, BlogPostLayout.astro)
+│   ├── pages/              # Site pages (index.astro, about.astro, etc.)
+│   └── styles/             # Global styles and themes
 ├── astro.config.mjs        # Astro configuration
-├── package.json            # Project dependencies and scripts
 ├── tailwind.config.mjs     # TailwindCSS configuration
-└── tsconfig.json           # TypeScript configuration
+├── tsconfig.json           # TypeScript configuration
+├── package.json            # Project dependencies and scripts
+└── README.md               # This file
 ```
+*(Note: Structure simplified for brevity)*
 
 ## Technologies Used
 
-- **[Astro](https://astro.build/)**: Fast, modern static site generator
-- **[TailwindCSS](https://tailwindcss.com/)**: Utility-first CSS framework
-- **[TypeScript](https://www.typescriptlang.org/)**: Type-safe JavaScript
-- **[Cloudflare API](https://developers.cloudflare.com/api/)**: For domain categorization
-- **[Brave Search API](https://brave.com/search/api/)**: For discovering LLMS.txt files
-- **[GitHub API](https://docs.github.com/en/rest)**: For finding LLMS.txt implementations
+- **[Astro](https://astro.build/)**: Web framework for building fast content sites.
+- **[TailwindCSS](https://tailwindcss.com/)**: Utility-first CSS framework.
+- **[TypeScript](https://www.typescriptlang.org/)**: Superset of JavaScript adding static types.
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js 18.x or higher
-- npm or yarn
+- npm (or pnpm, yarn)
 
 ### Installation
 
-1. Clone the repository:
+1.  Clone the repository:
+    ```bash
+    # git clone <repository-url> # Add repository URL if known
+    cd <repository-directory>
+    ```
 
-   ```bash
-   git clone https://github.com/example/llms-explorer.git
-   cd llms-explorer
-   ```
+2.  Install dependencies (using your preferred package manager):
+    ```bash
+    npm install # or pnpm install / yarn install / uv pip install -r requirements.txt (if applicable)
+    ```
 
-2. Install dependencies:
+3.  Start the development server:
+    ```bash
+    npm run dev # or pnpm dev / yarn dev
+    ```
 
-   ```bash
-   npm install
-   ```
+4.  Open your browser and navigate to `http://localhost:4321` (or the port specified by Astro).
 
-3. Start the development server:
+## Deployment
 
-   ```bash
-   npm run dev
-   ```
+This Astro project can be deployed to various static hosting platforms like Netlify, Vercel, Cloudflare Pages, or GitHub Pages.
 
-4. Open your browser and navigate to `http://localhost:4321`
+1.  **Build the site:**
+    ```bash
+    npm run build # or pnpm build / yarn build
+    ```
+2.  **Deploy:** Follow the instructions for your chosen hosting provider, typically pointing it to the `dist/` directory created by the build command.
 
-## Data Source
+Refer to the `DEPLOYMENT.md` file for more detailed platform-specific instructions.
 
-The LLMS.txt data displayed in this explorer (`src/data/llms_metadata.json`) is automatically acquired, processed, and updated by a separate backend process. This process runs in the [llms-backend](https://github.com/your-username/llms-backend) repository (replace with actual link if available).
+## Maintenance
 
-The backend uses Python scripts and various APIs (Brave Search, GitHub, Cloudflare) to gather and enrich the data. A GitHub Actions workflow in the backend repository automatically commits the updated `llms_metadata_enriched.json` file to this frontend repository's `src/data/` directory periodically.
-
-Therefore, manual data updates are no longer required within this repository. The data is kept current by the automated backend workflow.
-
-## Deployment Guide
-
-### Building for Production
-
-1. Update the site URL in `astro.config.mjs`:
-
-   ```javascript
-   site: 'https://your-domain.com',
-   ```
-
-2. Build the site:
-
-   ```bash
-   npm run build
-   ```
-
-3. The built files will be in the `dist` directory.
-
-### Deployment Options
-
-#### Netlify Deployment
-
-1. Connect your GitHub repository to Netlify.
-2. Configure the build settings:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-3. Set environment variables if needed.
-4. Deploy the site.
-
-The site includes a `_headers` file that will automatically configure caching and security headers on Netlify.
-
-#### Vercel Deployment
-
-1. Connect your GitHub repository to Vercel.
-2. Configure the build settings:
-   - Framework preset: Astro
-   - Build command: `npm run build`
-   - Output directory: `dist`
-3. Set environment variables if needed.
-4. Deploy the site.
-
-#### Cloudflare Pages Deployment
-
-1. Connect your GitHub repository to Cloudflare Pages.
-2. Configure the build settings:
-   - Framework preset: Astro
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-3. Set environment variables if needed.
-4. Deploy the site.
-
-The site includes a `_headers` file that will automatically configure caching and security headers on Cloudflare Pages.
-
-#### GitHub Pages Deployment
-
-1. Update the `astro.config.mjs` file:
-
-   ```javascript
-   import { defineConfig } from "astro/config";
-
-   export default defineConfig({
-     site: "https://username.github.io",
-     base: "/repository-name",
-     // other configuration...
-   });
-   ```
-
-2. Build the site:
-
-   ```bash
-   npm run build
-   ```
-
-3. Deploy using GitHub Actions by creating a `.github/workflows/deploy.yml` file:
-
-   ```yaml
-   name: Deploy to GitHub Pages
-
-   on:
-     push:
-       branches: [main]
-     workflow_dispatch:
-
-   jobs:
-     build-and-deploy:
-       runs-on: ubuntu-latest
-       steps:
-         - name: Checkout
-           uses: actions/checkout@v3
-         - name: Setup Node.js
-           uses: actions/setup-node@v3
-           with:
-             node-version: 18
-         - name: Install dependencies
-           run: npm ci
-         - name: Build
-           run: npm run build
-         - name: Deploy
-           uses: JamesIves/github-pages-deploy-action@v4
-           with:
-             folder: dist
-   ```
-
-#### Traditional Web Server Deployment
-
-1. Upload the contents of the `dist` directory to your web server.
-2. Ensure your server is configured to serve the `.htaccess` file for proper caching and security headers.
-3. Configure your server to redirect all requests to non-existent files to `/404.html`.
-
-### Custom Domain Setup
-
-1. Update the `site` property in `astro.config.mjs` to your production domain:
-
-   ```javascript
-   site: 'https://your-domain.com',
-   ```
-
-2. If using a CDN or hosting provider:
-
-   - Configure your DNS settings to point to your hosting provider
-   - Set up SSL certificates for HTTPS
-   - Configure any additional domain settings according to your provider's documentation
-
-3. For Netlify, Vercel, or Cloudflare Pages:
-   - Add your custom domain in the provider's dashboard
-   - Follow the provider's instructions to verify domain ownership
-   - Configure DNS settings as instructed
-
-## Maintenance Guide
-
-### Updating the Data
-
-The LLMS.txt data (`src/data/llms_metadata.json`) is updated automatically by a backend process running in a separate repository. A GitHub Actions workflow commits the latest data directly to this repository.
-
-No manual steps are needed here to update the data. If the site is deployed on a platform like Cloudflare Pages, Vercel, or Netlify with continuous deployment enabled, the site will automatically rebuild and redeploy when the data file is updated by the backend workflow.
-
-### Making Site Changes
-
-#### Modifying the Design
-
-1. Edit the TailwindCSS classes in the Astro components to change the styling.
-2. For global styles, modify `src/styles/global.css`.
-3. For layout changes, edit `src/layouts/Layout.astro`.
-4. For component changes, edit files in the `src/components/` directory.
-
-#### Adding New Pages
-
-1. Create a new `.astro` file in the `src/pages/` directory.
-2. Use the `Layout` component to maintain consistent styling.
-3. Update the sitemap.xml file to include the new page.
-
-#### Updating SEO
-
-1. Modify the meta tags in `src/layouts/Layout.astro`.
-2. Update the structured data in `src/components/StructuredData.astro`.
-3. Update the `robots.txt` and `sitemap.xml` files in the `public/` directory.
-
-### Troubleshooting
-
-#### Build Errors
-
-- Check the Node.js version (should be 18.x or higher)
-- Ensure all dependencies are installed: `npm install`
-- Clear the cache: `npm run clean` or remove the `.astro` directory
-- Check for TypeScript errors: `npx tsc --noEmit`
-
-#### Deployment Issues
-
-- Verify the build output directory is correct (`dist`)
-- Check environment variables are properly set
-- Ensure the site URL in `astro.config.mjs` is correct
-- Verify DNS settings for custom domains
-
-#### Performance Issues
-
-- Check the Network tab in browser DevTools for slow-loading resources
-- Optimize images using WebP format
-- Ensure lazy loading is working correctly
-- Verify caching headers are being applied
+Refer to the `MAINTENANCE.md` file for guidance on updating dependencies, modifying the site, and troubleshooting. Data updates are handled automatically by the backend process.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add some amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+Contributions are welcome! Please follow standard Git workflow practices (fork, branch, commit, pull request).
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. (Assuming MIT, update if different).
