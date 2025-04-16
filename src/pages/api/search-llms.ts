@@ -15,8 +15,7 @@ interface LlmMetadata {
 // Type assertion for the imported data
 const allLlms: LlmMetadata[] = llmsData as LlmMetadata[];
 
-export const GET: APIRoute = ({ request }) => {
-  const url = new URL(request.url);
+export const GET: APIRoute = ({ url }) => {
   const params = url.searchParams;
 
   // --- 1. Get and Validate Parameters ---
