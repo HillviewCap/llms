@@ -39,12 +39,12 @@ import Layout from '../layouts/Layout.astro';
     <section class="mb-8">
       <h2 class="text-2xl font-semibold mb-3">Example Request</h2>
       <p>Search for "example model" on page 2 with 5 results per page:</p>
-      <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>GET /api/search-llms?q=example%20model&page=2&limit=5</code></pre>
+      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>GET /api/search-llms?q=example%20model&page=2&limit=5</code></pre>
     </section>
 
     <section>
       <h2 class="text-2xl font-semibold mb-3">Example Response (Success - 200 OK)</h2>
-      <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
+      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
   "totalResults": 15,
   "page": 2,
   "limit": 5,
@@ -70,10 +70,10 @@ import Layout from '../layouts/Layout.astro';
 
      <section class="mt-8">
       <h2 class="text-2xl font-semibold mb-3">Example Response (Error - 400 Bad Request)</h2>
-      <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
+      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
   "error": "Missing or empty search query parameter \"q\"."
 &rbrace;`}</code></pre>
-      <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
+      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
   "error": "Invalid page parameter. Must be a positive integer."
 &rbrace;`}</code></pre>
     </section>
