@@ -2,49 +2,38 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Request/Report Site - LLMS.txt Explorer" description="Request the addition of a new site with an LLMS.txt file or report an existing site in the LLMS.txt Explorer database.">
+<Layout title="Request/Report Site - LLMS.txt Explorer" description="Request the addition of a new site or report an existing site via our GitHub repository issues.">
   <main class="container mx-auto px-4 py-8">
     <h1 class="text-3xl font-bold mb-6 text-center">Request New Site / Report Site</h1>
 
     <section class="mb-8 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
       <h2 class="text-2xl font-semibold mb-4">Request Addition of a New Site</h2>
       <p class="mb-4 text-gray-600 dark:text-gray-300">
-        If you know of a site hosting an `llms.txt` or `llms-full.txt` file that isn't listed, please provide the URL below.
+        To request the addition of a site hosting an `llms.txt` or `llms-full.txt` file, please open an issue in our GitHub repository using the template below. Ensure the site isn't already listed and provides a valid file.
       </p>
-      <form action="#" method="POST" class="space-y-4">
-        <div>
-          <label for="urlInput" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">
-            URL of llms.txt or llms-full.txt:
-          </label>
-          <input
-            type="url"
-            id="urlInput"
-            name="urlInput"
-            required
-            placeholder="https://example.com/llms.txt"
-            class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-white"
-          />
-        </div>
-        <button
-          type="submit"
-          class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
-          Request Addition
-        </button>
-      </form>
+      <a
+        href="https://github.com/HillviewCap/llms/issues/new?template=new_site_request.md"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      >
+        Request New Site via GitHub Issue
+      </a>
     </section>
 
     <section class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-      <h2 class="text-2xl font-semibold mb-4">Report an Inappropriate or Malicious Site</h2>
+      <h2 class="text-2xl font-semibold mb-4">Report an Existing Site</h2>
       <p class="mb-4 text-gray-600 dark:text-gray-300">
-        If you find a site listed that contains inappropriate content, malware, or violates ethical guidelines, please report it.
+        If you find a listed site that contains inappropriate content, malware, has a broken `llms.txt` file, or violates ethical guidelines, please report it by opening an issue in our GitHub repository using the template below.
       </p>
-      <button
-        type="button"
+      <a
+        href="https://github.com/HillviewCap/llms/issues/new?template=report_site.md"
+        target="_blank"
+        rel="noopener noreferrer"
         class="inline-flex justify-center py-2 px-4 border border-red-600 shadow-sm text-sm font-medium rounded-md text-red-600 bg-white hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 dark:bg-gray-800 dark:text-red-400 dark:border-red-500 dark:hover:bg-gray-700"
       >
-        Report Site
-      </button>
+        Report Site via GitHub Issue
+      </a>
     </section>
   </main>
 </Layout>
