@@ -15,6 +15,9 @@ export default defineConfig({
   },
   output: 'server',
   adapter: cloudflare(),
+  experimental: {
+    session: true
+  },
   compressHTML: true,
   integrations: [
     sitemap(),
