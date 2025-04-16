@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import '../styles/enhanced-theme.css';
 import PerformanceOptimizer from '../components/PerformanceOptimizer.astro';
+import StructuredData from '../components/StructuredData.astro'; // Import the component
 
 interface Props {
 	title?: string;
@@ -66,22 +67,19 @@ const fullCanonicalUrl = new URL(canonicalUrl, siteUrl).toString();
 		<meta name="twitter:creator" content="@llmsexplorer" />
 		
 		<!-- JSON-LD Structured Data -->
-		<script type="application/ld+json">
-			{
-				JSON.stringify({
-					"@context": "https://schema.org",
-					"@type": "WebSite",
-					"name": "LLMS.txt Explorer",
-					"url": siteUrl,
-					"description": description,
-					"potentialAction": {
-						"@type": "SearchAction",
-						"target": `${siteUrl}/?search={search_term_string}`,
-						"query-input": "required name=search_term_string"
-					}
-				})
-			}
-		</script>
+		<StructuredData
+			type="WebSite"
+			data={{
+				name: "LLMS.txt Explorer",
+				url: siteUrl,
+				description: description,
+				potentialAction: {
+					"@type": "SearchAction",
+					target: `${siteUrl}/?search={search_term_string}`,
+					"query-input": "required name=search_term_string"
+				}
+			}}
+		/>
 	</head>
 	
 	<!-- Preload critical assets -->
