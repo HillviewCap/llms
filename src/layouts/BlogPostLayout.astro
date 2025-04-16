@@ -8,6 +8,13 @@ const { frontmatter } = Astro.props;
   <article class="prose prose-invert max-w-none">
     <h1>{frontmatter.title}</h1>
     <p>Published on: <time datetime={frontmatter.pubDate.toISOString()}>{frontmatter.pubDate.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })}</time></p>
+    {frontmatter.tags && frontmatter.tags.length > 0 && (
+      <div class="tags mt-2">
+        Tags: {frontmatter.tags.map((tag: string) => (
+          <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2">{tag}</span>
+        ))}
+      </div>
+    )}
     <hr/>
     <slot /> <!-- Blog post content will be injected here -->
   </article>
