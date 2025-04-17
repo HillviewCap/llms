@@ -1,19 +1,25 @@
 ---
-// src/components/blog/BlogTags.astro
+/**
+ * BlogTags.astro
+ * A component for rendering blog post tags with consistent styling
+ */
+
 interface Props {
   tags: string[];
+  class?: string;
 }
 
-const { tags } = Astro.props;
+const { tags, class: className = "" } = Astro.props;
 ---
 
-<div class="flex flex-wrap gap-2">
-  {
-    tags.map((tag) => (
-      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-900 text-primary-200 hover:bg-primary-800 transition-colors duration-200">
-        <span class="w-1.5 h-1.5 mr-1.5 rounded-full bg-primary-400" />
-        {tag}
-      </span>
-    ))
-  }
-</div>
+{
+  tags && tags.length > 0 && (
+    <div class={`blog-tags-container ${className}`}>
+      {tags.map((tag) => (
+        <a href={`/blog?tag=${encodeURIComponent(tag)}`} class="blog-tag">
+          #{tag}
+        </a>
+      ))}
+    </div>
+  )
+}

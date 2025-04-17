@@ -33,6 +33,7 @@ const { entry } = Astro.props;
 
 // Add error handling
 let Content;
+let headings: { depth: number; slug: string; text: string }[] = [];
 let renderError = null;
 
 try {
@@ -40,8 +41,9 @@ try {
     throw new Error(`Blog post not found for slug: ${slug}`);
   }
 
-  const { Content: EntryContent } = await entry.render();
+  const { Content: EntryContent, headings } = await entry.render();
   Content = EntryContent;
+  // Pass headings to the layout for table of contents
 } catch (error) {
   console.error("Error rendering blog post:", error);
   renderError = error instanceof Error ? error.message : "Unknown error";
@@ -50,7 +52,7 @@ try {
 
 {
   !renderError ? (
-    <BlogPostLayout frontmatter={entry.data}>
+    <BlogPostLayout frontmatter={entry.data} headings={headings} entry={entry}>
       {Content && <Content />}
     </BlogPostLayout>
   ) : (
