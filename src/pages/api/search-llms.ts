@@ -137,13 +137,13 @@ const searchHandler = async (context: APIContext) => {
     }
     
     const paginatedResults = filteredResults.slice(startIndex, startIndex + limit);
-
-    // --- 4. Format Response ---
+    
+    // Format response
     const responseBody = {
       totalResults: totalResults,
       page: page,
       limit: limit,
-      results: paginatedResults,
+      results: paginatedResults
     };
 
     return createSecureJsonResponse(responseBody, 200);
