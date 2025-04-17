@@ -1,0 +1,25 @@
+---
+/**
+ * BlogTags.astro
+ * A component for rendering blog post tags with consistent styling
+ */
+
+interface Props {
+  tags: string[];
+  class?: string;
+}
+
+const { tags, class: className = "" } = Astro.props;
+---
+
+{
+  tags && tags.length > 0 && (
+    <div class={`blog-tags-container ${className}`}>
+      {tags.map((tag) => (
+        <a href={`/blog?tag=${encodeURIComponent(tag)}`} class="blog-tag">
+          #{tag}
+        </a>
+      ))}
+    </div>
+  )
+}

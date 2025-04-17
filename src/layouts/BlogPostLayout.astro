@@ -1,21 +1,150 @@
 ---
 // src/layouts/BlogPostLayout.astro
-import Layout from './Layout.astro';
+import Layout from "./Layout.astro";
+import BlogTags from "../components/blog/BlogTags.astro";
+import BlogAuthor from "../components/blog/BlogAuthor.astro";
+import BlogTableOfContents from "../components/blog/BlogTableOfContents.astro";
+import BlogRelatedPosts from "../components/blog/BlogRelatedPosts.astro";
+import BlogSocialShare from "../components/blog/BlogSocialShare.astro";
+import StructuredData from "../components/StructuredData.astro";
+import "../styles/blog.css";
 
-const { frontmatter } = Astro.props;
+// Import utilities for calculating reading time
+import { getCollection } from "astro:content";
+
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  frontmatter: any;
+  headings: { depth: number; slug: string; text: string }[];
+  entry?: CollectionEntry<"blog">;
+}
+
+const { frontmatter, headings, entry } = Astro.props;
+
+// Calculate reading time (approx. 200 words per minute)
+function calculateReadingTime(content: string): number {
+  const wordsPerMinute = 200;
+  const text = content;
+  const words = text.trim().split(/\s+/).length;
+  const readingTime = Math.ceil(words / wordsPerMinute);
+  return readingTime;
+}
+
+// Get the content as a string for reading time calculation
+const content = await Astro.slots.render("default");
+const readingTime = calculateReadingTime(content);
+
+// Format the date
+const formattedDate = frontmatter.pubDate.toLocaleDateString("en-us", {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+});
+
+// Get the current URL for sharing
+const currentUrl = Astro.url.href;
+
+// Extract author information
+const authorName = frontmatter.author || "LLMS.txt Team";
+const authorBio = frontmatter.authorBio || "";
 ---
-<Layout title={frontmatter.title} description={frontmatter.description}>
-  <article class="prose prose-invert max-w-none">
-    <h1>{frontmatter.title}</h1>
-    <p>Published on: <time datetime={frontmatter.pubDate.toISOString()}>{frontmatter.pubDate.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })}</time></p>
-    {frontmatter.tags && frontmatter.tags.length > 0 && (
-      <div class="tags mt-2">
-        Tags: {frontmatter.tags.map((tag: string) => (
-          <span class="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2">{tag}</span>
-        ))}
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  type="article"
+>
+  <!-- Article structured data for SEO -->
+  <StructuredData
+    slot="head"
+    type="Article"
+    data={{
+      headline: frontmatter.title,
+      description: frontmatter.description,
+      image: frontmatter.image || `${Astro.site}og-image.png`,
+      datePublished: frontmatter.pubDate.toISOString(),
+      dateModified: frontmatter.updatedDate
+        ? frontmatter.updatedDate.toISOString()
+        : frontmatter.pubDate.toISOString(),
+      author: {
+        "@type": "Person",
+        name: authorName,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "LLMS.txt Explorer",
+        logo: {
+          "@type": "ImageObject",
+          url: `${Astro.site}favicon.svg`,
+        },
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": currentUrl,
+      },
+    }}
+  />
+
+  <div class="blog-container">
+    <!-- Back to blog link -->
+    <a href="/blog" class="blog-back-link">
+      <span class="blog-back-icon">←</span> Back to Blog
+    </a>
+
+    <div class="blog-layout">
+      <!-- Main content area -->
+      <div class="blog-content-wrapper">
+        <header class="blog-header">
+          <h1 class="blog-title">{frontmatter.title}</h1>
+
+          <div class="blog-metadata">
+            <BlogAuthor name={authorName} />
+
+            <span class="blog-date">
+              <time datetime={frontmatter.pubDate.toISOString()}
+                >{formattedDate}</time
+              >
+            </span>
+
+            <span class="blog-reading-time">
+              {readingTime} min read
+            </span>
+          </div>
+
+          <BlogTags tags={frontmatter.tags} />
+
+          <BlogSocialShare title={frontmatter.title} url={currentUrl} />
+        </header>
+
+        <div class="blog-layout">
+          <!-- Table of contents (visible on desktop) -->
+          <aside class="blog-toc-wrapper hidden lg:block">
+            <div class="sticky top-4">
+              <BlogTableOfContents headings={headings} />
+            </div>
+          </aside>
+
+          <!-- Main blog content -->
+          <article
+            class="blog-main-content blog-content prose prose-invert max-w-none"
+          >
+            <!-- Mobile TOC (hidden on desktop) -->
+            <div class="lg:hidden mb-8">
+              <BlogTableOfContents headings={headings} />
+            </div>
+
+            <slot />
+            <!-- Blog post content will be injected here -->
+          </article>
+        </div>
+
+        <!-- Author bio section -->
+        <BlogAuthor name={authorName} bio={authorBio} showFull={true} />
+
+        <!-- Related posts -->
+        {entry && <BlogRelatedPosts currentPost={entry} />}
       </div>
-    )}
-    <hr/>
-    <slot /> <!-- Blog post content will be injected here -->
-  </article>
+    </div>
+  </div>
 </Layout>

@@ -1,0 +1,57 @@
+---
+/**
+ * BlogAuthor.astro
+ * A component for displaying author information in blog posts
+ */
+
+interface Props {
+  name: string;
+  avatar?: string;
+  bio?: string;
+  showFull?: boolean;
+}
+
+const {
+  name,
+  avatar = "/assets/default-avatar.png",
+  bio = "",
+  showFull = false,
+} = Astro.props;
+---
+
+{
+  showFull ? (
+    <div class="blog-author-bio">
+      <div class="blog-author-bio-avatar">
+        <img
+          src={avatar}
+          alt={`Avatar for ${name}`}
+          width="80"
+          height="80"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div class="blog-author-bio-content">
+        <h3 class="blog-author-bio-name">About {name}</h3>
+        <p class="blog-author-bio-description">
+          {bio || `${name} is a contributor to the LLMS.txt Explorer blog.`}
+        </p>
+      </div>
+    </div>
+  ) : (
+    <div class="blog-author">
+      <div class="blog-author-avatar">
+        <img
+          src={avatar}
+          alt={`Avatar for ${name}`}
+          width="32"
+          height="32"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <span>{name}</span>
+    </div>
+  )
+}
