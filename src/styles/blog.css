@@ -1,0 +1,64 @@
+/* Blog-specific styles */
+
+/* Blog index page */
+.blog-index-header {
+  @apply bg-gradient-to-br from-gray-950 to-gray-900 py-12 mb-8 border-b border-gray-800;
+}
+
+.blog-index-title {
+  @apply text-4xl md:text-5xl font-bold text-white mb-4;
+}
+
+.blog-index-description {
+  @apply text-xl text-gray-300 max-w-3xl;
+}
+
+.blog-filter-bar {
+  @apply flex flex-wrap gap-2 mb-8 pb-6 border-b border-gray-800;
+}
+
+.blog-filter-button {
+  @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200
+    bg-gray-800 text-gray-300 hover:bg-primary-900 hover:text-white
+    focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+}
+
+.blog-filter-button[aria-current="true"] {
+  @apply bg-primary-700 text-white;
+}
+
+.blog-grid {
+  @apply grid gap-6;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+  .blog-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Accessibility enhancements */
+.skip-to-content {
+  @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 
+    focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-700 focus:text-white 
+    focus:rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400;
+}
+
+/* Focus styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-gray-900 rounded;
+}
