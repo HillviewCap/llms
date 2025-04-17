@@ -136,12 +136,36 @@ To search for sites related to "AI":
 GET /api/search-llms?q=AI
 ```
 
+**curl example:**
+
+```bash
+curl "https://example.com/api/search-llms?q=AI"
+```
+
+**wget example:**
+
+```bash
+wget -O - "https://example.com/api/search-llms?q=AI"
+```
+
 ### Filtering by File Type
 
 To search for sites with llms-full.txt files related to "documentation":
 
 ```
 GET /api/search-llms?q=documentation&fileType=llms-full.txt
+```
+
+**curl example:**
+
+```bash
+curl "https://example.com/api/search-llms?q=documentation&fileType=llms-full.txt"
+```
+
+**wget example:**
+
+```bash
+wget -O - "https://example.com/api/search-llms?q=documentation&fileType=llms-full.txt"
 ```
 
 ### Searching for Specific Domains
@@ -152,12 +176,36 @@ To find entries from a specific domain:
 GET /api/search-llms?q=cloudflare.com
 ```
 
+**curl example:**
+
+```bash
+curl "https://example.com/api/search-llms?q=cloudflare.com"
+```
+
+**wget example:**
+
+```bash
+wget -O - "https://example.com/api/search-llms?q=cloudflare.com"
+```
+
 ### Searching for Topics in Metadata
 
 To find sites categorized under a specific topic:
 
 ```
 GET /api/search-llms?q=Software+Development
+```
+
+**curl example:**
+
+```bash
+curl "https://example.com/api/search-llms?q=Software+Development"
+```
+
+**wget example:**
+
+```bash
+wget -O - "https://example.com/api/search-llms?q=Software+Development"
 ```
 
 This will return sites where "Software Development" appears in the title, summary, or is a significant topic in the metadata rankings.
@@ -168,6 +216,18 @@ To get the second page of results with 20 results per page:
 
 ```
 GET /api/search-llms?q=AI&page=2&limit=20
+```
+
+**curl example:**
+
+```bash
+curl "https://example.com/api/search-llms?q=AI&page=2&limit=20"
+```
+
+**wget example:**
+
+```bash
+wget -O - "https://example.com/api/search-llms?q=AI&page=2&limit=20"
 ```
 
 ## Error Handling
