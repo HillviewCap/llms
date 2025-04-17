@@ -7,7 +7,7 @@ tags: ["llms", "web standard", "ai"]
 
 # LLMs.txt: A New Web Standard
 
-_Curated by zcorum_
+_Curated by Zach_
 _3 min read_
 
 The llms.txt file, introduced in September 2024, represents a new web standard designed to help Large Language Models (LLMs) efficiently process and understand website content by providing structured, markdown-formatted information that bypasses the complexities of HTML parsing and content filtering.
