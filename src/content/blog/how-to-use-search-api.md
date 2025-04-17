@@ -7,6 +7,7 @@ tags: ["api", "search", "development"]
 
 # How to Use Our Search API
 
+_Curated by Zach_
 _3 min read_
 
 Our site provides a powerful search API that allows you to programmatically search through our LLMs metadata collection. This guide explains how to use the API, available at `/api/search-llms`, to find specific sites, query metadata, and handle pagination.
@@ -136,7 +137,7 @@ To search for sites related to "AI":
 GET /api/search-llms?q=AI
 ```
 
-**curl example:**
+**curl example:** (available on Windows 10+ and all Unix-based systems)
 
 ```bash
 curl "https://llms-text.ai/api/search-llms?q=AI"
@@ -146,6 +147,14 @@ curl "https://llms-text.ai/api/search-llms?q=AI"
 
 ```bash
 wget -O - "https://llms-text.ai/api/search-llms?q=AI"
+```
+
+**PowerShell example:** (native to Windows)
+
+```powershell
+Invoke-WebRequest -Uri "https://llms-text.ai/api/search-llms?q=AI" | Select-Object -ExpandProperty Content
+# Shorthand version:
+iwr -Uri "https://llms-text.ai/api/search-llms?q=AI" | Select -ExpandProperty Content
 ```
 
 ### Filtering by File Type
@@ -168,6 +177,14 @@ curl "https://llms-text.ai/api/search-llms?q=documentation&fileType=llms-full.tx
 wget -O - "https://llms-text.ai/api/search-llms?q=documentation&fileType=llms-full.txt"
 ```
 
+**PowerShell example:**
+
+```powershell
+Invoke-WebRequest -Uri "https://llms-text.ai/api/search-llms?q=documentation&fileType=llms-full.txt" | Select-Object -ExpandProperty Content
+# Shorthand version:
+iwr -Uri "https://llms-text.ai/api/search-llms?q=documentation&fileType=llms-full.txt" | Select -ExpandProperty Content
+```
+
 ### Searching for Specific Domains
 
 To find entries from a specific domain:
@@ -186,6 +203,14 @@ curl "https://llms-text.ai/api/search-llms?q=cloudflare.com"
 
 ```bash
 wget -O - "https://llms-text.ai/api/search-llms?q=cloudflare.com"
+```
+
+**PowerShell example:**
+
+```powershell
+Invoke-WebRequest -Uri "https://llms-text.ai/api/search-llms?q=cloudflare.com" | Select-Object -ExpandProperty Content
+# Shorthand version:
+iwr -Uri "https://llms-text.ai/api/search-llms?q=cloudflare.com" | Select -ExpandProperty Content
 ```
 
 ### Searching for Topics in Metadata
@@ -208,6 +233,14 @@ curl "https://llms-text.ai/api/search-llms?q=Software+Development"
 wget -O - "https://llms-text.ai/api/search-llms?q=Software+Development"
 ```
 
+**PowerShell example:**
+
+```powershell
+Invoke-WebRequest -Uri "https://llms-text.ai/api/search-llms?q=Software+Development" | Select-Object -ExpandProperty Content
+# Shorthand version:
+iwr -Uri "https://llms-text.ai/api/search-llms?q=Software+Development" | Select -ExpandProperty Content
+```
+
 This will return sites where "Software Development" appears in the title, summary, or is a significant topic in the metadata rankings.
 
 ### Paginated Results
@@ -228,6 +261,14 @@ curl "https://llms-text.ai/api/search-llms?q=AI&page=2&limit=20"
 
 ```bash
 wget -O - "https://llms-text.ai/api/search-llms?q=AI&page=2&limit=20"
+```
+
+**PowerShell example:**
+
+```powershell
+Invoke-WebRequest -Uri "https://llms-text.ai/api/search-llms?q=AI&page=2&limit=20" | Select-Object -ExpandProperty Content
+# Shorthand version:
+iwr -Uri "https://llms-text.ai/api/search-llms?q=AI&page=2&limit=20" | Select -ExpandProperty Content
 ```
 
 ## Error Handling
@@ -260,6 +301,14 @@ Returned when there's an unexpected error processing the request:
   "error": "Internal Server Error processing search request."
 }
 ```
+
+## Windows Compatibility Note
+
+While the examples above show both curl/wget (Unix-based) and PowerShell approaches, it's worth noting that:
+
+- **curl** is now available natively on Windows 10 and later versions
+- **PowerShell** examples using `Invoke-WebRequest` (alias: `iwr`) are native to all modern Windows systems
+- Choose the approach that best fits your environment and scripting preferences
 
 ## Best Practices
 
