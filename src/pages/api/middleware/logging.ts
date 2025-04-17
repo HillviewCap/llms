@@ -251,14 +251,35 @@ export function logRequest(): (next: APIRoute) => APIRoute {
         });
         modifiedRequest.headers.set('X-Correlation-ID', correlationId);
         
+        // DEBUG: Log the modified request
+        console.debug(`DEBUG: Modified request in logging middleware:`, {
+          url: modifiedRequest.url,
+          method: modifiedRequest.method,
+          headers: Object.fromEntries(modifiedRequest.headers.entries())
+        });
+        
         // Create a new context with the modified request
         const modifiedContext = { ...context, request: modifiedRequest, correlationId };
+        
+        // DEBUG: Check if sanitizedParams is preserved in the modified context
+        if (context.sanitizedParams) {
+          console.debug(`DEBUG: SanitizedParams before modification:`, context.sanitizedParams);
+          console.debug(`DEBUG: SanitizedParams after modification:`, modifiedContext.sanitizedParams);
+        }
         
         // Call the next handler
         const response = await next(modifiedContext);
         
         // Calculate response time
         const responseTime = performance.now() - startTime;
+        
+        // DEBUG: Log the response from the next handler
+        console.debug(`DEBUG: Response from next handler:`, {
+          status: response.status,
+          statusText: response.statusText,
+          headers: Object.fromEntries(response.headers.entries()),
+          hasBody: response.body !== null
+        });
         
         // Add correlation ID to response headers
         const modifiedResponse = new Response(response.body, {
@@ -267,6 +288,14 @@ export function logRequest(): (next: APIRoute) => APIRoute {
           headers: response.headers
         });
         modifiedResponse.headers.set('X-Correlation-ID', correlationId);
+        
+        // DEBUG: Log the modified response
+        console.debug(`DEBUG: Modified response in logging middleware:`, {
+          status: modifiedResponse.status,
+          statusText: modifiedResponse.statusText,
+          headers: Object.fromEntries(modifiedResponse.headers.entries()),
+          hasBody: modifiedResponse.body !== null
+        });
         
         // Log response
         logEntry(createLogEntry(

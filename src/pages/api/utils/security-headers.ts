@@ -117,8 +117,22 @@ export function createSecureJsonResponse(
   status: number = 200,
   customCSP?: CSPDirectives
 ): Response {
+  // DEBUG: Log the data being sent in the response
+  console.debug(`DEBUG: Creating secure JSON response:`, {
+    status,
+    dataType: typeof data,
+    isArray: Array.isArray(data),
+    hasResults: data && data.results ? `Results array length: ${data.results.length}` : 'No results property',
+    totalResults: data && data.totalResults !== undefined ? data.totalResults : 'No totalResults property'
+  });
+  
+  const jsonString = JSON.stringify(data);
+  
+  // DEBUG: Log the stringified JSON
+  console.debug(`DEBUG: JSON string length: ${jsonString.length}`);
+  
   return createSecureResponse(
-    JSON.stringify(data),
+    jsonString,
     {
       status,
       headers: {
