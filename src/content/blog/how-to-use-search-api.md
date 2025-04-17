@@ -7,8 +7,7 @@ tags: ["api", "search", "development"]
 
 # How to Use Our Search API
 
-_Curated by Zach_
-_3 min read_
+_By Zach · April 17, 2025 · 3 min read_
 
 Our site provides a powerful search API that allows you to programmatically search through our LLMs metadata collection. This guide explains how to use the API, available at `/api/search-llms`, to find specific sites, query metadata, and handle pagination.
 
@@ -18,7 +17,7 @@ The search API is designed to help you find relevant LLM-compatible websites bas
 
 ### Endpoint
 
-```
+```http
 GET /api/search-llms
 ```
 
@@ -37,8 +36,8 @@ The API accepts the following query parameters:
 
 The `q` parameter is **required** and specifies the search query. The API searches for this term in the title and summary fields of the LLM metadata. For example:
 
-```
-/api/search-llms?q=cloudflare
+```http
+GET /api/search-llms?q=cloudflare
 ```
 
 This will return all entries where "cloudflare" appears in the title or summary.
@@ -53,8 +52,8 @@ The `fileType` parameter is optional and filters results by the type of LLM file
 
 Example:
 
-```
-/api/search-llms?q=documentation&fileType=llms-full.txt
+```http
+GET /api/search-llms?q=documentation&fileType=llms-full.txt
 ```
 
 This will return only sites with llms-full.txt files that match the query "documentation".
@@ -68,8 +67,8 @@ The API supports pagination through the `page` and `limit` parameters:
 
 Example:
 
-```
-/api/search-llms?q=ai&page=2&limit=20
+```http
+GET /api/search-llms?q=ai&page=2&limit=20
 ```
 
 This will return the second page of results for the query "ai", with 20 results per page.
@@ -133,7 +132,7 @@ Each result in the `results` array contains:
 
 To search for sites related to "AI":
 
-```
+```http
 GET /api/search-llms?q=AI
 ```
 
@@ -161,7 +160,7 @@ iwr -Uri "https://llms-text.ai/api/search-llms?q=AI" | Select -ExpandProperty Co
 
 To search for sites with llms-full.txt files related to "documentation":
 
-```
+```http
 GET /api/search-llms?q=documentation&fileType=llms-full.txt
 ```
 
@@ -189,7 +188,7 @@ iwr -Uri "https://llms-text.ai/api/search-llms?q=documentation&fileType=llms-ful
 
 To find entries from a specific domain:
 
-```
+```http
 GET /api/search-llms?q=cloudflare.com
 ```
 
@@ -217,7 +216,7 @@ iwr -Uri "https://llms-text.ai/api/search-llms?q=cloudflare.com" | Select -Expan
 
 To find sites categorized under a specific topic:
 
-```
+```http
 GET /api/search-llms?q=Software+Development
 ```
 
@@ -247,7 +246,7 @@ This will return sites where "Software Development" appears in the title, summar
 
 To get the second page of results with 20 results per page:
 
-```
+```http
 GET /api/search-llms?q=AI&page=2&limit=20
 ```
 

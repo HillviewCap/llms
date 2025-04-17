@@ -89,6 +89,13 @@ export function validateQueryParams(
           result.errors.push(`Parameter "${paramName}" must be at most ${rules.max}`);
           result.valid = false;
         }
+        
+        // DEBUG: Log number conversion
+        console.debug(`DEBUG: Number parameter "${paramName}" converted:`, {
+          original: paramValue,
+          converted: sanitizedValue,
+          type: typeof sanitizedValue
+        });
         break;
 
       case 'string':
@@ -140,7 +147,16 @@ export function validateQueryParams(
     // Apply custom sanitization if provided
     if (rules.sanitize && result.valid) {
       try {
+        const beforeSanitize = sanitizedValue;
         sanitizedValue = rules.sanitize(sanitizedValue);
+        
+        // DEBUG: Log sanitization
+        console.debug(`DEBUG: Parameter "${paramName}" sanitized:`, {
+          before: beforeSanitize,
+          after: sanitizedValue,
+          typeBefore: typeof beforeSanitize,
+          typeAfter: typeof sanitizedValue
+        });
       } catch (e) {
         result.errors.push(`Failed to sanitize parameter "${paramName}"`);
         result.valid = false;
@@ -198,10 +214,16 @@ export async function validateRequestSize(request: Request): Promise<boolean> {
 export function validateRequest(schema: ValidationRules): (next: APIRoute) => APIRoute {
   return (next: APIRoute) => {
     return async (context: APIContext) => {
+      // DEBUG: Log the raw query parameters
+      console.debug(`DEBUG: Raw query parameters:`,
+        Object.fromEntries(context.url.searchParams.entries())
+      );
+      
       // Validate request size for POST, PUT, PATCH requests
       if (['POST', 'PUT', 'PATCH'].includes(context.request.method)) {
         const isValidSize = await validateRequestSize(context.request);
         if (!isValidSize) {
+          console.debug(`DEBUG: Request size validation failed`);
           return new Response(
             JSON.stringify({ error: 'Request body exceeds maximum allowed size' }),
             {
@@ -215,6 +237,13 @@ export function validateRequest(schema: ValidationRules): (next: APIRoute) => AP
       // Validate query parameters
       const validationResult = validateQueryParams(context.url.searchParams, schema);
       
+      // DEBUG: Log the validation result
+      console.debug(`DEBUG: Validation result:`, {
+        valid: validationResult.valid,
+        errors: validationResult.errors,
+        sanitizedParams: validationResult.sanitizedParams
+      });
+      
       if (!validationResult.valid) {
         return new Response(
           JSON.stringify({ error: 'Validation failed', details: validationResult.errors }),
@@ -227,6 +256,13 @@ export function validateRequest(schema: ValidationRules): (next: APIRoute) => AP
 
       // Add sanitized parameters to the context for the next handler
       context.sanitizedParams = validationResult.sanitizedParams;
+      
+      // DEBUG: Log the context with sanitized parameters
+      console.debug(`DEBUG: Context with sanitized parameters:`, {
+        sanitizedParams: context.sanitizedParams,
+        url: context.url.toString(),
+        method: context.request.method
+      });
       
       // Call the next handler
       return next(context);

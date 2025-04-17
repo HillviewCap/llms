@@ -1,0 +1,96 @@
+---
+/**
+ * BlogRelatedPosts.astro
+ * A component for displaying related blog posts based on tags
+ */
+
+import { getCollection, type CollectionEntry } from "astro:content";
+
+interface Props {
+  currentPost: CollectionEntry<"blog">;
+  maxPosts?: number;
+}
+
+const { currentPost, maxPosts = 3 } = Astro.props;
+
+// Get all blog posts
+const allPosts = await getCollection("blog");
+
+// Find related posts based on matching tags
+const relatedPosts = allPosts
+  .filter((post) => {
+    // Don't include the current post
+    if (post.id === currentPost.id) return false;
+
+    // Check if there are matching tags
+    const currentTags = currentPost.data.tags || [];
+    const postTags = post.data.tags || [];
+
+    return currentTags.some((tag) => postTags.includes(tag));
+  })
+  .sort((a, b) => {
+    // Sort by number of matching tags (descending)
+    const aTags = a.data.tags || [];
+    const bTags = b.data.tags || [];
+    const currentTags = currentPost.data.tags || [];
+
+    const aMatches = aTags.filter((tag) => currentTags.includes(tag)).length;
+    const bMatches = bTags.filter((tag) => currentTags.includes(tag)).length;
+
+    if (aMatches !== bMatches) {
+      return bMatches - aMatches;
+    }
+
+    // If same number of matching tags, sort by date (newest first)
+    return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+  })
+  .slice(0, maxPosts);
+
+// If no related posts with matching tags, get most recent posts
+const recentPosts =
+  relatedPosts.length > 0
+    ? relatedPosts
+    : allPosts
+        .filter((post) => post.id !== currentPost.id)
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+        .slice(0, maxPosts);
+
+// Function to get excerpt from description or content
+function getExcerpt(post: CollectionEntry<"blog">) {
+  if (post.data.description) {
+    return post.data.description.length > 120
+      ? post.data.description.substring(0, 120) + "..."
+      : post.data.description;
+  }
+  return "";
+}
+---
+
+{
+  recentPosts.length > 0 && (
+    <section class="blog-related">
+      <h2 class="blog-related-title">Related Posts</h2>
+      <div class="blog-related-posts">
+        {recentPosts.map((post) => (
+          <article class="blog-related-post">
+            <a href={`/blog/${post.slug}`} aria-label={post.data.title}>
+              <div class="blog-related-post-image">
+                <div class="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
+                  <span class="text-gray-500 text-4xl">📝</span>
+                </div>
+              </div>
+            </a>
+            <div class="blog-related-post-content">
+              <h3>
+                <a href={`/blog/${post.slug}`} class="blog-related-post-title">
+                  {post.data.title}
+                </a>
+              </h3>
+              <p class="blog-related-post-excerpt">{getExcerpt(post)}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}

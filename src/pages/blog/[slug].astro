@@ -1,18 +1,76 @@
 ---
 // src/pages/blog/[slug].astro
-import { getCollection } from 'astro:content';
-import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+import { getCollection, getEntry } from "astro:content";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
+import Layout from "../../layouts/Layout.astro";
+
+// Enable static pre-rendering for this route
+export const prerender = true;
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
-  }));
+  try {
+    const blogEntries = await getCollection("blog");
+    console.log(`Found ${blogEntries.length} blog entries:`);
+
+    // Log all available blog entries for debugging
+    blogEntries.forEach((entry) => {
+      console.log(`- ${entry.slug} (${entry.id})`);
+    });
+
+    return blogEntries.map((entry) => ({
+      params: { slug: entry.slug },
+      props: { entry },
+    }));
+  } catch (error) {
+    console.error("Error in getStaticPaths:", error);
+    return [];
+  }
 }
 
+// Get the entry directly from Astro.params
+const { slug } = Astro.params;
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+
+// Add error handling
+let Content;
+let headings: { depth: number; slug: string; text: string }[] = [];
+let renderError = null;
+
+try {
+  if (!entry) {
+    throw new Error(`Blog post not found for slug: ${slug}`);
+  }
+
+  const { Content: EntryContent, headings } = await entry.render();
+  Content = EntryContent;
+  // Pass headings to the layout for table of contents
+} catch (error) {
+  console.error("Error rendering blog post:", error);
+  renderError = error instanceof Error ? error.message : "Unknown error";
+}
 ---
-<BlogPostLayout frontmatter={entry.data}>
-  <Content />
-</BlogPostLayout>
+
+{
+  !renderError ? (
+    <BlogPostLayout frontmatter={entry.data} headings={headings} entry={entry}>
+      {Content && <Content />}
+    </BlogPostLayout>
+  ) : (
+    <Layout
+      title="Post Not Found"
+      description="The requested blog post could not be found"
+    >
+      <div class="container mx-auto px-4 py-12">
+        <h1 class="text-3xl font-bold text-red-500">Blog Post Not Found</h1>
+        <p class="mt-4">The blog post you're looking for could not be found.</p>
+        <p class="mt-2 text-sm text-gray-400">Error: {renderError}</p>
+        <a
+          href="/blog"
+          class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Return to Blog
+        </a>
+      </div>
+    </Layout>
+  )
+}

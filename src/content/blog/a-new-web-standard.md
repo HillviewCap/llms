@@ -5,10 +5,9 @@ pubDate: 2025-04-17
 tags: ["llms", "web standard", "ai"]
 ---
 
-# LLMs.txt: A New Web Standard
+# A New Web Standard
 
-_Curated by Zach_
-_3 min read_
+_By Zach · April 17, 2025 · 3 min read_
 
 The llms.txt file, introduced in September 2024, represents a new web standard designed to help Large Language Models (LLMs) efficiently process and understand website content by providing structured, markdown-formatted information that bypasses the complexities of HTML parsing and content filtering.
 
@@ -16,7 +15,13 @@ The llms.txt file, introduced in September 2024, represents a new web standard d
 
 The standard consists of two primary file formats that serve different purposes. The basic llms.txt acts as a concise index file containing website summaries and links to markdown versions of important pages, essentially providing a roadmap for AI systems to navigate your content. Meanwhile, llms-full.txt offers a comprehensive approach by consolidating all technical documentation into a single extensive markdown document, eliminating the need for additional navigation but potentially exceeding an LLM's context window limitations for sites with extensive content.
 
-This innovative approach addresses several challenges LLMs face when processing traditional web content, including wasted processing power parsing irrelevant HTML/JavaScript, difficulty distinguishing between core content and supplementary elements, and missing important context between pages. Unlike robots.txt (which controls crawling permissions) or sitemap.xml (which lists indexable pages), llms.txt specifically focuses on helping AI systems understand your content when users request information related to your site.
+This innovative approach addresses several challenges LLMs face when processing traditional web content, including:
+
+- Wasted processing power parsing irrelevant HTML/JavaScript
+- Difficulty distinguishing between core content and supplementary elements
+- Missing important context between pages
+
+Unlike robots.txt (which controls crawling permissions) or sitemap.xml (which lists indexable pages), llms.txt specifically focuses on helping AI systems understand your content when users request information related to your site.
 
 ## File Structure Guidelines
 
@@ -33,9 +38,15 @@ This standardized structure ensures LLMs can efficiently parse your content's hi
 
 ## Implementation Steps
 
-Implementing llms.txt on your website involves a three-step process that begins with creating the actual file. Website owners can either manually craft this document or utilize automated tools like the "Website LLMs.txt" WordPress plugin, dotenvx/llmstxt for static sites, or online generators such as llmstxtgenerator.org and llmstxt.firecrawl.dev.
+Implementing llms.txt on your website involves a three-step process:
 
-The second step requires providing markdown versions of key pages by appending .md to original URLs (e.g., https://example.com/blog/important-article.md). For URLs without filenames, append index.html.md instead. Finally, upload the llms.txt file to your server's root directory and ensure all markdown versions of your pages are accessible at their respective URLs. This standardized implementation allows any website, regardless of size or complexity, to make their content more accessible to AI systems in a structured, machine-readable format.
+1. Create the actual file. Website owners can either manually craft this document or utilize automated tools like the "Website LLMs.txt" WordPress plugin, dotenvx/llmstxt for static sites, or online generators such as llmstxtgenerator.org and llmstxt.firecrawl.dev.
+
+2. Provide markdown versions of key pages by appending .md to original URLs (e.g., `https://example.com/blog/important-article.md`). For URLs without filenames, append index.html.md instead.
+
+3. Upload the llms.txt file to your server's root directory and ensure all markdown versions of your pages are accessible at their respective URLs.
+
+This standardized implementation allows any website, regardless of size or complexity, to make their content more accessible to AI systems in a structured, machine-readable format.
 
 ## Benefits and Adoption
 

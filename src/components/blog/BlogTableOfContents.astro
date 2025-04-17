@@ -1,0 +1,53 @@
+---
+/**
+ * BlogTableOfContents.astro
+ * A component for generating and displaying a table of contents for blog posts
+ */
+
+interface TocItem {
+  text: string;
+  slug: string;
+  level: number;
+}
+
+interface Props {
+  headings: {
+    depth: number;
+    slug: string;
+    text: string;
+  }[];
+}
+
+const { headings } = Astro.props;
+
+// Filter out h1 (title) and only include h2-h4
+const tocItems: TocItem[] = headings
+  .filter((heading) => heading.depth >= 2 && heading.depth <= 4)
+  .map((heading) => ({
+    text: heading.text,
+    slug: heading.slug,
+    level: heading.depth,
+  }));
+
+// Don't render if there are no headings or only one heading
+const shouldRender = tocItems.length > 1;
+---
+
+{
+  shouldRender && (
+    <div class="blog-toc">
+      <h2 class="blog-toc-title">Contents</h2>
+      <nav class="blog-toc-list">
+        {tocItems.map((item) => (
+          <a
+            href={`#${item.slug}`}
+            class={`blog-toc-item level-${item.level} block`}
+            aria-label={`Jump to section: ${item.text}`}
+          >
+            {item.text}
+          </a>
+        ))}
+      </nav>
+    </div>
+  )
+}
