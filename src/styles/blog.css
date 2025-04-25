@@ -89,15 +89,15 @@
 }
 
 .blog-header {
-  @apply mb-8 pb-6 border-b border-gray-800;
+  @apply mb-10 pb-8 border-b border-gray-800;
 }
 
 .blog-title {
-  @apply text-4xl font-bold text-gray-50 mb-4;
+  @apply text-4xl md:text-5xl font-bold text-gray-50 mb-6 leading-tight;
 }
 
 .blog-metadata {
-  @apply flex flex-wrap items-center text-gray-400 text-sm gap-2;
+  @apply flex flex-wrap items-center text-gray-400 text-sm gap-4 mb-4;
 }
 
 .blog-author {
@@ -117,11 +117,11 @@
 }
 
 .blog-tags-container {
-  @apply flex flex-wrap gap-2 mt-4;
+  @apply flex flex-wrap gap-3 mt-4;
 }
 
 .blog-tag {
-  @apply inline-flex items-center bg-gray-800 hover:bg-gray-700 text-primary-400 text-xs font-medium px-2.5 py-1 rounded-full transition-colors duration-200;
+  @apply inline-flex items-center bg-gray-800 hover:bg-gray-700 text-primary-400 text-xs font-medium px-3 py-1.5 rounded-full transition-colors duration-200 border border-gray-700 hover:border-primary-400 shadow-sm;
 }
 
 /* Table of contents */
@@ -218,11 +218,11 @@
 
 /* Back to blog link */
 .blog-back-link {
-  @apply inline-flex items-center text-gray-400 hover:text-primary-400 mb-6 transition-colors duration-200;
+  @apply inline-flex items-center text-gray-400 hover:text-primary-400 mb-8 transition-colors duration-200 bg-gray-800/50 px-4 py-2 rounded-full border border-gray-700 hover:border-primary-400 text-sm font-medium;
 }
 
 .blog-back-icon {
-  @apply mr-1;
+  @apply mr-2 text-lg;
 }
 
 /* Responsive adjustments */
@@ -270,4 +270,33 @@
   .blog-container {
     @apply px-12 max-w-7xl;
   }
+}
+
+/* Blog index page specific styles */
+.blog-index-header {
+  @apply py-12 bg-gradient-to-b from-gray-800/50 to-transparent mb-8;
+}
+
+.blog-index-title {
+  @apply text-4xl md:text-5xl font-bold text-gray-50 mb-4;
+}
+
+.blog-index-description {
+  @apply text-xl text-gray-300 max-w-3xl;
+}
+
+.blog-filter-bar {
+  @apply flex flex-wrap items-center gap-3 mb-8 pb-6 border-b border-gray-800;
+}
+
+.blog-filter-button {
+  @apply inline-flex items-center bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-primary-400 text-sm font-medium px-4 py-2 rounded-full transition-colors duration-200 border border-gray-700 hover:border-primary-400;
+}
+
+.blog-filter-button[aria-current="true"] {
+  @apply bg-primary-600/20 text-primary-400 border-primary-500;
+}
+
+.blog-grid {
+  @apply grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8;
 }

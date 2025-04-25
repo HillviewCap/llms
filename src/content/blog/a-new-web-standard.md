@@ -3,6 +3,7 @@ title: "A New Web Standard"
 description: "An overview of the llms.txt web standard for helping LLMs understand website content."
 pubDate: 2025-04-17
 tags: ["llms", "web standard", "ai"]
+image: "/assets/android-chrome-512x512.png"
 ---
 
 # A New Web Standard
