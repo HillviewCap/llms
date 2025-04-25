@@ -45,7 +45,7 @@ interface LlmEntry {
 }
 
 // Data extraction and transformation
-const llmsData: LlmEntry[] = llmsDataJson as unknown as LlmEntry[];
+const llmsData: LlmEntry[] = Object.values(llmsDataJson) as unknown as LlmEntry[];
 
 const sortedLlmsData: LlmEntry[] = [...llmsData].sort((a, b) => {
   const qualityOrder: Record<Quality, number> = { High: 0, Medium: 1, Low: 2 };
