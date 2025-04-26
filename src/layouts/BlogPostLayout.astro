@@ -54,6 +54,7 @@ const authorBio = frontmatter.authorBio || "";
   title={frontmatter.title}
   description={frontmatter.description}
   type="article"
+  image="/assets/favicon-32x32.png"
 >
   <!-- Article structured data for SEO -->
   <StructuredData
@@ -62,7 +63,7 @@ const authorBio = frontmatter.authorBio || "";
     data={{
       headline: frontmatter.title,
       description: frontmatter.description,
-      image: frontmatter.image || `${Astro.site}og-image.png`,
+      image: "/assets/favicon-32x32.png",
       datePublished: frontmatter.pubDate.toISOString(),
       dateModified: frontmatter.updatedDate
         ? frontmatter.updatedDate.toISOString()

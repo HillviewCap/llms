@@ -2,6 +2,9 @@
 // src/components/Navigation.astro
 ---
 <nav>
+  <a href="/" class="logo">
+    <img src="/assets/llms-text.jpg" alt="LLMS Logo" />
+  </a>
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
@@ -15,8 +18,18 @@
 <style>
   nav {
     background-color: #f0f0f0;
-    padding: 1rem 0;
+    padding: 1rem;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    display: block;
+  }
+  .logo img {
+    max-height: 40px;
+    width: auto;
   }
   ul {
     list-style: none;

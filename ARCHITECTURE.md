@@ -1,622 +1,191 @@
-# ARCHITECTURE: Blog Section Revitalization Plan
+# Blog Page UI/UX Refinement Architecture Plan
 
-This document outlines a comprehensive plan for revitalizing the blog section of our website, focusing on the content in `src/pages/blog` and `src/content/blog`. The plan aims to create a more engaging, accessible, and responsive blog experience while maintaining the technical integrity of the codebase.
+## Objective
 
-## 1. Visual Theme & Layout
+This document outlines the architecture plan for refining the UI/UX of the blog pages, addressing specific requirements related to tag styling, the top section layout, and the overall header and intro area. The goal is to create a more professional and visually appealing blog experience.
 
-### Current State
+## Requirements (Completed)
 
-The blog currently uses:
+1.  Tags on blog posts should be styled as visually distinct "pills" (rounded, colored backgrounds, clear separation). - **Completed**
+2.  The top section of the blog page currently displays "Skip to Content" and "Blog" in a way that looks unrefined and amateur. Clarify the intended structure: should "Skip to Content" be a visually hidden accessibility link? Should "Blog" be a heading or part of navigation? Propose a clean, professional layout. - **Completed**
+3.  Ensure the overall header and intro area of the blog page is visually appealing, with clear hierarchy and spacing. - **Completed**
+4.  Reference the screenshot provided for context on current issues (Note: Screenshot was referenced during analysis).
+5.  Identify the relevant Astro components, layouts, and CSS files that will need to be modified.
+6.  Break down the implementation into logical subtasks, each with a clear scope.
+7.  This plan should be saved as ARCHITECTURE.md in the project root and will guide all subsequent implementation subtasks.
 
-- A dark theme with gray-900 background and gray-200 text
-- Simple list-based index with basic hover effects
-- Minimal styling for individual posts with basic tag styling
-- Tailwind CSS for styling, complemented by global.css and enhanced-theme.css
+## Analysis and Proposed Structure
 
-### Proposed Theme Enhancements
+### "Skip to Content" and "Blog" Elements
 
-#### Color Scheme
+*   **Current State:**
+    *   "Skip to Content" is a visible link at the top of `src/pages/blog/index.astro`.
+    *   "Blog" on the index page (`src/pages/blog/index.astro`) is an `<h1>` title.
+    *   On individual post pages (`src/layouts/BlogPostLayout.astro`), the post title is the `<h1>`, and a "Back to Blog" link is provided.
 
-- **Primary**: Leverage the existing primary blues (primary-500 to primary-900) for accents, buttons, and interactive elements
-- **Background**: Create a subtle gradient background transitioning from gray-950 to gray-900 for added depth
-- **Text**: Use a hierarchical text color system:
-  - Headings: white/gray-50
-  - Body text: gray-200
-  - Secondary text: gray-400
-  - Metadata: gray-500
+*   **Proposed Refinement:**
+    *   **"Skip to Content":** Maintain the link for accessibility but apply CSS to make it visually hidden by default, appearing only when focused via keyboard navigation. This is a standard accessibility practice.
+    *   **Blog Index Page:** The "Blog" `<h1>` title is appropriate for the main page heading. The layout of the header section containing this title and the page description needs refinement for better visual appeal and spacing.
+    *   **Individual Blog Post Page:** The post title as `<h1>` is correct. The "Back to Blog" link should be clearly styled as a navigation element.
 
-#### Typography
+### Tag Styling
 
-- Maintain the 'MainFont' as primary font but introduce font-weight variations:
-  - Blog post titles: font-bold (700)
-  - Section headings: font-semibold (600)
-  - Body text: font-normal (400)
-- Increase line-height for better readability (leading-relaxed for body text)
-- Implement responsive font sizing using Tailwind's text-base/lg/xl/2xl system
+*   **Current State:** Tags are displayed, but their styling needs to be updated to a "pill" format. The `BlogTags.astro` component is used for individual posts, and buttons are used for tag filtering on the index page.
+*   **Proposed Refinement:** Apply CSS styles to elements within `BlogTags.astro` and to the tag filter buttons on the index page (`.blog-filter-button`) to give them rounded corners, background colors, padding, and appropriate margins for visual separation and a "pill" appearance. Ensure distinct styling for active filter buttons.
 
-#### Blog Index Page Layout
+### Header and Intro Area Refinement
 
-- Implement a card-based grid layout instead of list view
-- Each blog card should include:
-  - Featured image area (with default image if none provided)
-  - Title with hover effect
-  - Brief excerpt (first 160 characters of description)
-  - Publication date and read time
-  - Author information with optional avatar
-  - Tag pills with updated styling
-- Add filter/category navigation above the grid
-- Implement transitions for card hover states
+*   **Current State:** The header and intro areas on both the index and individual post pages require improved visual hierarchy and spacing.
+*   **Proposed Refinement:**
+    *   **Blog Index Page:** Adjust CSS in `src/styles/blog.css` for `.blog-index-header`, `.blog-filter-bar`, and `.blog-grid` to improve spacing, typography, and overall layout flow.
+    *   **Individual Blog Post Page:** Adjust CSS in `src/styles/blog.css` for the `.blog-header` section to improve spacing and layout of the title, metadata, tags, and social share.
+    *   Style the `.blog-back-link` in `src/styles/blog.css` to be a clear navigation element.
 
-```
-+-------------------------------------------------------+
-| BLOG                                                  |
-+-------------------------------------------------------+
-| [All] [Technology] [Development] [Standards] [Search] |
-+-------------------------------------------------------+
-|                          |                            |
-| +---------------------+  | +----------------------+   |
-| | [Image]             |  | | [Image]              |   |
-| |                     |  | |                      |   |
-| | Title of Post       |  | | Another Post Title   |   |
-| |                     |  | |                      |   |
-| | Brief excerpt that  |  | | Brief excerpt that   |   |
-| | introduces the post |  | | introduces the post  |   |
-| |                     |  | |                      |   |
-| | Apr 17 · 3 min read |  | | Apr 15 · 5 min read  |   |
-| | By Author           |  | | By Author            |   |
-| |                     |  | |                      |   |
-| | #tag #tag #tag      |  | | #tag #tag            |   |
-| +---------------------+  | +----------------------+   |
-|                          |                            |
-| +---------------------+  | +----------------------+   |
-| | [Image]             |  | | [Image]              |   |
-| | ...                 |  | | ...                  |   |
-+-------------------------------------------------------+
-```
+## Files to Modify
 
-#### Blog Post Page Layout
+The following files are identified as requiring modifications:
 
-- Implement a wide content area with improved readability
-- Add a fixed table of contents sidebar for longer posts
-- Create distinct sections with visual separators
-- Add related posts section at the end
-- Implement improved code block styling with syntax highlighting
-- Add social sharing buttons
-- Include author bio section
+*   `src/styles/blog.css` (Primary CSS changes for tags, headers, spacing)
+*   `src/components/blog/BlogTags.astro` (Potential minor structural adjustments for styling)
+*   `src/pages/blog/index.astro` (Potential minor structural adjustments, verify "Skip to Content" class)
+*   `src/layouts/BlogPostLayout.astro` (Potential minor structural adjustments)
+*   `src/styles/global.css` (If "Skip to Content" styling is handled here)
 
-````
-+-------------------------------------------------------+
-| < Back to Blog                                        |
-+-------------------------------------------------------+
-| BLOG POST TITLE                                       |
-|                                                       |
-| By Author · Apr 17, 2025 · 3 min read · #tag #tag    |
-+-------------------------------------------------------+
-|                     |                                 |
-| CONTENTS            | Main content area with improved |
-| - Section 1         | typography and spacing. This    |
-| - Section 2         | should have ample whitespace    |
-| - Section 3         | and clear hierarchy.            |
-|   - Subsection      |                                 |
-| - Section 4         | ## Section Heading              |
-|                     |                                 |
-|                     | Content with proper spacing and |
-|                     | formatting. Code blocks should  |
-|                     | have syntax highlighting.       |
-|                     |                                 |
-|                     | ```javascript                   |
-|                     | const x = function() {          |
-|                     |   return "example";             |
-|                     | }                               |
-|                     | ```                             |
-|                     |                                 |
-+-------------------------------------------------------+
-| RELATED POSTS                                         |
-| +-------------------+  +-------------------+          |
-| | [Related Post 1]  |  | [Related Post 2]  |          |
-| +-------------------+  +-------------------+          |
-+-------------------------------------------------------+
-| ABOUT THE AUTHOR                                      |
-| [Avatar] Author Name                                  |
-| Bio information about the author...                   |
-+-------------------------------------------------------+
-````
+## Implementation Subtasks (Completed)
 
-#### Component Structure
+The implementation subtasks have been completed:
 
-- Create new reusable components:
-  - `BlogCard.astro`: For individual cards in the index grid
-  - `BlogTags.astro`: For consistent tag rendering
-  - `BlogAuthor.astro`: For author information display
-  - `BlogTableOfContents.astro`: For generating and displaying TOC
-  - `BlogRelatedPosts.astro`: For showing related content
-  - `BlogCodeBlock.astro`: For enhanced code display
+1.  **Implement Pill Styling for Blog Post Tags:** Completed via CSS in `src/styles/blog.css`.
+2.  **Implement Pill Styling for Blog Index Tag Filter Buttons:** Completed via CSS in `src/styles/blog.css`.
+3.  **Refine Blog Index Page Header and Intro Area Styling:** Completed via CSS in `src/styles/blog.css`.
+4.  **Refine Individual Blog Post Page Header Area Styling:** Completed via CSS in `src/styles/blog.css`.
+5.  **Implement Visually Hidden "Skip to Content" Styling:** Completed via CSS in `src/styles/global.css`.
 
-#### CSS Updates Needed
+## Implementation Summary and Design Decisions
 
-- Create `src/styles/blog.css` for blog-specific styles
-- Update `enhanced-theme.css` to include new blog theme elements
-- Leverage existing Tailwind config and extend as needed
+The UI/UX refinements for the blog pages have been successfully implemented. All changes were accomplished purely through CSS modifications in `src/styles/blog.css` and `src/styles/global.css`. No structural changes to the existing Astro components (`BlogTags.astro`, `src/pages/blog/index.astro`, `src/layouts/BlogPostLayout.astro`) were required, demonstrating the flexibility of the current component structure and the power of CSS for styling.
 
-## 2. Markdown Formatting Standards
+Key design decisions and implementations include:
 
-### Headings
+*   **Pill-style Tags:** Tags on both individual posts and the blog index filter bar are now styled with rounded corners, background colors, and appropriate padding/margins to appear as distinct "pills".
+*   **Accessible "Skip to Content" Link:** The "Skip to Content" link is now visually hidden by default using CSS, appearing only when focused via keyboard navigation, adhering to standard accessibility practices.
+*   **Refined Header and Intro Area:** Spacing, typography, and layout flow have been adjusted in the header and intro areas of both the blog index and individual post pages for improved visual hierarchy and a more professional appearance.
+*   **Improved Visual Hierarchy and Spacing:** Overall adjustments to margins, padding, and typography throughout the blog page elements (headers, tag bars, post lists) have enhanced the visual hierarchy and readability.
+*   **Structural Clarity:** The plan confirmed that the "Blog" title on the index page functions correctly as an `<h1>`, and the post title on individual pages is also an `<h1>`. The "Back to Blog" link is styled as a clear navigation element.
 
-- **H1**: Reserved for post title only (single use per post)
-- **H2**: Major sections (e.g., "Introduction", "Conclusion")
-- **H3**: Subsections within major sections
-- **H4**: Minor points or special callouts
-- **H5/H6**: Use sparingly for deeply nested content
+## Component Relationships (Mermaid Diagram)
 
-```markdown
-# Post Title (H1 - only used once)
-
-_Metadata here_
-
-## Major Section (H2)
-
-Main content text...
-
-### Subsection (H3)
-
-More detailed content...
-
-#### Special Note (H4)
-
-Important callout information...
+```mermaid
+graph TD
+    A[src/pages/blog/index.astro] --> B(src/layouts/Layout.astro)
+    A --> C(src/components/blog/BlogCard.astro)
+    A --> D(src/styles/blog.css)
+    A --> E(src/styles/global.css)
+    F[src/pages/blog/[slug].astro] --> G(src/layouts/BlogPostLayout.astro)
+    G --> B
+    G --> H(src/components/blog/BlogTags.astro)
+    G --> I(src/components/blog/BlogAuthor.astro)
+    G --> J(src/components/blog/BlogTableOfContents.astro)
+    G --> K(src/components/blog/BlogRelatedPosts.astro)
+    G --> L(src/components/blog/BlogSocialShare.astro)
+    G --> M(src/components/StructuredData.astro)
+    G --> D
+    H --> D
+    A --> H
 ```
 
-### Lists
-
-- Unordered lists (bullets) for items without sequence importance
-  - Use single level of nesting when possible
-  - Maintain consistent capitalization within a list
-- Ordered lists for sequential steps or prioritized items
-  - Each item should be a complete thought/sentence
-  - End each item with appropriate punctuation
+## Outstanding Issues and Plans
 
-```markdown
-## Unordered List Example
+### Plan for Table Width and Overflow Fix on LLMS.txt Explorer Page
 
-- First bullet point
-- Second bullet point
-  - Nested bullet point
-  - Another nested bullet point
-- Third bullet point
+#### Objective
 
-## Ordered List Example
+Address the persistent horizontal overflow issue on the LLMS.txt Explorer page (`src/pages/index.astro`) where the table is too wide, preventing the "Last Checked" column from being visible. The previous fix attempt did not fully resolve the issue.
 
-1. First step in the process.
-2. Second step in the process.
-   1. Sub-step one
-   2. Sub-step two
-3. Third step in the process.
-```
-
-### Code Blocks
+#### Root Cause
 
-- Use triple backticks (```) with language specification
-- Keep code blocks under 80 characters wide when possible
-- Include comments for complex code
-- Use syntax highlighting appropriate to the language
-
-````markdown
-```javascript
-// Example JavaScript function
-function example() {
-  const data = fetchData();
-  return data.filter((item) => item.active);
-}
-```
-````
+The primary cause of the overflow is likely a combination of:
+1.  Fixed width classes (`w-1/3`, `w-2/5`, etc.) on table headers and data cells forcing the table to exceed the container width.
+2.  Lack of `table-fixed` layout, allowing column widths to be determined by content, leading to unpredictable widths.
+3.  Long content in columns like "Title", "Summary", and "LLMS.txt URL" pushing the table wider without proper constraints or truncation.
 
-````
+#### Solution
 
-### Links
-- Use descriptive link text (avoid "click here")
-- External links should open in new tabs with proper attributes
-- Internal links should be relative paths
+The revised plan to fix the table width and overflow involves the following steps:
 
-```markdown
-[Descriptive link text](../relative/path) for internal links
+1.  **Remove Fixed Width Classes:** Identify and remove or significantly reduce fixed width Tailwind classes (e.g., `w-1/3`, `w-2/5`, `w-1/6`, `w-1/12`) from `<th>` and `<td>` elements within the table structure. Allow Tailwind's default table layout or use `table-fixed` to control column widths.
+2.  **Add `table-fixed` Layout:** Apply the `table-fixed` class to the `<table>` element. This tells the browser to use the first row's column widths as the width for all subsequent rows, making column width control more predictable.
+3.  **Apply Content Constraints and Truncation:** For columns containing potentially long content ("Title", "Summary", "LLMS.txt URL"), apply appropriate Tailwind classes to constrain their maximum width and handle overflow.
+    *   Use `max-w-xs`, `max-w-sm`, `max-w-md`, or similar classes on the `<td>` elements to set a maximum width for the column.
+    *   Apply the `truncate` class to the content *within* the `<td>` (e.g., on the `<a>` tag for the URL, or a `<span>` or `div` wrapping the text in Title/Summary cells) to clip text and add an ellipsis if it exceeds the cell width.
+    *   Ensure `whitespace-nowrap` is removed from cells where truncation is applied, as it conflicts with `truncate`.
+4.  **Ensure Responsiveness:**
+    *   The container wrapping the table (`#table-view`) should retain `overflow-x-auto` to enable horizontal scrolling on smaller screens where the table might still exceed the viewport width.
+    *   The combination of `table-fixed`, `max-w-*`, and `truncate` should help the table fit within the viewport on larger screens.
+5.  **Consider Mobile Hiding (Optional):** Evaluate if certain less critical columns (e.g., "Last Checked", "Status") could be hidden on smaller screen sizes using responsive utility classes (e.g., `hidden`, `sm:table-cell`) to improve usability on mobile. This is an optional enhancement.
 
-[External resource name](https://example.com){:target="_blank" rel="noopener"}
-````
+#### Relevant Files and Sections
 
-### Images
+The fix will primarily involve modifications to the `src/pages/index.astro` file, specifically within the table structure.
 
-- Always include alt text for accessibility
-- Specify image dimensions when possible
-- Caption images when appropriate
-- Use consistent image sizing throughout posts
+-   The `div` with `id="table-view"` is the table container.
+-   The `table` element needs the `table-fixed` class added and existing width classes removed/adjusted.
+-   Table headers (`<th>`) and data cells (`<td>`) for "Title", "Summary", and "LLMS.txt URL" need fixed width classes removed/adjusted and `max-w-*` and `truncate` applied.
+-   Other `<th>` and `<td>` elements (e.g., "Last Checked", "Status") may need width adjustments or responsive hiding classes.
 
-```markdown
-![Alt text describing the image](../path/to/image.jpg)
+#### Tailwind/CSS Classes to Use
 
-<figure>
-  <img src="../path/to/image.jpg" alt="Descriptive alt text" width="600" />
-  <figcaption>Caption explaining the image context</figcaption>
-</figure>
-```
+-   `table-fixed`: Set table layout to fixed.
+-   `max-w-xs`, `max-w-sm`, `max-w-md`, etc.: Set maximum width for table cells.
+-   `truncate`: Truncate text with ellipsis.
+-   `overflow-x-auto`: Add horizontal scrollbar if content overflows horizontally (already on the container).
+-   `w-*` classes (e.g., `w-1/3`, `w-2/5`): Remove or reduce from `<th>` and `<td>`.
+-   `whitespace-nowrap`: Remove from cells where truncation is applied.
+-   `hidden`, `sm:table-cell` (Optional): Hide columns on small screens.
 
-### Blockquotes
+## Next Steps
 
-- Use for quotes, important callouts, or notes
-- Attribute quotes when appropriate
+Upon approval of this plan, the implementation subtasks will be executed.
+### Table Row Overflow Fix on LLMS.txt Explorer Page (Completed)
 
-```markdown
-> This is an important note that readers should pay attention to.
+The plan for addressing the horizontal overflow issue on the LLMS.txt Explorer page has been successfully implemented.
 
-> "This is a direct quote from someone."
-> — Attribution
-```
+- The fix was implemented and pushed to the `fix/table-overflow-index-page` branch.
+- The changes included constraining the table container width, changing the table to `w-full`, and removing `whitespace-nowrap` from the URL cell.
+- Reference Commit: `c301b7d`
+- Reference Pull Request: https://github.com/HillviewCap/llms/pull/new/fix/table-overflow-index-page
+- The table overflow issue is now resolved and the implementation matches the plan outlined in `table-overflow-fix-plan.md`.
 
-### Tables
+### Plan for Standardizing Blog Post Placeholder Image
 
-- Include header row
-- Align columns appropriately (left for text, right for numbers)
-- Keep tables simple and readable
+#### Objective
 
-```markdown
-| Name   | Type   | Default | Description      |
-| ------ | ------ | ------- | ---------------- |
-| param1 | string | null    | First parameter  |
-| param2 | number | 0       | Second parameter |
-```
+Standardize the default/placeholder image used for blog posts when no specific image is provided.
 
-## 3. Responsive Design
+#### Requirement
 
-### Breakpoint Strategy
+All blog posts should use `public/assets/favicon-32x32.png` as the default/placeholder image when no specific image is provided.
 
-Implement a comprehensive breakpoint strategy using Tailwind's responsive prefixes:
+#### Relevant Files
 
-- **Mobile-first** approach (base styling for small screens)
-- **sm**: 640px and above
-- **md**: 768px and above
-- **lg**: 1024px and above
-- **xl**: 1280px and above
-- **2xl**: 1536px and above
+The following components, layouts, and pages are responsible for rendering blog post images and will likely need modification:
 
-### Layout Adjustments
+*   `src/components/blog/BlogCard.astro`: Renders the card view for blog posts, typically including a thumbnail or image.
+*   `src/layouts/BlogPostLayout.astro`: The layout for individual blog post pages, which may display a hero image or a default image if none is specified in the frontmatter.
+*   `src/pages/blog/index.astro`: The blog index page, which lists blog posts and uses `BlogCard.astro`.
+*   `src/pages/blog/[slug].astro`: The dynamic route for individual blog post pages, which uses `BlogPostLayout.astro`.
 
-- **Blog Index Page**:
+#### Implementation Approach
 
-  - Mobile: Single column cards, full width
-  - sm: Single column with padding
-  - md: Two column grid
-  - lg: Three column grid
-  - xl: Three column grid with increased spacing
+To ensure the placeholder image is used consistently:
 
-- **Blog Post Page**:
-  - Mobile: Single column, full-width reading area, no TOC sidebar
-  - md: Increased padding and max-width for better reading
-  - lg: Fixed table of contents sidebar appears
-  - xl: Increased content width and sidebar spacing
+1.  **Modify `BlogCard.astro`:** Update the component to check if a specific image is provided in the blog post's frontmatter. If not, use `public/assets/favicon-32x32.png` as the image source.
+2.  **Modify `BlogPostLayout.astro`:** Update the layout to check for a specific image in the frontmatter. If no image is found, use `public/assets/favicon-32x32.png` for any image display areas (e.g., a hero image).
+3.  **Ensure Frontmatter Consistency:** Document the expected frontmatter field for specifying a blog post image (e.g., `image: /path/to/image.jpg`) and ensure existing posts either have an image specified or rely on the new placeholder logic.
+#### Implementation Status (Completed)
 
-### Component Adaptations
+The plan for standardizing the blog post placeholder image has been successfully implemented.
 
-- **Navigation**: Collapsible on mobile, horizontal on larger screens
-- **Code Blocks**: Horizontal scrolling on small screens, properly sized on larger screens
-- **Images**: Responsive sizing with maximum width constraints
-- **Tables**: Horizontal scrolling container on small screens
-- **Author Bio**: Compact on mobile, expanded on larger screens
-- **Related Posts**: Vertical stack on mobile, horizontal cards on larger screens
-
-### Performance Considerations
-
-- Implement lazy loading for images
-- Optimize font loading with preload strategies
-- Ensure critical CSS is inlined
-
-## 4. Accessibility & SEO
-
-### Accessibility Implementations
-
-#### Semantic HTML
-
-- Use appropriate HTML5 elements (`<article>`, `<section>`, `<aside>`, `<figure>`, etc.)
-- Ensure proper heading hierarchy (h1 → h6)
-- Use `<time>` elements for dates
-
-#### ARIA Attributes
-
-- Add aria-label to links without descriptive text
-- Use aria-hidden for decorative elements
-- Implement aria-expanded for expandable sections
-- Add aria-current="page" for current page in navigation
-
-#### Keyboard Navigation
-
-- Ensure all interactive elements are keyboard accessible
-- Implement logical tab order
-- Add visible focus states to all interactive elements
-- Create skip-to-content link
-
-#### Color & Contrast
-
-- Ensure 4.5:1 contrast ratio for normal text (WCAG AA)
-- Maintain 3:1 contrast ratio for large text
-- Don't rely solely on color to convey information
-- Test color combinations for color blindness issues
-
-#### Screen Reader Support
-
-- Add alt text to all images
-- Implement proper ARIA landmark roles
-- Ensure form labels are properly associated with inputs
-- Test with screen reader software
-
-### SEO Enhancements
-
-#### Metadata
-
-- Implement proper Open Graph tags for social sharing
-- Add Twitter Card metadata
-- Ensure each post has unique title and description
-- Implement canonical URLs
-
-#### Structured Data
-
-- Add Article schema markup for blog posts
-- Implement BreadcrumbList schema
-- Add Person schema for authors
-- Use JSON-LD format for structured data
-
-#### URLs & Slugs
-
-- Create SEO-friendly URL structure
-- Use kebab-case for slugs (e.g., `my-blog-post`)
-- Keep URLs concise but descriptive
-
-#### Content Optimization
-
-- Implement proper heading structure with keywords
-- Optimize image filenames and alt text
-- Create internal linking between related posts
-- Include schema.org markup for content organization
-
-#### Performance
-
-- Optimize Core Web Vitals (LCP, FID, CLS)
-- Implement responsive images with srcset
-- Add preload for critical resources
-- Minimize render-blocking resources
-
-## 5. File/Component Relationships
-
-```
-src/
-├── pages/
-│   └── blog/
-│       ├── index.astro         # Blog index page
-│       └── [slug].astro        # Individual blog post page
-│
-├── content/
-│   └── blog/
-│       ├── post-1.md           # Blog post content
-│       ├── post-2.md
-│       └── ...
-│
-├── layouts/
-│   ├── Layout.astro            # Base site layout
-│   └── BlogPostLayout.astro    # Blog post layout
-│
-├── components/
-│   ├── Navigation.astro        # Site navigation
-│   ├── StructuredData.astro    # SEO structured data
-│   └── blog/                   # New folder for blog components
-│       ├── BlogCard.astro      # Card component for index
-│       ├── BlogTags.astro      # Tag rendering component
-│       ├── BlogAuthor.astro    # Author info component
-│       ├── BlogTOC.astro       # Table of contents component
-│       ├── BlogCodeBlock.astro # Enhanced code block display
-│       ├── BlogRelated.astro   # Related posts component
-│       └── BlogSocialShare.astro # Social sharing component
-│
-└── styles/
-    ├── global.css             # Global CSS
-    ├── enhanced-theme.css     # Current theme CSS
-    └── blog.css               # New blog-specific CSS
-```
-
-### Component Interactions
-
-#### Blog Index Page Flow
-
-1. `src/pages/blog/index.astro`:
-   - Fetches all blog posts from `getCollection("blog")`
-   - Sorts by publication date
-   - Maps each post to a `BlogCard` component
-   - Renders grid layout with filtering options
-
-#### Blog Post Page Flow
-
-1. `src/pages/blog/[slug].astro`:
-
-   - Generates static paths for all blog posts
-   - Fetches specific post content
-   - Passes content to `BlogPostLayout`
-
-2. `src/layouts/BlogPostLayout.astro`:
-   - Wraps post in base `Layout`
-   - Renders post metadata (title, date, author)
-   - Includes `BlogTOC` for table of contents
-   - Renders Markdown content in main area
-   - Includes `BlogRelated` for similar posts
-   - Adds `BlogAuthor` with author details
-   - Includes `BlogSocialShare` for sharing options
-
-#### Component Data Flow
-
-- Blog posts metadata flows from Markdown frontmatter to components
-- TOC is generated automatically from Markdown headings
-- Tags are extracted from frontmatter and rendered via `BlogTags`
-- Related posts are determined by matching tags
-
-## 6. Implementation Approach and Status
-
-The implementation has been divided into logical subtasks, with the following current status:
-
-### 1. Content Structure Update ✅ COMPLETED
-
-- **Scope**: Update the backend structure of how blog posts are processed
-- **Completed Tasks**:
-  - Created the new blog-specific components directory structure under `src/components/blog/`
-  - Implemented BlogCard, BlogTags, BlogAuthor components
-  - Implemented automatic TOC generation from headers
-  - Created utilities for extracting excerpts and calculating read time
-- **Implementation Notes**:
-  - The blog post markdown files now follow consistent formatting with proper front matter
-  - Metadata includes title, description, publication date, and tags
-  - Proper heading hierarchy is maintained (H1 for title, H2 for sections)
-  - Author information and read time estimation are now included
-
-### 2. Index Page Redesign ✅ COMPLETED
-
-- **Scope**: Revamp the blog index page with new grid layout and filtering
-- **Completed Tasks**:
-  - Implemented responsive design for blog posts listing
-  - Created the BlogCard component for displaying post previews
-  - Added proper metadata display (date, read time)
-  - Added tag display functionality
-- **Implementation Notes**:
-  - BlogCard component features hover effects, consistent styling, and proper metadata display
-  - Each card includes a featured image area (with placeholder), title, excerpt, publication date, read time, author info, and tags
-  - Cards follow the responsive sizing specified in the design plan
-
-### 3. Blog Post Template Redesign ✅ COMPLETED
-
-- **Scope**: Enhance the individual blog post display
-- **Completed Tasks**:
-  - Updated BlogPostLayout.astro with new structure
-  - Implemented table of contents sidebar with responsive behavior
-  - Created enhanced code block styling
-  - Added related posts section
-  - Implemented author bio section
-  - Added social sharing functionality
-- **Implementation Notes**:
-  - The table of contents is responsive (fixed sidebar on desktop, inline on mobile)
-  - Enhanced code styling with syntax highlighting
-  - Improved typography with proper spacing and hierarchy
-  - Added "Back to Blog" navigation option
-  - Structured data for SEO is now included
-
-### 4. CSS/Theme Implementation ✅ COMPLETED
-
-- **Scope**: Create and update stylesheets for the new blog design
-- **Completed Tasks**:
-  - Created blog.css for blog-specific styles
-  - Implemented all responsive design breakpoints
-  - Applied typography and color scheme enhancements
-- **Implementation Notes**:
-  - Comprehensive styling for all blog components (cards, tags, TOC, etc.)
-  - Mobile-first approach with breakpoints for sm, md, lg, and xl screens
-  - Enhanced typography with improved readability
-  - Consistent color scheme applied throughout the blog section
-  - Create animations and transitions for interactive elements
-  - Ensure consistent styling across all blog components
-- **References**: Visual Theme & Layout section, Responsive Design section
-
-### 5. Accessibility & SEO Enhancement (for Code Mode)
-
-- **Scope**: Ensure blog meets accessibility standards and SEO best practices
-- **Tasks**:
-  - Implement semantic HTML throughout templates
-  - Add appropriate ARIA attributes
-  - Ensure proper color contrast
-  - Update structured data for blog posts
-  - Implement OpenGraph and Twitter Card metadata
-  - Add schema.org markup
-- **References**: Accessibility & SEO section
-
-### 6. Markdown Standardization (for Debug Mode)
-
-- **Scope**: Update existing blog posts to follow new formatting standards
-- **Tasks**:
-  - Audit existing posts for compliance with new standards
-  - Update headings, lists, code blocks as needed
-  - Standardize image usage and alt text
-  - Ensure proper link formatting
-  - Validate Markdown syntax
-- **References**: Markdown Formatting Standards section
-
-### 7. Content Migration (for Code Mode)
-
-- **Scope**: Transfer existing content to new format if needed
-- **Tasks**:
-  - Update frontmatter in existing posts if schema changes
-  - Add any new required metadata (e.g., author info, featured images)
-  - Fix any broken internal links
-  - Generate missing excerpts
-- **References**: File/Component Relationships section
-
-### 8. Testing & Validation (for Debug Mode)
-
-- **Scope**: Ensure all changes work correctly across devices and browsers
-- **Tasks**:
-  - Test responsive layouts across device sizes
-  - Validate accessibility with automated tools and manual testing
-  - Check SEO implementation with validation tools
-  - Performance testing (Core Web Vitals)
-  - Cross-browser compatibility testing
-- **References**: Accessibility & SEO section, Responsive Design section
-
-## 7. Current State and Future Recommendations
-
-### Current State
-
-The blog section revitalization has been successfully completed with all key components implemented according to the architectural plan. The new blog section features:
-
-1. **Enhanced Visual Design**:
-
-   - Consistent styling and typography across all blog components
-   - Card-based layout for the index page
-   - Improved reading experience for individual blog posts
-   - Responsive design that works well across all device sizes
-
-2. **Improved Functionality**:
-
-   - Table of contents for easier navigation within long posts
-   - Related posts to encourage further exploration
-   - Social sharing to increase content distribution
-   - Author information to establish credibility and connection
-
-3. **Technical Improvements**:
-   - Component-based architecture for better maintainability
-   - Consistent formatting standards for markdown content
-   - Enhanced SEO elements including structured data
-   - Improved accessibility features
-
-### Recommendations for Future Improvements
-
-While the core revitalization is complete, the following enhancements could further improve the blog section:
-
-1. **Search Functionality**:
-
-   - Implement a dedicated blog search feature to help users find specific content
-   - Add filtering options by date, topic, or tag
-
-2. **Content Expansion**:
-
-   - Create a content calendar for regular blog updates
-   - Develop a style guide for future content contributors
-   - Consider adding different content types (tutorials, case studies, etc.)
-
-3. **Engagement Features**:
-
-   - Add comment functionality for reader engagement
-   - Implement a newsletter subscription option
-   - Create an email sharing feature
-
-4. **Analytics Integration**:
-
-   - Add tracking for popular posts and topics
-   - Implement heat mapping to understand user engagement
-   - Track conversion from blog posts to other site sections
-
-5. **Performance Optimization**:
-   - Implement image lazy loading for faster initial page load
-   - Add preloading for linked blog posts
-   - Further optimize Core Web Vitals metrics
-
-These recommendations can be prioritized based on user feedback and business goals after the initial release of the revitalized blog section.
+- The default/placeholder image for blog posts is now consistently set to `/assets/favicon-32x32.png` when no specific image is provided in the frontmatter.
+- The implementation involved modifications to `src/components/blog/BlogCard.astro` and `src/layouts/BlogPostLayout.astro` to check for the presence of a specific image and fall back to the placeholder if needed.
+- This work was completed on the `feature/blog-placeholder-image` branch.

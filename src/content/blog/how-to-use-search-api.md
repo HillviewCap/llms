@@ -3,6 +3,7 @@ title: "How to Use Our Search API"
 description: "A comprehensive guide to using the LLMs search API for querying metadata and content."
 pubDate: 2025-04-17
 tags: ["api", "search", "development"]
+image: "/assets/apple-touch-icon.png"
 ---
 
 # How to Use Our Search API
