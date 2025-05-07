@@ -9,7 +9,7 @@ pages_build_output_dir = "dist"
 # Without this binding, you'll get the SessionConfigWithoutFlagError even if the
 # experimental.session flag is set to true in astro.config.mjs
 kv_namespaces = [
-  { binding = "SESSION", id = "f1cd8a83a67e4c2e849f48a2d190581e", preview_id = "your-preview-kv-namespace-id" }
+  { binding = "SESSION", id = "889af86f97364ca382a869856373b073", preview_id = "your-preview-kv-namespace-id" }
 ]
 
 # In Cloudflare Pages dashboard, you must also:
