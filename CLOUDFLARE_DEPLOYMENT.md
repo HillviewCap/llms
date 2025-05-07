@@ -49,16 +49,20 @@ compatibility_date = "2023-12-01"
 # Required for Pages projects using wrangler.toml
 pages_build_output_dir = "dist"
 
+# Main entry point for Workers
+main = "workers-site/index.js"
+
 # KV Namespace binding for Astro sessions
 kv_namespaces = [
   { binding = "SESSION", id = "your-actual-kv-namespace-id", preview_id = "your-actual-preview-kv-namespace-id" }
 ]
-
-[site]
-bucket = "./dist"
 ```
 
-The `pages_build_output_dir` property is required for Cloudflare Pages projects using wrangler.toml. Without this property, Cloudflare will consider the wrangler.toml file invalid and skip it during deployment.
+Important notes about the wrangler.toml configuration:
+
+1. The `pages_build_output_dir` property is required for Cloudflare Pages projects using wrangler.toml.
+2. Do NOT include a `[site]` section in your wrangler.toml for Pages projects - this is not supported and will cause validation errors.
+3. Include the `main` field to specify the entry point for Workers.
 
 ## Step 3: Deploy to Cloudflare Pages
 
@@ -165,6 +169,23 @@ pages_build_output_dir = "dist"
 ```
 
 Without this property, Cloudflare will consider the wrangler.toml file invalid and skip it during deployment, which means your KV namespace binding won't be applied.
+
+### Site Configuration Error
+
+If you see the error:
+```
+Configuration file for Pages projects does not support "site"
+```
+
+This means you have a `[site]` section in your wrangler.toml file, which is not supported for Pages projects. Remove the entire `[site]` section:
+
+```toml
+# Remove this section
+[site]
+bucket = "./dist"
+```
+
+Instead, use the `pages_build_output_dir` property at the top level to specify your build output directory.
 
 ## Local Development with Sessions
 
