@@ -26,6 +26,7 @@ interface LlmMetadata {
     domain_purpose_ranking?: string[];
     domain_topic_ranking?: [string, number][];
   };
+  url_token_count?: number;
 }
 
 // Type assertion for the imported data

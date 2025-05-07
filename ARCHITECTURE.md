@@ -189,3 +189,86 @@ The plan for standardizing the blog post placeholder image has been successfully
 - The default/placeholder image for blog posts is now consistently set to `/assets/favicon-32x32.png` when no specific image is provided in the frontmatter.
 - The implementation involved modifications to `src/components/blog/BlogCard.astro` and `src/layouts/BlogPostLayout.astro` to check for the presence of a specific image and fall back to the placeholder if needed.
 - This work was completed on the `feature/blog-placeholder-image` branch.
+# Plan for url_token_count Field in LLM Metadata Model and UI
+
+## Objective
+
+Document the addition of the `url_token_count` field to the LLM metadata model and its display in the UI, specifically in the metadata row of the main table on the index page. This field is for user reference only and is not filterable or searchable.
+
+## Data Model Update
+
+- **TypeScript Interface Change**  
+  Update the `LlmMetadata` type to include the new field:
+  ```ts
+  interface LlmMetadata {
+    source_domain: string;
+    url_topic_ranking?: [string, number][];
+    domain_purpose_ranking?: string[];
+    domain_topic_ranking?: [string, number][];
+    url_token_count?: number; // New: total token count for the LLMS.txt URL
+  }
+  ```
+- **Semantics**  
+  - `url_token_count` represents the total number of tokens in the LLMS.txt file for the given URL.
+  - This field is optional to maintain backward compatibility.
+
+## UI/UX Update
+
+- **Display Location**  
+  - The `url_token_count` value will be displayed in the metadata row beneath each main table row on the index page (`src/pages/index.astro`).
+  - Placement:  
+    - Add as a new section in the metadata row grid (ideally as a fourth column on desktop, or appended to the first column on mobile).
+    - Label: **"Token Count:"**
+    - Value: Display the number with thousands separators (e.g., "12,345").
+- **Formatting**  
+  - Use a clear, concise label ("Token Count:").
+  - If the value is missing, display "N/A".
+  - Example display:
+    ```
+    Token Count: 12,345
+    ```
+- **No Filtering or Searching**  
+  - The field is for display only and does not affect filtering or searching.
+
+- **Example (docs.openpipe.ai):**
+  ```
+  LLMs Text Topics: [ ... ]
+  Token Count: 8,192
+  ```
+  (Assuming the "docs.openpipe.ai" record has `url_token_count: 8192`.)
+
+## Implementation Steps
+
+1. **Data Model**
+   - Add `url_token_count` to the `LlmMetadata` interface in all relevant files.
+   - Ensure the field is populated in the data source (e.g., `llms_metadata.json`).
+
+2. **UI**
+   - Update the metadata row rendering in [`src/pages/index.astro`](src/pages/index.astro):
+     - Add a new section to the grid for "Token Count:".
+     - Format the number with thousands separators.
+     - Ensure responsive layout (4 columns on desktop, stacked on mobile).
+   - No changes to filters or search logic.
+
+3. **Testing**
+   - Verify that the "Token Count:" appears for all records with a value.
+   - Check that "N/A" is shown if the value is missing.
+   - Confirm that the field is not filterable or searchable.
+
+## Mermaid Diagram
+
+```mermaid
+flowchart TD
+    A[llms_metadata.json] --> B(LlmEntry.metadata.url_token_count)
+    B --> C[Main Table Row (index.astro)]
+    C --> D[Metadata Row: Token Count Section]
+    D -.->|Display only| E[User]
+```
+
+## UI/UX Considerations
+
+- **Label:** Use "Token Count:" for clarity.
+- **Placement:** In the metadata row, as a new section (fourth column on desktop).
+- **Formatting:** Use thousands separators for readability.
+- **Responsiveness:** Ensure the new section stacks or wraps appropriately on smaller screens.
+- **No Interactivity:** The field is not clickable, filterable, or searchable.
