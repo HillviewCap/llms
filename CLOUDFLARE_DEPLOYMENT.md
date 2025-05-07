@@ -46,6 +46,9 @@ Your `wrangler.toml` should look like this:
 name = "llms-explorer"
 compatibility_date = "2023-12-01"
 
+# Required for Pages projects using wrangler.toml
+pages_build_output_dir = "dist"
+
 # KV Namespace binding for Astro sessions
 kv_namespaces = [
   { binding = "SESSION", id = "your-actual-kv-namespace-id", preview_id = "your-actual-preview-kv-namespace-id" }
@@ -54,6 +57,8 @@ kv_namespaces = [
 [site]
 bucket = "./dist"
 ```
+
+The `pages_build_output_dir` property is required for Cloudflare Pages projects using wrangler.toml. Without this property, Cloudflare will consider the wrangler.toml file invalid and skip it during deployment.
 
 ## Step 3: Deploy to Cloudflare Pages
 
@@ -144,6 +149,22 @@ Invalid binding `SESSION`
 ```
 
 This means your KV namespace binding is not correctly configured. Follow Step 4 again to ensure the binding is properly set up in the Cloudflare Dashboard.
+
+### Invalid wrangler.toml Error
+
+If you see the error:
+```
+A wrangler.toml file was found but it does not appear to be valid. Did you mean to use wrangler.toml to configure Pages?
+```
+
+This means your wrangler.toml file is missing required properties for Pages projects. Make sure your wrangler.toml includes:
+
+```toml
+# Required for Pages projects using wrangler.toml
+pages_build_output_dir = "dist"
+```
+
+Without this property, Cloudflare will consider the wrangler.toml file invalid and skip it during deployment, which means your KV namespace binding won't be applied.
 
 ## Local Development with Sessions
 
