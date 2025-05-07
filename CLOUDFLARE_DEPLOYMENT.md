@@ -49,9 +49,6 @@ compatibility_date = "2023-12-01"
 # Required for Pages projects using wrangler.toml
 pages_build_output_dir = "dist"
 
-# Main entry point for Workers
-main = "workers-site/index.js"
-
 # KV Namespace binding for Astro sessions
 kv_namespaces = [
   { binding = "SESSION", id = "your-actual-kv-namespace-id", preview_id = "your-actual-preview-kv-namespace-id" }
@@ -62,7 +59,7 @@ Important notes about the wrangler.toml configuration:
 
 1. The `pages_build_output_dir` property is required for Cloudflare Pages projects using wrangler.toml.
 2. Do NOT include a `[site]` section in your wrangler.toml for Pages projects - this is not supported and will cause validation errors.
-3. Include the `main` field to specify the entry point for Workers.
+3. Do NOT include a `main` field in Pages projects - you cannot use both `main` and `pages_build_output_dir` together.
 
 ## Step 3: Deploy to Cloudflare Pages
 
@@ -186,6 +183,20 @@ bucket = "./dist"
 ```
 
 Instead, use the `pages_build_output_dir` property at the top level to specify your build output directory.
+
+### Main and Pages Build Output Conflict
+
+If you see the error:
+```
+Configuration file cannot contain both both "main" and "pages_build_output_dir" configuration keys.
+```
+
+This means you're trying to configure both a Worker (using `main`) and a Pages project (using `pages_build_output_dir`) in the same wrangler.toml file, which is not allowed. For Pages projects:
+
+1. Keep the `pages_build_output_dir` property
+2. Remove the `main` property entirely
+
+Your wrangler.toml should only contain configuration relevant to the type of project you're deploying.
 
 ## Local Development with Sessions
 

@@ -4,9 +4,6 @@ compatibility_date = "2023-12-01"
 # Required for Pages projects using wrangler.toml
 pages_build_output_dir = "dist"
 
-# Main entry point for Workers
-main = "workers-site/index.js"
-
 # KV Namespace binding for Astro sessions
 # This is required when using Astro with the Cloudflare adapter and sessions enabled
 # Without this binding, you'll get the SessionConfigWithoutFlagError even if the
