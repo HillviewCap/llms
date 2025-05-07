@@ -1,0 +1,19 @@
+name = "llms-explorer"
+compatibility_date = "2023-12-01"
+
+# KV Namespace binding for Astro sessions
+# This is required when using Astro with the Cloudflare adapter and sessions enabled
+# Without this binding, you'll get the SessionConfigWithoutFlagError even if the
+# experimental.session flag is set to true in astro.config.mjs
+kv_namespaces = [
+  { binding = "SESSION", id = "f1cd8a83a67e4c2e849f48a2d190581e", preview_id = "your-preview-kv-namespace-id" }
+]
+
+# In Cloudflare Pages dashboard, you must also:
+# 1. Go to your Pages project > Settings > Functions
+# 2. Under "KV namespace bindings", add a binding with:
+#    - Variable name: SESSION
+#    - KV namespace: (select your namespace)
+
+[site]
+bucket = "./dist"
