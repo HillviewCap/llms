@@ -15,6 +15,9 @@ export default defineConfig({
   },
   output: 'server',
   adapter: cloudflare(),
+  experimental: {
+    session: true, // TypeScript may show an error, but this is needed for Cloudflare KV sessions
+  },
   compressHTML: true,
   integrations: [
     sitemap(),
