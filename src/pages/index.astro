@@ -24,6 +24,7 @@ interface LlmMetadata {
   url_topic_ranking?: [string, number][];
   domain_purpose_ranking?: string[];
   domain_topic_ranking?: [string, number][];
+  url_token_count?: number;
 }
 
 interface LlmEntry {
@@ -394,7 +395,6 @@ const pillColorClasses: string[] = [
                     </td>
                   </tr>
                   {(entry.metadata.url_topic_ranking?.length ||
-                    entry.metadata.domain_purpose_ranking?.length ||
                     entry.metadata.domain_topic_ranking?.length) && (
                     <tr
                       class:list={[
@@ -420,6 +420,17 @@ const pillColorClasses: string[] = [
                         class="px-6 py-3 text-xs text-white-700 text-white-400 border-t border-neutral-200 border-neutral-700"
                       >
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2 md:divide-x md:divide-neutral-200 md:divide-neutral-700">
+                          {/* Token Count */}
+                          {typeof entry.metadata.url_token_count === "number" && (
+                            <div class="metadata-section md:pr-6">
+                              <h4 class="font-semibold text-white-800 text-white-200 mb-1">
+                                Token Count:
+                              </h4>
+                              <div class="text-sm text-white-700 text-white-300">
+                                {entry.metadata.url_token_count.toLocaleString()}
+                              </div>
+                            </div>
+                          )}
                           {/* URL Topics */}
                           {entry.metadata.url_topic_ranking &&
                             entry.metadata.url_topic_ranking.length > 0 && (
@@ -444,27 +455,10 @@ const pillColorClasses: string[] = [
                                 </div>
                               </div>
                             )}
-                          {/* Domain Purposes */}
-                          {entry.metadata.domain_purpose_ranking &&
-                            entry.metadata.domain_purpose_ranking.length >
-                              0 && (
-                              <div class="metadata-section md:px-6">
-                                <h4 class="font-semibold text-white-800 text-white-200 mb-1">
-                                  Domain Purposes:
-                                </h4>
-                                <ul class="list-disc list-inside space-y-0.5">
-                                  {entry.metadata.domain_purpose_ranking?.map(
-                                    (purpose) => (
-                                      <li>{purpose}</li>
-                                    )
-                                  )}
-                                </ul>
-                              </div>
-                            )}
                           {/* Domain Topics */}
                           {entry.metadata.domain_topic_ranking &&
                             entry.metadata.domain_topic_ranking.length > 0 && (
-                              <div class="metadata-section md:pl-6">
+                              <div class="metadata-section md:px-6">
                                 <h4 class="font-semibold text-white-800 text-white-200 mb-1">
                                   Domain Topics:
                                 </h4>
@@ -485,6 +479,7 @@ const pillColorClasses: string[] = [
                                 </div>
                               </div>
                             )}
+                          {/* Domain Purposes section hidden */}
                         </div>
                       </td>
                     </tr>
