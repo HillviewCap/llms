@@ -12,6 +12,25 @@ echo -e "${YELLOW}=== LLMS.txt Explorer Deployment Script ===${NC}"
 echo -e "${YELLOW}This script will commit and push the fixed files to GitHub, triggering a Cloudflare deployment.${NC}"
 echo ""
 
+# Run compatibility check before deployment
+echo -e "${YELLOW}Running Cloudflare compatibility check...${NC}"
+node check-cloudflare-compatibility.js
+CHECK_STATUS=$?
+if [ $CHECK_STATUS -ne 0 ]; then
+    echo -e "${RED}Error: Compatibility check failed. Please fix the issues before deploying.${NC}"
+    echo -e "${YELLOW}You can run 'node check-cloudflare-compatibility.js' manually to see the detailed errors.${NC}"
+    read -p "Do you want to continue anyway? (y/n) " -n 1 -r
+    echo ""
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        echo -e "${YELLOW}Deployment cancelled.${NC}"
+        exit 1
+    fi
+    echo -e "${YELLOW}Continuing with deployment despite compatibility issues...${NC}"
+else
+    echo -e "${GREEN}Compatibility check passed!${NC}"
+fi
+echo ""
+
 # Check if git is installed
 if ! command -v git &> /dev/null; then
     echo -e "${RED}Error: git is not installed. Please install git and try again.${NC}"

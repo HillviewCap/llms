@@ -12,6 +12,38 @@ To ensure compatibility:
 2. **Avoid Node.js-specific modules** entirely in code that will run on Cloudflare
 3. **Configure KV namespaces correctly** for Astro session support
 4. **Set proper security headers** in the `public/_headers` file
+5. **Enable Node.js compatibility mode** in the `wrangler.toml` file
+
+## Node.js Compatibility Mode
+
+Cloudflare Workers provides a Node.js compatibility mode that allows certain Node.js APIs and modules to work in the Cloudflare environment. This is essential for our application to function correctly.
+
+### Why It's Required
+
+1. **Module Compatibility**: Some dependencies may use Node.js built-in modules internally
+2. **API Compatibility**: Certain Node.js APIs that our application relies on need this compatibility layer
+3. **Error Prevention**: Without this flag, you'll see "Module not found" errors for Node.js built-in modules
+
+### How to Enable It
+
+In your `wrangler.toml` file, ensure you have the following settings:
+
+```toml
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+```
+
+The `compatibility_date` specifies the version of the Cloudflare Workers runtime to use, while the `nodejs_compat` flag enables the Node.js compatibility mode.
+
+### Limitations
+
+Even with the compatibility flag enabled, not all Node.js features are supported:
+
+1. File system operations (`fs` module) are still not available
+2. Some crypto operations may have limitations
+3. Performance may be slightly impacted
+
+Always test your application thoroughly in a local Wrangler environment before deploying.
 
 ## Deployment Process
 

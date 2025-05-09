@@ -60,8 +60,24 @@ wrangler pages dev dist
 This command will:
 
 - Start a local server that simulates the Cloudflare Pages environment
-- Apply your `wrangler.toml` configuration
+- Apply your `wrangler.toml` configuration (including compatibility settings)
 - Connect to your KV namespaces if configured
+
+### Testing with Compatibility Settings
+
+To ensure your local testing environment matches the production environment, verify that your `wrangler.toml` file includes the necessary compatibility settings:
+
+```toml
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+```
+
+These settings are critical because:
+
+1. The `compatibility_date` ensures you're using a specific version of the Cloudflare Workers runtime
+2. The `nodejs_compat` flag enables Node.js compatibility mode, which allows certain Node.js APIs to work
+
+Without these settings, you might see different behavior locally than in production, particularly with modules that rely on Node.js APIs.
 
 ## Step 5: Test Node.js Module Compatibility
 

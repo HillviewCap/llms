@@ -63,6 +63,36 @@ Cloudflare Pages runs on Cloudflare Workers, which uses a V8 isolate environment
 
 4. **Set proper security headers** in the `public/_headers` file
 
+## Final Deployment Checklist
+
+Before deploying to Cloudflare, ensure you've completed the following steps:
+
+1. **Compatibility Check**:
+
+   - Run `node check-cloudflare-compatibility.js` to verify no Node.js-specific code will cause issues
+   - Fix any identified compatibility issues
+
+2. **Configuration Verification**:
+
+   - Confirm `wrangler.toml` includes the required compatibility settings:
+     ```toml
+     compatibility_date = "2024-09-23"
+     compatibility_flags = ["nodejs_compat"]
+     ```
+   - Verify KV namespace bindings are correctly configured
+   - Check that security headers are properly set in `public/_headers`
+
+3. **Local Testing**:
+
+   - Build the project with `npm run build`
+   - Test locally with `npx wrangler pages dev dist`
+   - Verify all functionality works as expected in the Wrangler environment
+
+4. **Deployment**:
+   - Use `./deploy.sh` to deploy changes
+   - Monitor the deployment in the Cloudflare Dashboard
+   - Wait for the deployment to complete (usually 1-3 minutes)
+
 ## Verification Steps
 
 After deployment, verify the fix by:
@@ -75,6 +105,11 @@ After deployment, verify the fix by:
    - Reload the page
    - Click on the main document request
    - Check the Response Headers section for the security headers
+4. Testing all critical functionality:
+   - Navigation between pages
+   - Search functionality
+   - Any interactive elements
+   - API endpoints if applicable
 
 ## Need Help?
 

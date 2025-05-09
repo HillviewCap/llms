@@ -1,5 +1,11 @@
 name = "llms-explorer"
+# The compatibility_date specifies the version of the Cloudflare Workers runtime to use
+# This date ensures we're using a stable version with all required features
 compatibility_date = "2024-09-23"
+
+# The nodejs_compat flag is critical for our application as it enables Node.js compatibility mode
+# This allows the use of certain Node.js APIs and modules that would otherwise cause runtime errors
+# Without this flag, we would encounter "Module not found" errors for Node.js built-in modules
 compatibility_flags = ["nodejs_compat"]
 
 # Required for Pages projects using wrangler.toml
