@@ -25,20 +25,12 @@ interface LlmEntry {
   // Add any other relevant fields from your data structure
 }
 
-// Import Layout and fs for reading the data file
+// Import Layout
 import Layout from "../layouts/Layout.astro";
-import fs from "node:fs";
-import path from "node:path";
 
-// Load data from src/data/llms_metadata.json
-const dataFilePath = path.join(
-  process.cwd(),
-  "src",
-  "data",
-  "llms_metadata.json"
-);
-const rawData = fs.readFileSync(dataFilePath, "utf-8");
-const llmsData = JSON.parse(rawData);
+// Import the data directly as a module
+// This works at build time and is compatible with Cloudflare
+import llmsData from "../data/llms_metadata.json";
 
 // Convert the object to an array of entries
 const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
