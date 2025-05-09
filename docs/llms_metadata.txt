@@ -1,0 +1,133 @@
+{
+  "slidesgpt.com": {
+    "url": "https://slidesgpt.com/docs/llms-full.txt",
+    "domain": "slidesgpt.com",
+    "content_hash": "ad79939270a69c040b27ac5c2e23e9c794874e8eaeed2355727c5796299cbad8",
+    "last_checked_utc": "2025-05-09T16:24:23.013406Z",
+    "title": "Delete a presentation",
+    "summary": "Source: https://slidesgpt.com/docs/api-reference/endpoint/delete",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "slidesgpt.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          29
+        ],
+        [
+          "Cybersecurity",
+          23
+        ],
+        [
+          "AI/ML",
+          6
+        ]
+      ],
+      "domain_purpose_ranking": [
+        "Other"
+      ],
+      "domain_topic_ranking": [
+        [
+          "AI/ML",
+          4
+        ],
+        [
+          "Software Development",
+          2
+        ]
+      ],
+      "url_token_count": 1827
+    },
+    "first_added": "2025-04-07T02:33:12Z",
+    "last_updated": "2025-04-07T02:33:12Z"
+  },
+  "trusted-psychics.co.uk": {
+    "url": "https://trusted-psychics.co.uk/llms.txt",
+    "domain": "trusted-psychics.co.uk",
+    "content_hash": "bd2dd32caa152719ffaa5638749f3e70f56c41396e30931ddc18b61a621e478d",
+    "last_checked_utc": "2025-05-09T16:24:25.202808Z",
+    "title": "https://www.trusted-psychics.co.uk llms-full.txt",
+    "summary": "THE UK'S MOST POPULAR PSYCHICS",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "trusted-psychics.co.uk",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Social",
+          12284
+        ],
+        [
+          "Entertainment",
+          11477
+        ],
+        [
+          "AI/ML",
+          7785
+        ]
+      ],
+      "domain_purpose_ranking": [
+        "Other"
+      ],
+      "domain_topic_ranking": [
+        [
+          "Social",
+          10
+        ],
+        [
+          "AI/ML",
+          9
+        ],
+        [
+          "Networking",
+          9
+        ]
+      ],
+      "url_token_count": 6382518
+    },
+    "first_added": "2025-04-07T02:13:51Z",
+    "last_updated": "2025-05-09T16:24:25.202808Z",
+    "previous_content_hash": "c907b125988d3e7b8abc0b066f4237dc009fa541f800062182b072d3fa03bf74"
+  },
+  "poeditor.com": {
+    "url": "https://poeditor.com/llms.txt",
+    "domain": "poeditor.com",
+    "content_hash": "6599bf687b278093b48b24eb648a449e484a8f7f0dbdb41400d9ba0e0df2ccc0",
+    "last_checked_utc": "2025-05-09T16:24:25.992449Z",
+    "title": "POEditor",
+    "quality": "High",
+    "metadata": {
+      "source_domain": "poeditor.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "AI/ML",
+          215
+        ],
+        [
+          "Software Development",
+          135
+        ],
+        [
+          "Social",
+          97
+        ]
+      ],
+      "url_token_count": 29848,
+      "domain_purpose_ranking": [
+        "Product/Service Page"
+      ],
+      "previous_url_token_count": 30032
+    },
+    "first_added": "2025-05-09T04:36:36Z",
+    "last_updated": "2025-05-09T16:24:25.992449Z",
+    "previous_content_hash": "a2441b105caed6fe77e7fe4988bfad0cd165c603984bb30fa36e11acaea88e11"
+  }
+}
