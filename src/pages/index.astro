@@ -25,6 +25,7 @@ interface LlmMetadata {
   domain_purpose_ranking?: string[];
   domain_topic_ranking?: [string, number][];
   url_token_count?: number;
+  previous_url_token_count?: number; // Added for token delta
 }
 
 interface LlmEntry {
@@ -43,10 +44,13 @@ interface LlmEntry {
   fallback_title?: string;
   parsed_summary?: string;
   fallback_summary?: string;
+  previous_content_hash?: string; // Added for new/updated logic
 }
 
 // Data extraction and transformation
-const llmsData: LlmEntry[] = Object.values(llmsDataJson) as unknown as LlmEntry[];
+const llmsData: LlmEntry[] = Object.values(
+  llmsDataJson
+) as unknown as LlmEntry[];
 
 const sortedLlmsData: LlmEntry[] = [...llmsData].sort((a, b) => {
   const qualityOrder: Record<Quality, number> = { High: 0, Medium: 1, Low: 2 };
@@ -72,24 +76,35 @@ const uniqueDomainTopics: string[] = [...new Set(allDomainTopics)].sort();
 // Helpers
 
 // Find the earliest first_added date for datePublished
-const earliestDate = llmsData.reduce((earliest, current) => {
-  // Ensure first_added exists and is a valid date string before parsing
-  if (current.first_added && !isNaN(new Date(current.first_added).getTime())) {
+const earliestDate = llmsData.reduce(
+  (earliest, current) => {
+    // Ensure first_added exists and is a valid date string before parsing
+    if (
+      current.first_added &&
+      !isNaN(new Date(current.first_added).getTime())
+    ) {
       const currentDate = new Date(current.first_added);
       // Check if earliest is valid before comparing
       if (!isNaN(earliest.getTime()) && currentDate < earliest) {
-          return currentDate;
+        return currentDate;
       }
-  }
-  return earliest;
-  // Initialize with a potentially valid date or a very future date if none are valid initially
-}, new Date(llmsData.find(entry => entry.first_added && !isNaN(new Date(entry.first_added).getTime()))?.first_added || '9999-12-31'));
+    }
+    return earliest;
+    // Initialize with a potentially valid date or a very future date if none are valid initially
+  },
+  new Date(
+    llmsData.find(
+      (entry) =>
+        entry.first_added && !isNaN(new Date(entry.first_added).getTime())
+    )?.first_added || "9999-12-31"
+  )
+);
 
 // Format the date, handle case where no valid date was found
-const formattedDatePublished = !isNaN(earliestDate.getTime()) && earliestDate.getFullYear() !== 9999
-  ? earliestDate.toISOString().split("T")[0]
-  : new Date().toISOString().split("T")[0]; // Fallback to today if no valid date found
-
+const formattedDatePublished =
+  !isNaN(earliestDate.getTime()) && earliestDate.getFullYear() !== 9999
+    ? earliestDate.toISOString().split("T")[0]
+    : new Date().toISOString().split("T")[0]; // Fallback to today if no valid date found
 
 const stripHtml = (html: string | undefined | null): string =>
   html?.replace(/<[^>]*>?/gm, "") ?? "";
@@ -123,6 +138,29 @@ const pillColorClasses: string[] = [
   "bg-red-800 text-white",
   "bg-gray-700 text-white",
 ];
+
+// Helper function to determine if a record is new
+const isNewRecord = (entry: LlmEntry): boolean => {
+  if (!entry.first_added || !entry.last_updated) return false;
+  // Consider new if first_added and last_updated are the same day
+  // and previous_content_hash is not present or same as current (though typically it wouldn't exist for a truly new item)
+  const firstAddedDate = new Date(entry.first_added).toDateString();
+  const lastUpdatedDate = new Date(entry.last_updated).toDateString();
+  return (
+    firstAddedDate === lastUpdatedDate &&
+    (!entry.previous_content_hash ||
+      entry.previous_content_hash === entry.content_hash)
+  );
+};
+
+// Helper function to determine if a record was recently updated (within the last 5 days)
+const isRecentlyUpdated = (entry: LlmEntry): boolean => {
+  if (!entry.last_updated) return false;
+  const lastUpdatedDate = new Date(entry.last_updated);
+  const fiveDaysAgo = new Date();
+  fiveDaysAgo.setDate(fiveDaysAgo.getDate() - 5);
+  return lastUpdatedDate > fiveDaysAgo;
+};
 ---
 
 <Layout
@@ -135,7 +173,15 @@ const pillColorClasses: string[] = [
       name: "LLMS.txt Explorer Dataset",
       description:
         "A comprehensive collection of LLMS.txt files from various domains across the web",
-      keywords: ["LLMS.txt", "AI", "machine learning", "language models", "web crawling", "structured data", "dataset"], // Added keywords as array
+      keywords: [
+        "LLMS.txt",
+        "AI",
+        "machine learning",
+        "language models",
+        "web crawling",
+        "structured data",
+        "dataset",
+      ], // Added keywords as array
       url: "https://llms-text.ai/", // Use actual site URL
       // sameAs removed as no actual repo URL is available
       creator: {
@@ -277,7 +323,9 @@ const pillColorClasses: string[] = [
       id="table-view"
       class="mt-8 overflow-x-auto bg-white bg-neutral-800 rounded-lg shadow-md enhanced-table w-full"
     >
-      <table class="w-full table-fixed divide-y divide-neutral-200 divide-neutral-700">
+      <table
+        class="w-full table-fixed divide-y divide-neutral-200 divide-neutral-700"
+      >
         <thead class="bg-neutral-50 bg-neutral-800">
           <tr>
             <th
@@ -322,6 +370,9 @@ const pillColorClasses: string[] = [
               const displayTitle =
                 title.length > 60 ? title.substring(0, 57) + "..." : title; // Truncate long titles
 
+              const newRecord = isNewRecord(entry);
+              const recentlyUpdated = isRecentlyUpdated(entry) && !newRecord; // Don't show if it's also new
+
               return (
                 <>
                   <tr
@@ -347,10 +398,24 @@ const pillColorClasses: string[] = [
                       title={title}
                     >
                       {displayTitle}
+                      {newRecord && (
+                        <span class="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-600 text-white">
+                          ✨ New
+                        </span>
+                      )}
+                      {recentlyUpdated && (
+                        <span class="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-teal-500 text-white">
+                          🔄 Updated
+                        </span>
+                      )}
                     </td>
                     <td class="px-6 py-4 text-sm text-white-500 text-white-400 align-top max-w-sm truncate">
                       {(() => {
-                        const fullSummary = entry.parsed_summary ?? entry.fallback_summary ?? entry.summary ?? "";
+                        const fullSummary =
+                          entry.parsed_summary ??
+                          entry.fallback_summary ??
+                          entry.summary ??
+                          "";
                         return fullSummary.length > 500
                           ? fullSummary.substring(0, 500) + "..."
                           : fullSummary || "N/A";
@@ -385,7 +450,7 @@ const pillColorClasses: string[] = [
                         {entry.url}
                       </a>
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-white-500 text-white-400">
+                    <td class="px-6 py-4 text-sm text-white-500 text-white-400">
                       {entry.last_checked_utc
                         ? new Date(entry.last_checked_utc).toLocaleString(
                             "en-US",
@@ -395,12 +460,12 @@ const pillColorClasses: string[] = [
                     </td>
                   </tr>
                   {(entry.metadata.url_topic_ranking?.length ||
-                    entry.metadata.domain_topic_ranking?.length) && (
+                    entry.metadata.domain_topic_ranking?.length ||
+                    typeof entry.metadata.url_token_count === "number" || // Ensure metadata row shows if token count exists
+                    entry.last_updated) && ( // Ensure metadata row shows if last_updated exists
                     <tr
                       class:list={[
-                        index % 2 === 0
-                          ? "bg-darkblue-500 bg-neutral-900"
-                          : "bg-darkblue-50 bg-neutral-800",
+                        index % 2 === 0 ? "bg-gray-900" : "bg-neutral-800",
                         /* Removed opacity class */
                         "metadata-row",
                       ]}
@@ -420,14 +485,46 @@ const pillColorClasses: string[] = [
                         class="px-6 py-3 text-xs text-white-700 text-white-400 border-t border-neutral-200 border-neutral-700"
                       >
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2 md:divide-x md:divide-neutral-200 md:divide-neutral-700">
-                          {/* Token Count */}
-                          {typeof entry.metadata.url_token_count === "number" && (
+                          {/* Token Count & Delta */}
+                          {typeof entry.metadata.url_token_count ===
+                            "number" && (
                             <div class="metadata-section md:pr-6">
                               <h4 class="font-semibold text-white-800 text-white-200 mb-1">
                                 Token Count:
                               </h4>
                               <div class="text-sm text-white-700 text-white-300">
                                 {entry.metadata.url_token_count.toLocaleString()}
+                                {typeof entry.metadata
+                                  .previous_url_token_count === "number" &&
+                                  entry.metadata.url_token_count !==
+                                    entry.metadata.previous_url_token_count &&
+                                  (() => {
+                                    const delta =
+                                      entry.metadata.url_token_count -
+                                      entry.metadata.previous_url_token_count;
+                                    const arrow = delta > 0 ? "▲" : "▼";
+                                    const color =
+                                      delta > 0
+                                        ? "text-green-400"
+                                        : "text-red-400";
+                                    return (
+                                      <span class={`ml-2 ${color}`}>
+                                        {arrow}{" "}
+                                        {Math.abs(delta).toLocaleString()}
+                                      </span>
+                                    );
+                                  })()}
+                              </div>
+                            </div>
+                          )}
+                          {/* Last Updated */}
+                          {entry.last_updated && (
+                            <div class="metadata-section md:pr-6">
+                              <h4 class="font-semibold text-white-800 text-white-200 mb-1">
+                                Last Updated:
+                              </h4>
+                              <div class="text-sm text-white-700 text-white-300">
+                                {formatDate(entry.last_updated)}
                               </div>
                             </div>
                           )}

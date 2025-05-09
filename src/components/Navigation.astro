@@ -1,9 +1,18 @@
 ---
 // src/components/Navigation.astro
+import { Image } from "astro:assets";
+import logoImage from "../assets/llms-text.jpg";
 ---
+
 <nav>
   <a href="/" class="logo">
-    <img src="/assets/llms-text.jpg" alt="LLMS Logo" />
+    <Image
+      src={logoImage}
+      alt="LLMS Logo"
+      width={40}
+      height={40}
+      format="webp"
+    />
   </a>
   <ul>
     <li><a href="/">Home</a></li>
@@ -26,10 +35,19 @@
   }
   .logo {
     display: block;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
   }
-  .logo img {
-    max-height: 40px;
-    width: auto;
+  /* Target both regular img tags and Astro's Image component */
+  .logo :global(img) {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    opacity: 1;
+    visibility: visible;
   }
   ul {
     list-style: none;
