@@ -36,13 +36,13 @@ if [[ -n $(git status -s) ]]; then
     
     # Add the fixed files
     echo -e "${YELLOW}Adding fixed files to git...${NC}"
-    git add public/_headers wrangler.toml
+    git add public/_headers wrangler.toml src/pages/index.astro
     echo -e "${GREEN}Files added.${NC}"
     echo ""
     
     # Commit the changes
     echo -e "${YELLOW}Committing changes...${NC}"
-    git commit -m "Fix: Update headers and wrangler.toml configuration to resolve 500 error"
+    git commit -m "Fix: Update headers, wrangler.toml configuration, and index.astro to resolve Cloudflare deployment errors"
     echo -e "${GREEN}Changes committed.${NC}"
     echo ""
     
@@ -82,7 +82,7 @@ if [[ -n $(git status -s) ]]; then
     fi
 else
     echo -e "${YELLOW}No changes detected in the working directory.${NC}"
-    echo -e "${YELLOW}Have you already committed the changes to public/_headers and wrangler.toml?${NC}"
+    echo -e "${YELLOW}Have you already committed the changes to public/_headers, wrangler.toml, and src/pages/index.astro?${NC}"
     read -p "Would you like to push any existing commits? (y/n) " -n 1 -r
     echo ""
     if [[ $REPLY =~ ^[Yy]$ ]]; then

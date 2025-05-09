@@ -1,5 +1,6 @@
 name = "llms-explorer"
-compatibility_date = "2023-12-01"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
 
 # Required for Pages projects using wrangler.toml
 pages_build_output_dir = "dist"
