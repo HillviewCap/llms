@@ -1,0 +1,12 @@
+# http://llms-text.ai llms.txt
+
+- [LLM Data Explorer](https://llms-text.ai/): Explore extensive LLM data entries for various domains.
+- [LLMS.txt Legal Information](https://llms-text.ai/legal): Explore legal terms and privacy policies for LLMS.txt Explorer.
+- [LLMS Text Project](https://llms-text.ai/about): Tools and resources for standardizing interactions with AI models.
+- [LLM Search API](https://llms-text.ai/api): Documentation for LLM search API usage and parameters.
+- [LLMs and AI Blog](https://llms-text.ai/blog): Explore articles on LLMs, AI development, and web standards.
+- [Request or Report Site](https://llms-text.ai/request): Request new sites or report existing ones on GitHub.
+- [New Web Standard](https://llms-text.ai/blog/a-new-web-standard): New web standard for LLMs to process content efficiently.
+- [LLMS Explorer Sitemap](https://llms-text.ai/sitemap.xml): Explore the sitemap for LLMS Explorer's latest updates.
+- [Utilizing llms.txt Files](https://llms-text.ai/blog/how-llmstxt-are-used): Explore how llms.txt files optimize AI content understanding.
+- [LLMs Blog Articles](https://llms-text.ai/blog?tag=llms): Explore articles on LLMs, AI development, and web standards.
