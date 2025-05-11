@@ -1,0 +1,502 @@
+# http://llms-text.ai llms-full.txt
+
+## LLM Data Explorer
+# LLM Data Explorer
+
+Show 102550100 entries
+
+Search:
+
+|  | Name | Title | Quality | Text Focus | Last Updated | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | [ziengs.nl](http://ziengs.nl/) | Ziengs \| De schoenenwinkel voor het hele gezin | Medium | E-commerce | 5/9/2025 | 🔄 Updated |
+|  | [zencoder.ai](http://zencoder.ai/) | https://zencoder.ai/llms.txt | Medium | Software Development | 5/9/2025 | 🔄 Updated |
+|  | [walletpasses.io](http://walletpasses.io/) | rs-demo-id {} | High | Software Development | 5/9/2025 | 🔄 Updated |
+|  | [walkfulton.com](http://walkfulton.com/) | www.walkfulton.com llms.txt | High | Health | 5/9/2025 | 🔄 Updated |
+|  | [veritableaviation.com](http://veritableaviation.com/) | https://www.veritableaviation.com | High | Travel | 5/9/2025 | 🔄 Updated |
+|  | [thrillophilia.com](http://thrillophilia.com/) | llms.txt for Thrillophilia.com | High | Travel | 5/9/2025 | 🔄 Updated |
+|  | [temi.com](http://temi.com/) | Rev.com | Medium | AI/ML | 5/9/2025 | 🔄 Updated |
+|  | [sysaid.com](http://sysaid.com/) | \# Detailed Content | Medium | Government | 5/9/2025 | 🔄 Updated |
+|  | [suprsend.com](http://suprsend.com/) | https://suprsend.com/ llms-full.txt | Medium | Data & Databases | 5/9/2025 | 🔄 Updated |
+|  | [sogexia.com](http://sogexia.com/) | Sogexia \| Le compte à ouverture facile 100 % en ligne | Medium | Education | 5/9/2025 | 🔄 Updated |
+
+Showing 1 to 10 of 831 entries
+
+Previous12345…84Next
+
+## LLMS.txt Legal Information
+# Legal Information
+
+## How This Site Functions
+
+LLMS.txt Explorer functions as a specialized search engine and directory for discovering \`llms.txt\` files across the web. It helps users find information about how websites prefer Large Language Models (LLMs) to interact with their content.
+
+## Data Collection and Privacy
+
+This site does not collect or store any personal user data. We are committed to user privacy and operate without tracking individual users or their activities.
+
+## External Links Disclaimer
+
+LLMS.txt Explorer provides links to external websites where \`llms.txt\` files are found. We are not responsible for the content, privacy practices, or accuracy of information on these third-party sites. Users access external links at their own risk.
+
+## Reporting Problematic Sites
+
+We strive to maintain a high-quality index. If you encounter a site linked through our service that you believe is problematic, harmful, or violates ethical standards, please report it to us via \[Reporting Mechanism - e.g., email address or contact form link to be added here\]. We will review reports and take appropriate action.
+
+## Terms of Service / Use
+
+By using LLMS.txt Explorer, you agree to comply with these terms. The service is provided "as is" for informational purposes. You agree not to use the service for any unlawful purpose or in any way that could damage, disable, overburden, or impair the service.
+
+## Disclaimer of Warranties
+
+The service is provided without warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant that the service will be uninterrupted, error-free, or completely secure.
+
+## Limitation of Liability
+
+In no event shall LLMS.txt Explorer, its creators, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the service or the content found through it.
+
+## Governing Law
+
+These terms shall be governed and construed in accordance with the laws of \[Your Jurisdiction\], without regard to its conflict of law provisions.
+
+## Changes to Terms
+
+We reserve the right to modify or replace these terms at any time. We will provide notice of significant changes. By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms.
+
+## LLMS Text Project
+# About This Project
+
+This project provides tools and resources related to the llmstxt.org initiative, which aims to standardize interactions with Large Language Models. You can learn more at the main project site: [https://llmstxt.org/](https://llmstxt.org/).
+
+## Our Data Collection Process
+
+To provide comprehensive insights, we regularly crawl the top 1 million websites (updated every few days) to find \`llms.txt\` and \`llms-full.txt\` files. The collected data is then enriched with additional metrics, including website category and a quality score.
+
+The quality score is derived by validating the discovered \`llms.txt\` and \`llms-full.txt\` files against the official specification using the `llms_text` module available from [llmstxt.org](https://llmstxt.org/).
+
+## About the llmstxt Standard
+
+The \`llmstxt\` standard aims to provide a structured way for website owners to communicate instructions and permissions to Large Language Models (LLMs) and other AI agents interacting with their sites. It complements existing standards like \`robots.txt\` (which focuses on crawlers) and \`sitemap.xml\` (which aids discovery).
+
+An \`llms.txt\` file is a simple plain text file, typically located in the root directory of a website, containing directives in a key-value format. These directives can specify preferred interaction models, data usage policies, contact information for AI-related inquiries, and more. The goal is to foster clearer communication and responsible AI interactions online.
+
+## Key Features
+
+- Comprehensive database of \`llms.txt\` and \`llms-full.txt\` files.
+- Regular updates sourced from crawling top websites.
+- Data enrichment with website category and quality score metrics.
+- Validation against the official llmstxt.org standard.
+
+## Technology Stack
+
+Built with Astro, Tailwind CSS.
+
+## LLM Search API
+# Search API Documentation
+
+This page documents the usage of the LLM search API endpoint.
+
+## Endpoint: \`/api/search-llms\`
+
+**Method:** `GET`
+
+This endpoint allows you to search through the available LLM metadata based on a query string.
+
+## Query Parameters
+
+- `q` ( **required**): The search term to query against LLM titles and summaries.
+
+- `fileType` (optional): Filters the search based on source file type. Allowed values: `'llms.txt'`, `'llms-full.txt'`, `'both'`. Defaults to `'both'`. (Note: Current implementation searches all JSON data regardless of this parameter, but it is validated).
+
+- `page` (optional): The page number for pagination. Must be a positive integer. Defaults to `1`.
+
+- `limit` (optional): The maximum number of results per page. Must be a positive integer. Defaults to `10`, maximum allowed is `50`.
+
+
+## Example Request
+
+Search for "example model" on page 2 with 5 results per page:
+
+```
+GET /api/search-llms?q=example%20model&page=2&limit=5
+```
+
+## Example Response (Success - 200 OK)
+
+```
+&lbrace;
+  "totalResults": 15,
+  "page": 2,
+  "limit": 5,
+  "results": [\
+    {\
+      "url": "https://example.com/model-a",\
+      "domain": "example.com",\
+      "title": "Example Model A",\
+      "summary": "An example language model.",\
+      "last_updated": "2024-01-15"\
+    },\
+    {\
+      "url": "https://example.org/model-b",\
+      "domain": "example.org",\
+      "title": "Example Model B",\
+      "summary": "Another example language model.",\
+      "last_updated": "2024-02-20"\
+    }\
+    // ... more results up to the limit\
+  ]
+&rbrace;
+```
+
+## Example Response (Error - 400 Bad Request)
+
+```
+&lbrace;
+  "error": "Missing or empty search query parameter "q"."
+&rbrace;
+```
+
+```
+&lbrace;
+  "error": "Invalid page parameter. Must be a positive integer."
+&rbrace;
+```
+
+## LLMs and AI Blog
+[Skip to content](https://llms-text.ai/blog#main-content)
+
+# Blog
+
+Read the latest updates and articles about LLMs, web standards, and AI development.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+An in-depth look at how different types of websites are implementing llms.txt and llms-full.txt files to optimize content for AI consumption.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+An exploration of how implementing llms.txt files can significantly improve customer experience, product discovery, and AI interactions for e-commerce websites.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+An in-depth exploration of potential security risks associated with implementing llms.txt files and best practices for mitigating these concerns.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+A comprehensive guide to creating llms.txt files for your website using Firecrawl's various tools and methods.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+An overview of the llms.txt web standard for helping LLMs understand website content.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+A comprehensive guide to using the LLMs search API for querying metadata and content.
+
+## Request or Report Site
+# Request New Site / Report Site
+
+## Request Addition of a New Site
+
+To request the addition of a site hosting an \`llms.txt\` or \`llms-full.txt\` file, please open an issue in our GitHub repository using the template below. Ensure the site isn't already listed and provides a valid file.
+
+[Request New Site via GitHub Issue](https://github.com/HillviewCap/llms/issues/new?template=new_site_request.md)
+
+## Report an Existing Site
+
+If you find a listed site that contains inappropriate content, malware, has a broken \`llms.txt\` file, or violates ethical guidelines, please report it by opening an issue in our GitHub repository using the template below.
+
+[Report Site via GitHub Issue](https://github.com/HillviewCap/llms/issues/new?template=report_site.md)
+
+## New Web Standard
+[← Back to Blog](https://llms-text.ai/blog)
+
+# A New Web Standard
+
+_By Zach · April 17, 2025 · 3 min read_
+
+The llms.txt file, introduced in September 2024, represents a new web standard designed to help Large Language Models (LLMs) efficiently process and understand website content by providing structured, markdown-formatted information that bypasses the complexities of HTML parsing and content filtering.
+
+## Understanding LLMS.txt Standard
+
+The standard consists of two primary file formats that serve different purposes. The basic llms.txt acts as a concise index file containing website summaries and links to markdown versions of important pages, essentially providing a roadmap for AI systems to navigate your content. Meanwhile, llms-full.txt offers a comprehensive approach by consolidating all technical documentation into a single extensive markdown document, eliminating the need for additional navigation but potentially exceeding an LLM’s context window limitations for sites with extensive content.
+
+This innovative approach addresses several challenges LLMs face when processing traditional web content, including:
+
+- Wasted processing power parsing irrelevant HTML/JavaScript
+- Difficulty distinguishing between core content and supplementary elements
+- Missing important context between pages
+
+Unlike robots.txt (which controls crawling permissions) or sitemap.xml (which lists indexable pages), llms.txt specifically focuses on helping AI systems understand your content when users request information related to your site.
+
+## File Structure Guidelines
+
+To create an effective llms.txt file, follow a specific markdown structure that begins with an H1 header containing your website name, followed by a blockquote that concisely summarizes your site’s purpose. The document should then include additional markdown sections providing context, H2 sections categorizing content with links to markdown versions, and optional sections that can be omitted if context length becomes constrained.
+
+A properly formatted llms.txt includes:
+
+- Links to markdown versions of pages (typically appended with .md to the original URL)
+- Brief descriptions of each linked resource
+- Hierarchical organization of content using proper markdown heading levels
+- Clean, structured content free from HTML markup and JavaScript
+
+This standardized structure ensures LLMs can efficiently parse your content’s hierarchy and understand relationships between different sections of your website, making it easier for AI systems to provide accurate information about your offerings when queried by users.
+
+## Implementation Steps
+
+Implementing llms.txt on your website involves a three-step process:
+
+1. Create the actual file. Website owners can either manually craft this document or utilize automated tools like the “Website LLMs.txt” WordPress plugin, dotenvx/llmstxt for static sites, or online generators such as llmstxtgenerator.org and llmstxt.firecrawl.dev.
+
+2. Provide markdown versions of key pages by appending .md to original URLs (e.g., `https://example.com/blog/important-article.md`). For URLs without filenames, append index.html.md instead.
+
+3. Upload the llms.txt file to your server’s root directory and ensure all markdown versions of your pages are accessible at their respective URLs.
+
+
+This standardized implementation allows any website, regardless of size or complexity, to make their content more accessible to AI systems in a structured, machine-readable format.
+
+## Benefits and Adoption
+
+Despite being relatively new, the llms.txt standard has gained significant traction with major organizations already implementing it, including Anthropic, Hugging Face, Perplexity, Zapier, and Cloudflare. Frameworks like LangChain and LangGraph have also integrated the standard into their documentation.
+
+Website owners who adopt this standard gain several advantages:
+
+- More accurate AI representation of their products and services
+- Enhanced user experience when visitors use AI assistants to inquire about offerings
+- Competitive edge as AI-driven search becomes more prevalent
+- Efficient content extraction without HTML and script interference
+- Future-proofing as AI information retrieval systems continue to evolve
+
+When deciding between formats, llms.txt works best for larger websites where compiling all content would exceed LLM context windows, while llms-full.txt is ideal for smaller sites or specific documentation where having consolidated content is beneficial.
+
+![Avatar for LLMS.txt Team](https://llms-text.ai/assets/default-avatar.png)
+
+### About LLMS.txt Team
+
+LLMS.txt Team is a contributor to the LLMS.txt Explorer blog.
+
+## Related Posts
+
+[📝](https://llms-text.ai/blog/how-llmstxt-are-used)
+
+### [How Websites Are Utilizing llms.txt Files](https://llms-text.ai/blog/how-llmstxt-are-used)
+
+An in-depth look at how different types of websites are implementing llms.txt and llms-full.txt files to optimize conten...
+
+[📝](https://llms-text.ai/blog/llmstxt-ecommerce-ux)
+
+### [How llms.txt Files Enhance E-Commerce User Experience](https://llms-text.ai/blog/llmstxt-ecommerce-ux)
+
+An exploration of how implementing llms.txt files can significantly improve customer experience, product discovery, and ...
+
+[📝](https://llms-text.ai/blog/llmstxt-security-concerns)
+
+### [Security Concerns with llms.txt Files](https://llms-text.ai/blog/llmstxt-security-concerns)
+
+An in-depth exploration of potential security risks associated with implementing llms.txt files and best practices for m...
+
+## 404 Page Not Found
+# 404
+
+## Page Not Found
+
+The page you're looking for doesn't exist or has been moved.
+
+[Back to Home](https://llms-text.ai/)
+
+## LLMS Explorer Sitemap
+https://llms-explorer.example.com/2025-04-02weekly1.0
+
+<urlsetxmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+
+<loc>https://llms-explorer.example.com/</loc>
+
+<lastmod>2025-04-02</lastmod>
+
+<changefreq>weekly</changefreq>
+
+<priority>1.0</priority>
+
+...
+
+</url>
+
+<!\-\- Additional pages would be added here as the site grows -->
+
+...
+
+</urlset>
+
+## Utilizing llms.txt Files
+[← Back to Blog](https://llms-text.ai/blog)
+
+# How Websites Are Utilizing llms.txt Files
+
+_By Zach · May 11, 2025 · 4 min read_
+
+Since their introduction in September 2024, llms.txt and llms-full.txt files have emerged as innovative strategies for optimizing website content for AI consumption. These files serve as structured guides that help Large Language Models (LLMs) better understand and navigate website content without struggling through complex HTML parsing and content filtering.
+
+## Understanding the llms.txt Ecosystem
+
+The llms.txt standard consists of two primary file types that serve complementary purposes:
+
+The basic **llms.txt** file provides a compact, simplified package of site data with structured navigation links and brief descriptions. It serves as a roadmap for LLMs to find the most relevant content on a site. Formatted in Markdown, it typically includes:
+
+- An H1 header with the site or project name
+- A blockquote providing a concise overview
+- Detailed sections with additional information
+- H2 headers organizing different content categories
+- Markdown lists with hyperlinks to key resources
+
+The more comprehensive **llms-full.txt** file consolidates all technical documentation into a single, extensive markdown document. It provides LLMs with the entirety of a site’s important content in one place, allowing for more thorough analysis and understanding without requiring navigation between multiple pages.
+
+## Implementation Across Different Website Types
+
+### Documentation and API References
+
+One of the most common applications of these files is organizing and presenting technical documentation:
+
+- **Streamlined Documentation Access**: Companies like Humanloop have implemented both formats, with their llms.txt providing a structured overview of documentation with one-sentence descriptions for each page, while their llms-full.txt contains comprehensive documentation content and API references.
+
+- **Technical Reference Centralization**: Major AI companies including Anthropic, Hugging Face, Perplexity, and Zapier have created llms-full.txt files to consolidate their documentation, making it easier for LLMs to access complete information about their technologies.
+
+- **Code Snippet Organization**: The files are being used to present code examples in a clean, machine-readable format, as seen with Fireproof Storage’s implementation for JavaScript code examples.
+
+
+### E-commerce and Product Sites
+
+Online retailers are finding innovative ways to leverage these files:
+
+- **Product Indexing**: E-commerce sites use llms.txt to provide structured information about their products, including descriptions, categories, and policies.
+
+- **Service Description**: Service-oriented websites implement these files to help LLMs understand their service offerings, pricing structures, and comparative advantages.
+
+
+### Corporate Information Management
+
+Organizations are using llms.txt to better organize and present their corporate information:
+
+- **Policy Documentation**: Companies utilize these files to make their security policies, terms of service, and privacy information more accessible to AI systems.
+
+- **Business Structure Information**: The versatility of llms.txt allows businesses to outline their organizational structure in a format that LLMs can easily process and explain to users.
+
+
+### Educational Resources
+
+Educational institutions are implementing these files to organize their learning materials:
+
+- **Course Information Access**: Schools and universities are using llms.txt to provide quick access to course information, curricula, and educational resources in a format optimized for AI consumption.
+
+- **Research Paper Organization**: Academic websites are implementing these files to make research papers and scholarly content more accessible to AI systems.
+
+
+### Marketing and Visibility Optimization
+
+Some websites are strategically using these files for marketing purposes:
+
+- **AI Search Visibility**: By implementing llms.txt, websites aim to improve their visibility in AI-powered search results and increase the likelihood of being referenced in AI responses.
+
+- **Brand Representation**: Businesses are using these files to ensure their brand is accurately represented when LLMs generate responses about their industry or offerings.
+
+
+## Implementation Approaches
+
+Website owners have several options for creating llms.txt files:
+
+1. **Manual Creation**: For smaller sites with limited content, manually crafting these files provides the most control over how information is presented to LLMs.
+
+2. **Automated Tools**: Several online generators have emerged, including llmstxt.firecrawl.dev and llmstxtgenerator.org, which can automatically create llms.txt files by crawling website content.
+
+3. **CMS Extensions**: WordPress users can leverage plugins specifically designed to generate and maintain llms.txt files as site content changes.
+
+4. **Development Libraries**: For static sites, tools like dotenvx/llmstxt can help generate and maintain these files as part of the build process.
+
+
+The choice of implementation approach depends on site size, complexity, and how frequently content changes.
+
+## Current Adoption and Challenges
+
+Despite being relatively new, the llms.txt standard has gained significant traction with major organizations already implementing it, including Anthropic, Hugging Face, Perplexity, Zapier, and Cloudflare. Frameworks like LangChain and LangGraph have also integrated the standard into their documentation.
+
+However, several challenges remain:
+
+- **Limited Official Support**: No major LLM provider currently officially supports llms.txt, making its immediate impact uncertain.
+
+- **Effectiveness Questions**: Google’s John Mueller has compared llms.txt to the keywords meta tag, suggesting limited practical utility without widespread adoption by AI systems.
+
+- **Format Decisions**: Website owners must decide whether to implement the concise llms.txt (better for larger sites where compiling all content would exceed LLM context windows) or the comprehensive llms-full.txt (ideal for smaller sites or specific documentation).
+
+
+## The Future of llms.txt
+
+As the relationship between websites and AI systems continues to evolve, these files may become increasingly important for ensuring accurate representation in AI-generated responses and optimizing visibility in AI-powered search environments.
+
+Website owners who adopt this standard gain several advantages:
+
+- More accurate AI representation of their products and services
+- Enhanced user experience when visitors use AI assistants to inquire about offerings
+- Competitive edge as AI-driven search becomes more prevalent
+- Efficient content extraction without HTML and script interference
+- Future-proofing as AI information retrieval systems continue to evolve
+
+While the ultimate impact of llms.txt will depend on adoption by major LLM providers and the evolution of AI content processing standards, forward-thinking organizations are already implementing these files to prepare for an increasingly AI-driven web ecosystem.
+
+![Avatar for LLMS.txt Team](https://llms-text.ai/assets/default-avatar.png)
+
+### About LLMS.txt Team
+
+LLMS.txt Team is a contributor to the LLMS.txt Explorer blog.
+
+## Related Posts
+
+[📝](https://llms-text.ai/blog/a-new-web-standard)
+
+### [A New Web Standard](https://llms-text.ai/blog/a-new-web-standard)
+
+An overview of the llms.txt web standard for helping LLMs understand website content.
+
+[📝](https://llms-text.ai/blog/llmstxt-ecommerce-ux)
+
+### [How llms.txt Files Enhance E-Commerce User Experience](https://llms-text.ai/blog/llmstxt-ecommerce-ux)
+
+An exploration of how implementing llms.txt files can significantly improve customer experience, product discovery, and ...
+
+[📝](https://llms-text.ai/blog/llmstxt-security-concerns)
+
+### [Security Concerns with llms.txt Files](https://llms-text.ai/blog/llmstxt-security-concerns)
+
+An in-depth exploration of potential security risks associated with implementing llms.txt files and best practices for m...
+
+## LLMs Blog Articles
+[Skip to content](https://llms-text.ai/blog?tag=llms#main-content)
+
+# Blog
+
+Read the latest updates and articles about LLMs, web standards, and AI development.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+An in-depth look at how different types of websites are implementing llms.txt and llms-full.txt files to optimize content for AI consumption.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+An exploration of how implementing llms.txt files can significantly improve customer experience, product discovery, and AI interactions for e-commerce websites.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+An in-depth exploration of potential security risks associated with implementing llms.txt files and best practices for mitigating these concerns.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+A comprehensive guide to creating llms.txt files for your website using Firecrawl's various tools and methods.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+An overview of the llms.txt web standard for helping LLMs understand website content.
+
+![Blog post thumbnail](https://llms-text.ai/assets/favicon-32x32.png)
+
+A comprehensive guide to using the LLMs search API for querying metadata and content.
+
