@@ -22,10 +22,10 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="text-2xl font-semibold mb-3">Query Parameters</h2>
       <ul class="list-disc list-inside space-y-2">
         <li>
-          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">q</code> (<strong>required</strong>): The search term to query against LLM titles and summaries.
+          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">q</code> (<strong>required</strong>): The search term to query against domain, URL, title, summary, and metadata fields including topics and purpose rankings.
         </li>
         <li>
-          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">fileType</code> (optional): Filters the search based on source file type. Allowed values: <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'llms.txt'</code>, <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'llms-full.txt'</code>, <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'both'</code>. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'both'</code>. (Note: Current implementation searches all JSON data regardless of this parameter, but it is validated).
+          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">fileType</code> (optional): Filters the search based on source file type. Allowed values: <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'llms.txt'</code>, <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'llms-full.txt'</code>, <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'both'</code>. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'both'</code>.
         </li>
         <li>
           <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">page</code> (optional): The page number for pagination. Must be a positive integer. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">1</code>.
@@ -45,27 +45,46 @@ import Layout from '../layouts/Layout.astro';
     <section>
       <h2 class="text-2xl font-semibold mb-3">Example Response (Success - 200 OK)</h2>
       <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
-  "totalResults": 15,
-  "page": 2,
-  "limit": 5,
-  "results": [
-    {
-      "url": "https://example.com/model-a",
-      "domain": "example.com",
-      "title": "Example Model A",
-      "summary": "An example language model.",
-      "last_updated": "2024-01-15"
-    },
-    {
-      "url": "https://example.org/model-b",
-      "domain": "example.org",
-      "title": "Example Model B",
-      "summary": "Another example language model.",
-      "last_updated": "2024-02-20"
-    }
-    // ... more results up to the limit
-  ]
-&rbrace;`}</code></pre>
+         "totalResults": 15,
+         "page": 2,
+         "limit": 5,
+         "results": [
+           {
+             "url": "https://example.com/llms.txt",
+             "domain": "example.com",
+             "content_hash": "a1b2c3d4e5f6...",
+             "last_checked_utc": "2025-04-15T14:32:10Z",
+             "title": "Example Model A",
+             "summary": "An example language model.",
+             "quality": "High",
+             "metadata": {
+               "source_domain": "example.com",
+               "url_purpose_ranking": ["Plain Text Resource"],
+               "url_topic_ranking": [
+                 ["AI/ML", 278],
+                 ["Software Development", 204]
+               ],
+               "domain_purpose_ranking": ["Documentation"],
+               "domain_topic_ranking": [
+                 ["Software Development", 15],
+                 ["AI/ML", 10]
+               ],
+               "url_token_count": 45678
+             },
+             "first_added": "2025-03-15T12:00:00Z",
+             "last_updated": "2025-04-15T14:32:10Z"
+           },
+           {
+             "url": "https://example.org/llms-full.txt",
+             "domain": "example.org",
+             "title": "Example Model B",
+             "summary": "Another example language model.",
+             "last_updated": "2025-04-20T09:15:30Z"
+             // ... other fields available
+           }
+           // ... more results up to the limit
+         ]
+       &rbrace;`}</code></pre>
     </section>
 
      <section class="mt-8">

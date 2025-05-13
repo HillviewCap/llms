@@ -35,13 +35,22 @@ The API accepts the following query parameters:
 
 ### The `q` Parameter
 
-The `q` parameter is **required** and specifies the search query. The API searches for this term in the title and summary fields of the LLM metadata. For example:
+The `q` parameter is **required** and specifies the search query. The API performs a comprehensive search across multiple fields including:
+
+- Domain and URL
+- Title and summary
+- All metadata fields including:
+  - Source domain
+  - Topic rankings (both URL and domain)
+  - Purpose rankings (both URL and domain)
+
+For example:
 
 ```http
 GET /api/search-llms?q=cloudflare
 ```
 
-This will return all entries where "cloudflare" appears in the title or summary.
+This will return all entries where "cloudflare" appears in any of these searchable fields, providing more comprehensive results than before.
 
 ### The `fileType` Parameter
 
@@ -87,9 +96,11 @@ The API returns JSON responses with the following structure:
     {
       "url": "https://example.com/llms.txt",
       "domain": "example.com",
+      "content_hash": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z",
+      "last_checked_utc": "2025-05-09T16:20:52.451356Z",
       "title": "Example Site",
       "summary": "This is an example site with LLM support.",
-      "last_updated": "2025-04-07T02:21:20Z",
+      "quality": "Medium",
       "metadata": {
         "source_domain": "example.com",
         "url_purpose_ranking": ["Plain Text Resource"],
@@ -103,8 +114,13 @@ The API returns JSON responses with the following structure:
           ["Software Development", 15],
           ["Science", 11],
           ["Education", 10]
-        ]
-      }
+        ],
+        "url_token_count": 45678,
+        "previous_url_token_count": 45000
+      },
+      "first_added": "2025-04-04T17:49:02Z",
+      "last_updated": "2025-05-09T16:20:52.451356Z",
+      "previous_content_hash": "z5y4x3w2v1u0t9s8r7q6p5o4n3m2l1k0j9i8h7g6f5e4d3c2b1a"
     }
     // Additional results...
   ]
@@ -117,15 +133,22 @@ Each result in the `results` array contains:
 
 - `url` - The URL of the LLM file
 - `domain` - The domain of the website
+- `content_hash` - A hash of the file content for version tracking
+- `last_checked_utc` - When the content was last validated
 - `title` - The title of the website
 - `summary` - A brief summary of the website content (if available)
-- `last_updated` - When the entry was last updated
+- `quality` - Quality rating of the content (e.g., "High", "Medium", "Low")
 - `metadata` - Additional metadata about the site, including:
   - `source_domain` - The original domain
   - `url_purpose_ranking` - Purpose categories for the URL
   - `url_topic_ranking` - Topic rankings for the URL with scores
   - `domain_purpose_ranking` - Purpose categories for the domain
   - `domain_topic_ranking` - Topic rankings for the domain with scores
+  - `url_token_count` - Approximate token count of the content
+  - `previous_url_token_count` - Token count from previous check (if available)
+- `first_added` - When the entry was first added to the database
+- `last_updated` - When the entry was last updated
+- `previous_content_hash` - Hash of the previous version (if available)
 
 ## Example API Requests
 
@@ -241,7 +264,7 @@ Invoke-WebRequest -Uri "https://llms-text.ai/api/search-llms?q=Software+Developm
 iwr -Uri "https://llms-text.ai/api/search-llms?q=Software+Development" | Select -ExpandProperty Content
 ```
 
-This will return sites where "Software Development" appears in the title, summary, or is a significant topic in the metadata rankings.
+This will return sites where "Software Development" appears in the domain, URL, title, summary, or any of the metadata fields, including topic and purpose rankings.
 
 ### Paginated Results
 
@@ -316,6 +339,8 @@ While the examples above show both curl/wget (Unix-based) and PowerShell approac
 2. **Implement pagination** - Always handle pagination for queries that might return many results
 3. **Handle errors gracefully** - Check for error responses and display appropriate messages
 4. **Cache results when appropriate** - Consider caching results to reduce API load
+5. **Search domains directly** - You can directly search for specific domains in the query
+6. **Utilize topic searching** - Search for specific topics like "Cybersecurity" or "AI/ML" to find relevant content
 
 ## Conclusion
 
