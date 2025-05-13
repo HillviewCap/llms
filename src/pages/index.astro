@@ -105,12 +105,12 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
     // Check if first_added equals last_updated
     const sameDate = firstAddedDate === lastUpdatedDate;
 
-    // Check if these dates are within the last 5 days
-    const fiveDaysAgo = new Date();
-    fiveDaysAgo.setDate(fiveDaysAgo.getDate() - 5);
-    fiveDaysAgo.setHours(0, 0, 0, 0);
+    // Check if these dates are within the last 3 days
+    const threeDaysAgo = new Date();
+    threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
+    threeDaysAgo.setHours(0, 0, 0, 0);
 
-    const isRecent = new Date(firstAddedDate).getTime() > fiveDaysAgo.getTime();
+    const isRecent = new Date(firstAddedDate).getTime() > threeDaysAgo.getTime();
 
     // Return true only if both conditions are met
     return sameDate && isRecent;
@@ -218,8 +218,15 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
         {
           data: "last_updated",
           title: "Last Updated",
+          type: "date", // Specify column type as date for proper sorting
           render: function (data, type, row) {
-            return data ? new Date(data).toLocaleDateString() : "N/A";
+            if (!data) return "N/A";
+            // For sorting operations, return the timestamp for chronological sorting
+            if (type === 'sort' || type === 'type') {
+              return new Date(data).getTime();
+            }
+            // For display, return the formatted date
+            return new Date(data).toLocaleDateString();
           },
         },
         {
@@ -304,14 +311,31 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
 
   /* Control buttons */
   table.dataTable td.dt-control {
-    background: url("https://datatables.net/examples/resources/details_open.png")
-      no-repeat center center;
     cursor: pointer;
+    position: relative;
   }
 
-  table.dataTable tr.shown td.dt-control {
-    background: url("https://datatables.net/examples/resources/details_close.png")
-      no-repeat center center;
+  table.dataTable td.dt-control::before {
+    content: '+';
+    display: inline-block;
+    background-color: #48bb78; /* green-500 */
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  table.dataTable tr.shown td.dt-control::before {
+    content: '-';
+    line-height: 18px;
   }
 
   /* Pagination controls */
