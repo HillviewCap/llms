@@ -7,30 +7,49 @@ import type { ValidationRules } from '../api/middleware/validation';
 import { logRequest, LogLevel, createLogEntry, logEntry } from '../api/middleware/logging';
 import { createSecureJsonResponse, createSecureErrorResponse } from '../api/utils/security-headers';
 
-// Define interface to match the actual structure of the imported data
-interface LlmMetadata {
+// Define interface to match the updated structure of the imported data
+interface LlmMetadataItem {
   url: string;
   domain: string;
+  content_hash: string;
+  last_checked_utc: string;
   title: string;
-  summary: string;
-  last_updated?: string;
-  last_checked_utc?: string;
-  content_hash?: string;
+  summary?: string;
   quality?: string;
-  first_added?: string;
-  // Add other potential fields if they exist in the JSON
-  metadata?: {
-    source_domain?: string;
-    url_purpose_ranking?: string[];
-    url_topic_ranking?: [string, number][];
-    domain_purpose_ranking?: string[];
-    domain_topic_ranking?: [string, number][];
+  metadata: {
+    source_domain: string;
+    url_purpose_ranking: string[];
+    url_topic_ranking: [string, number][];
+    domain_purpose_ranking: string[];
+    domain_topic_ranking: [string, number][];
+    url_token_count?: number;
+    previous_url_token_count?: number;
   };
-  url_token_count?: number;
+  first_added: string;
+  last_updated: string;
+  previous_content_hash?: string;
 }
 
-// Type assertion for the imported data
-const allLlms: LlmMetadata[] = llmsData as unknown as LlmMetadata[];
+// Define interface for the new JSON structure
+interface LlmsDataRecord {
+  [domain: string]: LlmMetadataItem;
+}
+
+// Convert the object structure to an array for easier processing
+const llmsDataObject: LlmsDataRecord = llmsData as unknown as LlmsDataRecord;
+const allLlms: LlmMetadataItem[] = Object.values(llmsDataObject);
+
+// Log data structure for debugging
+logEntry(createLogEntry(
+  LogLevel.DEBUG,
+  `Loaded ${allLlms.length} records from metadata JSON`,
+  {
+    additionalData: {
+      sampleKeys: Object.keys(llmsDataObject).slice(0, 3),
+      dataFormat: typeof llmsDataObject
+    }
+  }
+));
 
 // Define validation schema for search parameters
 const searchValidationSchema: ValidationRules = {
@@ -135,6 +154,10 @@ const searchHandler = async (context: APIContext) => {
     ));
     
     const filteredResults = allLlms.filter(llm => {
+      // Search in domain and URL
+      const domainMatch = llm.domain && llm.domain.toLowerCase().includes(lowerCaseQuery);
+      const urlMatch = llm.url && llm.url.toLowerCase().includes(lowerCaseQuery);
+      
       // Search in title and summary
       const titleMatch = llm.title && llm.title.toLowerCase().includes(lowerCaseQuery);
       const summaryMatch = llm.summary && llm.summary.toLowerCase().includes(lowerCaseQuery);
@@ -166,9 +189,28 @@ const searchHandler = async (context: APIContext) => {
             }
           }
         }
+        
+        // Check purpose rankings
+        if (llm.metadata.url_purpose_ranking) {
+          for (const purpose of llm.metadata.url_purpose_ranking) {
+            if (purpose.toLowerCase().includes(lowerCaseQuery)) {
+              metadataMatch = true;
+              break;
+            }
+          }
+        }
+        
+        if (llm.metadata.domain_purpose_ranking) {
+          for (const purpose of llm.metadata.domain_purpose_ranking) {
+            if (purpose.toLowerCase().includes(lowerCaseQuery)) {
+              metadataMatch = true;
+              break;
+            }
+          }
+        }
       }
       
-      const isMatch = titleMatch || summaryMatch || metadataMatch;
+      const isMatch = domainMatch || urlMatch || titleMatch || summaryMatch || metadataMatch;
       
       // DEBUG: Log a sample of matches and non-matches (without referencing filteredResults)
       if ((isMatch && Math.random() < 0.1) || (!isMatch && Math.random() < 0.01)) {
