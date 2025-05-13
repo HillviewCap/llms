@@ -13,7 +13,7 @@ interface Props {
 
 const {
   name,
-  avatar = "public/assets/favicon-32x32.png",
+  avatar = name === "LLMS.txt Team" ? "/assets/llms-text.jpg" : "/assets/favicon-32x32.png",
   bio = "",
   showFull = false,
 } = Astro.props;

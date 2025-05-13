@@ -250,7 +250,7 @@
   }
   
   .blog-content-wrapper {
-    @apply col-span-2;
+    @apply col-span-2 mx-auto max-w-4xl;
   }
   
   .blog-toc-wrapper {
