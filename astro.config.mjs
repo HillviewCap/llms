@@ -20,7 +20,23 @@ export default defineConfig({
   },
   compressHTML: true,
   integrations: [
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.includes('/api/'),
+      customPages: [
+        'https://llms-text.ai/',
+        'https://llms-text.ai/about',
+        'https://llms-text.ai/legal',
+        'https://llms-text.ai/request',
+        'https://llms-text.ai/blog',
+        'https://llms-text.ai/blog/a-new-web-standard',
+        'https://llms-text.ai/blog/firecrawl-llmstxt-howto',
+        'https://llms-text.ai/blog/how-llmstxt-are-used',
+        'https://llms-text.ai/blog/how-to-use-search-api',
+        'https://llms-text.ai/blog/llmstxt-ecommerce-ux',
+        'https://llms-text.ai/blog/llmstxt-security-concerns',
+      ],
+      entryLimit: 10000,
+    }),
     compress({
       CSS: true,
       HTML: true,
