@@ -1,0 +1,442 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
+
+interface MetadataEntry {
+  url: string;
+  domain: string;
+  content_hash: string;
+  last_checked_utc: string;
+  title: string;
+  summary?: string;
+  quality: 'High' | 'Medium' | 'Low' | 'Unknown';
+  metadata: {
+    source_domain: string;
+    url_purpose_ranking: string[];
+    url_topic_ranking: [string, number][];
+    domain_purpose_ranking: string[];
+    domain_topic_ranking?: [string, number][];
+    url_token_count: number;
+    previous_url_token_count?: number;
+  };
+  first_added: string;
+  last_updated: string;
+  previous_content_hash?: string;
+}
+
+type MetadataRecord = Record<string, MetadataEntry>;
+
+// Read and parse the JSON data
+const dataPath = path.join(process.cwd(), 'src', 'data', 'llms_metadata.json');
+const rawData = await readFile(dataPath, 'utf-8');
+const data = JSON.parse(rawData) as MetadataRecord;
+
+// Helper function to calculate days difference
+const daysDifference = (date: string) => {
+  const now = new Date();
+  const compareDate = new Date(date);
+  return Math.floor((now.getTime() - compareDate.getTime()) / (1000 * 60 * 60 * 24));
+};
+
+// Calculate overview statistics
+const totalEntries = Object.keys(data).length;
+const totalTokens = Object.values(data).reduce((sum, entry) => 
+  sum + entry.metadata.url_token_count, 0);
+const avgTokens = Math.round(totalTokens / totalEntries);
+
+// Calculate entries by time period
+const getEntriesInPeriod = (days: number) => {
+  return Object.values(data).filter(entry => 
+    daysDifference(entry.last_updated) <= days
+  ).length;
+};
+
+const last7DaysEntries = getEntriesInPeriod(7);
+const last30DaysEntries = getEntriesInPeriod(30);
+
+// Calculate quality distribution
+const qualityDistribution = Object.values(data).reduce((acc: Record<string, number>, entry) => {
+  const quality = entry.quality || 'Unknown';
+  acc[quality] = (acc[quality] || 0) + 1;
+  return acc;
+}, {});
+
+// Get top topics (url and domain)
+const getTopTopics = (entries: MetadataEntry[], type: 'url_topic_ranking' | 'domain_topic_ranking', limit = 10) => {
+  const topicCounts: Record<string, number> = {};
+  
+  entries.forEach(entry => {
+    const rankings = entry.metadata[type] || [];
+    rankings.forEach(ranking => {
+      if (Array.isArray(ranking)) {
+        const [topic] = ranking; // Only use the topic name, ignore the score
+        topicCounts[topic] = (topicCounts[topic] || 0) + 1; // Increment count by 1 for each occurrence
+      }
+    });
+  });
+
+  return Object.entries(topicCounts)
+    .sort(([,a], [,b]) => b - a)
+    .slice(0, limit);
+};
+
+const topUrlTopics = getTopTopics(Object.values(data), 'url_topic_ranking');
+const topDomainTopics = getTopTopics(Object.values(data), 'domain_topic_ranking');
+
+// Get purpose distribution
+const getPurposeDistribution = (entries: MetadataEntry[], type: 'url_purpose_ranking' | 'domain_purpose_ranking') => {
+  const purposeCounts: Record<string, number> = {};
+  
+  entries.forEach(entry => {
+    const purposes = entry.metadata[type] || [];
+    purposes.forEach(purpose => {
+      purposeCounts[purpose] = (purposeCounts[purpose] || 0) + 1;
+    });
+  });
+
+  return purposeCounts;
+};
+
+const urlPurposes = getPurposeDistribution(Object.values(data), 'url_purpose_ranking');
+const domainPurposes = getPurposeDistribution(Object.values(data), 'domain_purpose_ranking');
+
+// Calculate monthly growth
+const getMonthlyGrowth = () => {
+  const monthlyData: Record<string, number> = {};
+  
+  Object.values(data).forEach(entry => {
+    const date = new Date(entry.first_added);
+    const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+    monthlyData[monthKey] = (monthlyData[monthKey] || 0) + 1;
+  });
+
+  return Object.entries(monthlyData)
+    .sort(([a], [b]) => a.localeCompare(b));
+};
+
+const monthlyGrowth = getMonthlyGrowth();
+
+// Prepare data for client-side
+const chartData = {
+  qualityDistribution,
+  monthlyGrowth,
+  topUrlTopics,
+  topDomainTopics,
+  urlPurposes,
+  domainPurposes,
+  stats: {
+    totalEntries,
+    last7DaysEntries,
+    last30DaysEntries
+  }
+};
+---
+
+<Layout title="LLMS.txt Metrics Dashboard" description="Analytics and insights from the LLMS.txt ecosystem">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">LLMS.txt Metrics Dashboard</h1>
+    
+    <!-- Time Period Filter -->
+    <div class="mb-8 flex gap-4">
+      <button class="time-filter px-4 py-2 rounded bg-blue-500 text-white" data-days="7">Last 7 Days</button>
+      <button class="time-filter px-4 py-2 rounded bg-blue-500 text-white" data-days="30">Last 30 Days</button>
+      <button class="time-filter px-4 py-2 rounded bg-blue-500 text-white" data-days="all">All Time</button>
+    </div>
+
+    <!-- Overview Statistics -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Total Entries</h3>
+        <p class="text-3xl font-bold text-gray-900 dark:text-white" id="totalEntries">{totalEntries}</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Recent Updates</h3>
+        <p class="text-3xl font-bold text-gray-900 dark:text-white" id="recentUpdates">{last7DaysEntries}</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Average Tokens</h3>
+        <p class="text-3xl font-bold text-gray-900 dark:text-white">{avgTokens}</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Total Tokens</h3>
+        <p class="text-3xl font-bold text-gray-900 dark:text-white">{totalTokens}</p>
+      </div>
+    </div>
+
+    <!-- Charts Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Quality Distribution -->
+      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Quality Distribution</h3>
+        <canvas id="qualityChart"></canvas>
+      </div>
+
+      <!-- Entry Growth -->
+      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Entry Growth Over Time</h3>
+        <canvas id="growthChart"></canvas>
+      </div>
+
+      <!-- URL Topics -->
+      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Top LLM Text Topics</h3>
+        <canvas id="urlTopicsChart"></canvas>
+      </div>
+
+      <!-- Domain Topics -->
+      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Top Domain Topics</h3>
+        <canvas id="domainTopicsChart"></canvas>
+      </div>
+
+      <!-- URL Purposes -->
+      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">LLM Text Purposes</h3>
+        <canvas id="urlPurposesChart"></canvas>
+      </div>
+
+      <!-- Domain Purposes -->
+      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Domain Purposes</h3>
+        <canvas id="domainPurposesChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script define:vars={{ chartData }}>
+    // Chart colors
+    const colors = [
+      '#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#6366F1',
+      '#EC4899', '#8B5CF6', '#14B8A6', '#F97316', '#06B6D4'
+    ];
+
+    // Initialize charts
+    // Global chart options for better text contrast
+    const globalOptions = {
+      plugins: {
+        legend: {
+          labels: {
+            color: '#111827', // text-gray-900 equivalent
+            font: {
+              weight: '500'
+            }
+          }
+        }
+      }
+    };
+
+    function initializeCharts() {
+      Chart.defaults.color = '#111827'; // Set default text color for all charts
+      
+      // Quality Distribution Pie Chart
+      const qualityChart = document.getElementById('qualityChart');
+      if (qualityChart) {
+        new Chart(qualityChart, {
+          type: 'pie',
+          data: {
+            labels: Object.keys(chartData.qualityDistribution),
+            datasets: [{
+              data: Object.values(chartData.qualityDistribution),
+              backgroundColor: colors
+            }]
+          },
+          options: {
+            ...globalOptions
+          }
+        });
+      }
+
+      // Growth Line Chart
+      const growthChart = document.getElementById('growthChart');
+      if (growthChart) {
+        new Chart(growthChart, {
+          type: 'line',
+          data: {
+            labels: chartData.monthlyGrowth.map(entry => entry[0]),
+            datasets: [{
+              label: 'New Entries',
+              data: chartData.monthlyGrowth.map(entry => entry[1]),
+              borderColor: colors[0],
+              tension: 0.1
+            }]
+          },
+          options: {
+            ...globalOptions,
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  color: '#111827'
+                }
+              },
+              x: {
+                ticks: {
+                  color: '#111827'
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // URL Topics Bar Chart
+      const urlTopicsChart = document.getElementById('urlTopicsChart');
+      if (urlTopicsChart) {
+        new Chart(urlTopicsChart, {
+          type: 'bar',
+          data: {
+            labels: chartData.topUrlTopics.map(entry => entry[0]),
+            datasets: [{
+              label: 'Frequency',
+              data: chartData.topUrlTopics.map(entry => entry[1]),
+              backgroundColor: colors[0]
+            }]
+          },
+          options: {
+            ...globalOptions,
+            indexAxis: 'y',
+            scales: {
+              x: {
+                ticks: {
+                  color: '#111827'
+                }
+              },
+              y: {
+                ticks: {
+                  color: '#111827'
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // Domain Topics Bar Chart
+      const domainTopicsChart = document.getElementById('domainTopicsChart');
+      if (domainTopicsChart) {
+        new Chart(domainTopicsChart, {
+          type: 'bar',
+          data: {
+            labels: chartData.topDomainTopics.map(entry => entry[0]),
+            datasets: [{
+              label: 'Frequency',
+              data: chartData.topDomainTopics.map(entry => entry[1]),
+              backgroundColor: colors[1]
+            }]
+          },
+          options: {
+            ...globalOptions,
+            indexAxis: 'y',
+            scales: {
+              x: {
+                ticks: {
+                  color: '#111827'
+                }
+              },
+              y: {
+                ticks: {
+                  color: '#111827'
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // URL Purposes Bar Chart
+      const urlPurposesChart = document.getElementById('urlPurposesChart');
+      if (urlPurposesChart) {
+        new Chart(urlPurposesChart, {
+          type: 'bar',
+          data: {
+            labels: Object.keys(chartData.urlPurposes),
+            datasets: [{
+              label: 'Count',
+              data: Object.values(chartData.urlPurposes),
+              backgroundColor: colors[2]
+            }]
+          },
+          options: {
+            ...globalOptions,
+            scales: {
+              x: {
+                ticks: {
+                  color: '#111827'
+                }
+              },
+              y: {
+                ticks: {
+                  color: '#111827'
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // Domain Purposes Bar Chart
+      const domainPurposesChart = document.getElementById('domainPurposesChart');
+      if (domainPurposesChart) {
+        new Chart(domainPurposesChart, {
+          type: 'bar',
+          data: {
+            labels: Object.keys(chartData.domainPurposes),
+            datasets: [{
+              label: 'Count',
+              data: Object.values(chartData.domainPurposes),
+              backgroundColor: colors[3]
+            }]
+          },
+          options: {
+            ...globalOptions,
+            scales: {
+              x: {
+                ticks: {
+                  color: '#111827'
+                }
+              },
+              y: {
+                ticks: {
+                  color: '#111827'
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    // Initialize charts when the page loads
+    document.addEventListener('DOMContentLoaded', initializeCharts);
+
+    // Time filter functionality
+    document.querySelectorAll('.time-filter').forEach(button => {
+      button.addEventListener('click', () => {
+        const days = button.getAttribute('data-days');
+        // Update active state
+        document.querySelectorAll('.time-filter').forEach(btn => {
+          btn.classList.remove('bg-blue-700');
+          btn.classList.add('bg-blue-500');
+        });
+        button.classList.remove('bg-blue-500');
+        button.classList.add('bg-blue-700');
+
+        // Update metrics based on time period
+        const recentUpdates = document.getElementById('recentUpdates');
+        if (recentUpdates) {
+          if (days === '7') {
+            recentUpdates.textContent = String(chartData.stats.last7DaysEntries);
+          } else if (days === '30') {
+            recentUpdates.textContent = String(chartData.stats.last30DaysEntries);
+          } else {
+            recentUpdates.textContent = String(chartData.stats.totalEntries);
+          }
+        }
+      });
+    });
+  </script>
+</Layout>
