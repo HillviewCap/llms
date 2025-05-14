@@ -1,0 +1,213 @@
+{
+  "https://launchdarkly.com/docs/llms.txt": {
+    "url": "https://launchdarkly.com/docs/llms.txt",
+    "domain": "launchdarkly.com",
+    "content_hash": "88f652da425ae78e7c2b4cabb2cfe80abc15bfc297d6d04f4ff83f21d05a334d",
+    "last_checked_utc": "2025-05-09T16:20:52.451356Z",
+    "title": "Welcome to LaunchDarkly docs",
+    "summary": "<div class=\"center\">",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "launchdarkly.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "AI/ML",
+          278
+        ],
+        [
+          "Software Development",
+          207
+        ],
+        [
+          "Science",
+          149
+        ]
+      ],
+      "url_token_count": 78512,
+      "domain_purpose_ranking": [
+        "Other"
+      ]
+    },
+    "first_added": "2025-05-09T04:25:15Z",
+    "last_updated": "2025-05-09T04:25:15Z"
+  },
+  "https://js.langchain.com/llms.txt": {
+    "url": "https://js.langchain.com/llms.txt",
+    "domain": "js.langchain.com",
+    "content_hash": "8eb44900b8fcf728377ad583bcfd204656ee8938a411ce11100a2a3603932f2e",
+    "last_checked_utc": "2025-05-09T16:20:52.659635Z",
+    "title": "LangChain JavaScript",
+    "summary": "This guide provides explanations of the key concepts behind the LangChain framework and AI applicati",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "js.langchain.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "AI/ML",
+          399
+        ],
+        [
+          "Data & Databases",
+          155
+        ],
+        [
+          "Education",
+          130
+        ]
+      ],
+      "domain_purpose_ranking": [
+        "Homepage"
+      ],
+      "domain_topic_ranking": [
+        [
+          "Other",
+          0
+        ]
+      ],
+      "url_token_count": 23943
+    },
+    "first_added": "2025-04-04T17:49:02Z",
+    "last_updated": "2025-05-09T16:20:52.659635Z",
+    "previous_content_hash": "5d76916216b25acc450e492ad042494e47bd745e1b566af7dccf034a2df1b931"
+  },
+  "https://digicert.com/llms.txt": {
+    "url": "https://digicert.com/llms.txt",
+    "domain": "digicert.com",
+    "content_hash": "10bd608462541e3834b1f91118166312d085daa1e2d74c191e63ef3082d74b60",
+    "last_checked_utc": "2025-05-13T19:49:11Z",
+    "title": "DigiCert",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "digicert.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Cybersecurity",
+          11
+        ],
+        [
+          "Hardware",
+          9
+        ],
+        [
+          "Software Development",
+          7
+        ]
+      ],
+      "domain_purpose_ranking": [
+        "Product/Service Page"
+      ],
+      "domain_topic_ranking": [
+        [
+          "E-commerce",
+          23
+        ],
+        [
+          "Software Development",
+          21
+        ],
+        [
+          "Hardware",
+          19
+        ]
+      ],
+      "url_token_count": 1680
+    },
+    "first_added": "2025-04-04T17:49:02Z",
+    "last_updated": "2025-04-04T17:49:02Z"
+  },
+  "https://docs.tilebox.com/llms-full.txt": {
+    "url": "https://docs.tilebox.com/llms-full.txt",
+    "domain": "docs.tilebox.com",
+    "content_hash": "2f1c346b460eca8eace13eaf42285305bea4b5b903c264a903ccc7320f0b0e3f",
+    "last_checked_utc": "2025-05-09T16:20:53.729477Z",
+    "title": "AI Assistance",
+    "summary": "Source: https://docs.tilebox.com/ai-assistance",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.tilebox.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Data & Databases",
+          548
+        ],
+        [
+          "AI/ML",
+          491
+        ],
+        [
+          "Software Development",
+          190
+        ]
+      ],
+      "domain_purpose_ranking": [
+        "Documentation"
+      ],
+      "domain_topic_ranking": [
+        [
+          "Software Development",
+          1
+        ],
+        [
+          "AI/ML",
+          1
+        ],
+        [
+          "Data & Databases",
+          1
+        ]
+      ],
+      "url_token_count": 66182,
+      "previous_url_token_count": 66858
+    },
+    "first_added": "2025-04-04T17:49:02Z",
+    "last_updated": "2025-05-09T16:20:53.729477Z",
+    "previous_content_hash": "d7250a927db6a96ae00b0d3ea0a20c7edc61ffc98d39f61fdc3ffe58ca318081"
+  },
+  "https://www.plain.com/docs/llms-full.txt": {
+    "url": "https://www.plain.com/docs/llms-full.txt",
+    "domain": "www.plain.com",
+    "content_hash": "31de97f1079e77f7437707ef15808b736a8512beebbc7a54da61f343470a5f44",
+    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "title": "Attachments",
+    "summary": "Source: https://www.plain.com/docs/api-reference/attachments",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "www.plain.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          331
+        ],
+        [
+          "AI/ML",
+          124
+        ],
+        [
+          "Data & Databases",
+          96
+        ]
+      ],
+      "url_token_count": 57409,
+      "domain_purpose_ranking": [
+        "Product/Service Page"
+      ]
+    },
+    "first_added": "2025-05-12T11:03:13Z",
+    "last_updated": "2025-05-12T11:03:13Z"
+  }
+}

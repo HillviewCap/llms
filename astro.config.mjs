@@ -34,6 +34,7 @@ export default defineConfig({
         'https://llms-text.ai/blog/how-to-use-search-api',
         'https://llms-text.ai/blog/llmstxt-ecommerce-ux',
         'https://llms-text.ai/blog/llmstxt-security-concerns',
+        'https://llms-text.ai/metrics-dashboard',
       ],
       entryLimit: 10000,
     }),
@@ -58,6 +59,7 @@ export default defineConfig({
     },
     ssr: {
       noExternal: ['@astrojs/*'],
+      external: ['node:fs/promises', 'node:path'],
     },
   },
 });
