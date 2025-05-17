@@ -179,7 +179,7 @@
     "url": "https://www.plain.com/docs/llms-full.txt",
     "domain": "www.plain.com",
     "content_hash": "31de97f1079e77f7437707ef15808b736a8512beebbc7a54da61f343470a5f44",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Attachments",
     "summary": "Source: https://www.plain.com/docs/api-reference/attachments",
     "quality": "Medium",
@@ -214,7 +214,7 @@
     "url": "https://docs.ionq.com/llms.txt",
     "domain": "docs.ionq.com",
     "content_hash": "b4f6d0b2114058c7830ce5b939153a1b26e154e573975ca3a7c8159fa76be2e1",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "IonQ Quantum Cloud Documentation",
     "summary": "This endpoint retrieves all jobs this API key is authorized to view.",
     "quality": "Medium",
@@ -248,8 +248,8 @@
   "https://sdk.vercel.ai/llms.txt": {
     "url": "https://sdk.vercel.ai/llms.txt",
     "domain": "sdk.vercel.ai",
-    "content_hash": "3585f682954f389dddb9cccd7af39437cdbfad8e2c99431fa1e1eacdbad30734",
-    "last_checked_utc": "2025-05-13T20:13:00Z",
+    "content_hash": "a7c634a01513e00e2e7e6fed29fe7f5c8ecb2db9c018a4641cdd59bfa09184c0",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Node.js HTTP Server",
     "summary": "You can use the AI SDK in a Node.js HTTP server to generate text and stream it to the client.",
     "quality": "Medium",
@@ -261,30 +261,30 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          1570
+          1668
         ],
         [
           "Software Development",
-          479
+          531
         ],
         [
           "Data & Databases",
-          222
+          239
         ]
       ],
-      "url_token_count": 138293,
+      "url_token_count": 142158,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:46:01Z",
-    "last_updated": "2025-05-12T10:46:01Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://theirstack.com/docs/llms.txt": {
     "url": "https://theirstack.com/docs/llms.txt",
     "domain": "theirstack.com",
-    "content_hash": "174dbe4e135a4bc42fb37cd81a95ca830268930a8cdd67ef5843b824c2bb4592",
-    "last_checked_utc": "2025-05-13T20:17:18Z",
+    "content_hash": "9d28a33adf59fa9dee0e74d3e24260641438167801aa9e835c7ee71e1303f8ec",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "TheirStack Documentation",
     "quality": "Medium",
     "metadata": {
@@ -303,22 +303,22 @@
         ],
         [
           "Software Development",
-          8
+          9
         ]
       ],
-      "url_token_count": 1606,
+      "url_token_count": 1681,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:53:47Z",
-    "last_updated": "2025-05-12T10:53:47Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.zapier.com/llms.txt": {
     "url": "https://docs.zapier.com/llms.txt",
     "domain": "docs.zapier.com",
-    "content_hash": "ed3d31d9342300f6f70fdb907e13560968e86a56eeb1436c21d6b8196965a764",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "d336931b5b85b14f5c229d65738d40e9a5d6bf9a5b9cba40438b50c3444bde2e",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Zapier",
     "summary": "Returns `true` if the action was deleted, `false` if it was not found.",
     "quality": "Medium",
@@ -330,30 +330,30 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          128
+          129
         ],
         [
           "AI/ML",
-          71
+          72
         ],
         [
           "Cybersecurity",
-          62
+          65
         ]
       ],
-      "url_token_count": 13338,
+      "url_token_count": 13565,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://developers.cloudflare.com/llms.txt": {
     "url": "https://developers.cloudflare.com/llms.txt",
     "domain": "developers.cloudflare.com",
-    "content_hash": "9aedc3fe302bae527647d2fc9bbf0d526c04c52e85ca5689351e6f707402029b",
-    "last_checked_utc": "2025-05-13T19:49:11Z",
+    "content_hash": "b7427aa57918e4b205fe56db720e98926c67388399da26d7fa37ecb8d998b74c",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Cloudflare Developer Documentation",
     "quality": "High",
     "metadata": {
@@ -375,14 +375,14 @@
           146
         ]
       ],
-      "url_token_count": 39286,
+      "url_token_count": 39307,
       "domain_purpose_ranking": [
         "Documentation",
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:12:27Z",
-    "last_updated": "2025-05-13T19:49:11Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://superwall.com/docs/llms.txt": {
     "url": "https://superwall.com/docs/llms.txt",
@@ -472,8 +472,8 @@
   "https://langfuse.com/llms.txt": {
     "url": "https://langfuse.com/llms.txt",
     "domain": "langfuse.com",
-    "content_hash": "470bed53ab82444e3c16cb24030e18979208325e2ac50ab3686dfb49ba7fa477",
-    "last_checked_utc": "2025-05-13T20:01:14Z",
+    "content_hash": "8c389c76109360925db8f8da53c3137c20493d32b73d10c1e922319f62f2aec6",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Langfuse",
     "quality": "High",
     "metadata": {
@@ -495,19 +495,19 @@
           19
         ]
       ],
-      "url_token_count": 12611,
+      "url_token_count": 12694,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:25:20Z",
-    "last_updated": "2025-05-13T20:01:14Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://modelcontextprotocol.io/llms-full.txt": {
     "url": "https://modelcontextprotocol.io/llms-full.txt",
     "domain": "modelcontextprotocol.io",
-    "content_hash": "8244d749b48be39ea8e39957c65ed6ea6944f94e7d9cd8533af2f9f0a88fa45e",
-    "last_checked_utc": "2025-05-13T20:05:40Z",
+    "content_hash": "52614540cd13c979a0db5e13ff69535c71a64fe32135e243e5142a9595c533b1",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Example Clients",
     "summary": "Source: https://modelcontextprotocol.io/clients",
     "quality": "Medium",
@@ -519,7 +519,7 @@
       "url_topic_ranking": [
         [
           "Hardware",
-          1135
+          1136
         ],
         [
           "AI/ML",
@@ -530,13 +530,13 @@
           689
         ]
       ],
-      "url_token_count": 133320,
+      "url_token_count": 133361,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:28:07Z",
-    "last_updated": "2025-05-13T20:05:40Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://razor-press.web-templates.io/llms.txt": {
     "url": "https://razor-press.web-templates.io/llms.txt",
@@ -1595,8 +1595,8 @@
   "https://elevenlabs.io/docs/llms.txt": {
     "url": "https://elevenlabs.io/docs/llms.txt",
     "domain": "elevenlabs.io",
-    "content_hash": "9ea1a28197b6a008a438b3fd533e1aecd34f77d627a5ff000bed01b69eca786e",
-    "last_checked_utc": "2025-05-13T19:50:58Z",
+    "content_hash": "83dc0fcade190aa64593964d557873e092e2adc2fff479facd3945c2a2123f31",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "ElevenLabs Documentation",
     "quality": "Medium",
     "metadata": {
@@ -1607,18 +1607,18 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          248
+          247
         ],
         [
           "AI/ML",
-          170
+          171
         ],
         [
           "News",
           20
         ]
       ],
-      "url_token_count": 13313,
+      "url_token_count": 13324,
       "domain_purpose_ranking": [
         "Research Paper",
         "Resource List",
@@ -1626,7 +1626,7 @@
       ]
     },
     "first_added": "2025-05-12T10:15:29Z",
-    "last_updated": "2025-05-13T19:50:58Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://www.azumuta.com/llms.txt": {
     "url": "https://www.azumuta.com/llms.txt",
@@ -2282,8 +2282,8 @@
   "https://mintlify.com/docs/llms.txt": {
     "url": "https://mintlify.com/docs/llms.txt",
     "domain": "mintlify.com",
-    "content_hash": "204b7e0c0b66b60a08543f0f7c6da7cfe14a5dacda561cb3cc74e3dae1db28d5",
-    "last_checked_utc": "2025-05-13T20:05:05Z",
+    "content_hash": "7e46d0674e345cdd74298dd48bb6c1bc5af528c9ae831c1e35230216b3c67b19",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Mintlify",
     "quality": "Medium",
     "metadata": {
@@ -2294,7 +2294,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          19
+          20
         ],
         [
           "AI/ML",
@@ -2305,14 +2305,14 @@
           7
         ]
       ],
-      "url_token_count": 2643,
+      "url_token_count": 2667,
       "domain_purpose_ranking": [
         "Documentation",
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:27:11Z",
-    "last_updated": "2025-05-13T20:05:05Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://secureframe.com/llms.txt": {
     "url": "https://secureframe.com/llms.txt",
@@ -2388,7 +2388,7 @@
     "url": "https://lmstudio.ai/llms-full.txt",
     "domain": "lmstudio.ai",
     "content_hash": "532ef34faefdd988986bb44b121420de65406c2d379117580880c95a2a681afd",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "app",
     "summary": "LM Studio is a desktop app for developing and experimenting with LLMs locally on your computer.",
     "quality": "Medium",
@@ -2422,8 +2422,8 @@
   "https://dub.co/docs/llms-full.txt": {
     "url": "https://dub.co/docs/llms-full.txt",
     "domain": "dub.co",
-    "content_hash": "39880e29ad39d327ce0e957c155033cfc52b320b0ce0bbe3639edc70550641bf",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "e14c79d9d96696e2f5e0ed623a48d99f71e1f36e191869fed430c900927f3c52",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Bulk create links",
     "summary": "Source: https://dub.co/docs/api-reference/endpoint/bulk-create-links",
     "quality": "Medium",
@@ -2446,13 +2446,13 @@
           149
         ]
       ],
-      "url_token_count": 99946,
+      "url_token_count": 99934,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:14:14Z",
-    "last_updated": "2025-05-12T10:14:14Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://makeswift.com/docs/llms-full.txt": {
     "url": "https://makeswift.com/docs/llms-full.txt",
@@ -2888,7 +2888,7 @@
     "url": "https://adda247.com/llms.txt",
     "domain": "adda247.com",
     "content_hash": "2f5b2ffcac625ad960ae020cb2eef8b714e9cad438f1a5ffe40bc61408c72d18",
-    "last_checked_utc": "2025-05-12T09:51:56Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Adda247 - India's Largest Vernacular Learning Platform for C",
     "summary": "State Common Entrance Test Cell of  Maharashtra @cetcell.mahacet.org. Understand all the sections of",
     "quality": "Medium",
@@ -2922,8 +2922,8 @@
   "https://svelte.dev/llms-full.txt": {
     "url": "https://svelte.dev/llms-full.txt",
     "domain": "svelte.dev",
-    "content_hash": "bb4499a83622734b47af65097a4b038e8fed05ddf581d31ffd04f2a77cedd7ef",
-    "last_checked_utc": "2025-05-13T20:15:33Z",
+    "content_hash": "ea0a4b3307c5553c9fb699abce4ca55d5ffbd7ab002c519f8055fea0bceb46c5",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Start of Svelte documentation",
     "summary": "Svelte is a framework for building user interfaces on the web. It uses a compiler to turn declarativ",
     "quality": "Medium",
@@ -2935,7 +2935,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          683
+          684
         ],
         [
           "Networking",
@@ -2946,13 +2946,13 @@
           345
         ]
       ],
-      "url_token_count": 228090,
+      "url_token_count": 231831,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:51:19Z",
-    "last_updated": "2025-05-13T20:15:33Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://activepieces.com/docs/llms.txt": {
     "url": "https://activepieces.com/docs/llms.txt",
@@ -4788,7 +4788,7 @@
     "url": "https://loops.so/docs/llms.txt",
     "domain": "loops.so",
     "content_hash": "b97b699a3d1dc1d95f0c6d4aef81634e85370923a36de2e12b6d2e3cdb0b5db3",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Loops",
     "quality": "Medium",
     "metadata": {
@@ -5353,8 +5353,8 @@
   "https://chakra-ui.com/llms-full.txt": {
     "url": "https://chakra-ui.com/llms-full.txt",
     "domain": "chakra-ui.com",
-    "content_hash": "aab8972fc0922b728670e7fa24911fbcb0da98315fec3f2febe552f7fc327cfd",
-    "last_checked_utc": "2025-05-13T19:44:24Z",
+    "content_hash": "ae24a3cd1146df4e0416a18d671801d355ebcf74d76c386f412c3e1506afedc3",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Area Chart",
     "summary": "\"use client\"",
     "quality": "Medium",
@@ -5366,24 +5366,24 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          371
+          400
         ],
         [
           "Data & Databases",
-          344
+          362
         ],
         [
           "AI/ML",
-          213
+          237
         ]
       ],
-      "url_token_count": 288900,
+      "url_token_count": 321960,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:06:03Z",
-    "last_updated": "2025-05-13T19:44:24Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://bitz1.io/llms.txt": {
     "url": "https://bitz1.io/llms.txt",
@@ -6832,7 +6832,7 @@
     "url": "https://inspira-ui.com/llms.txt",
     "domain": "inspira-ui.com",
     "content_hash": "6e332ddafc487ac867bb1166b38d9c065ca0ff94efc8e35555d5457ef0792b62",
-    "last_checked_utc": "2025-05-13T19:58:37Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Inspira UI",
     "quality": "High",
     "metadata": {
@@ -8276,7 +8276,7 @@
     "url": "https://flatfile.com/docs/llms-full.txt",
     "domain": "flatfile.com",
     "content_hash": "75486cb1b06ae94ef8232ab58e30ca02bd0640cd84b9a5adb6008c39826a29e5",
-    "last_checked_utc": "2025-05-13T19:53:08Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Platform",
     "summary": "Source: https://flatfile.com/docs/changelog/platform",
     "quality": "Medium",
@@ -9154,8 +9154,8 @@
   "https://screenshotone.com/docs/llms.txt": {
     "url": "https://screenshotone.com/docs/llms.txt",
     "domain": "screenshotone.com",
-    "content_hash": "413d375bd5990f4842a5c4fd524812cb456c4a401b5ba381701f12a3754c4c72",
-    "last_checked_utc": "2025-05-13T20:13:00Z",
+    "content_hash": "3f71355fd6863af82289e076ade3b4cfcb329b5855668b130def622bab686e7a",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "ScreenshotOne.com Documentation",
     "quality": "High",
     "metadata": {
@@ -9183,7 +9183,7 @@
       ]
     },
     "first_added": "2025-05-12T10:46:01Z",
-    "last_updated": "2025-05-12T10:46:01Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://supertokens.io/llms.txt": {
     "url": "https://supertokens.io/llms.txt",
@@ -9934,7 +9934,7 @@
     "url": "https://upstash.com/docs/llms.txt",
     "domain": "upstash.com",
     "content_hash": "7c32c138148576bbd95d9439f29ba67d3f7ec52fa17d458e8609209cb65cf5cc",
-    "last_checked_utc": "2025-05-13T20:19:26Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Upstash Documentation",
     "quality": "Medium",
     "metadata": {
@@ -10357,8 +10357,8 @@
   "https://turbo.build/llms.txt": {
     "url": "https://turbo.build/llms.txt",
     "domain": "turbo.build",
-    "content_hash": "72cbbc252c9dfb9c32d4acdfce191e725bfb1290e8c69f2e2e3ea454af4eef0c",
-    "last_checked_utc": "2025-05-13T20:17:58Z",
+    "content_hash": "b89200393338eeca7f7780c2c837b402b4d3b3aa8e88a697481097a7f3728138",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Add a new changeset",
     "summary": "changeset",
     "quality": "Medium",
@@ -10370,24 +10370,24 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          711
+          710
         ],
         [
           "Science",
-          201
+          200
         ],
         [
           "Cloud Computing",
           61
         ]
       ],
-      "url_token_count": 115110,
+      "url_token_count": 115142,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:57:30Z",
-    "last_updated": "2025-05-13T20:17:58Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://zenml.io/llms.txt": {
     "url": "https://zenml.io/llms.txt",
@@ -11322,8 +11322,8 @@
   "https://infisical.com/docs/llms-full.txt": {
     "url": "https://infisical.com/docs/llms-full.txt",
     "domain": "infisical.com",
-    "content_hash": "531358392e5cb40b385998ba660bcc5fddfbe08408b286c5c9ad4e4c57be3e61",
-    "last_checked_utc": "2025-05-13T19:57:45Z",
+    "content_hash": "17112112922af885d0b74475a800abfe87f9ecdef8b2c8dae51832718ae60525",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Available",
     "summary": "Source: https://infisical.com/docs/api-reference/endpoints/app-connections/auth0/available",
     "quality": "Medium",
@@ -11335,30 +11335,30 @@
       "url_topic_ranking": [
         [
           "Cloud Computing",
-          2455
+          2460
         ],
         [
           "Software Development",
-          1334
+          1377
         ],
         [
           "AI/ML",
-          997
+          1002
         ]
       ],
-      "url_token_count": 443001,
+      "url_token_count": 450653,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:25:20Z",
-    "last_updated": "2025-05-13T19:57:45Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://trigger.dev/docs/llms-full.txt": {
     "url": "https://trigger.dev/docs/llms-full.txt",
     "domain": "trigger.dev",
-    "content_hash": "302aa20cf14eaa27a196d857a2865883f37d0c28fe74084cfb27de6417f35655",
-    "last_checked_utc": "2025-05-13T20:17:58Z",
+    "content_hash": "5ab07dbd5556d2ed2d3114f91bbeca6c858a6ed53ae0293cbc5c6f2c77bb3b11",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "API keys",
     "summary": "Source: https://trigger.dev/docs/apikeys",
     "quality": "Medium",
@@ -11374,20 +11374,20 @@
         ],
         [
           "AI/ML",
-          549
+          548
         ],
         [
           "Data & Databases",
-          391
+          390
         ]
       ],
-      "url_token_count": 201709,
+      "url_token_count": 202253,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:56:13Z",
-    "last_updated": "2025-05-13T20:17:58Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://pics.io/llms.txt": {
     "url": "https://pics.io/llms.txt",
@@ -13107,7 +13107,7 @@
     "url": "https://boehs.org/llms.txt",
     "domain": "boehs.org",
     "content_hash": "418d2ebb4ead03295f0312352f823f2fcc30fc4765f06c1a00112b8564b60616",
-    "last_checked_utc": "2025-05-13T19:42:57Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Boehs.org",
     "quality": "High",
     "metadata": {
@@ -13358,7 +13358,7 @@
     "url": "https://daisyui.com/llms.txt",
     "domain": "daisyui.com",
     "content_hash": "4e0282f1faa5f51028e1ab991489413c0e556a40c6cae2c9e5878a683a58452c",
-    "last_checked_utc": "2025-05-13T19:48:18Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "daisyUI 5",
     "summary": "daisyUI 5 is a CSS library for Tailwind CSS 4",
     "quality": "Medium",
@@ -13552,7 +13552,7 @@
     "url": "https://wordlift.io/llms.txt",
     "domain": "wordlift.io",
     "content_hash": "801e9d5ea7eab0659b3b4a0eba4f2182d378c6c3e9110c0f428e6588ce2cc0e2",
-    "last_checked_utc": "2025-05-13T20:21:17Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "WordLift",
     "summary": "WordLift is an AI-powered Enterprise SEO platform that leverages Knowledge Graphs and Large Language",
     "quality": "High",
@@ -13774,7 +13774,7 @@
     "url": "https://glama.ai/llms.txt",
     "domain": "glama.ai",
     "content_hash": "de6ee5e318275d547ec1259f794a42e41e0ec958cb5ad8f33aaf2c20bc40c93d",
-    "last_checked_utc": "2025-05-13T19:55:01Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "glama.ai llms.txt",
     "quality": "High",
     "metadata": {
@@ -13878,7 +13878,7 @@
     "url": "https://trackvia.com/llms.txt",
     "domain": "trackvia.com",
     "content_hash": "ad12caaf99b7054db47844147e8a3b142756b0914d38c99187f27d172a8938ca",
-    "last_checked_utc": "2025-05-13T20:17:58Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "TrackVia",
     "quality": "Medium",
     "metadata": {
@@ -14462,7 +14462,7 @@
     "url": "https://convex.dev/llms.txt",
     "domain": "convex.dev",
     "content_hash": "6e639b3df1ac75091a202f9b2df188b73a6e1150125de0e2617d86d11f024cdd",
-    "last_checked_utc": "2025-05-13T19:46:30Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Convex",
     "summary": "Convex is a great fit for building fullstack apps with Next.js for web and Expo for",
     "quality": "Medium",
@@ -15456,8 +15456,8 @@
   "https://resend.com/docs/llms-full.txt": {
     "url": "https://resend.com/docs/llms-full.txt",
     "domain": "resend.com",
-    "content_hash": "75b0a9913b8c4d30de3eeef350bc02f29abe0342211fd0ed6411c36a10c598a9",
-    "last_checked_utc": "2025-05-13T20:11:11Z",
+    "content_hash": "3ddee64de4b86f4d1faf978d71744504e1514c7989c62c92b4a00005640fb0d2",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Create API key",
     "summary": "Source: https://resend.com/docs/api-reference/api-keys/create-api-key",
     "quality": "Medium",
@@ -15469,24 +15469,24 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          410
+          412
         ],
         [
           "News",
           176
         ],
         [
-          "Government",
-          117
+          "Networking",
+          119
         ]
       ],
-      "url_token_count": 157059,
+      "url_token_count": 161422,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:43:12Z",
-    "last_updated": "2025-05-12T10:43:12Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://updf.cn/llms.txt": {
     "url": "https://updf.cn/llms.txt",
@@ -15629,8 +15629,8 @@
   "https://axiom.co/docs/llms.txt": {
     "url": "https://axiom.co/docs/llms.txt",
     "domain": "axiom.co",
-    "content_hash": "5da2b0fef6a2fe7f6c65b0320fcf279e6c82c7c7fa6a940ef62142e9a9dfca33",
-    "last_checked_utc": "2025-05-13T19:40:57Z",
+    "content_hash": "c7383143eed8e81d7cd6431e49b2e8d5a6c86047a4aedb2aa00291d0e45c50b6",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Axiom Docs",
     "quality": "Medium",
     "metadata": {
@@ -15641,24 +15641,24 @@
       "url_topic_ranking": [
         [
           "Data & Databases",
-          140
+          138
         ],
         [
           "AI/ML",
-          116
+          114
         ],
         [
           "Software Development",
           35
         ]
       ],
-      "url_token_count": 11654,
+      "url_token_count": 11617,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T09:57:56Z",
-    "last_updated": "2025-05-12T09:57:56Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://polar.sh/llms-full.txt": {
     "url": "https://polar.sh/llms-full.txt",
@@ -17865,7 +17865,7 @@
     "url": "https://smartcar.com/docs/llms-full.txt",
     "domain": "smartcar.com",
     "content_hash": "26a958b37dc55e874aed92ede1461256411661f68df230a5aee34f8960c81ab6",
-    "last_checked_utc": "2025-05-13T20:14:49Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Make Specific Endpoints",
     "summary": "Source: https://smartcar.com/docs/api-reference/about-brand-specific",
     "quality": "Medium",
@@ -18451,8 +18451,8 @@
   "https://prisma.io/docs/llms.txt": {
     "url": "https://prisma.io/docs/llms.txt",
     "domain": "prisma.io",
-    "content_hash": "97b248dbcf6259aae4aeb5c568b6e9fc81ff3fafed29ad1892b6a37802bea2db",
-    "last_checked_utc": "2025-05-13T20:10:26Z",
+    "content_hash": "d6729093d12d622b7f4b01ee73b2f5b91b05c2b341d354e7901ed957e8e1b421",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Prisma Documentation",
     "quality": "Medium",
     "metadata": {
@@ -18463,24 +18463,24 @@
       "url_topic_ranking": [
         [
           "Data & Databases",
-          430
+          431
         ],
         [
           "AI/ML",
-          99
+          102
         ],
         [
           "Software Development",
-          98
+          101
         ]
       ],
-      "url_token_count": 22067,
+      "url_token_count": 22320,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:39:48Z",
-    "last_updated": "2025-05-12T10:39:48Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://asap-aerospace.com/llms.txt": {
     "url": "https://asap-aerospace.com/llms.txt",
@@ -19570,7 +19570,7 @@
     "url": "https://docs.intunedhq.com/llms.txt",
     "domain": "docs.intunedhq.com",
     "content_hash": "8d3a22945d1af0dba8ec61bfd3a17f8773039381d1f9d7bee982844b3c2b715f",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Intuned",
     "summary": "This methods accepts the file.",
     "quality": "Medium",
@@ -19604,8 +19604,8 @@
   "https://rspack.dev/llms-full.txt": {
     "url": "https://rspack.dev/llms-full.txt",
     "domain": "rspack.dev",
-    "content_hash": "edc3916e174551e9aa20d37df6d0305fb1c298b5d11854585df183d97a4aeecd",
-    "last_checked_utc": "2025-05-13T20:12:08Z",
+    "content_hash": "8414c8a88718151acb7ca1455649e30f88352c87caed55bf2735caef5e705977",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Branding guideline",
     "summary": "Here you can find the branding guideline, assets and license for the project.",
     "quality": "Medium",
@@ -19617,7 +19617,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          1514
+          1521
         ],
         [
           "Finance",
@@ -19625,22 +19625,22 @@
         ],
         [
           "AI/ML",
-          226
+          225
         ]
       ],
-      "url_token_count": 246110,
+      "url_token_count": 246878,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:44:49Z",
-    "last_updated": "2025-05-13T20:12:08Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.inkeep.com/llms.txt": {
     "url": "https://docs.inkeep.com/llms.txt",
     "domain": "docs.inkeep.com",
-    "content_hash": "6d0f54e678a59b322ceedf458634f514ba32bb1d4a30e163a6b99f00b70751a9",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "d8f633d3715b8722777b66d9c16b179bf5238e689386004b99ed8f7556a63c53",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Inkeep",
     "quality": "Medium",
     "metadata": {
@@ -19662,19 +19662,19 @@
           21
         ]
       ],
-      "url_token_count": 5705,
+      "url_token_count": 5587,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://viem.sh/llms.txt": {
     "url": "https://viem.sh/llms.txt",
     "domain": "viem.sh",
-    "content_hash": "a234f035401d39351cbe8a8ee4e7dd483ff7a1e53d33ea6dcdda1bca8046984c",
-    "last_checked_utc": "2025-05-13T20:20:08Z",
+    "content_hash": "b043e6ef17906f4fa10e4cad162a84a6d7a6e57bc9ab0b991f9815d0442a004b",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Viem",
     "summary": "This Action will fill the required fields of the Authorization object if they are not provided (e.g.",
     "quality": "Medium",
@@ -19704,13 +19704,13 @@
       ]
     },
     "first_added": "2025-05-12T11:00:01Z",
-    "last_updated": "2025-05-12T11:00:01Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.dynamic.xyz/llms.txt": {
     "url": "https://docs.dynamic.xyz/llms.txt",
     "domain": "docs.dynamic.xyz",
     "content_hash": "1ebab14841188a767580e975af86fa211e7aad2c4815875114ace8c373c14ce2",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Dynamic",
     "quality": "Medium",
     "metadata": {
@@ -19744,7 +19744,7 @@
     "url": "https://docs.embedchain.ai/llms-full.txt",
     "domain": "docs.embedchain.ai",
     "content_hash": "8086b486fc7c1ee3bede3a1899aa27cdc713c222d1b0765bff8a5fad6b68b87d",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Custom configurations",
     "summary": "Source: https://docs.embedchain.ai/api-reference/advanced/configuration",
     "quality": "Medium",
@@ -19779,7 +19779,7 @@
     "url": "https://docs.sourcegraph.com/llms.txt",
     "domain": "docs.sourcegraph.com",
     "content_hash": "b349c79c827bade4518c04a20ebaede1abd563cefa335c3345864a2d039e310b",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Technical Changelog",
     "summary": "This page documents all notable changes to Sourcegraph. For more detailed changelog posts, please [r",
     "quality": "Medium",
@@ -19815,7 +19815,7 @@
     "url": "https://lotsofcsvs.com/llms.txt",
     "domain": "lotsofcsvs.com",
     "content_hash": "04bfd956d51e9ed34f989d0a2bbf9412957ff6fc72ada6570abe986ce31741da",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Lots of CSVS",
     "summary": "This content is specifically designed for LLMs and not intended for human reading. These instruction",
     "quality": "Medium",
@@ -19850,7 +19850,7 @@
     "url": "https://rainbowkit.com/llms-full.txt",
     "domain": "rainbowkit.com",
     "content_hash": "5e2adcc91f7c755dc703440fc2b88122204d6b90ed97ceeb53564b699fddb552",
-    "last_checked_utc": "2025-05-13T20:10:50Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "https://rainbowkit.com llms-full.txt",
     "summary": "RainbowKit",
     "quality": "Medium",
@@ -19884,8 +19884,8 @@
   "https://docs.flowx.ai/llms.txt": {
     "url": "https://docs.flowx.ai/llms.txt",
     "domain": "docs.flowx.ai",
-    "content_hash": "134883646bb34b3f04e277eae5e5bad32959ed88dee0f7b2e6eb59763581c770",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "c17df606035a8115035bf8ccf3b1d9914af91e50a98274fa0e575cfb64cc2cde",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Docs",
     "quality": "Medium",
     "metadata": {
@@ -19900,27 +19900,27 @@
         ],
         [
           "Software Development",
-          41
+          42
         ],
         [
           "Data & Databases",
           38
         ]
       ],
-      "url_token_count": 16836,
+      "url_token_count": 16997,
       "domain_purpose_ranking": [
         "Documentation",
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.datafold.com/llms-full.txt": {
     "url": "https://docs.datafold.com/llms-full.txt",
     "domain": "docs.datafold.com",
     "content_hash": "5a5dc00ce3951f4bc0fb36ad59e0997ba3b0c7571acad348e8a871bb7fae4cd6",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Get Audit Logs",
     "summary": "Source: https://docs.datafold.com/api-reference/audit-logs/get-audit-logs",
     "quality": "Medium",
@@ -19955,7 +19955,7 @@
     "url": "https://iqboatlifts.com/llms-full.txt",
     "domain": "iqboatlifts.com",
     "content_hash": "e75f0bef5b8e3b4fa94bc437c2e8d6ecd0b35d225a5291aae2d8caed449b3afe",
-    "last_checked_utc": "2025-05-13T19:58:37Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "https://iqboatlifts.com/ llms-full.txt",
     "summary": "IMM Quality Boat Lifts ™ has earned its reputation as the leading manufacturer of high-performance b",
     "quality": "Medium",
@@ -19989,8 +19989,8 @@
   "https://mystery-o-matic.com/llms.txt": {
     "url": "https://mystery-o-matic.com/llms.txt",
     "domain": "mystery-o-matic.com",
-    "content_hash": "5504c90fd2730dbf510ae4a5c417ad70d4ff42e1c2fe6b4e3da94cef02b74dc7",
-    "last_checked_utc": "2025-05-13T20:06:05Z",
+    "content_hash": "7ee957809b05240f3bfe0b48a88a49de142be5c4d2f9551e9800641c2f55547b",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "mystery-o-matic puzzle of the day",
     "summary": "🕵️ Welcome Detective!",
     "quality": "Medium",
@@ -20013,13 +20013,13 @@
           1
         ]
       ],
-      "url_token_count": 4686,
+      "url_token_count": 4782,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:29:45Z",
-    "last_updated": "2025-05-13T20:06:05Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://langchain-ai.github.io/langgraph/llms.txt": {
     "url": "https://langchain-ai.github.io/langgraph/llms.txt",
@@ -20059,7 +20059,7 @@
     "url": "https://docs.fastht.ml/llms.txt",
     "domain": "docs.fastht.ml",
     "content_hash": "0914173aec7bbf929a1588d8701f394b85ce2d10ec1c19ebc555142ac603ec5f",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "FastHTML",
     "summary": "FastHTML is a python library which brings together Starlette, Uvicorn, HTMX, and fastcore's `FT` \"Fa",
     "quality": "High",
@@ -20094,7 +20094,7 @@
     "url": "https://developers.campsite.com/llms.txt",
     "domain": "developers.campsite.com",
     "content_hash": "5b9be2cfb41506d174e1d48db7c1796f1adc99c9161d63b9bf918ed602924943",
-    "last_checked_utc": "2025-05-13T19:49:11Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Campsite",
     "quality": "Medium",
     "metadata": {
@@ -20120,7 +20120,7 @@
     "url": "https://count.co/llms.txt",
     "domain": "count.co",
     "content_hash": "29832e9494e42de45385b8f5c10ee07ffeeba867f3f1c56438da60d635460b12",
-    "last_checked_utc": "2025-05-13T19:47:25Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Count",
     "quality": "Medium",
     "metadata": {
@@ -20154,7 +20154,7 @@
     "url": "https://postfa.st/llms.txt",
     "domain": "postfa.st",
     "content_hash": "968238f0a0cebf1e9aced57b7d8912ea39643fb9e786173cb03d4f6e8d8541c6",
-    "last_checked_utc": "2025-05-13T20:10:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "PostFast",
     "summary": "PostFast is a social media scheduling platform that helps users save 10+ hours weekly by efficiently",
     "quality": "High",
@@ -20184,8 +20184,8 @@
   "https://rsbuild.dev/llms-full.txt": {
     "url": "https://rsbuild.dev/llms-full.txt",
     "domain": "rsbuild.dev",
-    "content_hash": "262f76292956dd31589fcc95a19de9ac08088d790ba610fd921bb0fb08c3f91d",
-    "last_checked_utc": "2025-05-13T20:12:08Z",
+    "content_hash": "22ed5c7d4821cb9afabd93bc02cf31fa19852f6957e149021fbbf2bfaf534afd",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Introduction",
     "summary": "Rsbuild is a high-performance build tool powered by Rspack. It provides a set of thoughtfully design",
     "quality": "Medium",
@@ -20208,19 +20208,19 @@
           258
         ]
       ],
-      "url_token_count": 190688,
+      "url_token_count": 191075,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:44:49Z",
-    "last_updated": "2025-05-13T20:12:08Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://www.answer.ai/llms.txt": {
     "url": "https://www.answer.ai/llms.txt",
     "domain": "www.answer.ai",
     "content_hash": "d4ec98294f9d919cc6b26c6f85480204ed7213d2898e499a229fec03ae06b9f1",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Answer.AI company website",
     "summary": "Answer.AI is a new kind of AI R&D lab which creates practical end-user products based on foundationa",
     "quality": "High",
@@ -20255,7 +20255,7 @@
     "url": "https://docs.workflow.design/llms.txt",
     "domain": "docs.workflow.design",
     "content_hash": "718263245e5b468653752b74096deb2a073ab12a49a62fca7facf79077b60e86",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Workflow Help",
     "quality": "Medium",
     "metadata": {
@@ -20284,8 +20284,8 @@
   "https://openrouter.ai/docs/llms-full.txt": {
     "url": "https://openrouter.ai/docs/llms-full.txt",
     "domain": "openrouter.ai",
-    "content_hash": "76dbe3841b1a03816f3b28fadfeb91d70c48f4d41bb8a79a5cce222e9ca000ed",
-    "last_checked_utc": "2025-05-13T20:08:52Z",
+    "content_hash": "49a13726f474dd77ad5ba0a43ca52b6a83dcdc2c1fe7af9825d1f8e62e78978a",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Quickstart",
     "summary": "OpenRouter provides a unified API that gives you access to hundreds of AI models through a single en",
     "quality": "Medium",
@@ -20314,13 +20314,13 @@
       ]
     },
     "first_added": "2025-05-12T10:34:34Z",
-    "last_updated": "2025-05-13T20:08:52Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://orm.drizzle.team/llms.txt": {
     "url": "https://orm.drizzle.team/llms.txt",
     "domain": "orm.drizzle.team",
     "content_hash": "435db9ffa7a015b5fe4030ce69702e2eeddb22caf73c7febc1d8b2b231584b2e",
-    "last_checked_utc": "2025-05-13T20:08:52Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Drizzle",
     "quality": "Medium",
     "metadata": {
@@ -20354,7 +20354,7 @@
     "url": "https://huggingface-projects-docs-llms-txt.hf.space/diffusers/llms.txt",
     "domain": "huggingface-projects-docs-llms-txt.hf.space",
     "content_hash": "196e6d4a7887ee07e954164776053f67a93a2ab547d8e825bf832410b414f160",
-    "last_checked_utc": "2025-05-13T19:57:02Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Installation",
     "summary": "🤗 Diffusers is tested on Python 3.8+, PyTorch 1.7.0+, and Flax. Follow the installation instructions",
     "quality": "Medium",
@@ -20389,7 +20389,7 @@
     "url": "https://docs.perplexity.ai/llms.txt",
     "domain": "docs.perplexity.ai",
     "content_hash": "7fe8d03d722f2005c5ef7c18239a3cb58db0c10a5d293756f5aa63d3439fe26c",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Perplexity",
     "quality": "Medium",
     "metadata": {
@@ -20423,7 +20423,7 @@
     "url": "https://qwikrank.com/llms-full.txt",
     "domain": "qwikrank.com",
     "content_hash": "3e2b09f7ee7350d80ea684e874a27d8849fa6ffbd67484a52ee2c43a96bd29df",
-    "last_checked_utc": "2025-05-13T20:10:50Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Qwikrank: AI-Powered SEO Content Generation & Blog Hosting",
     "quality": "High",
     "metadata": {
@@ -20456,8 +20456,8 @@
   "https://www.aptible.com/docs/llms-full.txt": {
     "url": "https://www.aptible.com/docs/llms-full.txt",
     "domain": "www.aptible.com",
-    "content_hash": "56744bba6bb5366ecc96ebb7c1ddde8c5f8a4ce9946b1bf0239307b5f6be2dbf",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "content_hash": "d729a63dd19246ddb23ce4931b468d5096401e796eb1e811f55924506359a1da",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Custom Certificate",
     "summary": "Source: https://aptible.com/docs/core-concepts/apps/connecting-to-apps/app-endpoints/custom-certific",
     "quality": "Medium",
@@ -20469,31 +20469,31 @@
       "url_topic_ranking": [
         [
           "Data & Databases",
-          1488
+          1487
         ],
         [
           "Software Development",
-          1196
+          1197
         ],
         [
           "Cloud Computing",
-          881
+          882
         ]
       ],
-      "url_token_count": 317155,
+      "url_token_count": 317590,
       "domain_purpose_ranking": [
         "Resource List",
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T11:03:13Z",
-    "last_updated": "2025-05-12T11:03:13Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://www.trackingplan.com/llms.txt": {
     "url": "https://www.trackingplan.com/llms.txt",
     "domain": "www.trackingplan.com",
     "content_hash": "ebdf1624f6d92db14d651d75a3198cc3a46d19a3eeb3093f19fcf3ea353576f2",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Trackingplan",
     "summary": "Trackingplan is a marketing data monitoring and auditing tool: digital analytics, product analytics,",
     "quality": "Medium",
@@ -20528,7 +20528,7 @@
     "url": "https://blacknet.ninja/llms.txt",
     "domain": "blacknet.ninja",
     "content_hash": "b162a4dc1bce8787c32ad0b8e6ae7ad0d0a0140bd1f752e345c18e0283b03d30",
-    "last_checked_utc": "2025-05-13T19:42:44Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Blacknet",
     "quality": "High",
     "metadata": {
@@ -20562,7 +20562,7 @@
     "url": "https://docs.openpipe.ai/llms.txt",
     "domain": "docs.openpipe.ai",
     "content_hash": "e5c4f1a45bbdcfdc6eb9b1f648b70f14c185ec3e7320c0e3a194ca73c2afab54",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "OpenPipe",
     "quality": "Medium",
     "metadata": {
@@ -20597,7 +20597,7 @@
     "url": "https://api-docs.devhub.com/llms.txt",
     "domain": "api-docs.devhub.com",
     "content_hash": "edaf1cb06ae68174c4dc0b7a663b7ac2266f87f3f7fb3e6f6dad661a040e80d7",
-    "last_checked_utc": "2025-05-13T19:38:43Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "DevHub API Documentation",
     "quality": "Medium",
     "metadata": {
@@ -20630,8 +20630,8 @@
   "https://docs.medusajs.com/llms-full.txt": {
     "url": "https://docs.medusajs.com/llms-full.txt",
     "domain": "docs.medusajs.com",
-    "content_hash": "cfd56263b42a24dc9ba3841138e76fcd46472ecb17d696ef178aff5d3c9ed4ba",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "5c38f2a4a30d6b23d6a677eca871b481fdb8876a09de67618eb9cef890163abd",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Introduction",
     "summary": "Medusa is a digital commerce platform with a built-in Framework for customization.",
     "quality": "Medium",
@@ -20643,30 +20643,30 @@
       "url_topic_ranking": [
         [
           "E-commerce",
-          3534
+          3538
         ],
         [
           "Data & Databases",
-          3186
+          3189
         ],
         [
           "AI/ML",
-          2969
+          2983
         ]
       ],
-      "url_token_count": 608153,
+      "url_token_count": 604719,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://www.promptfoo.dev/llms.txt": {
     "url": "https://www.promptfoo.dev/llms.txt",
     "domain": "www.promptfoo.dev",
-    "content_hash": "f6140e09188fa862215908e6ecd46c8538f699c7630eb3cd6d0da3363c1a9fd8",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "content_hash": "faa500415cfa17f08a5a19653b1099e0dc0ebf8306f95dbd2adfc215f6ad28f6",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "promptfoo",
     "quality": "Medium",
     "metadata": {
@@ -20688,19 +20688,19 @@
           4
         ]
       ],
-      "url_token_count": 3615,
+      "url_token_count": 3675,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T11:03:13Z",
-    "last_updated": "2025-05-13T20:21:53Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://getlago.com/docs/llms-full.txt": {
     "url": "https://getlago.com/docs/llms-full.txt",
     "domain": "getlago.com",
-    "content_hash": "11ac6bc678b517a68fd478cc8fa7a925c75c167bc690822bc699bfcafea4af4c",
-    "last_checked_utc": "2025-05-13T19:55:01Z",
+    "content_hash": "639450da3e578d530059a3a7cda0113c0b2603cecf938e387d3b3bcc3b572b08",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "The add-on object",
     "summary": "Source: https://getlago.com/docs/api-reference/add-ons/add-on-object",
     "quality": "Medium",
@@ -20712,30 +20712,30 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          874
+          895
         ],
         [
           "AI/ML",
-          468
+          473
         ],
         [
           "Data & Databases",
-          405
+          411
         ]
       ],
-      "url_token_count": 308527,
+      "url_token_count": 310386,
       "domain_purpose_ranking": [
-        "Other"
+        "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:23:01Z",
-    "last_updated": "2025-05-12T10:23:01Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.uniwebview.com/llms-full.txt": {
     "url": "https://docs.uniwebview.com/llms-full.txt",
     "domain": "docs.uniwebview.com",
     "content_hash": "a6229aac39153984b30d12a5e20e6529a8aa1b0753cc1e804aeca8de76679646",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "UniWebView Complete Content",
     "summary": "UniWebView is a Unity 3D plugin for adding a web view component to your Unity 3D mobile games on iOS",
     "quality": "Medium",
@@ -20770,7 +20770,7 @@
     "url": "https://uxpatterns.dev/en/llms.txt",
     "domain": "uxpatterns.dev",
     "content_hash": "e2e74ba776350314f024f93d8976851cd4c416f860300152d67f5c43d05962b1",
-    "last_checked_utc": "2025-05-13T20:19:26Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "UX Patterns for Developers",
     "summary": "This is an automatically generated overview of all UX patterns documented in this project.",
     "quality": "Medium",
@@ -20804,8 +20804,8 @@
   "https://docs.pinata.cloud/llms.txt": {
     "url": "https://docs.pinata.cloud/llms.txt",
     "domain": "docs.pinata.cloud",
-    "content_hash": "13c3cc48b118989a8dcdfe76be2df4c124138826cdc24627fdc12d71d79c7b9b",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "b63bccdb9107df642a0d779ab691c63fbeb7ebf03f722afe62a41a6f1f7e05c2",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Pinata Docs",
     "quality": "Medium",
     "metadata": {
@@ -20827,19 +20827,19 @@
           6
         ]
       ],
-      "url_token_count": 4730,
+      "url_token_count": 4764,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.primev.xyz/llms.txt": {
     "url": "https://docs.primev.xyz/llms.txt",
     "domain": "docs.primev.xyz",
     "content_hash": "2ee4f3f99603d9a87f39913e71ca21d8aa8a516c616c3fae8a8bd618459d8e1d",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Documentation",
     "summary": "can specify the amount of ETH to be deposited in each window. The bidder can also specify the start ",
     "quality": "Medium",
@@ -20874,7 +20874,7 @@
     "url": "https://gr-docs.aporia.com/llms.txt",
     "domain": "gr-docs.aporia.com",
     "content_hash": "7becd6dc94e832000613ff356983fc5b9f7411416baed6c17b8b48c226c89c34",
-    "last_checked_utc": "2025-05-13T19:55:57Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Aporia",
     "quality": "Medium",
     "metadata": {
@@ -20908,7 +20908,7 @@
     "url": "https://www.trailofbits.com/llms.txt",
     "domain": "www.trailofbits.com",
     "content_hash": "7549b7c5e377db7c32ded5fc315e870cf0f1005c5bee56dbb8e360be3970a68f",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Trail of Bits",
     "summary": "We go beyond standard checklist testing, focusing on deep manual analysis, custom tooling (like Slit",
     "quality": "Medium",
@@ -20942,8 +20942,8 @@
   "https://docs.methodfi.com/llms-full.txt": {
     "url": "https://docs.methodfi.com/llms-full.txt",
     "domain": "docs.methodfi.com",
-    "content_hash": "75d02daa00269dbd6079d6c8aab1286a34b410377b05d1b1ed11bdbed731504e",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "dadd719f6a3df1f4e47b26fef207100b22e7b6d7131737202cefc16a31b9b75f",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "December Updates",
     "summary": "Source: https://docs.methodfi.com/changelog/2024/december",
     "quality": "Medium",
@@ -20966,19 +20966,19 @@
           197
         ]
       ],
-      "url_token_count": 245718,
+      "url_token_count": 245828,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://vue-macros.dev/llms-full.txt": {
     "url": "https://vue-macros.dev/llms-full.txt",
     "domain": "vue-macros.dev",
     "content_hash": "3e9f4aacfe0f4a848010aa525cd0d361d394401a1335b62c552d45a971e0f159",
-    "last_checked_utc": "2025-05-13T20:21:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "&#x20;ESLint Integration&#x20;",
     "summary": "::: code-group",
     "quality": "Medium",
@@ -21013,7 +21013,7 @@
     "url": "https://www.tinybird.co/docs/llms.txt",
     "domain": "www.tinybird.co",
     "content_hash": "91161ced4743bfceb5ebd474db4003ca111793917548941703659e47d89d610e",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Tinybird",
     "quality": "High",
     "metadata": {
@@ -21046,8 +21046,8 @@
   "https://docs.fireworks.ai/llms.txt": {
     "url": "https://docs.fireworks.ai/llms.txt",
     "domain": "docs.fireworks.ai",
-    "content_hash": "617a0c76099487a9157f6accfc2203d146453ff03448c7c5ec14d6e603823b04",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "cf0d955445d16b76a6ab9fdb5f866112b356993f8f9e9877f5d9cfe155903a3a",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Fireworks AI Docs",
     "summary": "Returns an error if there is an existing pending connection.",
     "quality": "Medium",
@@ -21059,7 +21059,7 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          45
+          44
         ],
         [
           "Social",
@@ -21070,20 +21070,20 @@
           12
         ]
       ],
-      "url_token_count": 5030,
+      "url_token_count": 5070,
       "domain_purpose_ranking": [
         "Documentation",
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://llm.rememberizer.ai/llms-full.txt": {
     "url": "https://llm.rememberizer.ai/llms-full.txt",
     "domain": "llm.rememberizer.ai",
     "content_hash": "6a5a9fa828a9cacc3a61538b8ed3a34a2137ebab965199a51d0eb21190a5e8b9",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Rememberizer LLM Ready Documentation",
     "summary": "This document provides a comprehensive, consolidated reference of Rememberizer's documentation, opti",
     "quality": "Medium",
@@ -21117,8 +21117,8 @@
   "https://llm.skydeck.ai/llms-full.txt": {
     "url": "https://llm.skydeck.ai/llms-full.txt",
     "domain": "llm.skydeck.ai",
-    "content_hash": "e71b21baf1cbd810694ed82166c9bb8e6258b916092775b229ac761c9cd9a06f",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "content_hash": "1f8be429cee92fc94696ccf75f48bdcb84e0d34e8eeec55c3ddc3a528a8b2c1b",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "SkyDeck.ai LLM Ready Documentation",
     "summary": "This document provides a comprehensive, consolidated reference of SkyDeck.ai's documentation, optimi",
     "quality": "Medium",
@@ -21130,30 +21130,30 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          754
+          759
         ],
         [
           "Software Development",
-          372
+          373
         ],
         [
           "Data & Databases",
           304
         ]
       ],
-      "url_token_count": 66695,
+      "url_token_count": 66975,
       "domain_purpose_ranking": [
         "Domain Root - Plain Text"
       ]
     },
     "first_added": "2025-05-12T10:25:20Z",
-    "last_updated": "2025-05-12T10:25:20Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://www.openphone.com/docs/llms.txt": {
     "url": "https://www.openphone.com/docs/llms.txt",
     "domain": "www.openphone.com",
     "content_hash": "e4be6d4f10f5bc5b387527d79b2256cd8e91704eedc3b0f3ffd8a782eb30a476",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "OpenPhone Docs",
     "quality": "Medium",
     "metadata": {
@@ -21187,7 +21187,7 @@
     "url": "https://docs.solidfi.com/llms.txt",
     "domain": "docs.solidfi.com",
     "content_hash": "88eea1d44926b16d19dcd1ef8f297694dcd4b804fc18087237870671b94c11b5",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Solid",
     "summary": "1. Get a one-time PIN token",
     "quality": "Medium",
@@ -21222,7 +21222,7 @@
     "url": "https://developer.ongoody.com/llms.txt",
     "domain": "developer.ongoody.com",
     "content_hash": "141996f8bedd14bfa474a030716e83fe43c5eb4eed32ed26c28cccb6aa445c4e",
-    "last_checked_utc": "2025-05-13T19:49:11Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Goody",
     "quality": "Medium",
     "metadata": {
@@ -21255,8 +21255,8 @@
   "https://trueprofit.io/llms.txt": {
     "url": "https://trueprofit.io/llms.txt",
     "domain": "trueprofit.io",
-    "content_hash": "347269f44008361c1dd978d8925f8f719f5f8b7ed04ee90b9a79fb8756b538a9",
-    "last_checked_utc": "2025-05-13T20:17:58Z",
+    "content_hash": "472105323fa8c818fc4876e6063643c4acb14cafaf5ba619faa9d4fb0c889dcb",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "TrueProfit - Profit Tracking App for Shopify Businesses",
     "quality": "Medium",
     "metadata": {
@@ -21267,30 +21267,30 @@
       "url_topic_ranking": [
         [
           "E-commerce",
-          30
+          32
+        ],
+        [
+          "Education",
+          19
         ],
         [
           "Data & Databases",
           18
-        ],
-        [
-          "Education",
-          18
         ]
       ],
-      "url_token_count": 6344,
+      "url_token_count": 6549,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:57:30Z",
-    "last_updated": "2025-05-13T20:17:58Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.unstructured.io/llms-full.txt": {
     "url": "https://docs.unstructured.io/llms-full.txt",
     "domain": "docs.unstructured.io",
-    "content_hash": "508c6d3f55774d7c2858802de19e9b182617f620d7778ece20309d62a1a7adbf",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "d35fcd926d8be6c8a4733010bc73080b584bfdf893caf7f15641f8ca8586b11e",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Unstructured API on AWS",
     "summary": "Source: https://docs.unstructured.io/api-reference/legacy-api/aws",
     "quality": "Medium",
@@ -21302,30 +21302,30 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          3050
+          3057
         ],
         [
           "Data & Databases",
-          2215
+          2216
         ],
         [
           "Cloud Computing",
-          2139
+          2141
         ]
       ],
-      "url_token_count": 612034,
+      "url_token_count": 614646,
       "domain_purpose_ranking": [
         "Homepage"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.projectdiscovery.io/llms.txt": {
     "url": "https://docs.projectdiscovery.io/llms.txt",
     "domain": "docs.projectdiscovery.io",
     "content_hash": "aa41408388afca1d36e02fda48300db1f539d7b39571a00d56d7ae61f7614610",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "ProjectDiscovery Documentation",
     "quality": "Medium",
     "metadata": {
@@ -21359,7 +21359,7 @@
     "url": "https://loglayer.dev/llms.txt",
     "domain": "loglayer.dev",
     "content_hash": "b3f07f0299d717ccf24f115a3bbd19a425329046948b46bb856904324759c2ee",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "LogLayer",
     "summary": "The modern logging library for Typescript / Javascript",
     "quality": "High",
@@ -21394,7 +21394,7 @@
     "url": "https://docs.quillsql.com/llms.txt",
     "domain": "docs.quillsql.com",
     "content_hash": "5dfcf2c4fba8d4ba93abff41ce8a59f3bf225c658d6b72439dd1519c7fc502a0",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Quill",
     "quality": "Medium",
     "metadata": {
@@ -21427,10 +21427,10 @@
   "https://docs.anthropic.com/llms-full.txt": {
     "url": "https://docs.anthropic.com/llms-full.txt",
     "domain": "docs.anthropic.com",
-    "content_hash": "615e2997a9a20bd0209628cbf9f4c9ece7a0e54835ad67058ff6e0beeb029807",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
-    "title": "Create Invite",
-    "summary": "Source: https://docs.anthropic.com/en/api/admin-api/invites/create-invite",
+    "content_hash": "10857bef0b4082e129d6077ee7b20e7de674dba6d0d395e85bf41ea3dc30d5bb",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "Get API Key",
+    "summary": "Source: https://docs.anthropic.com/en/api/admin-api/apikeys/get-api-key",
     "quality": "Medium",
     "metadata": {
       "source_domain": "docs.anthropic.com",
@@ -21440,30 +21440,30 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          2466
+          2368
         ],
         [
           "Software Development",
-          1669
+          1676
         ],
         [
           "Data & Databases",
-          815
+          671
         ]
       ],
-      "url_token_count": 427580,
+      "url_token_count": 425085,
       "domain_purpose_ranking": [
         "Homepage"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.expo.dev/llms.txt": {
     "url": "https://docs.expo.dev/llms.txt",
     "domain": "docs.expo.dev",
-    "content_hash": "65e3618f2574ee1688559d983d297ad12134c57cea9b7005d31c6909b807f7c0",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "70f03a1b8aed6ee924f819a6bbf513df66401b97fafad44bb71cf05e5afd2bd0",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Expo Documentation",
     "quality": "High",
     "metadata": {
@@ -21474,30 +21474,30 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          223
+          222
         ],
         [
           "Networking",
-          71
+          72
         ],
         [
           "News",
           45
         ]
       ],
-      "url_token_count": 18650,
+      "url_token_count": 18676,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.pydantic.dev/latest/llms.txt": {
     "url": "https://docs.pydantic.dev/latest/llms.txt",
     "domain": "docs.pydantic.dev",
     "content_hash": "1e8cc4043b1c51be2e27abb7e25050dc1b9a542d9237c39c7943dc9b4cb717bc",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Pydantic",
     "summary": "Data validation using Python type hints",
     "quality": "High",
@@ -21531,8 +21531,8 @@
   "https://docs.codeium.com/llms-full.txt": {
     "url": "https://docs.codeium.com/llms-full.txt",
     "domain": "docs.codeium.com",
-    "content_hash": "e1c49c52cdd5c5db31dc324bfb45b5275f6b9b3b4758b28ef0c58a60af5519be",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "b4ffad3cea7d1cba06eabe6e16ceb61f3128f60ff85d286387306948ca5c94b1",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Windsurf Analytics API (SaaS)",
     "summary": "Source: https://docs.windsurf.com/analytics/analytics-api",
     "quality": "Medium",
@@ -21544,30 +21544,30 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          392
+          398
         ],
         [
           "AI/ML",
-          250
+          255
         ],
         [
           "Data & Databases",
-          101
+          104
         ]
       ],
-      "url_token_count": 54701,
+      "url_token_count": 55869,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://fibery.io/llms.txt": {
     "url": "https://fibery.io/llms.txt",
     "domain": "fibery.io",
     "content_hash": "322a5eab510c122ac9a4117ed76597b1d00178d668f7687d6d1a8b03e96ee8b8",
-    "last_checked_utc": "2025-05-13T19:53:08Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Fibery",
     "summary": "Fibery is a work operating system that lets teams build a fully custom workspace—databases, document",
     "quality": "High",
@@ -21602,7 +21602,7 @@
     "url": "https://zaphyr.org/llms.txt",
     "domain": "zaphyr.org",
     "content_hash": "ab024ee77c2e0ffa607cc4ea9762436697ca62bb93a35a635e065917bb64a074",
-    "last_checked_utc": "2025-05-13T20:22:44Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "ZAPHYR PHP Framework",
     "summary": "ZAPHYR is a breath of fresh air in the **PHP** ecosystem, providing a flexible,",
     "quality": "Medium",
@@ -21637,7 +21637,7 @@
     "url": "https://marcloudconsulting.com/llms.txt",
     "domain": "marcloudconsulting.com",
     "content_hash": "4fb2127918ea75c6ee1c284b4d6ce3dafa489b5cd7c6896a22a4ab570d3f75e3",
-    "last_checked_utc": "2025-05-13T20:03:57Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "llms.txt - MarCloud Consulting LLM Permissions",
     "quality": "High",
     "metadata": {
@@ -21662,8 +21662,8 @@
   "https://www.activepieces.com/docs/llms.txt": {
     "url": "https://www.activepieces.com/docs/llms.txt",
     "domain": "www.activepieces.com",
-    "content_hash": "c1a3efc344a490467f9d7761424d3b50d33a984c8ba8141fd051a58ef30a544d",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "content_hash": "5992c0f65b86fcf1ef80fd28ad25149c64c6898eb1d05c77fe05c58f8a8422ed",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Activepieces",
     "quality": "Medium",
     "metadata": {
@@ -21681,23 +21681,23 @@
           12
         ],
         [
-          "Cloud Computing",
-          9
+          "News",
+          10
         ]
       ],
-      "url_token_count": 4827,
+      "url_token_count": 4888,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T11:03:13Z",
-    "last_updated": "2025-05-12T11:03:13Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.luxalgo.com/llms-full.txt": {
     "url": "https://docs.luxalgo.com/llms-full.txt",
     "domain": "docs.luxalgo.com",
-    "content_hash": "f736d3d845a0e8979beec0effe9bec928d554baa57e95d8efb9d89a3f632801d",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "dd8d9ac554ae682b7987e49d42f2c4b097e296efe2a949e42fdbb9f3d4fa6388",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Fetching Information",
     "summary": "Source: https://docs.luxalgo.com/docs/ai-backtesting/fetching-information",
     "quality": "Medium",
@@ -21709,7 +21709,7 @@
       "url_topic_ranking": [
         [
           "E-commerce",
-          729
+          732
         ],
         [
           "Finance",
@@ -21720,13 +21720,13 @@
           184
         ]
       ],
-      "url_token_count": 98966,
+      "url_token_count": 99216,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://tamagui.dev/llms-full.txt": {
     "url": "https://tamagui.dev/llms-full.txt",
@@ -21766,8 +21766,8 @@
   "https://developer.fabric.inc/llms-full.txt": {
     "url": "https://developer.fabric.inc/llms-full.txt",
     "domain": "developer.fabric.inc",
-    "content_hash": "e3666a64efe94677a79247101b2782983a53f402a02741114d1a36868db4cc9f",
-    "last_checked_utc": "2025-05-13T19:49:11Z",
+    "content_hash": "67a94d59cc31e3a2c40f5e56eecd78cb3e40c3aaaff1c7c58aa0610df645b374",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Welcome to the fabric Developer Portal",
     "summary": "Source: https://developer.fabric.inc/home",
     "quality": "Medium",
@@ -21779,30 +21779,30 @@
       "url_topic_ranking": [
         [
           "E-commerce",
-          4744
+          4805
         ],
         [
           "AI/ML",
-          901
+          942
         ],
         [
           "Software Development",
-          889
+          896
         ]
       ],
-      "url_token_count": 354948,
+      "url_token_count": 365268,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:12:27Z",
-    "last_updated": "2025-05-12T10:12:27Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.tavus.io/llms.txt": {
     "url": "https://docs.tavus.io/llms.txt",
     "domain": "docs.tavus.io",
-    "content_hash": "2e23adbe7053a6c67022974c6c6d91f299bd9f81c887328dc1deb5edf5b250cc",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "f2d31f4e4550b95edf37e4dabddfaf4e2043379f55ee6883158675ae0c9de292",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Tavus",
     "summary": "A `conversation` is a video call with a replica.",
     "quality": "Medium",
@@ -21818,26 +21818,26 @@
         ],
         [
           "Software Development",
-          23
+          24
         ],
         [
           "AI/ML",
-          17
+          18
         ]
       ],
-      "url_token_count": 4585,
+      "url_token_count": 4724,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.meshconnect.com/llms-full.txt": {
     "url": "https://docs.meshconnect.com/llms-full.txt",
     "domain": "docs.meshconnect.com",
     "content_hash": "3e666ccb3dc72db8f7116b2bd83a31bb1ea02e736ab3738edc96e696e5f8e0ba",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Get account balance",
     "summary": "Source: https://docs.meshconnect.com/api-reference/balance/get-account-balance",
     "quality": "Medium",
@@ -21872,7 +21872,7 @@
     "url": "https://www.helicone.ai/llms.txt",
     "domain": "www.helicone.ai",
     "content_hash": "4090ea8ca284b5a6893695b49d90d75807df4e3d0d5885152ffb0bf8a93152eb",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Helicone",
     "summary": "Helicone is an open-source observability platform for LLM users. It helps companies monitor usage, l",
     "quality": "High",
@@ -21907,7 +21907,7 @@
     "url": "https://docs.oxla.com/llms-full.txt",
     "domain": "docs.oxla.com",
     "content_hash": "5ac5add8fe952e496a4d764472d2bd06532792ebd0b159bebc12e8df2ed366e1",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "C# (Dapper - Npgsql)",
     "summary": "Source: https://docs.oxla.com/clients-tools/language-clients/dotnet-dapper",
     "quality": "Medium",
@@ -21941,8 +21941,8 @@
   "https://www.stedi.com/docs/llms.txt": {
     "url": "https://www.stedi.com/docs/llms.txt",
     "domain": "www.stedi.com",
-    "content_hash": "0f74b4fec0ea03b466d69e4287a1dbd43611318b5d122325df567d922bf57b6f",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "content_hash": "f397d0b97afca0a7c2e4eed5dd337aa8d231c7a7c1f28fdf89930841e60e5607",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Stedi",
     "quality": "Medium",
     "metadata": {
@@ -21964,19 +21964,19 @@
           4
         ]
       ],
-      "url_token_count": 4896,
+      "url_token_count": 4931,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T11:03:13Z",
-    "last_updated": "2025-05-12T11:03:13Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.basehub.com/llms.txt": {
     "url": "https://docs.basehub.com/llms.txt",
     "domain": "docs.basehub.com",
     "content_hash": "06fc301ddecd9e91da424c401a80e3f8c45aae173bb505064cdaacb89b44afb1",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "BaseHub",
     "summary": "OpenAPI Spec: https://cdn.jsdelivr.net/npm/@scalar/galaxy/dist/latest.yaml",
     "quality": "Medium",
@@ -22010,8 +22010,8 @@
   "http://docs.stripe.com/llms.txt": {
     "url": "http://docs.stripe.com/llms.txt",
     "domain": "docs.stripe.com",
-    "content_hash": "e331c9ca7b6cb38264d6c27004d2ecaa1cb55c4dbcf1f9e5b495e830b722527f",
-    "last_checked_utc": "2025-05-13T19:35:43Z",
+    "content_hash": "74cf01e69d8fb10530e76fbee07abee6364da72a1e9c9c95ace5a9b17937d462",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Stripe Documentation",
     "summary": "Build a low-code payment form and embed it on your site or host it on Stripe. Checkout creates a cus",
     "quality": "Medium",
@@ -22040,13 +22040,13 @@
       ]
     },
     "first_added": "2025-05-12T09:47:56Z",
-    "last_updated": "2025-05-13T19:35:43Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.giselles.ai/llms.txt": {
     "url": "https://docs.giselles.ai/llms.txt",
     "domain": "docs.giselles.ai",
     "content_hash": "a8d9767024bd896df603b4d46f567bcfc21757e872b8c9bc58becffc0af4c356",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Giselle Docs",
     "quality": "Medium",
     "metadata": {
@@ -22079,8 +22079,8 @@
   "https://docs.velt.dev/llms-full.txt": {
     "url": "https://docs.velt.dev/llms-full.txt",
     "domain": "docs.velt.dev",
-    "content_hash": "2e3d9c18805d54f3f8e84a7c25347fb0cc628423414e4ad3595f9f67ea481cd6",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "a5ab0ef03d79782fee5481d1b46c0942b7c19a591dc2f7bcc2c09f0a75e062f4",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Add Comment Annotations",
     "summary": "Source: https://docs.velt.dev/api-reference/rest-apis/comments-feature/comment-annotations/add-comme",
     "quality": "Medium",
@@ -22103,19 +22103,19 @@
           921
         ]
       ],
-      "url_token_count": 402063,
+      "url_token_count": 402064,
       "domain_purpose_ranking": [
         "Homepage"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.conductor.is/llms.txt": {
     "url": "https://docs.conductor.is/llms.txt",
     "domain": "docs.conductor.is",
-    "content_hash": "b56b164c4aefba14f80ca4ebf6a43f4b747b575cf66dfdff6cd07c7f89d5e862",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "008114fe4d4dce1f6b7157cfece1359e6df50a5c07ccd2d600402a639d4243a3",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Conductor Docs",
     "summary": "There are two types of non-inventory items: 1. Materials or parts that are part of the business's ov",
     "quality": "Medium",
@@ -22131,26 +22131,26 @@
         ],
         [
           "News",
-          37
+          38
         ],
         [
           "Software Development",
           26
         ]
       ],
-      "url_token_count": 12011,
+      "url_token_count": 12241,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://demotime.elio.dev/llms.txt": {
     "url": "https://demotime.elio.dev/llms.txt",
     "domain": "demotime.elio.dev",
     "content_hash": "436048eccb527b8da1f9c162e98a2fc94719768b99a82134452601c790eeeb09",
-    "last_checked_utc": "2025-05-13T19:49:11Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Demo Time - Live demos & slides in VS Code",
     "quality": "High",
     "metadata": {
@@ -22219,7 +22219,7 @@
     "url": "https://ast-grep.github.io/llms-full.txt",
     "domain": "ast-grep.github.io",
     "content_hash": "99941f791dbd6b9a442ca22e5695d1a15e5f073e95522292aead12fa51b111ef",
-    "last_checked_utc": "2025-05-13T19:39:49Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "`ast-grep new`",
     "summary": "Create new ast-grep project or items like rules/tests. Also see the step by step [guide](/guide/scan",
     "quality": "Medium",
@@ -22253,8 +22253,8 @@
   "https://docs.tryvital.io/llms.txt": {
     "url": "https://docs.tryvital.io/llms.txt",
     "domain": "docs.tryvital.io",
-    "content_hash": "5b943e6a4bb5084b09fc9743a2189eacf235cef33cac1f3def51c4854432b277",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "a13e414834f0b7375e4712b10462ae23777fc73fa27d40ebb1e8be00ce484abd",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Junction",
     "summary": "Information returned:",
     "quality": "Medium",
@@ -22277,20 +22277,20 @@
           19
         ]
       ],
-      "url_token_count": 11543,
+      "url_token_count": 11392,
       "domain_purpose_ranking": [
         "Documentation",
         "Resource List"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://www.clever-cloud.com/developers/llms.txt": {
     "url": "https://www.clever-cloud.com/developers/llms.txt",
     "domain": "www.clever-cloud.com",
     "content_hash": "e36a93d6d1fc4872825d6d82b7aa1d09f12aefb5b37105e8e0a4d2a91e5a3daa",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Clever Cloud Documentation",
     "quality": "High",
     "metadata": {
@@ -22324,7 +22324,7 @@
     "url": "https://docs.frigade.com/llms.txt",
     "domain": "docs.frigade.com",
     "content_hash": "9b610f3a9e3c0bcd18f3ab38a9edc8d08df3e7e17b3dfd132371fae870d1c727",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Frigade",
     "quality": "Medium",
     "metadata": {
@@ -22358,8 +22358,8 @@
   "https://lib.rsbuild.dev/llms.txt": {
     "url": "https://lib.rsbuild.dev/llms.txt",
     "domain": "lib.rsbuild.dev",
-    "content_hash": "a025996c78dcdc86e44639cd3e75a7a0b54aa2976994df3119e5fea3dd1dd992",
-    "last_checked_utc": "2025-05-13T20:02:08Z",
+    "content_hash": "ed9b86314751b5b7adf74460f66758ab6b4256588256d26affd977c26a380170",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Rslib",
     "quality": "High",
     "metadata": {
@@ -22370,26 +22370,26 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          1
+          2
         ],
         [
           "Education",
           1
         ]
       ],
-      "url_token_count": 616,
+      "url_token_count": 649,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:25:20Z",
-    "last_updated": "2025-05-12T10:25:20Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.dopp.finance/llms.txt": {
     "url": "https://docs.dopp.finance/llms.txt",
     "domain": "docs.dopp.finance",
     "content_hash": "960f334a88f819b4e2f9694b4200afc872b17dfc93303d32a4ef6903e99e1eca",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Dopp Docs",
     "quality": "Medium",
     "metadata": {
@@ -22423,7 +22423,7 @@
     "url": "https://webrecorder.net/llms.txt",
     "domain": "webrecorder.net",
     "content_hash": "bb340a53e0a8a98ac9081d691b313ec908bd06c9e831ebbfa0c8599f2032218f",
-    "last_checked_utc": "2025-05-13T20:21:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Webrecorder",
     "summary": "The Webrecorder team has been developing open source web archiving tools for over 10 years. Webrecor",
     "quality": "High",
@@ -22458,7 +22458,7 @@
     "url": "https://www.cobo.com/developers/llms-full.txt",
     "domain": "www.cobo.com",
     "content_hash": "f21a8cbf639b557ab3865526a5656c302e526a48ab47f1e2782b0e008744f9f7",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Get Address History",
     "summary": "Source: https://cobo.com/developers/v1/api-references/custody-wallet/address_history",
     "quality": "Medium",
@@ -22492,8 +22492,8 @@
   "https://docs.mangopay.com/llms.txt": {
     "url": "https://docs.mangopay.com/llms.txt",
     "domain": "docs.mangopay.com",
-    "content_hash": "3fcd7ac5cee9aeb663ed70cc842e06af69b0904e63cc807ecd006314b7569a31",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "3de99f0f04333634271491254453b7c3cf9d89584738161a20e61ad7f302c85d",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Mangopay docs",
     "quality": "Medium",
     "metadata": {
@@ -22504,30 +22504,30 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          21
+          22
         ],
         [
           "News",
           19
         ],
         [
-          "Software Development",
-          9
+          "Cloud Computing",
+          10
         ]
       ],
-      "url_token_count": 12085,
+      "url_token_count": 12400,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://supabase.com/llms.txt": {
     "url": "https://supabase.com/llms.txt",
     "domain": "supabase.com",
     "content_hash": "1833bd45d564c727657d71276e5da3466f2f9b0c43cb7100d0bd8053595f0cc3",
-    "last_checked_utc": "2025-05-13T20:15:33Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Supabase Docs",
     "quality": "High",
     "metadata": {
@@ -22553,8 +22553,8 @@
   "https://docs.turso.tech/llms-full.txt": {
     "url": "https://docs.turso.tech/llms-full.txt",
     "domain": "docs.turso.tech",
-    "content_hash": "a75004d90e936d6a6ff5e288295571b40ef171ed0530b2dc9d01c92312d03453",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "984a918f0793243cf6f307ff634ea5a195525e13dc9d12afd43643a9944b7068",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "List Audit Logs",
     "summary": "Source: https://docs.turso.tech/api-reference/audit-logs/list",
     "quality": "Medium",
@@ -22577,19 +22577,19 @@
           150
         ]
       ],
-      "url_token_count": 81804,
+      "url_token_count": 81808,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://www.roc-lang.org/llms.txt": {
     "url": "https://www.roc-lang.org/llms.txt",
     "domain": "www.roc-lang.org",
     "content_hash": "9a08de5c7ad621edcc49cf52da080116908fd5bccf4f69d92894dccb8af0725d",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "The 'name' field is unused by add_and_stringify",
     "summary": "Whenever you write `#` it means that the rest of the line is a comment, and will not affect the",
     "quality": "Medium",
@@ -22623,8 +22623,8 @@
   "https://docs.hypermode.com/llms.txt": {
     "url": "https://docs.hypermode.com/llms.txt",
     "domain": "docs.hypermode.com",
-    "content_hash": "0987ccf698cece57290e5cbfe2738bc67062cf4446bf7e67073b9c8c0054fac1",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "6d64a3ed838ee741d098fe06ec49675a7a91cbd18d08f931d1ec0d2a60f38e69",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Hypermode",
     "quality": "Medium",
     "metadata": {
@@ -22646,20 +22646,20 @@
           46
         ]
       ],
-      "url_token_count": 8738,
+      "url_token_count": 8771,
       "domain_purpose_ranking": [
         "Documentation",
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.cursor.com/llms.txt": {
     "url": "https://docs.cursor.com/llms.txt",
     "domain": "docs.cursor.com",
-    "content_hash": "1a4663b60c2b0e3fcd4a3a1cc72b52400d80ef51ce7030131783ffa429fbfce6",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "9a5d6ec40d0e8ecab2187f37bdc103e136fcadc44288791735069629aeec959c",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Cursor",
     "quality": "Medium",
     "metadata": {
@@ -22670,7 +22670,7 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          31
+          32
         ],
         [
           "Software Development",
@@ -22681,19 +22681,19 @@
           18
         ]
       ],
-      "url_token_count": 2374,
+      "url_token_count": 2446,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.docker.com/llms.txt": {
     "url": "https://docs.docker.com/llms.txt",
     "domain": "docs.docker.com",
-    "content_hash": "44ca897a5f07c8904aa286e2aa55b6b20b07ccfc0836cd749202f6027766e8f6",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "fc2f3cd95fb67476eeb53503f3b48ed21366b665aa4bbd1956a45c1ed4eee985",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Docker Documentation",
     "quality": "Medium",
     "metadata": {
@@ -22715,20 +22715,20 @@
           32
         ]
       ],
-      "url_token_count": 21380,
+      "url_token_count": 21404,
       "domain_purpose_ranking": [
         "Documentation",
         "Resource List"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.salesbricks.com/llms-full.txt": {
     "url": "https://docs.salesbricks.com/llms-full.txt",
     "domain": "docs.salesbricks.com",
     "content_hash": "23dfe18109fcc897ca49dccf5eeea84e7ec92ceaee352c00c0a263217f379e4f",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Authentication",
     "summary": "Source: https://docs.salesbricks.com/api-reference/getting-started/authentication",
     "quality": "Medium",
@@ -22763,7 +22763,7 @@
     "url": "https://docs.rungalileo.io/llms.txt",
     "domain": "docs.rungalileo.io",
     "content_hash": "405e5f555331e44f9802f55e321e0789fd859e85371f611a26f1eeef7273df6f",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Galileo",
     "summary": "Use this endpoint to create a new Evaluate run with workflows. The request body should contain the `",
     "quality": "Medium",
@@ -22798,7 +22798,7 @@
     "url": "https://prettier.io/llms-full.txt",
     "domain": "prettier.io",
     "content_hash": "73640f0ba55497817c0fa2628594178bee1882e3f5a69d9ff77634a65ad1575b",
-    "last_checked_utc": "2025-05-13T20:10:26Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": ".prettierrc or .prettierrc.yaml",
     "summary": "trailingComma: \"es5\"",
     "quality": "Medium",
@@ -22833,7 +22833,7 @@
     "url": "https://dotenvx.com/llms-full.txt",
     "domain": "dotenvx.com",
     "content_hash": "eb88f1cd1d901636b88671a69821d393abb9cb9fe78fe656391475bbd654a2a1",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "from this:",
     "summary": "./node_modules/.bin/dotenvx run --env-file .env -- yourcommand",
     "quality": "Medium",
@@ -22867,8 +22867,8 @@
   "https://docs.squared.ai/llms.txt": {
     "url": "https://docs.squared.ai/llms.txt",
     "domain": "docs.squared.ai",
-    "content_hash": "74147204af5ef6cd749c91fabc8447e9a4e4271ceb2c6289264ad21873e2cb7e",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "dc2370885e53b75e6575da5c57cbef7f69af67c7a53631abec3d35fcf2b905a1",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "AI Squared",
     "quality": "Medium",
     "metadata": {
@@ -22879,7 +22879,7 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          76
+          77
         ],
         [
           "Data & Databases",
@@ -22890,19 +22890,19 @@
           21
         ]
       ],
-      "url_token_count": 3956,
+      "url_token_count": 4019,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://developer.tryfinch.com/llms.txt": {
     "url": "https://developer.tryfinch.com/llms.txt",
     "domain": "developer.tryfinch.com",
     "content_hash": "cdbe60a35507fe15c790c992b5735e523476c2d2defb39a802b4fa3de5d633ec",
-    "last_checked_utc": "2025-05-13T19:49:11Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Finch",
     "summary": "Retrieve details of a specific document by its ID.",
     "quality": "Medium",
@@ -22936,8 +22936,8 @@
   "https://docs.hyperline.co/llms-full.txt": {
     "url": "https://docs.hyperline.co/llms-full.txt",
     "domain": "docs.hyperline.co",
-    "content_hash": "bd251cc2fe144e978cb50592d95e391c614193cca827d6d5cd1a159b135b9ff4",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "db217bd59ad5f35fbdda23ae2e44cafe9fcb7726c571843f52619fc0d8a902f9",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Currency amounts",
     "summary": "Source: https://docs.hyperline.co/api-reference/docs/amount",
     "quality": "Medium",
@@ -22949,30 +22949,30 @@
       "url_topic_ranking": [
         [
           "E-commerce",
-          411
+          416
         ],
         [
           "Software Development",
-          266
+          274
         ],
         [
           "AI/ML",
-          262
+          267
         ]
       ],
-      "url_token_count": 348883,
+      "url_token_count": 354099,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://semgrep.com/llms.txt": {
     "url": "https://semgrep.com/llms.txt",
     "domain": "semgrep.com",
     "content_hash": "dae500ad90b41f1e54bd10144f032b846ff4ec64860330831a884748dc45ec5a",
-    "last_checked_utc": "2025-05-13T20:13:54Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Semgrep",
     "quality": "High",
     "metadata": {
@@ -23005,8 +23005,8 @@
   "https://www.unkey.com/docs/llms.txt": {
     "url": "https://www.unkey.com/docs/llms.txt",
     "domain": "www.unkey.com",
-    "content_hash": "592880fb9d719d2976a6f9dff93b1e5b65152a0261a5e8a5a4e62cccfeeec7b6",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "content_hash": "a4b1c56ef64e64a543318510ee90f96819e02bf98902358696428acd36a2842a",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Unkey Docs",
     "quality": "Medium",
     "metadata": {
@@ -23028,19 +23028,19 @@
           14
         ]
       ],
-      "url_token_count": 4860,
+      "url_token_count": 5470,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T11:03:13Z",
-    "last_updated": "2025-05-12T11:03:13Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.bucket.co/llms.txt": {
     "url": "https://docs.bucket.co/llms.txt",
     "domain": "docs.bucket.co",
     "content_hash": "c217713b5ea01afbdc0009fd5e55776b60f857022e7a3af62e794083dc45a640",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Bucket docs",
     "quality": "Medium",
     "metadata": {
@@ -23074,7 +23074,7 @@
     "url": "https://docs.axle.insure/llms.txt",
     "domain": "docs.axle.insure",
     "content_hash": "d89e1899b05f0d52961b91bde12aa81ed16c0a28e2e6c0ccdf4de6a56f61702d",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Axle",
     "summary": "Please note that this endpoint will NOT refresh the Account object with new data from the insurance ",
     "quality": "Medium",
@@ -23109,7 +23109,7 @@
     "url": "https://frontmatter.codes/llms.txt",
     "domain": "frontmatter.codes",
     "content_hash": "7c6c79d3545aacb673715e9e83b17926080634a11a9f5fc62057919b52edb77f",
-    "last_checked_utc": "2025-05-13T19:53:27Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Headless CMS right in your code editor | Front Matter",
     "quality": "High",
     "metadata": {
@@ -23142,8 +23142,8 @@
   "https://docs.crewai.com/llms-full.txt": {
     "url": "https://docs.crewai.com/llms-full.txt",
     "domain": "docs.crewai.com",
-    "content_hash": "75928334e66aecaf2be6a6b16b0fb705f891fd7abae68f2d8aa794682a2fabfd",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "ecbf52ed1ef85829f4a130b011cbca3a7116f5c98a27e3c820f007e0de434c15",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Changelog",
     "summary": "Source: https://docs.crewai.com/changelog",
     "quality": "Medium",
@@ -23155,30 +23155,30 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          2684
+          2706
         ],
         [
           "Software Development",
-          1132
+          1150
         ],
         [
           "Data & Databases",
-          640
+          647
         ]
       ],
-      "url_token_count": 188983,
+      "url_token_count": 191310,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.argil.ai/llms.txt": {
     "url": "https://docs.argil.ai/llms.txt",
     "domain": "docs.argil.ai",
-    "content_hash": "5ddba45c9bafebcf8cfafda2920f931dc6e8ef7d6eb460f88d0a4e8df5cfb4f8",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "fa18fd69c2ee68c4832c0364f45aabcb184a3f3af7282e89e9e8e0afb10ed6e2",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Argil",
     "quality": "Medium",
     "metadata": {
@@ -23200,19 +23200,19 @@
           7
         ]
       ],
-      "url_token_count": 1720,
+      "url_token_count": 1763,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:13:22Z",
-    "last_updated": "2025-05-12T10:13:22Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://llmstxt.org/llms.txt": {
     "url": "https://llmstxt.org/llms.txt",
     "domain": "llmstxt.org",
     "content_hash": "ea68604d4d353fde5ce0af52cd1572a2c437bf50ffefc36d58abb82d8f9557e9",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "llms.txt",
     "quality": "High",
     "metadata": {
@@ -23238,7 +23238,7 @@
     "url": "https://docs.unifygtm.com/llms.txt",
     "domain": "docs.unifygtm.com",
     "content_hash": "fc32f3a474e97825c3033e635d4d8f646fec2dd1f5fcde3f7461ecb7d3de9020",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Unify",
     "quality": "Medium",
     "metadata": {
@@ -23271,8 +23271,8 @@
   "https://emailgic.com/llms.txt": {
     "url": "https://emailgic.com/llms.txt",
     "domain": "emailgic.com",
-    "content_hash": "a7a6a93b29632a4fc92c5f1d9a03b6684f55d8a2aebe79a4cd976f70c638912a",
-    "last_checked_utc": "2025-05-13T19:51:52Z",
+    "content_hash": "25f78ad034412c245d95fc75b764c0ff0403583fe47d8c3f0681201f84ef58d4",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Emailgic",
     "summary": "From Words to Wow in Seconds",
     "quality": "Medium",
@@ -23295,19 +23295,19 @@
           114
         ]
       ],
-      "url_token_count": 94261,
+      "url_token_count": 94297,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-12T10:15:29Z",
-    "last_updated": "2025-05-12T10:15:29Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.netlify.com/llms.txt": {
     "url": "https://docs.netlify.com/llms.txt",
     "domain": "docs.netlify.com",
     "content_hash": "4b1542eb06c03b6f96d87d808e7aed79e3761a7170af113008f3012bb93288b2",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "LLM documentation for Netlify",
     "quality": "High",
     "metadata": {
@@ -23342,7 +23342,7 @@
     "url": "https://docs.warp.dev/llms.txt",
     "domain": "docs.warp.dev",
     "content_hash": "e3b07a4eb4de518b7dfe3f628e4a319480d3cf2f1d644a7f6a9c6b5152e671e1",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Warp documentation",
     "quality": "Medium",
     "metadata": {
@@ -23377,7 +23377,7 @@
     "url": "https://docs.convex.dev/llms.txt",
     "domain": "docs.convex.dev",
     "content_hash": "6c18cd3ae07f5b0a4f17baf3ad5ecdf984d91f861b8883911ab1425531e65a04",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Errors and Warnings",
     "summary": "This page explains specific errors thrown by Convex.",
     "quality": "Medium",
@@ -23412,7 +23412,7 @@
     "url": "https://docs.envoyer.io/llms.txt",
     "domain": "docs.envoyer.io",
     "content_hash": "e80fafe0c433cac9cd870ec3cee1fe9c5931adfbb31ba4e0112bc1d162c4da7d",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Envoyer",
     "quality": "Medium",
     "metadata": {
@@ -23446,7 +23446,7 @@
     "url": "https://docs.fractalpay.com/llms.txt",
     "domain": "docs.fractalpay.com",
     "content_hash": "044710ecf12b113a25c9c680c6e64864aa336c0aab7923cdd1180d7331319438",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "API Documentation",
     "quality": "Medium",
     "metadata": {
@@ -23479,8 +23479,8 @@
   "https://ably.io/llms.txt": {
     "url": "https://ably.io/llms.txt",
     "domain": "ably.io",
-    "content_hash": "ee2b39c86f784e6b7ee1418ce66912bca4c3064875709d7827936c6d8fef5067",
-    "last_checked_utc": "2025-05-09T16:30:25.109953Z",
+    "content_hash": "910edd708610358f4484344a3daf096a5c52a32ec1ceefae0c467071ff2df66c",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "https://ably.com/docs llms.txt",
     "quality": "High",
     "metadata": {
@@ -23491,7 +23491,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          116
+          114
         ],
         [
           "Data & Databases",
@@ -23499,23 +23499,22 @@
         ],
         [
           "AI/ML",
-          22
+          23
         ]
       ],
-      "url_token_count": 5178,
+      "url_token_count": 5274,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-09T03:56:01Z",
-    "last_updated": "2025-05-09T16:30:25.109953Z",
-    "previous_content_hash": "cac194059863f2fcf904fdf96dd3961d41e659fe0c2d32f9ef25f828ffb0af60"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://ably-realtime.com/llms.txt": {
     "url": "https://ably-realtime.com/llms.txt",
     "domain": "ably-realtime.com",
-    "content_hash": "ee2b39c86f784e6b7ee1418ce66912bca4c3064875709d7827936c6d8fef5067",
-    "last_checked_utc": "2025-05-09T16:30:25.814654Z",
+    "content_hash": "910edd708610358f4484344a3daf096a5c52a32ec1ceefae0c467071ff2df66c",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "https://ably.com/docs llms.txt",
     "quality": "High",
     "metadata": {
@@ -23526,7 +23525,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          116
+          114
         ],
         [
           "Data & Databases",
@@ -23534,17 +23533,16 @@
         ],
         [
           "AI/ML",
-          22
+          23
         ]
       ],
-      "url_token_count": 5178,
+      "url_token_count": 5274,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-09T03:56:01Z",
-    "last_updated": "2025-05-09T16:30:25.814654Z",
-    "previous_content_hash": "cac194059863f2fcf904fdf96dd3961d41e659fe0c2d32f9ef25f828ffb0af60"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://aerospaceorbit.com/llms.txt": {
     "url": "https://aerospaceorbit.com/llms.txt",
@@ -23688,8 +23686,8 @@
   "https://ably.net/llms.txt": {
     "url": "https://ably.net/llms.txt",
     "domain": "ably.net",
-    "content_hash": "ee2b39c86f784e6b7ee1418ce66912bca4c3064875709d7827936c6d8fef5067",
-    "last_checked_utc": "2025-05-09T16:30:28.986528Z",
+    "content_hash": "910edd708610358f4484344a3daf096a5c52a32ec1ceefae0c467071ff2df66c",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "https://ably.com/docs llms.txt",
     "quality": "High",
     "metadata": {
@@ -23700,7 +23698,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          116
+          114
         ],
         [
           "Data & Databases",
@@ -23708,23 +23706,22 @@
         ],
         [
           "AI/ML",
-          22
+          23
         ]
       ],
-      "url_token_count": 5178,
+      "url_token_count": 5274,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-09T03:56:01Z",
-    "last_updated": "2025-05-09T16:30:28.986528Z",
-    "previous_content_hash": "cac194059863f2fcf904fdf96dd3961d41e659fe0c2d32f9ef25f828ffb0af60"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://ably.com/llms.txt": {
     "url": "https://ably.com/llms.txt",
     "domain": "ably.com",
-    "content_hash": "ee2b39c86f784e6b7ee1418ce66912bca4c3064875709d7827936c6d8fef5067",
-    "last_checked_utc": "2025-05-09T16:30:29.269715Z",
+    "content_hash": "910edd708610358f4484344a3daf096a5c52a32ec1ceefae0c467071ff2df66c",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "https://ably.com/docs llms.txt",
     "quality": "High",
     "metadata": {
@@ -23735,7 +23732,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          116
+          114
         ],
         [
           "Data & Databases",
@@ -23743,17 +23740,16 @@
         ],
         [
           "AI/ML",
-          22
+          23
         ]
       ],
-      "url_token_count": 5178,
+      "url_token_count": 5274,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-09T03:56:01Z",
-    "last_updated": "2025-05-09T16:30:29.269715Z",
-    "previous_content_hash": "cac194059863f2fcf904fdf96dd3961d41e659fe0c2d32f9ef25f828ffb0af60"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://afterall.com/llms.txt": {
     "url": "https://afterall.com/llms.txt",
@@ -40152,7 +40148,7 @@
     "url": "https://ast-grep.github.io/llms.txt",
     "domain": "ast-grep.github.io",
     "content_hash": "155fc41bd5fea9968d1bff40e87cfed711ba228f30a4c97cb0bfedee39f46c4b",
-    "last_checked_utc": "2025-05-13T19:39:49Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "AST-GREP",
     "summary": "ast-grep(sg) is a fast and polyglot tool for code structural search, lint, rewriting at large scale.",
     "quality": "Medium",
@@ -40324,8 +40320,8 @@
   "https://axiom.co/docs/llms-full.txt": {
     "url": "https://axiom.co/docs/llms-full.txt",
     "domain": "axiom.co",
-    "content_hash": "02b1d2acf75173ed392d815e258deb04da215dd2660b6ad364bd51f5ff4cdf2c",
-    "last_checked_utc": "2025-05-13T19:40:57Z",
+    "content_hash": "c4b58a2d33b96354ec7396c9fc6e1125613132b4922dfe432949c92f7adf51f7",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "arg_max",
     "summary": "Source: https://axiom.co/docs/apl/aggregation-function/arg-max",
     "quality": "Medium",
@@ -40337,24 +40333,24 @@
       "url_topic_ranking": [
         [
           "Data & Databases",
-          3417
+          3421
         ],
         [
           "AI/ML",
-          1991
+          1994
         ],
         [
           "Software Development",
-          1219
+          1222
         ]
       ],
-      "url_token_count": 400897,
+      "url_token_count": 401016,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T19:40:57Z",
-    "last_updated": "2025-05-13T19:40:57Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://ayrshare.com/docs/llms.txt": {
     "url": "https://ayrshare.com/docs/llms.txt",
@@ -41023,7 +41019,7 @@
     "url": "https://bun.sh/llms.txt",
     "domain": "bun.sh",
     "content_hash": "c8b726d801bd2afa3f12c5ae28a0f8cdacfb0a5a12e4e26e1e4adbb77f8a25ad",
-    "last_checked_utc": "2025-05-13T19:44:09Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Bun Documentation",
     "summary": "Bun is a fast all-in-one JavaScript runtime & toolkit designed for speed, complete with a bundler, t",
     "quality": "High",
@@ -41128,8 +41124,8 @@
   "https://chakra-ui.com/llms.txt": {
     "url": "https://chakra-ui.com/llms.txt",
     "domain": "chakra-ui.com",
-    "content_hash": "25dc8efdd39885dff1508d9c40d8c36cd5ee9a74261ff7e61c2c0d645f4c7a32",
-    "last_checked_utc": "2025-05-13T19:44:24Z",
+    "content_hash": "0940a743883174e8d9b2df58076c068835dac21e693b1fd3c6f63e6835e3ecc5",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Chakra UI v3 Documentation for LLMs",
     "quality": "Medium",
     "metadata": {
@@ -41143,13 +41139,13 @@
           2
         ]
       ],
-      "url_token_count": 329,
+      "url_token_count": 341,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T19:44:24Z",
-    "last_updated": "2025-05-13T19:44:24Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://capgo.app/llms-full.txt": {
     "url": "https://capgo.app/llms-full.txt",
@@ -41701,8 +41697,8 @@
   "https://developers.cloudflare.com/llms-full.txt": {
     "url": "https://developers.cloudflare.com/llms-full.txt",
     "domain": "developers.cloudflare.com",
-    "content_hash": "2605fe813e895e372e06c7dc8e4d5b2a2bb7e6ecc8b8c30bd16a5d8edcb5fac4",
-    "last_checked_utc": "2025-05-13T19:49:11Z",
+    "content_hash": "52d3d0a06adef96a5e0fe563873863a6236e082280125d4e5b0f1587f8f9a531",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Verify connection",
     "summary": "URL: https://developers.cloudflare.com/1.1.1.1/check/",
     "quality": "Medium",
@@ -41714,25 +41710,25 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          17085
+          17100
         ],
         [
           "Networking",
-          14334
+          14351
         ],
         [
           "AI/ML",
-          14118
+          14103
         ]
       ],
-      "url_token_count": 3951001,
+      "url_token_count": 3960419,
       "domain_purpose_ranking": [
         "Documentation",
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T19:49:11Z",
-    "last_updated": "2025-05-13T19:49:11Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://deutschlandcasinos.org/llms.txt": {
     "url": "https://deutschlandcasinos.org/llms.txt",
@@ -41771,8 +41767,8 @@
   "https://developer.fabric.inc/llms.txt": {
     "url": "https://developer.fabric.inc/llms.txt",
     "domain": "developer.fabric.inc",
-    "content_hash": "6395aae3a17c2866c86fd0e452f08e9612104cfab5bea51570eadf1813cd602e",
-    "last_checked_utc": "2025-05-13T19:49:11Z",
+    "content_hash": "ee20c58995a3b9bdf0b39de67b7e5f26d3da7473a7ba91af6d7f6749ef827260",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Fabric",
     "summary": "The Cart ID from the [Create cart](/v3/cart-and-checkout/api-reference/carts-v3/carts/carts) endpoin",
     "quality": "Medium",
@@ -41795,19 +41791,19 @@
           103
         ]
       ],
-      "url_token_count": 50611,
+      "url_token_count": 50706,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T19:49:11Z",
-    "last_updated": "2025-05-13T19:49:11Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.cursor.com/llms-full.txt": {
     "url": "https://docs.cursor.com/llms-full.txt",
     "domain": "docs.cursor.com",
-    "content_hash": "8ff286d1e51ee04a883cb4172cc94bfc2404fdb547f58860860a77cbf641ae9b",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "28c4b6b4dbfc89ba4cf0e45c812cbe192a6d3cbe42bfe80588bc6f10467d877b",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Billing",
     "summary": "Source: https://docs.cursor.com/account/billing",
     "quality": "Medium",
@@ -41819,30 +41815,30 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          431
+          461
         ],
         [
           "Software Development",
-          364
+          375
         ],
         [
           "Data & Databases",
-          73
+          84
         ]
       ],
-      "url_token_count": 68793,
+      "url_token_count": 71224,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.conductor.is/llms-full.txt": {
     "url": "https://docs.conductor.is/llms-full.txt",
     "domain": "docs.conductor.is",
-    "content_hash": "5e4e1886edddbdd2626e631d7f546bc3224f937533e688b182f5b64e33c37051",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "5324ebbf12598c7ad350a77bea1dca4aa521d10fb3552805c6bae22a53dac315",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "What is Conductor?",
     "summary": "Source: https://docs.conductor.is/about",
     "quality": "Medium",
@@ -41858,26 +41854,26 @@
         ],
         [
           "Software Development",
-          278
+          279
         ],
         [
           "Data & Databases",
           207
         ]
       ],
-      "url_token_count": 56655,
+      "url_token_count": 56966,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.ionq.com/llms-full.txt": {
     "url": "https://docs.ionq.com/llms-full.txt",
     "domain": "docs.ionq.com",
     "content_hash": "972ca684c9b78092e37e2155c50c1dda8ff4d3537e5c79ceb6670317e1613bba",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Get Backends",
     "summary": "Source: https://docs.ionq.com/api-reference/v0.3/backends/get-backends",
     "quality": "Medium",
@@ -41912,7 +41908,7 @@
     "url": "https://docs.embedchain.ai/llms.txt",
     "domain": "docs.embedchain.ai",
     "content_hash": "9d8d38ae98b71a3f9c2349502eb01a3f353feefa5a7f5142a034bff67ab1fe51",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Embedchain",
     "quality": "Medium",
     "metadata": {
@@ -41979,8 +41975,8 @@
   "https://docs.mangopay.com/llms-full.txt": {
     "url": "https://docs.mangopay.com/llms-full.txt",
     "domain": "docs.mangopay.com",
-    "content_hash": "f6a0cd66958ca767e4e34e810658bd615a06e145696333ef90127ad87bdd9757",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "04c2611b30324c06c9339b2ee2cd495fae1055d1bf2dcf333ea2b0a84e1a746f",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "The API Response object",
     "summary": "Source: https://docs.mangopay.com/api-reference/api-responses/api-response-object",
     "quality": "Medium",
@@ -41992,30 +41988,30 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          4238
-        ],
-        [
-          "Social",
-          1724
+          4294
         ],
         [
           "AI/ML",
-          1592
+          1731
+        ],
+        [
+          "Social",
+          1726
         ]
       ],
-      "url_token_count": 1835364,
+      "url_token_count": 1862369,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.dynamic.xyz/llms-full.txt": {
     "url": "https://docs.dynamic.xyz/llms-full.txt",
     "domain": "docs.dynamic.xyz",
-    "content_hash": "584c052d3205fb4bc3bbbf3193ba8422a9e1eed3768ba3db7515ce1aff1b9a52",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "a03952377b35ae16838b9dba29870a2e8295025fd64f3932c57120e187e949b5",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "AI Use Cases",
     "summary": "Source: https://docs.dynamic.xyz/ai/ai-use-cases",
     "quality": "Medium",
@@ -42031,26 +42027,26 @@
         ],
         [
           "Social",
-          496
+          497
         ],
         [
           "Hardware",
-          403
+          404
         ]
       ],
-      "url_token_count": 257748,
+      "url_token_count": 258023,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.velt.dev/llms.txt": {
     "url": "https://docs.velt.dev/llms.txt",
     "domain": "docs.velt.dev",
     "content_hash": "6f9c44c7436aaaba53a3c62685972f7bc8ba89d1d9d7c04466b5b1a1249f1c11",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Velt",
     "quality": "Medium",
     "metadata": {
@@ -42083,8 +42079,8 @@
   "https://docs.squared.ai/llms-full.txt": {
     "url": "https://docs.squared.ai/llms-full.txt",
     "domain": "docs.squared.ai",
-    "content_hash": "4653c76892ab20437602e50a23aa4625dc758c9ef2cf85e68c48218b904bef7d",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "4794fe309e33b506334f1ad4af67d6a395ac6727e0cb5dd617fdd3f069dbd932",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Adding an AI/ML Source",
     "summary": "Source: https://docs.squared.ai/activation/add-ai-source",
     "quality": "Medium",
@@ -42096,30 +42092,30 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          1080
+          1108
         ],
         [
           "Data & Databases",
-          759
+          774
         ],
         [
           "Software Development",
-          347
+          365
         ]
       ],
-      "url_token_count": 84027,
+      "url_token_count": 85050,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.medusajs.com/llms.txt": {
     "url": "https://docs.medusajs.com/llms.txt",
     "domain": "docs.medusajs.com",
     "content_hash": "785ff8d8e2bc985986fc582051d17d596fc466985de63e67d395e0c3eaf0199c",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Medusa",
     "summary": "Medusa is a digital commerce platform with a built-in framework for customization. When you install ",
     "quality": "High",
@@ -42154,7 +42150,7 @@
     "url": "https://docs.pydantic.dev/latest/llms-full.txt",
     "domain": "docs.pydantic.dev",
     "content_hash": "efda3f206ec97f9c9e7e442944f731db32826b953520da9adfbee4bd5ce90688",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Pydantic",
     "summary": "Pydantic is the most widely used data validation library for Python.",
     "quality": "Medium",
@@ -42188,8 +42184,8 @@
   "https://docs.fireworks.ai/llms-full.txt": {
     "url": "https://docs.fireworks.ai/llms-full.txt",
     "domain": "docs.fireworks.ai",
-    "content_hash": "51bf3c998d2f8cfc00f11b4a7e70de72ec8f3434a6f14982c3d188698c7f99c9",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "2690d9ea75c637ace6a9f77f7e8ae1a5345180d0894f626cae36bfa080d7a200",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Custom SSO",
     "summary": "Source: https://docs.fireworks.ai/accounts/sso",
     "quality": "Medium",
@@ -42201,31 +42197,31 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          1077
+          1080
         ],
         [
           "Software Development",
-          615
+          622
         ],
         [
           "Data & Databases",
-          212
+          216
         ]
       ],
-      "url_token_count": 118735,
+      "url_token_count": 120449,
       "domain_purpose_ranking": [
         "Documentation",
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.openpipe.ai/llms-full.txt": {
     "url": "https://docs.openpipe.ai/llms-full.txt",
     "domain": "docs.openpipe.ai",
     "content_hash": "f8649cb885a3823566015c6f649fdbebd8e8fdd5af26202cccd61e81bda28bec",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Delete Dataset",
     "summary": "Source: https://docs.openpipe.ai/api-reference/delete-dataset",
     "quality": "Medium",
@@ -42260,8 +42256,8 @@
   "https://docs.anthropic.com/llms.txt": {
     "url": "https://docs.anthropic.com/llms.txt",
     "domain": "docs.anthropic.com",
-    "content_hash": "40363f29a5cb3e0e7a79bf9ab8a4552d650671b47c6bbd6929e85216a94161ac",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "93afef4c67f2f9d78a738564cf173e0bfb7e4a5072c803da2559d458189c1c11",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Anthropic",
     "summary": "The number of canceled requests is specified in `request_counts`. To determine which requests were c",
     "quality": "Medium",
@@ -42273,7 +42269,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          77
+          76
         ],
         [
           "AI/ML",
@@ -42284,19 +42280,19 @@
           20
         ]
       ],
-      "url_token_count": 7502,
+      "url_token_count": 7581,
       "domain_purpose_ranking": [
         "Homepage"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.uniwebview.com/llms.txt": {
     "url": "https://docs.uniwebview.com/llms.txt",
     "domain": "docs.uniwebview.com",
     "content_hash": "e63a8e81522015f46c6802d3baa223713c2fb776062b5dab35d95d57d23fb5ae",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "UniWebView",
     "quality": "High",
     "metadata": {
@@ -42330,7 +42326,7 @@
     "url": "https://docs.meshconnect.com/llms.txt",
     "domain": "docs.meshconnect.com",
     "content_hash": "6908189c4672359fc8f1d4192b20aed2d98b57e8b1556d6ec41bc78d0f42afd0",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Mesh",
     "summary": "Some institutions do not require tokens to be refreshed.",
     "quality": "Medium",
@@ -42364,8 +42360,8 @@
   "https://docs.flowx.ai/llms-full.txt": {
     "url": "https://docs.flowx.ai/llms-full.txt",
     "domain": "docs.flowx.ai",
-    "content_hash": "cae9f7dcce107d1ad6fdf56898aba4f9aa095851b3e886c4d0c7abd278114c08",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "f0461ce01dd1defdf77a109e1fd010e426077c00e5fc88d380f18dbd614bfc60",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Node actions",
     "summary": "Source: https://docs.flowx.ai/4.7.x/docs/building-blocks/actions/actions",
     "quality": "Medium",
@@ -42377,31 +42373,31 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          2043
+          2066
         ],
         [
           "Data & Databases",
-          1810
+          1825
         ],
         [
           "Software Development",
-          1590
+          1615
         ]
       ],
-      "url_token_count": 551745,
+      "url_token_count": 561674,
       "domain_purpose_ranking": [
         "Documentation",
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.rungalileo.io/llms-full.txt": {
     "url": "https://docs.rungalileo.io/llms-full.txt",
     "domain": "docs.rungalileo.io",
     "content_hash": "5de8a0830caaa36e7a89a7833c7c07d897f731d6bcc3bcbadc33db3f4557b84a",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Get Token",
     "summary": "Source: https://docs.galileo.ai/api-reference/auth/get-token",
     "quality": "Medium",
@@ -42436,7 +42432,7 @@
     "url": "https://dub.co/docs/llms.txt",
     "domain": "dub.co",
     "content_hash": "dfd2803457ecbf5d83dc4321e7aa95cd64d391adada6556afec0d83750195aa9",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Dub Documentation",
     "quality": "Medium",
     "metadata": {
@@ -42470,7 +42466,7 @@
     "url": "https://docs.datafold.com/llms.txt",
     "domain": "docs.datafold.com",
     "content_hash": "ea11546f00828965a469633e0cb30a6f2bb2baf34e52442cf99684a8388e797a",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Datafold",
     "summary": "Date fields also support ranges using the following syntax:",
     "quality": "Medium",
@@ -42504,8 +42500,8 @@
   "https://docs.hyperline.co/llms.txt": {
     "url": "https://docs.hyperline.co/llms.txt",
     "domain": "docs.hyperline.co",
-    "content_hash": "5752bdb1490286a9d6a69cd5010243accc8057f8dd1bf50dd7b7188108556d91",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "da3f233a18a6b845cba0d5db1a6323eb7df4e1977571abe3148d8f5cf1cd7874",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Hyperline",
     "summary": "Retrieve all webhook messages sent.",
     "quality": "Medium",
@@ -42517,7 +42513,7 @@
       "url_topic_ranking": [
         [
           "E-commerce",
-          44
+          45
         ],
         [
           "News",
@@ -42525,22 +42521,22 @@
         ],
         [
           "Data & Databases",
-          22
+          23
         ]
       ],
-      "url_token_count": 7655,
+      "url_token_count": 7746,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.giselles.ai/llms-full.txt": {
     "url": "https://docs.giselles.ai/llms-full.txt",
     "domain": "docs.giselles.ai",
     "content_hash": "5a15efe45110b7abb40d5c93ea09901a50370d3293cd07cd4e4f61f7232aeb5f",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Account FAQ",
     "summary": "Source: https://docs.giselles.ai/faq/account-billing/accounts",
     "quality": "Medium",
@@ -42575,7 +42571,7 @@
     "url": "https://docs.salesbricks.com/llms.txt",
     "domain": "docs.salesbricks.com",
     "content_hash": "9d8997e4204ed1872b9774386e1f50f8b35fba379e54b9cdcaa267057a01621a",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Salesbricks",
     "quality": "Medium",
     "metadata": {
@@ -42608,8 +42604,8 @@
   "https://docs.tavus.io/llms-full.txt": {
     "url": "https://docs.tavus.io/llms-full.txt",
     "domain": "docs.tavus.io",
-    "content_hash": "da22eb647c2e6f5f995c54ab3dfd9e784f2864a7999893f3f8dfc609e92fcdc0",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "7331450a0b4a7f4580773ff971e3785f00d617b14553721066a464752f90396e",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Create Conversation",
     "summary": "Source: https://docs.tavus.io/api-reference/conversations/create-conversation",
     "quality": "Medium",
@@ -42621,7 +42617,7 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          315
+          322
         ],
         [
           "Entertainment",
@@ -42632,19 +42628,19 @@
           195
         ]
       ],
-      "url_token_count": 40291,
+      "url_token_count": 40670,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.oxla.com/llms.txt": {
     "url": "https://docs.oxla.com/llms.txt",
     "domain": "docs.oxla.com",
     "content_hash": "7233fa97886da2e26c926ec13603cd29991f80875ff3921563d811954623eca0",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Oxla Developer Hub",
     "quality": "Medium",
     "metadata": {
@@ -42677,8 +42673,8 @@
   "https://docs.projectdiscovery.io/llms-full.txt": {
     "url": "https://docs.projectdiscovery.io/llms-full.txt",
     "domain": "docs.projectdiscovery.io",
-    "content_hash": "50a78f87664c107a6701221a4bdf2b227728764e3038fddde047d2c764510988",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "782dc2406482ea7b8ba3f45778e88da4ca501089341336d22eccffc2b3c29950",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Delete Asset",
     "summary": "Source: https://docs.projectdiscovery.io/api-reference/assets/delete-asset",
     "quality": "Medium",
@@ -42690,7 +42686,7 @@
       "url_topic_ranking": [
         [
           "Networking",
-          762
+          760
         ],
         [
           "Software Development",
@@ -42698,7 +42694,7 @@
         ],
         [
           "Cybersecurity",
-          556
+          557
         ]
       ],
       "url_token_count": 198178,
@@ -42707,13 +42703,13 @@
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://dotenvx.com/llms.txt": {
     "url": "https://dotenvx.com/llms.txt",
     "domain": "dotenvx.com",
     "content_hash": "e3f00cf1c2ba375e2209298c8253f4e9b631b916708c1546e512b48049a44a35",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "dotenvx",
     "quality": "Medium",
     "metadata": {
@@ -42747,7 +42743,7 @@
     "url": "https://docs.methodfi.com/llms.txt",
     "domain": "docs.methodfi.com",
     "content_hash": "8f84decec1dc9923d028a2e97b6331819ace515f560f83d2dc3fa0aa024b0e64",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Method API Docs",
     "quality": "Medium",
     "metadata": {
@@ -42781,7 +42777,7 @@
     "url": "https://docs.envoyer.io/llms-full.txt",
     "domain": "docs.envoyer.io",
     "content_hash": "8ee812de554a724d577a975c4dee47893b34158edd493c59d139e24f9fa1514a",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Source Control",
     "summary": "Connect to source control providers to deploy your projects.",
     "quality": "Medium",
@@ -42815,8 +42811,8 @@
   "https://docs.pinata.cloud/llms-full.txt": {
     "url": "https://docs.pinata.cloud/llms-full.txt",
     "domain": "docs.pinata.cloud",
-    "content_hash": "64d2784077d87a63bf216e9db4c729cefee2dc71e0b6386d1f5607c24a969054",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "8ffe36b979a411122d533d0f8725ead0cf6f3b98a42da6367770c6e311bff843",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "API Keys",
     "summary": "Source: https://docs.pinata.cloud/account-management/api-keys",
     "quality": "Medium",
@@ -42828,24 +42824,24 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          491
+          492
         ],
         [
           "AI/ML",
-          267
+          268
         ],
         [
           "Data & Databases",
           180
         ]
       ],
-      "url_token_count": 106804,
+      "url_token_count": 109417,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://dnsexit.com/content/llms-full.txt": {
     "url": "https://dnsexit.com/content/llms-full.txt",
@@ -42885,7 +42881,7 @@
     "url": "https://docs.turso.tech/llms.txt",
     "domain": "docs.turso.tech",
     "content_hash": "48c3efa27d6e126b3cda5f78621eba8a68bffa7ed50175e5c08fac276501d2c6",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Turso",
     "quality": "Medium",
     "metadata": {
@@ -42919,7 +42915,7 @@
     "url": "https://docs.unstructured.io/llms.txt",
     "domain": "docs.unstructured.io",
     "content_hash": "4ae5e25f39630622c6bc7cf9ce58924c1bcddf23730e4b0238ac74b4d279726d",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Unstructured",
     "quality": "Medium",
     "metadata": {
@@ -42952,8 +42948,8 @@
   "https://docs.crewai.com/llms.txt": {
     "url": "https://docs.crewai.com/llms.txt",
     "domain": "docs.crewai.com",
-    "content_hash": "1594322d829495d40646b289a78878b72a6eadba194245e8187dd3c7b59b01fb",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "71fe4cafc59de76e03355b0f8f71dfc501ff3d19aea19156667d6f6c0a781366",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "CrewAI",
     "quality": "Medium",
     "metadata": {
@@ -42975,19 +42971,19 @@
           16
         ]
       ],
-      "url_token_count": 4755,
+      "url_token_count": 4791,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.tryvital.io/llms-full.txt": {
     "url": "https://docs.tryvital.io/llms-full.txt",
     "domain": "docs.tryvital.io",
-    "content_hash": "ef6d0b9cec92ad170cb1e6965ec8bbdbec8c1c5fb9eab14d8053500a0b938c81",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "b955cac40098546575e113c155fcc66fb7a4fd8ea24b4634ff633cd932c39623",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Junction API",
     "summary": "Source: https://docs.junction.com/api-details/junction-api",
     "quality": "Medium",
@@ -42999,31 +42995,31 @@
       "url_topic_ranking": [
         [
           "Data & Databases",
-          1357
+          1342
         ],
         [
           "AI/ML",
-          1261
+          1246
         ],
         [
           "Software Development",
-          829
+          850
         ]
       ],
-      "url_token_count": 239702,
+      "url_token_count": 238300,
       "domain_purpose_ranking": [
         "Documentation",
         "Resource List"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.expo.dev/llms-full.txt": {
     "url": "https://docs.expo.dev/llms-full.txt",
     "domain": "docs.expo.dev",
-    "content_hash": "4e1fc6c298289e690c388e2ee3101d134bc6992e8e6f95e733e66e3b816dd6da",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "df972a486afe5ae84557695a96368e5534b2d4228575dc976d880a21d38f61f1",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Expo Documentation",
     "summary": "Expo is an open-source React Native framework for apps that run natively on Android, iOS, and the we",
     "quality": "Medium",
@@ -43035,30 +43031,30 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          2257
+          2262
         ],
         [
           "Hardware",
-          690
+          689
         ],
         [
           "Networking",
           584
         ]
       ],
-      "url_token_count": 324017,
+      "url_token_count": 324452,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.primev.xyz/llms-full.txt": {
     "url": "https://docs.primev.xyz/llms-full.txt",
     "domain": "docs.primev.xyz",
     "content_hash": "6b8f67a4f6f10007f8efcdff24dc17bae4807f911ba148fb30723478893224b8",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Add Auto Deposit",
     "summary": "Source: https://docs.primev.xyz/v1.1.0/api-reference/bidder/autodeposit",
     "quality": "Medium",
@@ -43127,8 +43123,8 @@
   "https://docs.codeium.com/llms.txt": {
     "url": "https://docs.codeium.com/llms.txt",
     "domain": "docs.codeium.com",
-    "content_hash": "c613799367843e18ae5425b30620b667e8894a8b2183efd5afface433543cf66",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "4f5645b5fe597f9150ba5b08cb2f4f8e1bb156ac178be4665336990420a9e466",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Windsurf Docs",
     "quality": "Medium",
     "metadata": {
@@ -43150,13 +43146,13 @@
           2
         ]
       ],
-      "url_token_count": 1211,
+      "url_token_count": 1240,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://dolphinradar.com/llms.txt": {
     "url": "https://dolphinradar.com/llms.txt",
@@ -43195,8 +43191,8 @@
   "https://docs.zapier.com/llms-full.txt": {
     "url": "https://docs.zapier.com/llms-full.txt",
     "domain": "docs.zapier.com",
-    "content_hash": "d170b94b6807b5a93be2d7dacda90fd9cc7c02646ffd498c6bb5440328c528be",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "00ea436dc5a8f8d775483e82ad97f53aa81e34e6627326691188bc5684ef941e",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Get Action Details",
     "summary": "Source: https://docs.zapier.com/ai-actions/api-reference/actions/get-action-details",
     "quality": "Medium",
@@ -43208,30 +43204,30 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          2241
+          2258
         ],
         [
           "AI/ML",
-          926
+          934
         ],
         [
           "Data & Databases",
-          796
+          802
         ]
       ],
-      "url_token_count": 267680,
+      "url_token_count": 271551,
       "domain_purpose_ranking": [
         "Documentation"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.perplexity.ai/llms-full.txt": {
     "url": "https://docs.perplexity.ai/llms-full.txt",
     "domain": "docs.perplexity.ai",
-    "content_hash": "c3705b5d6a28a1cef37d8b01d1cb6b6046a35e2b329987ef7590b71619c4353a",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "content_hash": "a8b306c1c7dd91a5eb42dd09c1eb6588bf8d5c25393b2f91249a090a4e36de50",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Chat Completions",
     "summary": "Source: https://docs.perplexity.ai/api-reference/chat-completions",
     "quality": "Medium",
@@ -43243,7 +43239,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          216
+          217
         ],
         [
           "AI/ML",
@@ -43251,22 +43247,22 @@
         ],
         [
           "Data & Databases",
-          57
+          58
         ]
       ],
-      "url_token_count": 23717,
+      "url_token_count": 23711,
       "domain_purpose_ranking": [
         "Homepage"
       ]
     },
     "first_added": "2025-05-13T19:50:03Z",
-    "last_updated": "2025-05-13T19:50:03Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://docs.luxalgo.com/llms.txt": {
     "url": "https://docs.luxalgo.com/llms.txt",
     "domain": "docs.luxalgo.com",
     "content_hash": "5f001ddf1df23631691e73c032ca72568cf3f71cc6d3078c760098d1bca39020",
-    "last_checked_utc": "2025-05-13T19:50:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "LuxAlgo",
     "quality": "Medium",
     "metadata": {
@@ -43299,8 +43295,8 @@
   "https://elevenlabs.io/docs/llms-full.txt": {
     "url": "https://elevenlabs.io/docs/llms-full.txt",
     "domain": "elevenlabs.io",
-    "content_hash": "43e5648bcbb8fe4319908b118427a4f0d4e86dee00a2ff75358fec01de173705",
-    "last_checked_utc": "2025-05-13T19:50:58Z",
+    "content_hash": "03427b205be54c0db9ef6fb4d96a20adf02cbf5faf37090bdca269cc3ff08112",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "ElevenLabs",
     "summary": "{/* Light mode wave */}",
     "quality": "Medium",
@@ -43312,18 +43308,18 @@
       "url_topic_ranking": [
         [
           "AI/ML",
-          2860
+          2871
         ],
         [
           "Data & Databases",
-          1109
+          1062
         ],
         [
           "Software Development",
-          951
+          966
         ]
       ],
-      "url_token_count": 587096,
+      "url_token_count": 589166,
       "domain_purpose_ranking": [
         "Research Paper",
         "Resource List",
@@ -43331,7 +43327,7 @@
       ]
     },
     "first_added": "2025-05-13T19:50:58Z",
-    "last_updated": "2025-05-13T19:50:58Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://faddom.com/llms.txt": {
     "url": "https://faddom.com/llms.txt",
@@ -43474,7 +43470,7 @@
     "url": "https://flatfile.com/docs/llms.txt",
     "domain": "flatfile.com",
     "content_hash": "1a7fa61690cdf8b93af7a38dadea821c78decf964e5916945bde3d089f70c21c",
-    "last_checked_utc": "2025-05-13T19:53:08Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "flatfile.com",
     "quality": "Medium",
     "metadata": {
@@ -43817,8 +43813,8 @@
   "https://getlago.com/docs/llms.txt": {
     "url": "https://getlago.com/docs/llms.txt",
     "domain": "getlago.com",
-    "content_hash": "56a7a8f378d7c631258a953b173e6d0d9cbacc0fa836f52734e33530ea4da7ef",
-    "last_checked_utc": "2025-05-13T19:55:01Z",
+    "content_hash": "6f32f611d93ed6d51359e603cb0f7dd121eb25e2f21fdf5dcaa65d3224057b9c",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Lago",
     "summary": "This endpoint allows you to fetch the URL that can be embedded to provide customers access to a dedi",
     "quality": "Medium",
@@ -43834,20 +43830,20 @@
         ],
         [
           "News",
-          26
+          28
         ],
         [
           "Data & Databases",
           25
         ]
       ],
-      "url_token_count": 9654,
+      "url_token_count": 10129,
       "domain_purpose_ranking": [
-        "Other"
+        "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T19:55:01Z",
-    "last_updated": "2025-05-13T19:55:01Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://glamar.io/llms-full.txt": {
     "url": "https://glamar.io/llms-full.txt",
@@ -44328,7 +44324,7 @@
     "url": "https://huggingface-projects-docs-llms-txt.hf.space/accelerate/llms.txt",
     "domain": "huggingface-projects-docs-llms-txt.hf.space",
     "content_hash": "53c28355bc4b7659944c66e3929a666f64a0631f3dd5bd415111d7ddfafe742d",
-    "last_checked_utc": "2025-05-13T19:57:02Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Quicktour",
     "summary": "There are many ways to launch and run your code depending on your training environment ([torchrun](h",
     "quality": "Medium",
@@ -44363,7 +44359,7 @@
     "url": "https://huggingface-projects-docs-llms-txt.hf.space/huggingface_hub/llms.txt",
     "domain": "huggingface-projects-docs-llms-txt.hf.space",
     "content_hash": "e6b04685792052d167d8dd43ead5b75dcc572b5d63c6f6c62e245b5878021c07",
-    "last_checked_utc": "2025-05-13T19:57:02Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Installation",
     "summary": "Before you start, you will need to setup your environment by installing the appropriate packages.",
     "quality": "Medium",
@@ -44398,7 +44394,7 @@
     "url": "https://huggingface-projects-docs-llms-txt.hf.space/hub/llms.txt",
     "domain": "huggingface-projects-docs-llms-txt.hf.space",
     "content_hash": "87d6185d6290a3aa5862c3e07d3725632f3116c3cdd2db3beea8f3cf84b2a3c4",
-    "last_checked_utc": "2025-05-13T19:57:02Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Advanced Access Control in Organizations with Resource Group",
     "summary": "<Tip warning={true}>",
     "quality": "Medium",
@@ -44433,7 +44429,7 @@
     "url": "https://huggingface-projects-docs-llms-txt.hf.space/transformers/llms.txt",
     "domain": "huggingface-projects-docs-llms-txt.hf.space",
     "content_hash": "4f87a99d5ade17a1273405dfd7174278e7f1e8d1fdb76ea1a888528df99e607a",
-    "last_checked_utc": "2025-05-13T19:57:02Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Hyperparameter Search using Trainer API",
     "summary": "🤗 Transformers provides a `Trainer` class optimized for training 🤗 Transformers models, making it ea",
     "quality": "Medium",
@@ -44502,8 +44498,8 @@
   "https://infisical.com/docs/llms.txt": {
     "url": "https://infisical.com/docs/llms.txt",
     "domain": "infisical.com",
-    "content_hash": "7c07ec896c27051b386ced3d29c37246671c058768dad103cff45a28a91ca48c",
-    "last_checked_utc": "2025-05-13T19:57:45Z",
+    "content_hash": "f7c91c3a7ada7db397bc532ec683d8ff1695e9e21f24d3275708548d2da624e7",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Infisical",
     "quality": "Medium",
     "metadata": {
@@ -44514,24 +44510,24 @@
       "url_topic_ranking": [
         [
           "Cloud Computing",
-          250
+          249
         ],
         [
           "News",
-          152
+          155
         ],
         [
           "Science",
-          49
+          50
         ]
       ],
-      "url_token_count": 29628,
+      "url_token_count": 30071,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T19:57:45Z",
-    "last_updated": "2025-05-13T19:57:45Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://icasinoreviews.info/llms.txt": {
     "url": "https://icasinoreviews.info/llms.txt",
@@ -44650,8 +44646,8 @@
   "https://inspira-ui.com/llms-full.txt": {
     "url": "https://inspira-ui.com/llms-full.txt",
     "domain": "inspira-ui.com",
-    "content_hash": "935090979227e2d71a4a95b65ad1683c9ad13f07247357577a369790d72bdd00",
-    "last_checked_utc": "2025-05-13T19:58:37Z",
+    "content_hash": "70d8d23e9aa2ec5494fe94d58178a52c367a8f53e73ab085dda50a86bdecdf4e",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Complete documentation of Inspira UI",
     "summary": "URL: https://inspira-ui.com/getting-started/Introduction",
     "quality": "Medium",
@@ -44663,7 +44659,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          320
+          319
         ],
         [
           "Data & Databases",
@@ -44674,13 +44670,13 @@
           65
         ]
       ],
-      "url_token_count": 165583,
+      "url_token_count": 165614,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T19:58:37Z",
-    "last_updated": "2025-05-13T19:58:37Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://involve.me/llms-full.txt": {
     "url": "https://involve.me/llms-full.txt",
@@ -44781,7 +44777,7 @@
     "url": "https://iqboatlifts.com/llms.txt",
     "domain": "iqboatlifts.com",
     "content_hash": "9a98b22b7b17a0a7fc0c68edd1bfd79feb92ee90763681b3d64349d512ba9b7b",
-    "last_checked_utc": "2025-05-13T19:58:37Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "https://iqboatlifts.com/llms.txt",
     "quality": "Medium",
     "metadata": {
@@ -45213,8 +45209,8 @@
   "https://lib.rsbuild.dev/llms-full.txt": {
     "url": "https://lib.rsbuild.dev/llms-full.txt",
     "domain": "lib.rsbuild.dev",
-    "content_hash": "158dad50139f5715bbc072797dd15271612d6a4fc1b011b0f8a664aeb72c7990",
-    "last_checked_utc": "2025-05-13T20:02:08Z",
+    "content_hash": "859a945af7370d6bcf1b94d2a72007dc9495680489671099736370316fc4592d",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Introduction",
     "summary": "Rslib is a library development tool that leverages the well-designed configurations and plugins of [",
     "quality": "Medium",
@@ -45226,7 +45222,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          272
+          316
         ],
         [
           "Data & Databases",
@@ -45237,13 +45233,13 @@
           19
         ]
       ],
-      "url_token_count": 39400,
+      "url_token_count": 41573,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T20:02:08Z",
-    "last_updated": "2025-05-13T20:02:08Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://lcl.dev/docs/llms.txt": {
     "url": "https://lcl.dev/docs/llms.txt",
@@ -45421,7 +45417,7 @@
     "url": "https://llm.skydeck.ai/llms.txt",
     "domain": "llm.skydeck.ai",
     "content_hash": "671bc3bfd528b9c4c63a70dbb46b688919bdaf697d26aae75a0b7342e6428059",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "SkyDeck.ai",
     "quality": "Medium",
     "metadata": {
@@ -45455,7 +45451,7 @@
     "url": "https://lmstudio.ai/llms.txt",
     "domain": "lmstudio.ai",
     "content_hash": "825c14a3eacc9ffa8197d9cb1305dd705b17162726bec91ab2386c35da166cb8",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "app",
     "summary": "LM Studio is a desktop app for developing and experimenting with LLMs locally on your computer.",
     "quality": "Medium",
@@ -45490,7 +45486,7 @@
     "url": "https://loglayer.dev/llms-full.txt",
     "domain": "loglayer.dev",
     "content_hash": "9425a9c398bfe827671137046782c6ac0653aa0c9173cbf4378cbb93cefc4306",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Introduction",
     "summary": "`loglayer` is a unified logger that routes logs to various logging libraries, cloud providers, and O",
     "quality": "Medium",
@@ -45525,7 +45521,7 @@
     "url": "https://llm.rememberizer.ai/llms.txt",
     "domain": "llm.rememberizer.ai",
     "content_hash": "fa6bd195647b673c957de09f819010e767a04a4f087acab0ece9c7ac6f9ca3b1",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Rememberizer",
     "quality": "Medium",
     "metadata": {
@@ -45593,8 +45589,8 @@
   "https://loops.so/docs/llms-full.txt": {
     "url": "https://loops.so/docs/llms-full.txt",
     "domain": "loops.so",
-    "content_hash": "43ce38c236d8ee35108f60a32d0a7b4d0c689f4899f54c03c9a3f55b7e6e3630",
-    "last_checked_utc": "2025-05-13T20:03:01Z",
+    "content_hash": "56f0d3cebeb862707161716a7cece098999ab6c3c4df3b8db910cb90dec7fcb6",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Change your login email",
     "summary": "Source: https://loops.so/docs/account/changing-your-email",
     "quality": "Medium",
@@ -45617,19 +45613,19 @@
           275
         ]
       ],
-      "url_token_count": 144321,
+      "url_token_count": 144540,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T20:03:01Z",
-    "last_updated": "2025-05-13T20:03:01Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://marcloudconsulting.com/llms-full.txt": {
     "url": "https://marcloudconsulting.com/llms-full.txt",
     "domain": "marcloudconsulting.com",
     "content_hash": "c61d7e39134009c81947deaa31db1584cabc4196531531da49b3894ba956541c",
-    "last_checked_utc": "2025-05-13T20:03:57Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "llms-full.txt - Extended LLM Policy for MarCloud Consulting",
     "quality": "High",
     "metadata": {
@@ -45975,8 +45971,8 @@
   "https://mintlify.com/docs/llms-full.txt": {
     "url": "https://mintlify.com/docs/llms-full.txt",
     "domain": "mintlify.com",
-    "content_hash": "62b26026551fc5d8640f9dd3b26e9d7f1c4683fa41f9cefd7cf1491547a9532e",
-    "last_checked_utc": "2025-05-13T20:05:05Z",
+    "content_hash": "407ec3c118cf12a18357c6d2f31706fa437091a868a4df3edc806661a1eae47e",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Editor Permissions",
     "summary": "Source: https://mintlify.com/docs/advanced/dashboard/permissions",
     "quality": "Medium",
@@ -45988,25 +45984,25 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          341
+          339
         ],
         [
           "Cybersecurity",
-          131
+          132
         ],
         [
           "Data & Databases",
-          105
+          106
         ]
       ],
-      "url_token_count": 91846,
+      "url_token_count": 91961,
       "domain_purpose_ranking": [
         "Documentation",
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T20:05:05Z",
-    "last_updated": "2025-05-13T20:05:05Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://mirrorfly.com/llms.txt": {
     "url": "https://mirrorfly.com/llms.txt",
@@ -46149,7 +46145,7 @@
     "url": "https://modelcontextprotocol.io/llms.txt",
     "domain": "modelcontextprotocol.io",
     "content_hash": "62c6526570ca9e7d2b5d6745a95e18fa1552f3d944041bd67d7749cc7f30f9dd",
-    "last_checked_utc": "2025-05-13T20:05:40Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Model Context Protocol",
     "quality": "Medium",
     "metadata": {
@@ -46518,7 +46514,7 @@
     "url": "https://openrouter.ai/docs/llms.txt",
     "domain": "openrouter.ai",
     "content_hash": "e6bbaea33f83b1683cec1603ad02676d9d234eccc551ced58c1d101c9b60272c",
-    "last_checked_utc": "2025-05-13T20:08:52Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "OpenRouter | Documentation",
     "quality": "Medium",
     "metadata": {
@@ -46611,8 +46607,8 @@
   "https://orm.drizzle.team/llms-full.txt": {
     "url": "https://orm.drizzle.team/llms-full.txt",
     "domain": "orm.drizzle.team",
-    "content_hash": "e23536fd5a205bb9d537a37cda18965bf4434ea866adde8ac95dbb96a40bf0b8",
-    "last_checked_utc": "2025-05-13T20:08:52Z",
+    "content_hash": "86a4e05255f0010692838200d1b00b6441dd6d056e056e6e0fe1478c991f6fff",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Drizzle",
     "summary": "Source: https://orm.drizzle.team/docs/arktype",
     "quality": "Medium",
@@ -46628,20 +46624,20 @@
         ],
         [
           "Software Development",
-          366
+          367
         ],
         [
           "AI/ML",
           301
         ]
       ],
-      "url_token_count": 273533,
+      "url_token_count": 273537,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T20:08:52Z",
-    "last_updated": "2025-05-13T20:08:52Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://otpless.com/docs/llms.txt": {
     "url": "https://otpless.com/docs/llms.txt",
@@ -47061,7 +47057,7 @@
     "url": "https://postfa.st/llms-full.txt",
     "domain": "postfa.st",
     "content_hash": "1155960e1db0501ebd1eb13ab68c3ad72e68188b1ec39b93d1d4ea249a15f1ce",
-    "last_checked_utc": "2025-05-13T20:10:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "PostFast",
     "summary": "PostFast is designed for content creators, brands, and businesses who want to simplify their social ",
     "quality": "Medium",
@@ -47096,7 +47092,7 @@
     "url": "https://prettier.io/llms.txt",
     "domain": "prettier.io",
     "content_hash": "6c6b5eb8ab00529f2b6d5ba8000723baea98e5b543e40fb73a456161c1cdbfc3",
-    "last_checked_utc": "2025-05-13T20:10:26Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Prettier",
     "quality": "Medium",
     "metadata": {
@@ -47121,8 +47117,8 @@
   "https://prisma.io/docs/llms-full.txt": {
     "url": "https://prisma.io/docs/llms-full.txt",
     "domain": "prisma.io",
-    "content_hash": "65cb4c561d1562c2674908f8f50e45305f8ca02efe304fbf9f25a5c9fb926584",
-    "last_checked_utc": "2025-05-13T20:10:26Z",
+    "content_hash": "128902095d67f47aa6a4d78d7b537817f7e9b9e50c93545117defc982f01da0b",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Quickstart",
     "summary": "URL: https://www.prisma.io/docs/getting-started/quickstart-prismaPostgres",
     "quality": "Medium",
@@ -47134,24 +47130,24 @@
       "url_topic_ranking": [
         [
           "Data & Databases",
-          9629
+          9737
         ],
         [
           "AI/ML",
-          4341
+          4387
         ],
         [
           "Software Development",
-          3157
+          3208
         ]
       ],
-      "url_token_count": 864435,
+      "url_token_count": 872143,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T20:10:26Z",
-    "last_updated": "2025-05-13T20:10:26Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://prwe.com/llms-full.txt": {
     "url": "https://prwe.com/llms-full.txt",
@@ -47631,7 +47627,7 @@
     "url": "https://qwikrank.com/llms.txt",
     "domain": "qwikrank.com",
     "content_hash": "1a4a67b112749a6cfb73b306e579ada5c259af7764d2ac9aeab669246339e90d",
-    "last_checked_utc": "2025-05-13T20:10:50Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Qwikrank: AI-Powered SEO Content Generation & Blog Hosting",
     "summary": "Automate your entire content creation process and host your SEO-optimized blog with Qwikrank's all-i",
     "quality": "Medium",
@@ -47701,7 +47697,7 @@
     "url": "https://rainbowkit.com/llms.txt",
     "domain": "rainbowkit.com",
     "content_hash": "44cdef8602f15efdbac2132eab22b332a122fa1cf4f92f2785959f9b91491d29",
-    "last_checked_utc": "2025-05-13T20:10:50Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "rainbowkit.com llms.txt",
     "summary": "RainbowKit offers a customizable wallet connection framework designed for developers, enabling them ",
     "quality": "High",
@@ -47873,8 +47869,8 @@
   "https://resend.com/docs/llms.txt": {
     "url": "https://resend.com/docs/llms.txt",
     "domain": "resend.com",
-    "content_hash": "a5bed60999a7b3b842dbf1004bfbb6fd45bc203e4accceafa65ae5e9e12c998b",
-    "last_checked_utc": "2025-05-13T20:11:11Z",
+    "content_hash": "749b26912dfa5ffed3919cdc17c62c625844a7eee45fc17df6a4797e99f43e59",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Resend",
     "quality": "Medium",
     "metadata": {
@@ -47896,13 +47892,13 @@
           4
         ]
       ],
-      "url_token_count": 5041,
+      "url_token_count": 5098,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T20:11:11Z",
-    "last_updated": "2025-05-13T20:11:11Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://rev.ai/llms.txt": {
     "url": "https://rev.ai/llms.txt",
@@ -47977,8 +47973,8 @@
   "https://rsbuild.dev/llms.txt": {
     "url": "https://rsbuild.dev/llms.txt",
     "domain": "rsbuild.dev",
-    "content_hash": "bf8139697e7697767cf1e4d5d0590c4aaae088247fa91133da352320cf0663e3",
-    "last_checked_utc": "2025-05-13T20:12:08Z",
+    "content_hash": "0295e004630090618f61bb17d7b154f1928491fdc619533b786b1225a2f0883a",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Rsbuild",
     "quality": "High",
     "metadata": {
@@ -48000,19 +47996,19 @@
           2
         ]
       ],
-      "url_token_count": 2534,
+      "url_token_count": 2550,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T20:12:08Z",
-    "last_updated": "2025-05-13T20:12:08Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://rspack.dev/llms.txt": {
     "url": "https://rspack.dev/llms.txt",
     "domain": "rspack.dev",
     "content_hash": "f1ce9ce68f50797a051d8a1dd0f3c608cdccf3f5f9f1ee13276d0e61a6cf146f",
-    "last_checked_utc": "2025-05-13T20:12:08Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Rspack",
     "quality": "High",
     "metadata": {
@@ -48114,8 +48110,8 @@
   "https://screenshotone.com/docs/llms-full.txt": {
     "url": "https://screenshotone.com/docs/llms-full.txt",
     "domain": "screenshotone.com",
-    "content_hash": "04ab1b2a5004e62491480867ec3ddda88fe055d3b7cd4618832758ae7dc8769b",
-    "last_checked_utc": "2025-05-13T20:13:00Z",
+    "content_hash": "bc760dd894930147cd4add3ae5540563fbadf7f73bea714e85c87ec65ce0319a",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "ScreenshotOne.com Full Documentation",
     "summary": "import Alert from \"@/components/Alert.astro\";",
     "quality": "Medium",
@@ -48131,7 +48127,7 @@
         ],
         [
           "Networking",
-          97
+          98
         ],
         [
           "AI/ML",
@@ -48144,7 +48140,7 @@
       ]
     },
     "first_added": "2025-05-13T20:13:00Z",
-    "last_updated": "2025-05-13T20:13:00Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://sanity.io/docs/llms.txt": {
     "url": "https://sanity.io/docs/llms.txt",
@@ -48494,7 +48490,7 @@
     "url": "https://smartcar.com/docs/llms.txt",
     "domain": "smartcar.com",
     "content_hash": "1bfd9168b9059f330a43650bc68d8a68d080af0c63dce42a7592247a46a906a6",
-    "last_checked_utc": "2025-05-13T20:14:49Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "smartcar",
     "quality": "Medium",
     "metadata": {
@@ -48905,7 +48901,7 @@
     "url": "https://svelte.dev/llms.txt",
     "domain": "svelte.dev",
     "content_hash": "98c6c3bb9e210dc7c742cdef6e354b6bde1b1618339c68f2b757354d1d19fcc9",
-    "last_checked_utc": "2025-05-13T20:15:33Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Svelte Documentation for LLMs",
     "quality": "Medium",
     "metadata": {
@@ -49076,7 +49072,7 @@
     "url": "https://tamagui.dev/llms.txt",
     "domain": "tamagui.dev",
     "content_hash": "4047e085f5fa3f83894aef3171d4f4c17ec640e7bc4620a4a41d9b1424b04763",
-    "last_checked_utc": "2025-05-13T20:16:21Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Tamagui Documentation",
     "summary": "If you want all docs as a single document, see https://tamagui.dev/llms-full.txt.",
     "quality": "Medium",
@@ -49209,7 +49205,7 @@
     "url": "https://trigger.dev/docs/llms.txt",
     "domain": "trigger.dev",
     "content_hash": "69ee10b7dcc6025b467c665f733e091b50061b553199423824dcb306492fb340",
-    "last_checked_utc": "2025-05-13T20:17:58Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Trigger.dev",
     "quality": "Medium",
     "metadata": {
@@ -49453,7 +49449,7 @@
     "url": "https://uxpatterns.dev/en/llms-full.txt",
     "domain": "uxpatterns.dev",
     "content_hash": "86ecf0b0cccfb87bf4cba7fb60eb57eb38d908aa9ae3206361dc4042ba7cad1a",
-    "last_checked_utc": "2025-05-13T20:19:26Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "GENERAL: [Books](https://ux-patterns-for-developers-khahu0xl",
     "summary": "A curated list of essential UX books to help developers improve their design and implementation skil",
     "quality": "Medium",
@@ -49513,8 +49509,8 @@
   "https://upstash.com/docs/llms-full.txt": {
     "url": "https://upstash.com/docs/llms-full.txt",
     "domain": "upstash.com",
-    "content_hash": "58669b49d1caef1f90c2f7470e50d71a0c3481bf57b0d3b26a0698c50748551f",
-    "last_checked_utc": "2025-05-13T20:19:26Z",
+    "content_hash": "c884c453299f6f2bdd777e150b872d6f407f8f1d39116bf62e97435be0537a20",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "null",
     "summary": "Source: https://upstash.com/docs/README",
     "quality": "Medium",
@@ -49526,7 +49522,7 @@
       "url_topic_ranking": [
         [
           "Data & Databases",
-          2908
+          2909
         ],
         [
           "Software Development",
@@ -49537,13 +49533,13 @@
           1316
         ]
       ],
-      "url_token_count": 489532,
+      "url_token_count": 489535,
       "domain_purpose_ranking": [
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T20:19:26Z",
-    "last_updated": "2025-05-13T20:19:26Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://userjot.com/llms.txt": {
     "url": "https://userjot.com/llms.txt",
@@ -49677,8 +49673,8 @@
   "https://viem.sh/llms-full.txt": {
     "url": "https://viem.sh/llms-full.txt",
     "domain": "viem.sh",
-    "content_hash": "7b623b106154350077cd83b2d022e33fb89cbeee161d4be1f2e3d5b886eae6a0",
-    "last_checked_utc": "2025-05-13T20:20:08Z",
+    "content_hash": "e6351c452b6b2b09966f7f8cd75aaf1e2e5b172305455504d4c820f9a24b6cfe",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Viem",
     "summary": "Smart Contract Accounts can send calls on the Network via a \"meta-transaction\" called a **User Opera",
     "quality": "Medium",
@@ -49690,7 +49686,7 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          3371
+          3366
         ],
         [
           "Networking",
@@ -49701,14 +49697,14 @@
           616
         ]
       ],
-      "url_token_count": 400431,
+      "url_token_count": 400379,
       "domain_purpose_ranking": [
         "Forum/Discussion",
         "Product/Service Page"
       ]
     },
     "first_added": "2025-05-13T20:20:08Z",
-    "last_updated": "2025-05-13T20:20:08Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://vite.dev/llms-full.txt": {
     "url": "https://vite.dev/llms-full.txt",
@@ -49840,7 +49836,7 @@
     "url": "https://vue-macros.dev/llms.txt",
     "domain": "vue-macros.dev",
     "content_hash": "8919d869a16279e4b77fe0139695a5925064f89b50e4df74dcb7843eb25ff3c1",
-    "last_checked_utc": "2025-05-13T20:21:03Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Vue Macros",
     "summary": "Modern Way to Writing Vue App",
     "quality": "High",
@@ -50065,8 +50061,8 @@
   "https://www.stedi.com/docs/llms-full.txt": {
     "url": "https://www.stedi.com/docs/llms-full.txt",
     "domain": "www.stedi.com",
-    "content_hash": "82e6ce14cc6fbb135c02577a5ac53d556618cc1d5d7c512f9a1f91cb6c76ea84",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "content_hash": "c9b3e723c657f69eb341428db3fd6e09c15226a9495c93e0393ad430bb47250e",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Accounts and billing",
     "summary": "Source: https://stedi.com/docs/accounts-and-billing/index",
     "quality": "Medium",
@@ -50078,30 +50074,30 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          1095
+          1113
         ],
         [
           "AI/ML",
-          881
+          900
         ],
         [
           "Health",
-          876
+          894
         ]
       ],
-      "url_token_count": 276979,
+      "url_token_count": 281139,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T20:21:53Z",
-    "last_updated": "2025-05-13T20:21:53Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://www.plain.com/docs/llms.txt": {
     "url": "https://www.plain.com/docs/llms.txt",
     "domain": "www.plain.com",
     "content_hash": "e3030b827ef5e30d697cf2e246b83e857071486d48c1c53faa904dfb5cf6ecba",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Plain Docs",
     "quality": "Medium",
     "metadata": {
@@ -50166,7 +50162,7 @@
     "url": "https://www.aptible.com/docs/llms.txt",
     "domain": "www.aptible.com",
     "content_hash": "1a2d8656c97f0e5bffae227eea1621636f07ea313d809d502300305eb07ba150",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Aptible",
     "quality": "Medium",
     "metadata": {
@@ -50200,8 +50196,8 @@
   "https://www.activepieces.com/docs/llms-full.txt": {
     "url": "https://www.activepieces.com/docs/llms-full.txt",
     "domain": "www.activepieces.com",
-    "content_hash": "b85bf8b8b6ad7806becaf9570f31bf09bac34d1d3e61df2ba07621bbfbd873f4",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "content_hash": "a773538c077b44cd2a0cf8c30c2f0ef20909e998f46ef228347e5d6e9d3f1e56",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Breaking Changes",
     "summary": "Source: https://www.activepieces.com/docs/about/breaking-changes",
     "quality": "Medium",
@@ -50213,30 +50209,30 @@
       "url_topic_ranking": [
         [
           "Software Development",
-          360
+          362
         ],
         [
           "AI/ML",
-          226
+          227
         ],
         [
           "Cloud Computing",
           193
         ]
       ],
-      "url_token_count": 58002,
+      "url_token_count": 58731,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T20:21:53Z",
-    "last_updated": "2025-05-13T20:21:53Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://www.trailofbits.com/llms-full.txt": {
     "url": "https://www.trailofbits.com/llms-full.txt",
     "domain": "www.trailofbits.com",
     "content_hash": "959bda2a19afd47409a86d329d848852ef89ec29684252134d78c4ed5324dd94",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Trail of Bits",
     "summary": "For historical content and publications prior to 2022, please refer to our [GitHub repository](https",
     "quality": "Medium",
@@ -50271,7 +50267,7 @@
     "url": "https://www.cobo.com/developers/llms.txt",
     "domain": "www.cobo.com",
     "content_hash": "96e58b8f6b08d0906def8355208a8362678bf5e9f912cf8b4b93dc56b917e7a9",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Developer Hub",
     "quality": "Medium",
     "metadata": {
@@ -50304,10 +50300,10 @@
   "https://www.tinybird.co/docs/llms-full.txt": {
     "url": "https://www.tinybird.co/docs/llms-full.txt",
     "domain": "www.tinybird.co",
-    "content_hash": "28470685ef6707c3575fb68ccc72cc61b33d4241db492963ff11cb4efe3c6bff",
-    "last_checked_utc": "2025-05-13T20:21:53Z",
+    "content_hash": "2f5613a864dfedfc55834f6f8f337fafe8d1b14f69d0e3ee17da9a3c9c5514df",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
     "title": "Tinybird Documentation (FWD)",
-    "summary": "Generated on: 2025-05-13T20:06:58.621Z",
+    "summary": "Generated on: 2025-05-15T18:28:17.774Z",
     "quality": "Medium",
     "metadata": {
       "source_domain": "www.tinybird.co",
@@ -50317,24 +50313,24 @@
       "url_topic_ranking": [
         [
           "Data & Databases",
-          1891
+          1890
         ],
         [
           "AI/ML",
-          1422
+          1421
         ],
         [
           "Software Development",
           901
         ]
       ],
-      "url_token_count": 170859,
+      "url_token_count": 170862,
       "domain_purpose_ranking": [
         "Other"
       ]
     },
     "first_added": "2025-05-13T20:21:53Z",
-    "last_updated": "2025-05-13T20:21:53Z"
+    "last_updated": "2025-05-17T18:03:04Z"
   },
   "https://zumper.com/llms.txt": {
     "url": "https://zumper.com/llms.txt",
@@ -50369,5 +50365,602 @@
     },
     "first_added": "2025-05-13T20:23:31Z",
     "last_updated": "2025-05-13T20:23:31Z"
+  },
+  "https://docs.abbyy.com/llms.txt": {
+    "url": "https://docs.abbyy.com/llms.txt",
+    "domain": "docs.abbyy.com",
+    "content_hash": "56deb809791df95cc35c3e6d670cf012b4fe98c9534846a75dbaae80fff1208f",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "Document AI API",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.abbyy.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "AI/ML",
+          130
+        ],
+        [
+          "Data & Databases",
+          24
+        ],
+        [
+          "Software Development",
+          13
+        ]
+      ],
+      "url_token_count": 5558,
+      "domain_purpose_ranking": [
+        "Product/Service Page"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.abs.xyz/llms.txt": {
+    "url": "https://docs.abs.xyz/llms.txt",
+    "domain": "docs.abs.xyz",
+    "content_hash": "07952c4353714c4ac4bd5cf7d4106cc7fbd2e8ade078c62496d7fbf80312a627",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "Abstract",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.abs.xyz",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          19
+        ],
+        [
+          "Data & Databases",
+          9
+        ],
+        [
+          "AI/ML",
+          7
+        ]
+      ],
+      "url_token_count": 5995,
+      "domain_purpose_ranking": [
+        "Documentation",
+        "Resource List"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.a2rev.com/llms.txt": {
+    "url": "https://docs.a2rev.com/llms.txt",
+    "domain": "docs.a2rev.com",
+    "content_hash": "ee4d7f7a17d529cf35b5249da2bd2c3e694a709a760029a63f6f797df6969ef6",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "A2Reviews",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.a2rev.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "E-commerce",
+          8
+        ],
+        [
+          "AI/ML",
+          3
+        ],
+        [
+          "Software Development",
+          2
+        ]
+      ],
+      "url_token_count": 1096,
+      "domain_purpose_ranking": [
+        "Other"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.acrcloud.com/llms.txt": {
+    "url": "https://docs.acrcloud.com/llms.txt",
+    "domain": "docs.acrcloud.com",
+    "content_hash": "f577b1b3c52b260e52a5be0657472d3ada0c9701f58c9acfa124f517defe1d47",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "ACRCloud",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.acrcloud.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Entertainment",
+          22
+        ],
+        [
+          "Software Development",
+          9
+        ],
+        [
+          "Data & Databases",
+          8
+        ]
+      ],
+      "url_token_count": 1722,
+      "domain_purpose_ranking": [
+        "Documentation",
+        "Resource List"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://raincamp.ai/llms.txt": {
+    "url": "https://raincamp.ai/llms.txt",
+    "domain": "raincamp.ai",
+    "content_hash": "300a63b5d475ae59ac3e3bd5f4031a1fbf12d7aebb82b7c86ad12afa710eb6a4",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "raincamp",
+    "quality": "High",
+    "metadata": {
+      "source_domain": "raincamp.ai",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "AI/ML",
+          1
+        ]
+      ],
+      "url_token_count": 11,
+      "domain_purpose_ranking": [
+        "Other"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.abstractapi.com/llms-full.txt": {
+    "url": "https://docs.abstractapi.com/llms-full.txt",
+    "domain": "docs.abstractapi.com",
+    "content_hash": "7f6b410d996f868a59b5830576c40d913a2152749380bfb1be6c174dc8b4aa1d",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "Email Validation API",
+    "summary": "Source: https://abstractapi-email.mintlify.app/email-validation",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.abstractapi.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          21
+        ],
+        [
+          "Hardware",
+          3
+        ],
+        [
+          "Government",
+          1
+        ]
+      ],
+      "url_token_count": 2268,
+      "domain_purpose_ranking": [
+        "Resource List"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.abbyy.com/llms-full.txt": {
+    "url": "https://docs.abbyy.com/llms-full.txt",
+    "domain": "docs.abbyy.com",
+    "content_hash": "271f5e29dbbf51e57ab0e31c541e5a6ffaf5ab75ef33603cba333ce7d851e855",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "Begin Air Waybill Field Extraction",
+    "summary": "Source: https://docs.abbyy.com/api-reference/air-waybill/begin-air-waybill-field-extraction",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.abbyy.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          459
+        ],
+        [
+          "AI/ML",
+          309
+        ],
+        [
+          "E-commerce",
+          168
+        ]
+      ],
+      "url_token_count": 84287,
+      "domain_purpose_ranking": [
+        "Product/Service Page"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.abcproxy.com/llms.txt": {
+    "url": "https://docs.abcproxy.com/llms.txt",
+    "domain": "docs.abcproxy.com",
+    "content_hash": "d1402f246aa2583c53fc525d538f3416f009a35fdcd775eaf9b9c92417094463",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "ABCProxy Docs",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.abcproxy.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          49
+        ],
+        [
+          "News",
+          15
+        ],
+        [
+          "Cybersecurity",
+          10
+        ]
+      ],
+      "url_token_count": 7717,
+      "domain_purpose_ranking": [
+        "Documentation"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.adsbynimbus.com/docs/llms.txt": {
+    "url": "https://docs.adsbynimbus.com/docs/llms.txt",
+    "domain": "docs.adsbynimbus.com",
+    "content_hash": "5e9287dca2d02db658166e20fc7beae5cdd8bc9c8b699ec7d52389ccba51628f",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "Nimbus Documentation",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.adsbynimbus.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          48
+        ],
+        [
+          "News",
+          39
+        ],
+        [
+          "AI/ML",
+          18
+        ]
+      ],
+      "url_token_count": 3641,
+      "domain_purpose_ranking": [
+        "Homepage"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.abs.xyz/llms-full.txt": {
+    "url": "https://docs.abs.xyz/llms-full.txt",
+    "domain": "docs.abs.xyz",
+    "content_hash": "97a5975aa416028431210c33953846bea34934e8e852c9d87d0ccc3023293e2a",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "deployContract",
+    "summary": "Source: https://docs.abs.xyz/abstract-global-wallet/agw-client/actions/deployContract",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.abs.xyz",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          404
+        ],
+        [
+          "Data & Databases",
+          193
+        ],
+        [
+          "AI/ML",
+          182
+        ]
+      ],
+      "url_token_count": 96195,
+      "domain_purpose_ranking": [
+        "Documentation",
+        "Resource List"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://raw.githubusercontent.com/raycast/extensions/refs/heads/gh-pages/llms-full.txt": {
+    "url": "https://raw.githubusercontent.com/raycast/extensions/refs/heads/gh-pages/llms-full.txt",
+    "domain": "raw.githubusercontent.com",
+    "content_hash": "d3637c4fec40e081756da6d809ffb7eb087de35a72ee0fa59b57cabc400da6fe",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "Introduction",
+    "summary": "Welcome, developers! Our docs cover guides, examples, references, and more to help you build extensi",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "raw.githubusercontent.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          1015
+        ],
+        [
+          "AI/ML",
+          547
+        ],
+        [
+          "Data & Databases",
+          482
+        ]
+      ],
+      "url_token_count": 149082,
+      "domain_purpose_ranking": [
+        "Code Repository",
+        "Product/Service Page"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.abstractapi.com/llms.txt": {
+    "url": "https://docs.abstractapi.com/llms.txt",
+    "domain": "docs.abstractapi.com",
+    "content_hash": "80a6aa9252db0723a74677d5396746264df83b1a05ed5582c2afbade244f7ede",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "Abstract API",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.abstractapi.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          3
+        ]
+      ],
+      "url_token_count": 60,
+      "domain_purpose_ranking": [
+        "Resource List"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.1rpc.io/llms.txt": {
+    "url": "https://docs.1rpc.io/llms.txt",
+    "domain": "docs.1rpc.io",
+    "content_hash": "34800bc04a9086436938c52cbf7026c888dd63ffe12f72424f0691a27b2c5dec",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "Automata 1RPC",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.1rpc.io",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Cybersecurity",
+          1
+        ],
+        [
+          "News",
+          1
+        ],
+        [
+          "Government",
+          1
+        ]
+      ],
+      "url_token_count": 654,
+      "domain_purpose_ranking": [
+        "Other"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://www.better-auth.com/llms.txt": {
+    "url": "https://www.better-auth.com/llms.txt",
+    "domain": "www.better-auth.com",
+    "content_hash": "83f2c1c63769af443bc8865b88f54892ee9f51cd36012665b455739c1c5d3792",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": ".env",
+    "summary": "POLAR_ACCESS_TOKEN=...",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "www.better-auth.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          817
+        ],
+        [
+          "Data & Databases",
+          633
+        ],
+        [
+          "AI/ML",
+          321
+        ]
+      ],
+      "url_token_count": 139546,
+      "domain_purpose_ranking": [
+        "Other"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.adpies.com/llms.txt": {
+    "url": "https://docs.adpies.com/llms.txt",
+    "domain": "docs.adpies.com",
+    "content_hash": "630846f5289f3bcdff91fb9e767c0491cfd67d9da16a0557a8d4502b5c654771",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "AdPie",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.adpies.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "AI/ML",
+          6
+        ],
+        [
+          "Networking",
+          6
+        ],
+        [
+          "Social",
+          6
+        ]
+      ],
+      "url_token_count": 2145,
+      "domain_purpose_ranking": [
+        "Other"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.adnuntius.com/llms.txt": {
+    "url": "https://docs.adnuntius.com/llms.txt",
+    "domain": "docs.adnuntius.com",
+    "content_hash": "f00b9588a4a479caa656ffc6dec116bb55aaff5040e36da0a32969d880ed8f5f",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "ADNUNTIUS",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.adnuntius.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "AI/ML",
+          37
+        ],
+        [
+          "Data & Databases",
+          25
+        ],
+        [
+          "Software Development",
+          24
+        ]
+      ],
+      "url_token_count": 8476,
+      "domain_purpose_ranking": [
+        "Documentation"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.adgatemedia.com/llms.txt": {
+    "url": "https://docs.adgatemedia.com/llms.txt",
+    "domain": "docs.adgatemedia.com",
+    "content_hash": "b027b852e1eabe94044dbf6ad22dd3ce1d8dbcdc368aca5fe9f3a4122e298296",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "Developer Documentation",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.adgatemedia.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Software Development",
+          17
+        ],
+        [
+          "Entertainment",
+          3
+        ],
+        [
+          "Hardware",
+          2
+        ]
+      ],
+      "url_token_count": 725,
+      "domain_purpose_ranking": [
+        "Documentation"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
+  },
+  "https://docs.6551.io/llms.txt": {
+    "url": "https://docs.6551.io/llms.txt",
+    "domain": "docs.6551.io",
+    "content_hash": "3d6f74d0991488a54d9189bda3240c6f4c97047040a2132d287407884a5323a0",
+    "last_checked_utc": "2025-05-17T18:03:04Z",
+    "title": "6551 Docs",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "docs.6551.io",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Finance",
+          1
+        ]
+      ],
+      "url_token_count": 1777,
+      "domain_purpose_ranking": [
+        "Documentation"
+      ]
+    },
+    "first_added": "2025-05-17T18:03:04Z",
+    "last_updated": "2025-05-17T18:03:04Z"
   }
 }

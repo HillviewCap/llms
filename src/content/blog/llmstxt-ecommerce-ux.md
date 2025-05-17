@@ -3,7 +3,7 @@ title: "How llms.txt Files Enhance E-Commerce User Experience"
 description: "An exploration of how implementing llms.txt files can significantly improve customer experience, product discovery, and AI interactions for e-commerce websites."
 pubDate: 2025-05-11
 tags: ["llms", "e-commerce", "ai", "ux"]
-image: "/assets/llms-text.jpg"
+image: "/assets/blog/llmstxt-ecommerce-ux.png"
 ---
 
 # How llms.txt Files Enhance E-Commerce User Experience
@@ -64,14 +64,14 @@ This level of control helps maintain brand integrity across the increasingly imp
 
 ## Key Benefits Summary
 
-| Benefit | How It Improves User Experience |
-|---------|--------------------------------|
-| Structured Product Data | Faster, more accurate product search and information retrieval |
-| Policy & FAQ Highlighting | Quick, reliable answers to common customer questions |
-| AI-Optimized Recommendations | Smarter, more relevant product suggestions |
-| Reduced AI Errors | Fewer mistakes in AI-generated responses about your products |
-| Competitive Edge | Better visibility and authority in AI search results |
-| Consistent Brand Messaging | Accurate, brand-aligned information in AI answers |
+| Benefit                      | How It Improves User Experience                                |
+| ---------------------------- | -------------------------------------------------------------- |
+| Structured Product Data      | Faster, more accurate product search and information retrieval |
+| Policy & FAQ Highlighting    | Quick, reliable answers to common customer questions           |
+| AI-Optimized Recommendations | Smarter, more relevant product suggestions                     |
+| Reduced AI Errors            | Fewer mistakes in AI-generated responses about your products   |
+| Competitive Edge             | Better visibility and authority in AI search results           |
+| Consistent Brand Messaging   | Accurate, brand-aligned information in AI answers              |
 
 ## Conclusion
 

@@ -33,32 +33,120 @@ import Layout from "../layouts/Layout.astro";
 import llmsData from "../data/llms_metadata.json";
 
 // Convert the object to an array of entries
-const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
-  .map(([domain, data]) => {
-    // Cast data to any to avoid TypeScript errors
-    const entryData = data as any;
-    return {
-      domain,
-      title: entryData.title,
-      quality: entryData.quality,
-      url: entryData.url,
-      content_hash: entryData.content_hash,
-      previous_content_hash: entryData.previous_content_hash,
-      metadata: entryData.metadata || {},
-      last_updated: entryData.last_updated,
-      first_added: entryData.first_added,
-      description: entryData.summary || "",
-    };
-  })
-  .sort((a, b) => {
-    // Sort by last_updated date (newest first)
+/**
+ * Transform llmsData to group by domain and include both llms.txt and llms-full.txt URLs if present.
+ * The resulting structure is an array of objects:
+ * {
+ *   domain: string,
+ *   name: string, // same as domain
+ *   urls: { llms?: string, llmsFull?: string },
+ *   titles: { llms?: string, llmsFull?: string },
+ *   qualities: { llms?: string, llmsFull?: string },
+ *   metadata: any, // can be merged or from primary file
+ *   last_updated: string,
+ *   first_added: string,
+ *   description: string
+ * }
+ */
+// Debug: Log the original data
+console.log("Original llmsData:", llmsData);
+
+const groupedLlmsData = (() => {
+  // Step 1: Build a map of domain -> { llms, llmsFull }
+  const domainMap = new Map();
+
+  // Debug: Track how many domains we're processing
+  let domainCount = 0;
+
+  Object.entries(llmsData).forEach(([key, data]) => {
+    // Extract domain from URL (e.g., https://example.com/path/llms.txt -> example.com)
+    const urlObj = new URL(key);
+    const domain = urlObj.hostname;
+    domainCount++;
+
+    // Determine if this is llms.txt or llms-full.txt
+    const fileType = key.includes("llms-full.txt") ? "llmsFull" : "llms";
+    if (!domainMap.has(domain)) {
+      domainMap.set(domain, {
+        domain,
+        name: domain,
+        urls: {},
+        titles: {},
+        qualities: {},
+        entries: {},
+        // Initialize properties needed by DataTable
+        title: null,
+        quality: null,
+        url: null,
+        content_hash: null,
+        previous_content_hash: null,
+        metadata: {},
+        last_updated: null,
+        first_added: null,
+        description: "",
+      });
+    }
+    const entry = domainMap.get(domain);
+    entry.urls[fileType] = data.url;
+    entry.titles[fileType] = data.title;
+    entry.qualities[fileType] = data.quality;
+    entry.entries[fileType] = data;
+
+    // Set the primary title and quality from llms.txt if available, otherwise from llms-full.txt
+    if (fileType === "llms" || !entry.title) {
+      entry.title = data.title || "";
+      entry.quality = data.quality;
+      entry.url = data.url;
+      entry.content_hash = data.content_hash;
+      // Skip setting previous_content_hash as it's not in the data object
+    }
+
+    // Optionally, store metadata, last_updated, etc. from llms.txt as primary
+    if (fileType === "llms") {
+      entry.metadata = data.metadata || {};
+      entry.last_updated = data.last_updated;
+      entry.first_added = data.first_added;
+      entry.description =
+        "summary" in data
+          ? data.summary
+          : "description" in data
+            ? data.description
+            : "";
+    }
+    // If llms-full.txt is present but llms.txt is not, use its metadata
+    if (
+      fileType === "llmsFull" &&
+      (!entry.metadata || Object.keys(entry.metadata).length === 0)
+    ) {
+      entry.metadata = data.metadata || {};
+      entry.last_updated = data.last_updated;
+      entry.first_added = data.first_added;
+      entry.description =
+        "summary" in data
+          ? data.summary
+          : "description" in data
+            ? data.description
+            : "";
+    }
+  });
+
+  // Step 2: Convert map to sorted array (by last_updated desc)
+  const result = Array.from(domainMap.values()).sort((a, b) => {
     return (
-      new Date(b.last_updated).getTime() - new Date(a.last_updated).getTime()
+      new Date(b.last_updated || 0).getTime() -
+      new Date(a.last_updated || 0).getTime()
     );
   });
+
+  // Debug: Log the transformed data
+  console.log(`Processed ${domainCount} domains into ${result.length} records`);
+  console.log("Transformed data:", result);
+
+  return result;
+})();
 ---
 
-<Layout title="LLM Data Explorer with DataTables">
+<Layout title="LLMS.txt Explorer">
   <main class="container mx-auto px-4 py-8">
     <h1 class="text-3xl font-bold mb-6 text-center">LLM Data Explorer</h1>
 
@@ -93,7 +181,7 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
   is:inline
   src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 
-<script define:vars={{ clientSortedLlmsData: sortedLlmsData }}>
+<script define:vars={{ clientSortedLlmsData: groupedLlmsData }}>
   // Client-side helper functions (re-implemented from frontmatter logic)
   function isNewRecord(entry) {
     if (!entry || !entry.first_added || !entry.last_updated) return false;
@@ -135,35 +223,76 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
       '<div class="p-4 bg-gray-800 text-gray-200 text-sm rounded-md">';
     childHtml += '<table class="w-full">';
     childHtml += `<tr><td class="font-semibold pr-2 py-1 w-1/4 text-blue-300">Domain:</td><td>${d.domain || "N/A"}</td></tr>`;
-    childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">Full Title:</td><td>${d.title || d.parsed_title || d.fallback_title || "N/A"}</td></tr>`;
+
+    // Get title from the appropriate source
+    let fullTitle = d.title;
+    if (!fullTitle && d.titles) {
+      fullTitle = d.titles.llms || d.titles.llmsFull;
+    }
+    childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">Full Title:</td><td>${fullTitle || "N/A"}</td></tr>`;
+
     childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">Description:</td><td>${d.description || "N/A"}</td></tr>`;
     childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">First Added:</td><td>${d.first_added ? new Date(d.first_added).toLocaleDateString() : "N/A"}</td></tr>`;
 
     if (d.metadata) {
-      childHtml += `<tr><td class="font-semibold pr-2 py-1 align-top text-blue-300">URL Topics:</td><td>${d.metadata.url_topic_ranking && d.metadata.url_topic_ranking.length > 0 ? d.metadata.url_topic_ranking.map((item) => `${item[0]} <span class="text-blue-400">(${item[1].toFixed(2)})</span>`).join("<br>") : "N/A"}</td></tr>`;
+      // Safely check for url_topic_ranking
+      const hasUrlTopics =
+        d.metadata.url_topic_ranking &&
+        Array.isArray(d.metadata.url_topic_ranking) &&
+        d.metadata.url_topic_ranking.length > 0;
 
-      // Add new metadata fields
-      childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">URL:</td><td>${d.url ? `<a href="${d.url}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">${d.url}</a>` : "N/A"}</td></tr>`;
+      childHtml += `<tr><td class="font-semibold pr-2 py-1 align-top text-blue-300">URL Topics:</td><td>${hasUrlTopics ? d.metadata.url_topic_ranking.map((item) => `${item[0]} <span class="text-blue-400">(${item[1].toFixed(2)})</span>`).join("<br>") : "N/A"}</td></tr>`;
+
+      // Show both llms.txt and llms-full.txt URLs if present
+      let urlLinks = [];
+      if (d.urls && (d.urls.llms || d.urls.llmsFull)) {
+        if (d.urls.llms) {
+          urlLinks.push(
+            `<a href="${d.urls.llms}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">llms.txt</a>`
+          );
+        }
+        if (d.urls.llmsFull) {
+          urlLinks.push(
+            `<a href="${d.urls.llmsFull}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">llms-full.txt</a>`
+          );
+        }
+      } else if (d.url) {
+        // Fallback to the single URL if urls object is not available
+        urlLinks.push(
+          `<a href="${d.url}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">URL</a>`
+        );
+      }
+      childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">URL:</td><td>${urlLinks.length > 0 ? urlLinks.join(" &nbsp;|&nbsp; ") : "N/A"}</td></tr>`;
+
+      // Safely check for content_hash
       childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">Content Hash:</td><td><span class="text-xs font-mono">${d.content_hash || "N/A"}</span></td></tr>`;
 
       if (d.previous_content_hash) {
         childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">Previous Hash:</td><td><span class="text-xs font-mono">${d.previous_content_hash}</span></td></tr>`;
       }
 
-      // Add domain topic ranking if available
-      if (
+      // Safely check for domain_topic_ranking
+      const hasDomainTopics =
         d.metadata.domain_topic_ranking &&
-        d.metadata.domain_topic_ranking.length > 0
-      ) {
+        Array.isArray(d.metadata.domain_topic_ranking) &&
+        d.metadata.domain_topic_ranking.length > 0;
+
+      if (hasDomainTopics) {
         childHtml += `<tr><td class="font-semibold pr-2 py-1 align-top text-blue-300">Domain Topics:</td><td>${d.metadata.domain_topic_ranking.map((item) => `${item[0]} <span class="text-blue-400">(${item[1].toFixed(2)})</span>`).join("<br>")}</td></tr>`;
       }
 
-      // Add token counts if available
-      if (d.metadata.url_token_count) {
+      // Safely check for token counts
+      if (
+        d.metadata.url_token_count !== undefined &&
+        d.metadata.url_token_count !== null
+      ) {
         childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">Token Count:</td><td>${d.metadata.url_token_count.toLocaleString()}</td></tr>`;
       }
 
-      if (d.metadata.previous_url_token_count) {
+      if (
+        d.metadata.previous_url_token_count !== undefined &&
+        d.metadata.previous_url_token_count !== null
+      ) {
         childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">Previous Token Count:</td><td>${d.metadata.previous_url_token_count.toLocaleString()}</td></tr>`;
       }
     }
@@ -173,6 +302,9 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
   }
 
   $(document).ready(function () {
+    // Debug: Log the data to see what's being passed to DataTable
+    console.log("Data for DataTable:", clientSortedLlmsData);
+
     const table = new DataTable("#llmsDataTable", {
       data: clientSortedLlmsData,
       responsive: true,
@@ -185,7 +317,7 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
           width: "15px", // Adjust width for the control button
         },
         {
-          data: "domain",
+          data: "name",
           title: "Name",
           render: function (data, type, row) {
             if (!data) return "N/A";
@@ -204,10 +336,35 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
           data: "title",
           title: "Title",
           render: function (data, type, row) {
-            return row.title || row.parsed_title || row.fallback_title || "N/A";
+            // First try to get title from the primary title field
+            if (data) return data;
+
+            // If not available, try to get from titles object
+            if (row.titles && (row.titles.llms || row.titles.llmsFull)) {
+              return row.titles.llms || row.titles.llmsFull || "N/A";
+            }
+
+            return "N/A";
           },
         },
-        { data: "quality", title: "Quality" },
+        {
+          data: "quality",
+          title: "Quality",
+          render: function (data, type, row) {
+            // First try to get quality from the primary quality field
+            if (data) return data;
+
+            // If not available, try to get from qualities object
+            if (
+              row.qualities &&
+              (row.qualities.llms || row.qualities.llmsFull)
+            ) {
+              return row.qualities.llms || row.qualities.llmsFull || "N/A";
+            }
+
+            return "N/A";
+          },
+        },
         {
           data: "metadata.url_topic_ranking",
           title: "Text Focus",
@@ -226,12 +383,11 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
         {
           data: "last_updated",
           title: "Last Updated",
-          type: "date", // Specify column type as date for proper sorting
           render: function (data, type, row) {
             if (!data) return "N/A";
-            // For sorting operations, return the timestamp for chronological sorting
+            // For sorting, return the ISO string (DataTables sorts ISO dates correctly)
             if (type === "sort" || type === "type") {
-              return new Date(data).getTime();
+              return new Date(data).toISOString();
             }
             // For display, return the formatted date
             return new Date(data).toLocaleDateString();

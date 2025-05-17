@@ -3,7 +3,7 @@ title: "Security Concerns with llms.txt Files"
 description: "An in-depth exploration of potential security risks associated with implementing llms.txt files and best practices for mitigating these concerns."
 pubDate: 2025-05-11
 tags: ["llms", "security", "ai", "privacy"]
-image: "/assets/llms-text.jpg"
+image: "/assets/blog/llmstxt-security-concerns.png"
 ---
 
 # Security Concerns with llms.txt Files
