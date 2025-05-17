@@ -110,7 +110,8 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
     threeDaysAgo.setDate(threeDaysAgo.getDate() - 3);
     threeDaysAgo.setHours(0, 0, 0, 0);
 
-    const isRecent = new Date(firstAddedDate).getTime() > threeDaysAgo.getTime();
+    const isRecent =
+      new Date(firstAddedDate).getTime() > threeDaysAgo.getTime();
 
     // Return true only if both conditions are met
     return sameDate && isRecent;
@@ -187,9 +188,16 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
           data: "domain",
           title: "Name",
           render: function (data, type, row) {
-            return data
-              ? `<a href="http://${data}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">${data}</a>`
-              : "N/A";
+            if (!data) return "N/A";
+
+            // Check if the domain already includes a protocol
+            const hasProtocol =
+              data.startsWith("http://") || data.startsWith("https://");
+
+            // Only prepend http:// if the domain doesn't already have a protocol
+            const href = hasProtocol ? data : `http://${data}`;
+
+            return `<a href="${href}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">${data}</a>`;
           },
         },
         {
@@ -222,7 +230,7 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
           render: function (data, type, row) {
             if (!data) return "N/A";
             // For sorting operations, return the timestamp for chronological sorting
-            if (type === 'sort' || type === 'type') {
+            if (type === "sort" || type === "type") {
               return new Date(data).getTime();
             }
             // For display, return the formatted date
@@ -316,7 +324,7 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
   }
 
   table.dataTable td.dt-control::before {
-    content: '+';
+    content: "+";
     display: inline-block;
     background-color: #48bb78; /* green-500 */
     color: white;
@@ -334,7 +342,7 @@ const sortedLlmsData: LlmEntry[] = Object.entries(llmsData)
   }
 
   table.dataTable tr.shown td.dt-control::before {
-    content: '-';
+    content: "-";
     line-height: 18px;
   }
 
