@@ -214,39 +214,29 @@ import Layout from "../layouts/Layout.astro";
     });
   }
 
-  // Load data using the working search API with broad queries
+  // Load data using the search-llms-all API to get all records
   async function loadData() {
     try {
-      const allResults = [];
-      const queries = ['a', 'e', 'i', 'o', 'u', 'com', 'org', 'net', 'ai', 'ml', 'data', 'api', 'docs', 'github', 'www'];
+      console.log('=== LOADING ALL DATA FROM search-llms-all API ===');
       
-      // Make multiple requests to get as much data as possible
-      for (const query of queries) {
-        try {
-          const response = await fetch(`/api/search-llms?q=${query}&limit=50`);
-          if (response.ok) {
-            const data = await response.json();
-            if (data.results && data.results.length > 0) {
-              allResults.push(...data.results);
-            }
-          }
-        } catch (error) {
-          console.warn(`Failed to fetch data for query "${query}":`, error);
-        }
+      // Use the search-llms-all API to get all records
+      const response = await fetch('/api/search-llms-all');
+      if (!response.ok) {
+        throw new Error(`API request failed: ${response.status} ${response.statusText}`);
       }
       
-      // Remove duplicates based on URL
-      const uniqueResults = [];
-      const seenUrls = new Set();
-      
-      allResults.forEach(item => {
-        if (!seenUrls.has(item.url)) {
-          seenUrls.add(item.url);
-          uniqueResults.push(item);
-        }
+      const data = await response.json();
+      console.log('search-llms-all API response:', {
+        success: data.success,
+        count: data.count,
+        dataLength: data.data ? data.data.length : 0
       });
       
-      console.log(`Loaded ${uniqueResults.length} unique results from ${allResults.length} total results`);
+      if (!data.success || !data.data) {
+        throw new Error('API returned unsuccessful response or no data');
+      }
+      
+      console.log(`Successfully loaded ${data.data.length} records from search-llms-all API`);
       
       // Hide loading indicator
       document.getElementById('loading').style.display = 'none';
@@ -254,9 +244,8 @@ import Layout from "../layouts/Layout.astro";
       // Show table container
       document.getElementById('tableContainer').style.display = 'block';
       
-      // Transform and initialize DataTable
-      const transformedData = transformToGroupedData(uniqueResults);
-      initializeDataTable(transformedData);
+      // The data from search-llms-all is already grouped by domain, so we can use it directly
+      initializeDataTable(data.data);
       
     } catch (error) {
       console.error('Error loading data:', error);
