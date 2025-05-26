@@ -99,14 +99,49 @@ import Layout from "../layouts/Layout.astro";
     childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">First Added:</td><td>${d.first_added ? new Date(d.first_added).toLocaleDateString() : "N/A"}</td></tr>`;
 
     if (d.metadata) {
-      const hasUrlTopics =
-        d.metadata.url_topic_ranking &&
-        Array.isArray(d.metadata.url_topic_ranking) &&
-        d.metadata.url_topic_ranking.length > 0;
+      // Display URL topics from both llms and llmsFull entries
+      let urlTopicsHtml = "";
+      let hasAnyTopics = false;
 
-      childHtml += `<tr><td class="font-semibold pr-2 py-1 align-top text-blue-300">URL Topics:</td><td>${hasUrlTopics ? d.metadata.url_topic_ranking.map((item) => `${item[0]} <span class="text-blue-400">(${item[1].toFixed(2)})</span>`).join("<br>") : "N/A"}</td></tr>`;
+      // Check for llms.txt topics
+      if (d.entries && d.entries.llms && d.entries.llms.metadata && d.entries.llms.metadata.url_topic_ranking && Array.isArray(d.entries.llms.metadata.url_topic_ranking) && d.entries.llms.metadata.url_topic_ranking.length > 0) {
+        urlTopicsHtml += '<div class="mb-2"><strong class="text-green-300">LLMs.txt Topics:</strong><br>';
+        urlTopicsHtml += d.entries.llms.metadata.url_topic_ranking.map((item) => `${item[0]} <span class="text-blue-400">(${item[1].toFixed(2)})</span>`).join("<br>");
+        urlTopicsHtml += '</div>';
+        hasAnyTopics = true;
+      }
 
-      childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">URL:</td><td><a href="${d.url}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">${d.url}</a></td></tr>`;
+      // Check for llms-full.txt topics
+      if (d.entries && d.entries.llmsFull && d.entries.llmsFull.metadata && d.entries.llmsFull.metadata.url_topic_ranking && Array.isArray(d.entries.llmsFull.metadata.url_topic_ranking) && d.entries.llmsFull.metadata.url_topic_ranking.length > 0) {
+        urlTopicsHtml += '<div class="mb-2"><strong class="text-purple-300">LLMs-Full.txt Topics:</strong><br>';
+        urlTopicsHtml += d.entries.llmsFull.metadata.url_topic_ranking.map((item) => `${item[0]} <span class="text-blue-400">(${item[1].toFixed(2)})</span>`).join("<br>");
+        urlTopicsHtml += '</div>';
+        hasAnyTopics = true;
+      }
+
+      childHtml += `<tr><td class="font-semibold pr-2 py-1 align-top text-blue-300">URL Topics:</td><td>${hasAnyTopics ? urlTopicsHtml : "N/A"}</td></tr>`;
+
+      // Display both URLs if they exist
+      let urlsHtml = "";
+      let hasAnyUrls = false;
+
+      if (d.urls && d.urls.llms) {
+        urlsHtml += `<div class="mb-1"><strong class="text-green-300">LLMs.txt URL:</strong><br><a href="${d.urls.llms}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">${d.urls.llms}</a></div>`;
+        hasAnyUrls = true;
+      }
+
+      if (d.urls && d.urls.llmsFull) {
+        urlsHtml += `<div class="mb-1"><strong class="text-purple-300">LLMs-Full.txt URL:</strong><br><a href="${d.urls.llmsFull}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">${d.urls.llmsFull}</a></div>`;
+        hasAnyUrls = true;
+      }
+
+      // Fallback to single URL if no specific URLs found
+      if (!hasAnyUrls && d.url) {
+        urlsHtml = `<a href="${d.url}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">${d.url}</a>`;
+        hasAnyUrls = true;
+      }
+
+      childHtml += `<tr><td class="font-semibold pr-2 py-1 align-top text-blue-300">URL:</td><td>${hasAnyUrls ? urlsHtml : "N/A"}</td></tr>`;
 
       childHtml += `<tr><td class="font-semibold pr-2 py-1 text-blue-300">Content Hash:</td><td><span class="text-xs font-mono">${d.content_hash || "N/A"}</span></td></tr>`;
 
@@ -214,39 +249,29 @@ import Layout from "../layouts/Layout.astro";
     });
   }
 
-  // Load data using the working search API with broad queries
+  // Load data using the search-llms-all API to get all records
   async function loadData() {
     try {
-      const allResults = [];
-      const queries = ['a', 'e', 'i', 'o', 'u', 'com', 'org', 'net', 'ai', 'ml', 'data', 'api', 'docs', 'github', 'www'];
+      console.log('=== LOADING ALL DATA FROM search-llms-all API ===');
       
-      // Make multiple requests to get as much data as possible
-      for (const query of queries) {
-        try {
-          const response = await fetch(`/api/search-llms?q=${query}&limit=50`);
-          if (response.ok) {
-            const data = await response.json();
-            if (data.results && data.results.length > 0) {
-              allResults.push(...data.results);
-            }
-          }
-        } catch (error) {
-          console.warn(`Failed to fetch data for query "${query}":`, error);
-        }
+      // Use the search-llms-all API to get all records
+      const response = await fetch('/api/search-llms-all');
+      if (!response.ok) {
+        throw new Error(`API request failed: ${response.status} ${response.statusText}`);
       }
       
-      // Remove duplicates based on URL
-      const uniqueResults = [];
-      const seenUrls = new Set();
-      
-      allResults.forEach(item => {
-        if (!seenUrls.has(item.url)) {
-          seenUrls.add(item.url);
-          uniqueResults.push(item);
-        }
+      const data = await response.json();
+      console.log('search-llms-all API response:', {
+        success: data.success,
+        count: data.count,
+        dataLength: data.data ? data.data.length : 0
       });
       
-      console.log(`Loaded ${uniqueResults.length} unique results from ${allResults.length} total results`);
+      if (!data.success || !data.data) {
+        throw new Error('API returned unsuccessful response or no data');
+      }
+      
+      console.log(`Successfully loaded ${data.data.length} records from search-llms-all API`);
       
       // Hide loading indicator
       document.getElementById('loading').style.display = 'none';
@@ -254,9 +279,8 @@ import Layout from "../layouts/Layout.astro";
       // Show table container
       document.getElementById('tableContainer').style.display = 'block';
       
-      // Transform and initialize DataTable
-      const transformedData = transformToGroupedData(uniqueResults);
-      initializeDataTable(transformedData);
+      // The data from search-llms-all is already grouped by domain, so we can use it directly
+      initializeDataTable(data.data);
       
     } catch (error) {
       console.error('Error loading data:', error);
