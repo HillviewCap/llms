@@ -1,0 +1,47 @@
+---
+// Debug page to check what's causing the 500 error
+import Layout from "../layouts/Layout.astro";
+
+let debugInfo = {
+  timestamp: new Date().toISOString(),
+  nodeEnv: typeof process !== 'undefined' ? process.env.NODE_ENV : 'undefined',
+  dataFileExists: false,
+  dataFileError: null as string | null,
+  dataFileSize: null as number | null,
+  sampleData: null as string[] | null
+};
+
+// Try to import the data file and catch any errors
+try {
+  const llmsData = await import("../data/llms_metadata.json");
+  debugInfo.dataFileExists = true;
+  debugInfo.sampleData = Object.keys(llmsData.default || llmsData).slice(0, 3);
+  debugInfo.dataFileSize = JSON.stringify(llmsData.default || llmsData).length;
+} catch (error) {
+  debugInfo.dataFileError = error instanceof Error ? error.message : String(error);
+  console.error("Error importing llms_metadata.json:", error);
+}
+
+// Log to console for Cloudflare logs
+console.log("Debug Info:", JSON.stringify(debugInfo, null, 2));
+---
+
+<Layout title="Debug Check">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Debug Information</h1>
+    
+    <div class="bg-gray-800 text-white p-6 rounded-lg">
+      <h2 class="text-xl font-semibold mb-4">System Check</h2>
+      <pre class="whitespace-pre-wrap text-sm">{JSON.stringify(debugInfo, null, 2)}</pre>
+    </div>
+
+    <div class="mt-6 bg-blue-800 text-white p-4 rounded-lg">
+      <h3 class="font-semibold">Expected Issues:</h3>
+      <ul class="list-disc list-inside mt-2">
+        <li>Missing llms_metadata.json file</li>
+        <li>File too large for Cloudflare Workers</li>
+        <li>Import path resolution issues</li>
+      </ul>
+    </div>
+  </main>
+</Layout>
