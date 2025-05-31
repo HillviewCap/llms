@@ -106356,7 +106356,7 @@
     "last_updated": "2025-05-25T16:55:23Z"
   },
   {
-    "url": "https:///docs/llms.txt",
+    "url": "https://plain.com/docs/llms.txt",
     "domain": "plain.com",
     "content_hash": "e3030b827ef5e30d697cf2e246b83e857071486d48c1c53faa904dfb5cf6ecba",
     "last_checked_utc": "2025-05-25T16:55:23Z",
@@ -111182,5 +111182,39 @@
     },
     "first_added": "2025-05-25T17:08:58Z",
     "last_updated": "2025-05-25T17:08:58Z"
+  },
+  {
+    "url": "https://finotor.com/llms.txt",
+    "domain": "finotor.com",
+    "content_hash": "e6f2222c242a54545739edc1297c8aee93b88cb95a184b16f4c6c751036ceed3",
+    "last_checked_utc": "2025-05-27T01:03:38Z",
+    "title": "# Detailed Content",
+    "quality": "Medium",
+    "metadata": {
+      "source_domain": "finotor.com",
+      "url_purpose_ranking": [
+        "Plain Text Resource"
+      ],
+      "url_topic_ranking": [
+        [
+          "Finance",
+          894
+        ],
+        [
+          "AI/ML",
+          337
+        ],
+        [
+          "Software Development",
+          205
+        ]
+      ],
+      "url_token_count": 122741,
+      "domain_purpose_ranking": [
+        "Other"
+      ]
+    },
+    "first_added": "2025-05-27T01:03:38Z",
+    "last_updated": "2025-05-27T01:03:38Z"
   }
 ]
