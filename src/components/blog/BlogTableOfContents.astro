@@ -41,8 +41,9 @@ const shouldRender = tocItems.length > 1;
         {tocItems.map((item) => (
           <a
             href={`#${item.slug}`}
-            class={`blog-toc-item level-${item.level} block`}
+            class={`blog-toc-item level-${item.level} block toc-link`}
             aria-label={`Jump to section: ${item.text}`}
+            data-target={item.slug}
           >
             {item.text}
           </a>
@@ -51,3 +52,73 @@ const shouldRender = tocItems.length > 1;
     </div>
   )
 }
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const headings = document.querySelectorAll('h2, h3, h4');
+    
+    // Smooth scrolling for TOC links
+    tocLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          
+          // Update URL without jumping
+          history.pushState(null, null, `#${targetId}`);
+        }
+      });
+    });
+    
+    // Highlight active section on scroll
+    let timeout = null;
+    
+    function updateActiveLink() {
+      let current = '';
+      
+      headings.forEach(heading => {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top <= 100) {
+          current = heading.id;
+        }
+      });
+      
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('data-target') === current) {
+          link.classList.add('active');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', () => {
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(updateActiveLink, 10);
+    });
+    
+    // Initial check
+    updateActiveLink();
+  });
+</script>
+
+<style>
+  .toc-link.active {
+    @apply text-primary-400 font-medium;
+  }
+  
+  .toc-link.active::before {
+    content: '';
+    @apply absolute left-0 w-0.5 h-full bg-primary-400;
+  }
+  
+  .blog-toc-item {
+    @apply relative pl-3;
+  }
+</style>

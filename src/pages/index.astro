@@ -6,21 +6,132 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="LLMS.txt Explorer">
-  <main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-6 text-center">LLM Data Explorer</h1>
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="hero-gradient relative overflow-hidden py-20 px-4">
+      <div class="container mx-auto relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
+            <span class="hero-text-gradient">LLMS.txt</span> Explorer
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+            Discover and explore <code class="bg-white/20 px-2 py-1 rounded text-blue-200">llms.txt</code> files from across the internet. 
+            A comprehensive directory of websites optimized for AI interaction following the 
+            <a href="https://llmstxt.org" target="_blank" class="text-blue-300 hover:text-blue-200 underline transition-colors">llmstxt.org</a> standard.
+          </p>
+          
+          <!-- Statistics Cards -->
+          <div id="stats-container" class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 mb-8">
+            <!-- Loading state for stats -->
+            <div id="stats-loading" class="col-span-full flex justify-center">
+              <div class="animate-pulse text-white/70">Loading statistics...</div>
+            </div>
+            
+            <!-- Stats cards will be populated by JavaScript -->
+            <div id="stats-cards" class="contents" style="display: none;">
+              <div class="stat-card bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div class="text-3xl font-bold text-white mb-2" id="total-domains">0</div>
+                <div class="text-gray-300 text-sm uppercase tracking-wide">Total Domains</div>
+              </div>
+              
+              <div class="stat-card bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div class="text-3xl font-bold text-green-400 mb-2" id="new-entries">0</div>
+                <div class="text-gray-300 text-sm uppercase tracking-wide">New This Week</div>
+              </div>
+              
+              <div class="stat-card bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div class="text-3xl font-bold text-blue-400 mb-2" id="recent-updates">0</div>
+                <div class="text-gray-300 text-sm uppercase tracking-wide">Recent Updates</div>
+              </div>
+              
+              <div class="stat-card bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div class="text-3xl font-bold text-purple-400 mb-2" id="high-quality">0</div>
+                <div class="text-gray-300 text-sm uppercase tracking-wide">High Quality</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex justify-center">
+            <a href="#explorer" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300 scroll-smooth">
+              Explore Data
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Animated background elements -->
+      <div class="absolute inset-0 z-0">
+        <div class="floating-orb floating-orb-1"></div>
+        <div class="floating-orb floating-orb-2"></div>
+        <div class="floating-orb floating-orb-3"></div>
+      </div>
+    </section>
 
-    <!-- Loading indicator -->
-    <div id="loading" class="text-center py-8">
-      <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-      <p class="mt-2 text-gray-600">Loading data...</p>
-    </div>
+    <!-- Explorer Section -->
+    <section id="explorer" class="container mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Explore LLMS.txt Files</h2>
+      
+      <!-- Quick Filters -->
+      <div class="mb-6" id="filter-section" style="display: none;">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Quick Filters:</span>
+          
+          <!-- Quality Filters -->
+          <div class="flex gap-2">
+            <button class="filter-chip" data-filter="quality" data-value="High">
+              <span class="chip-icon">💎</span> High Quality
+            </button>
+            <button class="filter-chip" data-filter="quality" data-value="Medium">
+              <span class="chip-icon">⭐</span> Medium Quality
+            </button>
+            <button class="filter-chip" data-filter="quality" data-value="Low">
+              <span class="chip-icon">📝</span> Low Quality
+            </button>
+          </div>
+          
+          <!-- Status Filters -->
+          <div class="flex gap-2">
+            <button class="filter-chip" data-filter="status" data-value="new">
+              <span class="chip-icon">✨</span> New This Week
+            </button>
+            <button class="filter-chip" data-filter="status" data-value="updated">
+              <span class="chip-icon">🔄</span> Recently Updated
+            </button>
+          </div>
+          
+          <!-- Topic Filters (will be populated dynamically) -->
+          <div id="topic-filters" class="flex gap-2">
+            <!-- Popular topics will be added here by JavaScript -->
+          </div>
+          
+          <!-- Clear Filters -->
+          <button id="clear-filters" class="clear-filter-btn" style="display: none;">
+            <span class="chip-icon">🗑️</span> Clear All
+          </button>
+        </div>
+        
+        <!-- Active Filters Display -->
+        <div id="active-filters" class="flex flex-wrap gap-2" style="display: none;">
+          <span class="text-xs text-gray-600 dark:text-gray-400">Active filters:</span>
+          <!-- Active filter tags will be added here -->
+        </div>
+      </div>
 
-    <!-- Error message -->
-    <div id="error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-      <p>Error loading data. Please try refreshing the page.</p>
-    </div>
+      <!-- Loading indicator -->
+      <div id="loading" class="text-center py-8">
+        <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">Loading data...</p>
+      </div>
 
-    <div class="overflow-x-auto bg-gray-800 shadow-md rounded-lg p-4" style="display: none;" id="tableContainer">
+      <!-- Error message -->
+      <div id="error" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+        <p>Error loading data. Please try refreshing the page.</p>
+      </div>
+
+      <div class="overflow-x-auto bg-gray-800 shadow-md rounded-lg p-4" style="display: none;" id="tableContainer">
       <table
         id="llmsDataTable"
         class="display compact stripe dark-theme"
@@ -42,7 +153,8 @@ import Layout from "../layouts/Layout.astro";
           <!-- DataTables will populate this -->
         </tbody>
       </table>
-    </div>
+      </div>
+    </section>
   </main>
 </Layout>
 
@@ -273,11 +385,18 @@ import Layout from "../layouts/Layout.astro";
       
       console.log(`Successfully loaded ${data.data.length} records from search-llms-all API`);
       
+      // Calculate and display statistics
+      updateStatistics(data.data);
+      
       // Hide loading indicator
       document.getElementById('loading').style.display = 'none';
       
-      // Show table container
+      // Show filter section and table container
+      document.getElementById('filter-section').style.display = 'block';
       document.getElementById('tableContainer').style.display = 'block';
+      
+      // Initialize filters with the data
+      initializeFilters(data.data);
       
       // The data from search-llms-all is already grouped by domain, so we can use it directly
       initializeDataTable(data.data);
@@ -289,8 +408,195 @@ import Layout from "../layouts/Layout.astro";
     }
   }
 
+  function updateStatistics(data) {
+    // Calculate statistics
+    const totalDomains = data.length;
+    
+    let newEntries = 0;
+    let recentUpdates = 0;
+    let highQuality = 0;
+    
+    data.forEach(entry => {
+      if (isNewRecord(entry)) {
+        newEntries++;
+      } else if (isRecentlyUpdated(entry)) {
+        recentUpdates++;
+      }
+      
+      if (entry.quality === 'High' || (entry.qualities && (entry.qualities.llms === 'High' || entry.qualities.llmsFull === 'High'))) {
+        highQuality++;
+      }
+    });
+    
+    // Animate counter updates
+    animateCounter('total-domains', totalDomains);
+    animateCounter('new-entries', newEntries);
+    animateCounter('recent-updates', recentUpdates);
+    animateCounter('high-quality', highQuality);
+    
+    // Hide loading and show stats
+    document.getElementById('stats-loading').style.display = 'none';
+    document.getElementById('stats-cards').style.display = 'contents';
+  }
+  
+  function animateCounter(elementId, targetValue) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+    
+    let current = 0;
+    const increment = Math.ceil(targetValue / 30); // Animate over ~30 frames
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= targetValue) {
+        current = targetValue;
+        clearInterval(timer);
+      }
+      element.textContent = current.toLocaleString();
+    }, 50);
+  }
+
+  // Global variables for filtering
+  let globalDataTable = null;
+  let globalData = [];
+  let activeFilters = {
+    quality: null,
+    status: null,
+    topic: null
+  };
+  
+  function initializeFilters(data) {
+    globalData = data;
+    
+    // Get top 5 most common topics
+    const topicCounts = {};
+    data.forEach(entry => {
+      if (entry.metadata && entry.metadata.url_topic_ranking && entry.metadata.url_topic_ranking.length > 0) {
+        const topTopic = entry.metadata.url_topic_ranking[0][0];
+        topicCounts[topTopic] = (topicCounts[topTopic] || 0) + 1;
+      }
+    });
+    
+    const topTopics = Object.entries(topicCounts)
+      .sort(([,a], [,b]) => b - a)
+      .slice(0, 5)
+      .map(([topic]) => topic);
+    
+    // Add topic filter chips
+    const topicFiltersContainer = document.getElementById('topic-filters');
+    topTopics.forEach(topic => {
+      const chip = document.createElement('button');
+      chip.className = 'filter-chip';
+      chip.setAttribute('data-filter', 'topic');
+      chip.setAttribute('data-value', topic);
+      chip.innerHTML = `<span class="chip-icon">📝</span> ${topic}`;
+      topicFiltersContainer.appendChild(chip);
+    });
+    
+    // Add event listeners to all filter chips
+    document.querySelectorAll('.filter-chip').forEach(chip => {
+      chip.addEventListener('click', handleFilterClick);
+    });
+    
+    // Add clear filters event listener
+    document.getElementById('clear-filters').addEventListener('click', clearAllFilters);
+  }
+  
+  function handleFilterClick(event) {
+    const chip = event.currentTarget;
+    const filterType = chip.getAttribute('data-filter');
+    const filterValue = chip.getAttribute('data-value');
+    
+    // Toggle filter
+    if (activeFilters[filterType] === filterValue) {
+      // Remove filter
+      activeFilters[filterType] = null;
+      chip.classList.remove('active');
+    } else {
+      // Remove other filters of the same type
+      document.querySelectorAll(`[data-filter="${filterType}"]`).forEach(c => c.classList.remove('active'));
+      // Add new filter
+      activeFilters[filterType] = filterValue;
+      chip.classList.add('active');
+    }
+    
+    applyFilters();
+    updateActiveFiltersDisplay();
+  }
+  
+  function applyFilters() {
+    if (!globalDataTable) return;
+    
+    // Custom filter function for DataTables
+    $.fn.dataTable.ext.search.pop(); // Remove previous custom filter
+    $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
+      const rowData = globalDataTable.row(dataIndex).data();
+      
+      // Quality filter
+      if (activeFilters.quality) {
+        const quality = rowData.quality || 
+          (rowData.qualities && (rowData.qualities.llms || rowData.qualities.llmsFull));
+        if (quality !== activeFilters.quality) return false;
+      }
+      
+      // Status filter
+      if (activeFilters.status) {
+        if (activeFilters.status === 'new' && !isNewRecord(rowData)) return false;
+        if (activeFilters.status === 'updated' && !isRecentlyUpdated(rowData)) return false;
+      }
+      
+      // Topic filter
+      if (activeFilters.topic) {
+        const hasMatchingTopic = rowData.metadata && 
+          rowData.metadata.url_topic_ranking && 
+          rowData.metadata.url_topic_ranking.some(([topic]) => topic === activeFilters.topic);
+        if (!hasMatchingTopic) return false;
+      }
+      
+      return true;
+    });
+    
+    globalDataTable.draw();
+  }
+  
+  function updateActiveFiltersDisplay() {
+    const activeFiltersContainer = document.getElementById('active-filters');
+    const clearButton = document.getElementById('clear-filters');
+    
+    // Clear existing active filter tags
+    const existingTags = activeFiltersContainer.querySelectorAll('.active-filter-tag');
+    existingTags.forEach(tag => tag.remove());
+    
+    let hasActiveFilters = false;
+    
+    // Add active filter tags
+    Object.entries(activeFilters).forEach(([type, value]) => {
+      if (value) {
+        hasActiveFilters = true;
+        const tag = document.createElement('span');
+        tag.className = 'active-filter-tag bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100 px-2 py-1 rounded-full text-xs';
+        tag.textContent = `${type}: ${value}`;
+        activeFiltersContainer.appendChild(tag);
+      }
+    });
+    
+    // Show/hide active filters display and clear button
+    activeFiltersContainer.style.display = hasActiveFilters ? 'flex' : 'none';
+    clearButton.style.display = hasActiveFilters ? 'block' : 'none';
+  }
+  
+  function clearAllFilters() {
+    activeFilters = { quality: null, status: null, topic: null };
+    document.querySelectorAll('.filter-chip').forEach(chip => chip.classList.remove('active'));
+    
+    // Remove custom filter
+    $.fn.dataTable.ext.search.pop();
+    if (globalDataTable) globalDataTable.draw();
+    
+    updateActiveFiltersDisplay();
+  }
+
   function initializeDataTable(clientSortedLlmsData) {
-    const table = new DataTable("#llmsDataTable", {
+    globalDataTable = new DataTable("#llmsDataTable", {
       data: clientSortedLlmsData,
       responsive: true,
       columns: [
@@ -384,6 +690,8 @@ import Layout from "../layouts/Layout.astro";
       ],
       order: [[5, "desc"]],
     });
+    
+    const table = globalDataTable; // For backward compatibility with existing code
 
     // Add event listener for opening and closing details
     $("#llmsDataTable tbody").on("click", "td.dt-control", function () {
@@ -403,11 +711,124 @@ import Layout from "../layouts/Layout.astro";
   // Load data when page is ready
   $(document).ready(function () {
     loadData();
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
   });
 </script>
 
 <style is:global>
   @import "https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css";
+  
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      #667eea 0%, 
+      #764ba2 25%, 
+      #6B73FF 50%, 
+      #9068BE 75%, 
+      #667eea 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .hero-text-gradient {
+    background: linear-gradient(45deg, #ffffff, #e2e8f0, #cbd5e0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: textShimmer 3s ease-in-out infinite;
+  }
+  
+  @keyframes textShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  /* Floating orbs animation */
+  .floating-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .floating-orb-1 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  .floating-orb-2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+  }
+  
+  .floating-orb-3 {
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    left: 70%;
+    animation-delay: 4s;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(120deg); }
+    66% { transform: translateY(10px) rotate(240deg); }
+  }
+  
+  /* Stat cards hover effects */
+  .stat-card {
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Dark mode adjustments */
+  @media (prefers-color-scheme: dark) {
+    .hero-gradient {
+      background: linear-gradient(135deg, 
+        #1a202c 0%, 
+        #2d3748 25%, 
+        #4a5568 50%, 
+        #2d3748 75%, 
+        #1a202c 100%);
+    }
+  }
 
   /* Dark theme for DataTables */
   .dark-theme {
@@ -540,5 +961,141 @@ import Layout from "../layouts/Layout.astro";
   .inline-block.bg-blue-200 {
     background-color: rgba(66, 153, 225, 0.2);
     color: #4299e1;
+  }
+  
+  /* Filter Chips Styles */
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+  }
+  
+  .filter-chip:hover {
+    background-color: #edf2f7;
+    border-color: #cbd5e0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-chip.active {
+    background-color: #3182ce;
+    border-color: #3182ce;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px -3px rgba(49, 130, 206, 0.4);
+  }
+  
+  .filter-chip.active:hover {
+    background-color: #2c5282;
+    border-color: #2c5282;
+  }
+  
+  .chip-icon {
+    font-size: 1rem;
+    line-height: 1;
+  }
+  
+  .clear-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #fed7d7;
+    border: 1px solid #fc8181;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #c53030;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+  }
+  
+  .clear-filter-btn:hover {
+    background-color: #feb2b2;
+    border-color: #f56565;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(245, 101, 101, 0.3);
+  }
+  
+  .active-filter-tag {
+    animation: slideIn 0.2s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Dark mode adjustments for filters */
+  @media (prefers-color-scheme: dark) {
+    .filter-chip {
+      background-color: #2d3748;
+      border-color: #4a5568;
+      color: #e2e8f0;
+    }
+    
+    .filter-chip:hover {
+      background-color: #4a5568;
+      border-color: #718096;
+    }
+    
+    .filter-chip.active {
+      background-color: #3182ce;
+      border-color: #3182ce;
+      color: white;
+    }
+    
+    .clear-filter-btn {
+      background-color: #742a2a;
+      border-color: #c53030;
+      color: #fed7d7;
+    }
+    
+    .clear-filter-btn:hover {
+      background-color: #c53030;
+      border-color: #f56565;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero-gradient {
+      padding: 60px 16px;
+    }
+    
+    .floating-orb {
+      display: none; /* Hide orbs on mobile for better performance */
+    }
+    
+    .stat-card {
+      padding: 16px;
+    }
+    
+    .filter-chip {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.8rem;
+    }
+    
+    #filter-section .flex {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
   }
 </style>

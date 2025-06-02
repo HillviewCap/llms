@@ -27,16 +27,36 @@ const canonicalURL = new URL("/blog", Astro.site);
   <!-- Skip to content link for accessibility -->
   <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-  <main id="main-content">
-    <!-- Blog Header Section -->
-    <section class="blog-index-header">
-      <div class="container mx-auto px-4">
-        <h1 class="blog-index-title">{pageTitle}</h1>
-        <p class="blog-index-description">{pageDescription}</p>
+  <!-- Hero Section -->
+  <section class="hero-gradient relative overflow-hidden py-16 px-4">
+    <div class="container mx-auto relative z-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+        <span class="hero-text-gradient">Blog</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+        Latest insights on llms.txt, AI standards, and web technology trends
+      </p>
+      
+      <!-- Blog Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-2xl mx-auto">
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-blue-400">{posts.length}</div>
+          <div class="text-gray-300 text-sm">Articles</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-green-400">{allTags.length}</div>
+          <div class="text-gray-300 text-sm">Topics</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-purple-400">Free</div>
+          <div class="text-gray-300 text-sm">Access</div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="container mx-auto px-4 pb-16">
+  <main id="main-content">
+    <div class="container mx-auto px-4 py-12">
       <!-- Filter/Category Navigation -->
       <nav class="blog-filter-bar" aria-label="Blog categories">
         <button
@@ -90,7 +110,7 @@ const canonicalURL = new URL("/blog", Astro.site);
       </nav>
 
       <!-- Blog Posts Grid -->
-      <div class="blog-grid">
+      <div class="blog-grid" id="blog-grid">
         {posts.map((post) => <BlogCard post={post} />)}
       </div>
     </div>
@@ -117,4 +137,136 @@ const canonicalURL = new URL("/blog", Astro.site);
       },
     })}
   />
+
+  <!-- Blog filtering and search functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.blog-filter-button');
+      const searchInput = document.getElementById('blog-search');
+      const blogGrid = document.getElementById('blog-grid');
+      const blogCards = document.querySelectorAll('.blog-card');
+      
+      let currentFilter = 'all';
+      let currentSearch = '';
+      
+      // Filter functionality
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Update button states
+          filterButtons.forEach(btn => btn.setAttribute('aria-current', 'false'));
+          button.setAttribute('aria-current', 'true');
+          
+          // Get filter value
+          currentFilter = button.textContent.toLowerCase().trim();
+          applyFilters();
+        });
+      });
+      
+      // Search functionality
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentSearch = e.target.value.toLowerCase();
+          applyFilters();
+        });
+      }
+      
+      function applyFilters() {
+        blogCards.forEach(card => {
+          const tags = card.getAttribute('data-tags');
+          const title = card.getAttribute('data-title');
+          const description = card.getAttribute('data-description');
+          
+          let showCard = true;
+          
+          // Apply tag filter
+          if (currentFilter !== 'all') {
+            showCard = tags && tags.includes(currentFilter);
+          }
+          
+          // Apply search filter
+          if (showCard && currentSearch) {
+            showCard = title.includes(currentSearch) || description.includes(currentSearch);
+          }
+          
+          // Show/hide card with animation
+          if (showCard) {
+            card.style.display = 'flex';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            }, 10);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 200);
+          }
+        });
+        
+        // Update grid layout after filtering
+        setTimeout(updateGridLayout, 300);
+      }
+      
+      function updateGridLayout() {
+        const visibleCards = Array.from(blogCards).filter(card => 
+          card.style.display !== 'none'
+        );
+        
+        if (visibleCards.length === 0) {
+          // Show "no results" message
+          if (!document.getElementById('no-results')) {
+            const noResults = document.createElement('div');
+            noResults.id = 'no-results';
+            noResults.className = 'col-span-full text-center py-12 text-gray-400';
+            noResults.innerHTML = `
+              <div class="max-w-md mx-auto">
+                <svg class="w-16 h-16 mx-auto mb-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <h3 class="text-lg font-medium text-gray-300 mb-2">No posts found</h3>
+                <p class="text-sm">Try adjusting your search or filter criteria.</p>
+              </div>
+            `;
+            blogGrid.appendChild(noResults);
+          }
+        } else {
+          // Remove "no results" message
+          const noResults = document.getElementById('no-results');
+          if (noResults) {
+            noResults.remove();
+          }
+        }
+      }
+    });
+  </script>
 </Layout>
+
+<style>
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      #0f172a 0%, 
+      #1e293b 25%, 
+      #334155 50%, 
+      #475569 75%, 
+      #64748b 100%);
+    position: relative;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  }
+
+  .hero-text-gradient {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

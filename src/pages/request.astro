@@ -3,37 +3,287 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Request/Report Site - LLMS.txt Explorer" description="Request the addition of a new site or report an existing site via our GitHub repository issues.">
-  <main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-6 text-center">Request New Site / Report Site</h1>
-
-    <section class="mb-8 p-6 bg-gray dark:bg-gray-800 rounded-lg shadow-md">
-      <h2 class="text-2xl font-semibold mb-4">Request Addition of a New Site</h2>
-      <p class="mb-4 text-white dark:text-gray-300">
-        To request the addition of a site hosting an `llms.txt` or `llms-full.txt` file, please open an issue in our GitHub repository using the template below. Ensure the site isn't already listed and provides a valid file.
+  <!-- Hero Section -->
+  <section class="hero-gradient relative overflow-hidden py-16 px-4">
+    <div class="container mx-auto relative z-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+        <span class="hero-text-gradient">Submit & Report</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+        Help us grow the database by submitting new llms.txt files or reporting issues with existing sites
       </p>
-      <a
-        href="https://github.com/HillviewCap/llms/issues/new?template=new_site_request.md"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-      >
-        Request New Site via GitHub Issue
-      </a>
+      
+      <!-- Action Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 max-w-2xl mx-auto">
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-green-400">Submit</div>
+          <div class="text-gray-300 text-sm">Add New Sites</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-red-400">Report</div>
+          <div class="text-gray-300 text-sm">Flag Issues</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container mx-auto px-4 py-12">
+    <!-- Overview -->
+    <section class="enhanced-card mb-12">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-white mb-4">Community Contributions</h2>
+        <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+          Our database grows through community contributions. Whether you've discovered a new site 
+          with llms.txt files or found issues with existing entries, your input helps maintain 
+          the quality and completeness of our directory.
+        </p>
+      </div>
     </section>
 
-    <section class="p-6 bg-gray dark:bg-gray-800 rounded-lg shadow-md">
-      <h2 class="text-2xl font-semibold mb-4">Report an Existing Site</h2>
-      <p class="mb-4 text-white dark:text-gray-300">
-        If you find a listed site that contains inappropriate content, malware, has a broken `llms.txt` file, or violates ethical guidelines, please report it by opening an issue in our GitHub repository using the template below.
-      </p>
-      <a
-        href="https://github.com/HillviewCap/llms/issues/new?template=report_site.md"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex justify-center py-2 px-4 border border-red-600 shadow-sm text-sm font-medium rounded-md text-red-600 bg-gray hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 dark:bg-gray-800 dark:text-red-400 dark:border-red-500 dark:hover:bg-gray-700"
-      >
-        Report Site via GitHub Issue
-      </a>
+    <!-- Main Actions -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+      <!-- Request New Site -->
+      <div class="enhanced-card border-2 border-green-500/30 bg-gradient-to-br from-green-900/20 to-emerald-900/20">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">Request New Site</h3>
+            <p class="text-gray-400">Submit a site for inclusion in our database</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-gray-300 mb-6">
+          <p>
+            Found a website with an <code class="bg-gray-700 px-2 py-1 rounded text-green-300">llms.txt</code> or 
+            <code class="bg-gray-700 px-2 py-1 rounded text-green-300">llms-full.txt</code> file? 
+            Help us expand our database by submitting it for review.
+          </p>
+          
+          <!-- Requirements -->
+          <div class="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
+            <h4 class="text-white font-semibold mb-3 flex items-center">
+              <svg class="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Requirements
+            </h4>
+            <ul class="text-sm space-y-2">
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">•</span>
+                Site must have a valid <code class="bg-gray-700 px-1 rounded text-blue-300">llms.txt</code> or <code class="bg-gray-700 px-1 rounded text-blue-300">llms-full.txt</code> file
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">•</span>
+                File must be accessible at domain root (e.g., example.com/llms.txt)
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">•</span>
+                Content should follow the <a href="https://llmstxt.org" target="_blank" class="text-blue-400 hover:text-blue-300 underline">llmstxt.org standard</a>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 mr-2">•</span>
+                Site should not already be in our database
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <a
+          href="https://github.com/HillviewCap/llms/issues/new?template=new_site_request.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="glow-button bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 flex items-center justify-center w-full"
+        >
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          Submit New Site Request
+        </a>
+      </div>
+
+      <!-- Report Site -->
+      <div class="enhanced-card border-2 border-red-500/30 bg-gradient-to-br from-red-900/20 to-rose-900/20">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16c-.77.833.192 2.5 1.732 2.5z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">Report Site Issues</h3>
+            <p class="text-gray-400">Flag problematic content or broken files</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-gray-300 mb-6">
+          <p>
+            Help us maintain database quality by reporting sites with issues. 
+            Your reports help ensure our directory remains reliable and safe.
+          </p>
+          
+          <!-- Report Reasons -->
+          <div class="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
+            <h4 class="text-white font-semibold mb-3 flex items-center">
+              <svg class="w-5 h-5 mr-2 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Report for:
+            </h4>
+            <ul class="text-sm space-y-2">
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">•</span>
+                Broken or missing llms.txt files
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">•</span>
+                Inappropriate or harmful content
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">•</span>
+                Malware or security concerns
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">•</span>
+                Non-compliant file format
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">•</span>
+                Site no longer accessible
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <a
+          href="https://github.com/HillviewCap/llms/issues/new?template=report_site.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="border-2 border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 flex items-center justify-center w-full"
+        >
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          Report Site Issue
+        </a>
+      </div>
+    </div>
+
+    <!-- Process Timeline -->
+    <section class="enhanced-card mb-12">
+      <h3 class="text-3xl font-bold text-white mb-8 text-center">Submission Process</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">1</span>
+          </div>
+          <h4 class="text-white font-semibold mb-2">Submit Request</h4>
+          <p class="text-gray-400 text-sm">Open a GitHub issue with the required information</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">2</span>
+          </div>
+          <h4 class="text-white font-semibold mb-2">Review</h4>
+          <p class="text-gray-400 text-sm">Our team validates the submission for compliance</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">3</span>
+          </div>
+          <h4 class="text-white font-semibold mb-2">Processing</h4>
+          <p class="text-gray-400 text-sm">Site is crawled and metadata is generated</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-bold text-xl">4</span>
+          </div>
+          <h4 class="text-white font-semibold mb-2">Live</h4>
+          <p class="text-gray-400 text-sm">Site appears in the database and search results</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="enhanced-card mb-12">
+      <h3 class="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h3>
+      
+      <div class="space-y-6">
+        <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+          <h4 class="text-xl font-bold text-white mb-3">How long does review take?</h4>
+          <p class="text-gray-300">Most submissions are reviewed within 24-48 hours. Complex cases or reports may take longer to investigate thoroughly.</p>
+        </div>
+
+        <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+          <h4 class="text-xl font-bold text-white mb-3">What makes a valid llms.txt file?</h4>
+          <p class="text-gray-300">Files should follow the <a href="https://llmstxt.org" target="_blank" class="text-blue-400 hover:text-blue-300 underline">official specification</a>, be accessible at the domain root, and contain properly formatted directives for AI interaction.</p>
+        </div>
+
+        <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+          <h4 class="text-xl font-bold text-white mb-3">Can I submit my own site?</h4>
+          <p class="text-gray-300">Absolutely! Self-submissions are welcome and encouraged. Just ensure your site meets our quality standards and follows the llmstxt specification.</p>
+        </div>
+
+        <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+          <h4 class="text-xl font-bold text-white mb-3">What happens to reported sites?</h4>
+          <p class="text-gray-300">Reported sites are investigated promptly. Depending on the issue, sites may be updated, marked with warnings, or removed from the database entirely.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Guidelines -->
+    <section class="text-center">
+      <div class="enhanced-card border-2 border-blue-500/30 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
+        <h3 class="text-3xl font-bold text-white mb-4">Community Guidelines</h3>
+        <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+          Help us maintain a high-quality, safe, and useful database by following our community guidelines 
+          and being respectful in all interactions.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/about" class="glow-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105">
+            Learn More
+          </a>
+          <a href="https://llmstxt.org" target="_blank" class="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200">
+            View Standard
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 </Layout>
+
+<style>
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      #0f172a 0%, 
+      #1e293b 25%, 
+      #334155 50%, 
+      #475569 75%, 
+      #64748b 100%);
+    position: relative;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  }
+
+  .hero-text-gradient {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
