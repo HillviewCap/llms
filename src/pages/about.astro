@@ -3,35 +3,237 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About LLMS.txt Explorer" description="Learn about the LLMS.txt Explorer project, its goals, features, and the technology behind this tool for analyzing LLMS.txt files.">
-  <main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-4">About This Project</h1>
-    <p class="mb-4">
-      This project provides tools and resources related to the llmstxt.org initiative, which aims to standardize interactions with Large Language Models. You can learn more at the main project site: <a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">https://llmstxt.org/</a>.
-    </p>
-    <h2 class="text-2xl font-semibold mb-2">Our Data Collection Process</h2>
-    <p class="mb-4">
-      To provide comprehensive insights, we regularly crawl the top 1 million websites (updated every few days) to find `llms.txt` and `llms-full.txt` files. The collected data is then enriched with additional metrics, including website category and a quality score.
-    </p>
-    <p class="mb-4">
-      The quality score is derived by validating the discovered `llms.txt` and `llms-full.txt` files against the official specification using the <code class="bg-gray-700 px-1 rounded">llms_text</code> module available from <a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">llmstxt.org</a>.
-    </p>
-    <h2 class="text-2xl font-semibold mb-2">About the llmstxt Standard</h2>
-    <p class="mb-4">
-      The `llmstxt` standard aims to provide a structured way for website owners to communicate instructions and permissions to Large Language Models (LLMs) and other AI agents interacting with their sites. It complements existing standards like `robots.txt` (which focuses on crawlers) and `sitemap.xml` (which aids discovery).
-    </p>
-    <p class="mb-4">
-      An `llms.txt` file is a simple plain text file, typically located in the root directory of a website, containing directives in a key-value format. These directives can specify preferred interaction models, data usage policies, contact information for AI-related inquiries, and more. The goal is to foster clearer communication and responsible AI interactions online.
-    </p>
-    <h2 class="text-2xl font-semibold mb-2">Key Features</h2>
-    <ul class="list-disc list-inside mb-4">
-      <li>Comprehensive database of `llms.txt` and `llms-full.txt` files.</li>
-      <li>Regular updates sourced from crawling top websites.</li>
-      <li>Data enrichment with website category and quality score metrics.</li>
-      <li>Validation against the official llmstxt.org standard.</li>
-    </ul>
-    <h2 class="text-2xl font-semibold mb-2">Technology Stack</h2>
-    <p class="mb-4">
-      Built with Astro, Tailwind CSS.
-    </p>
+  <!-- Hero Section -->
+  <section class="hero-gradient relative overflow-hidden py-16 px-4">
+    <div class="container mx-auto relative z-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+        About <span class="hero-text-gradient">LLMS.txt Explorer</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+        Bridging the gap between websites and AI through the 
+        <a href="https://llmstxt.org/" target="_blank" rel="noopener noreferrer" 
+           class="text-blue-300 hover:text-blue-200 underline transition-colors">llmstxt.org</a> standard
+      </p>
+      
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-2xl mx-auto">
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-blue-400">50K+</div>
+          <div class="text-gray-300 text-sm">Websites Indexed</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-green-400">Daily</div>
+          <div class="text-gray-300 text-sm">Updates</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-purple-400">Open</div>
+          <div class="text-gray-300 text-sm">Source</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container mx-auto px-4 py-12">
+    <!-- Mission Statement -->
+    <section class="enhanced-card mb-12">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-white mb-4">Our Mission</h2>
+        <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+          We're building the world's most comprehensive directory of websites that implement the 
+          llms.txt standard, making it easier for AI systems to understand how they should interact 
+          with web content responsibly.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+      <!-- Data Collection Process -->
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white">Data Collection Process</h3>
+        </div>
+        <div class="space-y-4 text-gray-300">
+          <p>
+            We systematically crawl the <strong class="text-white">top 1 million websites</strong> every few days, 
+            scanning for <code class="bg-gray-700 px-2 py-1 rounded text-blue-300">llms.txt</code> and 
+            <code class="bg-gray-700 px-2 py-1 rounded text-blue-300">llms-full.txt</code> files.
+          </p>
+          <p>
+            Each discovered file is validated against the official specification using the 
+            <code class="bg-gray-700 px-2 py-1 rounded text-blue-300">llms_text</code> module, 
+            ensuring quality and compliance with the standard.
+          </p>
+          <p>
+            Our data is enriched with website categorization, quality scores, and topic rankings 
+            to provide comprehensive insights into how different industries adopt the standard.
+          </p>
+        </div>
+      </div>
+
+      <!-- About the Standard -->
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white">The llmstxt Standard</h3>
+        </div>
+        <div class="space-y-4 text-gray-300">
+          <p>
+            The llmstxt standard provides a <strong class="text-white">structured way</strong> for website owners 
+            to communicate instructions and permissions to Large Language Models and AI agents.
+          </p>
+          <p>
+            It complements existing standards like <code class="bg-gray-700 px-2 py-1 rounded text-green-300">robots.txt</code> 
+            (for crawlers) and <code class="bg-gray-700 px-2 py-1 rounded text-green-300">sitemap.xml</code> (for discovery), 
+            but focuses specifically on AI interaction guidelines.
+          </p>
+          <p>
+            Files contain key-value directives specifying interaction models, data usage policies, 
+            contact information, and more to foster <strong class="text-white">responsible AI interactions</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Features -->
+    <section class="enhanced-card mb-12">
+      <h3 class="text-3xl font-bold text-white mb-8 text-center">Key Features</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+            </svg>
+          </div>
+          <h4 class="text-white font-semibold mb-2">Comprehensive Database</h4>
+          <p class="text-gray-400 text-sm">Complete directory of llms.txt files across the web</p>
+        </div>
+
+        <div class="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+          </div>
+          <h4 class="text-white font-semibold mb-2">Regular Updates</h4>
+          <p class="text-gray-400 text-sm">Fresh data from daily crawls of top websites</p>
+        </div>
+
+        <div class="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700">
+          <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h4 class="text-white font-semibold mb-2">Quality Metrics</h4>
+          <p class="text-gray-400 text-sm">Validation and scoring against official standards</p>
+        </div>
+
+        <div class="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700">
+          <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <h4 class="text-white font-semibold mb-2">Advanced Search</h4>
+          <p class="text-gray-400 text-sm">Filter by domain, quality, topics, and more</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="enhanced-card mb-12">
+      <h3 class="text-3xl font-bold text-white mb-8 text-center">Technology Stack</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="text-center p-4">
+          <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <span class="text-white font-bold text-lg">A</span>
+          </div>
+          <div class="text-white font-semibold">Astro</div>
+          <div class="text-gray-400 text-sm">Static Site Generator</div>
+        </div>
+
+        <div class="text-center p-4">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <span class="text-white font-bold text-lg">T</span>
+          </div>
+          <div class="text-white font-semibold">Tailwind CSS</div>
+          <div class="text-gray-400 text-sm">Utility-First CSS</div>
+        </div>
+
+        <div class="text-center p-4">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <span class="text-white font-bold text-lg">TS</span>
+          </div>
+          <div class="text-white font-semibold">TypeScript</div>
+          <div class="text-gray-400 text-sm">Type Safety</div>
+        </div>
+
+        <div class="text-center p-4">
+          <div class="w-16 h-16 bg-gradient-to-r from-orange-600 to-yellow-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <span class="text-white font-bold text-lg">CF</span>
+          </div>
+          <div class="text-white font-semibold">Cloudflare</div>
+          <div class="text-gray-400 text-sm">Edge Computing</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="text-center">
+      <div class="enhanced-card border-2 border-blue-500/30 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
+        <h3 class="text-3xl font-bold text-white mb-4">Ready to Explore?</h3>
+        <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+          Discover how websites across the internet are implementing the llms.txt standard 
+          and join the movement toward responsible AI interaction.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/" class="glow-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105">
+            Explore Database
+          </a>
+          <a href="/api" class="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200">
+            View API Docs
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
+
+<style>
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      #0f172a 0%, 
+      #1e293b 25%, 
+      #334155 50%, 
+      #475569 75%, 
+      #64748b 100%);
+    position: relative;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  }
+
+  .hero-text-gradient {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

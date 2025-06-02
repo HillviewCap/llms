@@ -2,99 +2,399 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="API Documentation">
-  <main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-6">Search API Documentation</h1>
-
-    <p class="mb-4">
-      This page documents the usage of the LLM search API endpoint.
-    </p>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-3">Endpoint: `/api/search-llms`</h2>
-      <p><strong class="font-medium">Method:</strong> <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">GET</code></p>
-      <p class="mt-2">
-        This endpoint allows you to search through the available LLM metadata based on a query string.
+<Layout title="API Documentation - LLMS.txt Explorer" description="Complete API documentation for the LLMS.txt Explorer search endpoints with examples and usage guidelines.">
+  <!-- Hero Section -->
+  <section class="hero-gradient relative overflow-hidden py-16 px-4">
+    <div class="container mx-auto relative z-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+        <span class="hero-text-gradient">API Documentation</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+        Access our comprehensive database of llms.txt files through our RESTful API
       </p>
+      
+      <!-- API Info Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-green-400">REST</div>
+          <div class="text-gray-300 text-sm">JSON API</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-blue-400">50K+</div>
+          <div class="text-gray-300 text-sm">Records Available</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-purple-400">Free</div>
+          <div class="text-gray-300 text-sm">No Auth Required</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container mx-auto px-4 py-12">
+    <!-- Overview -->
+    <section class="enhanced-card mb-12">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-white mb-4">Getting Started</h2>
+        <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+          Our API provides programmatic access to the world's largest database of llms.txt files.
+          All endpoints return JSON responses and support pagination for efficient data retrieval.
+        </p>
+      </div>
+      
+      <!-- Quick Start -->
+      <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+        <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+          <svg class="w-6 h-6 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+          Quick Start
+        </h3>
+        <div class="code-block">
+          <pre class="bg-gray-900 p-4 rounded-lg overflow-x-auto"><code class="text-gray-200">curl "https://llms-text.ai/api/search-llms?q=openai&limit=5"</code></pre>
+        </div>
+      </div>
     </section>
 
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-3">Query Parameters</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li>
-          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">q</code> (<strong>required</strong>): The search term to query against domain, URL, title, summary, and metadata fields including topics and purpose rankings.
-        </li>
-        <li>
-          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">fileType</code> (optional): Filters the search based on source file type. Allowed values: <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'llms.txt'</code>, <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'llms-full.txt'</code>, <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'both'</code>. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">'both'</code>.
-        </li>
-        <li>
-          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">page</code> (optional): The page number for pagination. Must be a positive integer. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">1</code>.
-        </li>
-        <li>
-          <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">limit</code> (optional): The maximum number of results per page. Must be a positive integer. Defaults to <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">10</code>, maximum allowed is <code class="bg-gray-700 dark:bg-gray-700 px-1 rounded">50</code>.
-        </li>
-      </ul>
-    </section>
+    <!-- Base URL and Rate Limits -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+      <div class="enhanced-card">
+        <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+          <svg class="w-6 h-6 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+          </svg>
+          Base URL
+        </h3>
+        <div class="space-y-4 text-gray-300">
+          <div class="bg-gray-800/50 p-4 rounded-lg border border-gray-700">
+            <code class="text-blue-300 text-lg">https://llms-text.ai/api/</code>
+          </div>
+          <p>All API endpoints are accessed relative to this base URL.</p>
+        </div>
+      </div>
 
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-3">Example Request</h2>
-      <p>Search for "example model" on page 2 with 5 results per page:</p>
-      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>GET /api/search-llms?q=example%20model&page=2&limit=5</code></pre>
-    </section>
+      <div class="enhanced-card">
+        <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
+          <svg class="w-6 h-6 mr-2 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          Rate Limits
+        </h3>
+        <div class="space-y-4 text-gray-300">
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <span>Requests per minute:</span>
+              <span class="text-green-400 font-semibold">60</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span>Max results per request:</span>
+              <span class="text-blue-400 font-semibold">50</span>
+            </div>
+          </div>
+          <p class="text-sm">No authentication required for public endpoints.</p>
+        </div>
+      </div>
+    </div>
 
-    <section>
-      <h2 class="text-2xl font-semibold mb-3">Example Response (Success - 200 OK)</h2>
-      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
-         "totalResults": 15,
-         "page": 2,
-         "limit": 5,
-         "results": [
-           {
-             "url": "https://example.com/llms.txt",
-             "domain": "example.com",
-             "content_hash": "a1b2c3d4e5f6...",
-             "last_checked_utc": "2025-04-15T14:32:10Z",
-             "title": "Example Model A",
-             "summary": "An example language model.",
-             "quality": "High",
-             "metadata": {
-               "source_domain": "example.com",
-               "url_purpose_ranking": ["Plain Text Resource"],
-               "url_topic_ranking": [
-                 ["AI/ML", 278],
-                 ["Software Development", 204]
-               ],
-               "domain_purpose_ranking": ["Documentation"],
-               "domain_topic_ranking": [
-                 ["Software Development", 15],
-                 ["AI/ML", 10]
-               ],
-               "url_token_count": 45678
-             },
-             "first_added": "2025-03-15T12:00:00Z",
-             "last_updated": "2025-04-15T14:32:10Z"
-           },
-           {
-             "url": "https://example.org/llms-full.txt",
-             "domain": "example.org",
-             "title": "Example Model B",
-             "summary": "Another example language model.",
-             "last_updated": "2025-04-20T09:15:30Z"
-             // ... other fields available
-           }
-           // ... more results up to the limit
-         ]
-       &rbrace;`}</code></pre>
-    </section>
+    <!-- API Endpoints -->
+    <div class="space-y-12">
+      <!-- Search LLMs Endpoint -->
+      <section class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">Search LLMS.txt Files</h3>
+            <p class="text-gray-400">Search and filter through our comprehensive database</p>
+          </div>
+        </div>
 
-     <section class="mt-8">
-      <h2 class="text-2xl font-semibold mb-3">Example Response (Error - 400 Bad Request)</h2>
-      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
-  "error": "Missing or empty search query parameter \"q\"."
-&rbrace;`}</code></pre>
-      <pre class="bg-gray-600 dark:bg-gray-800 p-4 rounded mt-2 overflow-x-auto"><code>{`&lbrace;
+        <!-- Endpoint Info -->
+        <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mb-6">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+            <div class="flex items-center gap-2">
+              <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">GET</span>
+              <code class="text-blue-300 text-lg">/api/search-llms</code>
+            </div>
+            <div class="text-gray-400">Paginated search with filtering</div>
+          </div>
+        </div>
+
+        <!-- Parameters -->
+        <div class="mb-6">
+          <h4 class="text-xl font-bold text-white mb-4">Query Parameters</h4>
+          <div class="space-y-4">
+            <div class="bg-gray-800/30 rounded-lg p-4 border border-gray-700">
+              <div class="flex items-center gap-2 mb-2">
+                <code class="text-blue-300 font-mono">q</code>
+                <span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-semibold">Required</span>
+              </div>
+              <p class="text-gray-300">Search term to query against domain, URL, title, summary, and metadata fields including topics and purpose rankings.</p>
+            </div>
+
+            <div class="bg-gray-800/30 rounded-lg p-4 border border-gray-700">
+              <div class="flex items-center gap-2 mb-2">
+                <code class="text-blue-300 font-mono">fileType</code>
+                <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">Optional</span>
+              </div>
+              <p class="text-gray-300 mb-2">Filter by source file type. Options: <code class="bg-gray-700 px-1 rounded text-green-300">'llms.txt'</code>, <code class="bg-gray-700 px-1 rounded text-green-300">'llms-full.txt'</code>, <code class="bg-gray-700 px-1 rounded text-green-300">'both'</code></p>
+              <p class="text-gray-400 text-sm">Default: <code class="bg-gray-700 px-1 rounded text-yellow-300">'both'</code></p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-gray-800/30 rounded-lg p-4 border border-gray-700">
+                <div class="flex items-center gap-2 mb-2">
+                  <code class="text-blue-300 font-mono">page</code>
+                  <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">Optional</span>
+                </div>
+                <p class="text-gray-300 text-sm">Page number for pagination</p>
+                <p class="text-gray-400 text-sm">Default: <code class="bg-gray-700 px-1 rounded text-yellow-300">1</code></p>
+              </div>
+
+              <div class="bg-gray-800/30 rounded-lg p-4 border border-gray-700">
+                <div class="flex items-center gap-2 mb-2">
+                  <code class="text-blue-300 font-mono">limit</code>
+                  <span class="bg-gray-600 text-white px-2 py-1 rounded text-xs">Optional</span>
+                </div>
+                <p class="text-gray-300 text-sm">Results per page (max 50)</p>
+                <p class="text-gray-400 text-sm">Default: <code class="bg-gray-700 px-1 rounded text-yellow-300">10</code></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example Request -->
+        <div class="mb-6">
+          <h4 class="text-xl font-bold text-white mb-4">Example Request</h4>
+          <div class="code-block">
+            <pre class="bg-gray-900 p-4 rounded-lg overflow-x-auto"><code class="text-gray-200">GET /api/search-llms?q=openai&fileType=llms.txt&page=1&limit=5</code></pre>
+          </div>
+        </div>
+
+        <!-- Example Response -->
+        <div>
+          <h4 class="text-xl font-bold text-white mb-4">Example Response</h4>
+          <div class="code-block">
+            <pre class="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm"><code class="text-gray-200">{`{
+  "totalResults": 15,
+  "page": 1,
+  "limit": 5,
+  "results": [
+    {
+      "url": "https://openai.com/llms.txt",
+      "domain": "openai.com",
+      "content_hash": "a1b2c3d4e5f6...",
+      "last_checked_utc": "2025-01-06T14:32:10Z",
+      "title": "OpenAI LLM Guidelines",
+      "summary": "Official guidelines for AI interaction",
+      "quality": "High",
+      "metadata": {
+        "source_domain": "openai.com",
+        "url_purpose_ranking": ["AI Guidelines"],
+        "url_topic_ranking": [
+          ["AI/ML", 456],
+          ["Research", 234]
+        ],
+        "domain_purpose_ranking": ["AI Research"],
+        "domain_topic_ranking": [
+          ["AI/ML", 89],
+          ["Research", 45]
+        ],
+        "url_token_count": 1234
+      },
+      "first_added": "2025-01-01T12:00:00Z",
+      "last_updated": "2025-01-06T14:32:10Z"
+    }
+  ]
+}`}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search All Endpoint -->
+      <section class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">Get All Records</h3>
+            <p class="text-gray-400">Retrieve the complete dataset without search filtering</p>
+          </div>
+        </div>
+
+        <!-- Endpoint Info -->
+        <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mb-6">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+            <div class="flex items-center gap-2">
+              <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">GET</span>
+              <code class="text-blue-300 text-lg">/api/search-llms-all</code>
+            </div>
+            <div class="text-gray-400">Returns all records in the database</div>
+          </div>
+        </div>
+
+        <div class="bg-yellow-900/20 border border-yellow-600/50 rounded-lg p-4 mb-6">
+          <div class="flex items-center gap-2 mb-2">
+            <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16c-.77.833.192 2.5 1.732 2.5z"></path>
+            </svg>
+            <span class="text-yellow-400 font-semibold">Note</span>
+          </div>
+          <p class="text-yellow-200 text-sm">This endpoint returns the entire dataset (~50K records). Use with caution as responses may be large.</p>
+        </div>
+
+        <!-- Example -->
+        <div class="mb-4">
+          <h4 class="text-xl font-bold text-white mb-4">Example Request</h4>
+          <div class="code-block">
+            <pre class="bg-gray-900 p-4 rounded-lg overflow-x-auto"><code class="text-gray-200">GET /api/search-llms-all</code></pre>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Error Responses -->
+    <section class="enhanced-card mb-12">
+      <h3 class="text-3xl font-bold text-white mb-8 text-center">Error Responses</h3>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-red-900/20 border border-red-600/50 rounded-lg p-6">
+          <h4 class="text-lg font-bold text-red-400 mb-3">400 Bad Request</h4>
+          <div class="code-block">
+            <pre class="bg-gray-900 p-3 rounded text-sm"><code class="text-gray-200">{`{
+  "error": "Missing or empty search query parameter 'q'."
+}`}</code></pre>
+          </div>
+        </div>
+
+        <div class="bg-red-900/20 border border-red-600/50 rounded-lg p-6">
+          <h4 class="text-lg font-bold text-red-400 mb-3">400 Bad Request</h4>
+          <div class="code-block">
+            <pre class="bg-gray-900 p-3 rounded text-sm"><code class="text-gray-200">{`{
   "error": "Invalid page parameter. Must be a positive integer."
-&rbrace;`}</code></pre>
+}`}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Code Examples -->
+    <section class="enhanced-card mb-12">
+      <h3 class="text-3xl font-bold text-white mb-8 text-center">Code Examples</h3>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- JavaScript Example -->
+        <div>
+          <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+            <svg class="w-6 h-6 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+            JavaScript/Node.js
+          </h4>
+          <div class="code-block">
+            <pre class="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm"><code class="text-gray-200">{`const response = await fetch(
+  'https://llms-text.ai/api/search-llms?q=openai&limit=10'
+);
+const data = await response.json();
+console.log(\`Found \${data.totalResults} results\`);
+data.results.forEach(item => {
+  console.log(\`\${item.domain}: \${item.title}\`);
+});`}</code></pre>
+          </div>
+        </div>
+
+        <!-- Python Example -->
+        <div>
+          <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+            <svg class="w-6 h-6 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+            Python
+          </h4>
+          <div class="code-block">
+            <pre class="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm"><code class="text-gray-200">{`import requests
+
+url = "https://llms-text.ai/api/search-llms"
+params = {"q": "openai", "limit": 10}
+
+response = requests.get(url, params=params)
+data = response.json()
+
+print(f"Found {data['totalResults']} results")
+for item in data['results']:
+    print(f"{item['domain']}: {item['title']}")`}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="text-center">
+      <div class="enhanced-card border-2 border-blue-500/30 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
+        <h3 class="text-3xl font-bold text-white mb-4">Need Help?</h3>
+        <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+          If you encounter any issues or have questions about our API, 
+          we're here to help you get the most out of our llms.txt database.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/blog" class="glow-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105">
+            Read Our Blog
+          </a>
+          <a href="/about" class="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200">
+            Learn More
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 </Layout>
+
+<style>
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      #0f172a 0%, 
+      #1e293b 25%, 
+      #334155 50%, 
+      #475569 75%, 
+      #64748b 100%);
+    position: relative;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  }
+
+  .hero-text-gradient {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .code-block {
+    position: relative;
+  }
+
+  .code-block pre {
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .code-block pre:hover {
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+</style>

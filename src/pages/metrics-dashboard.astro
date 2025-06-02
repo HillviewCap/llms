@@ -131,75 +131,282 @@ const chartData = {
 ---
 
 <Layout title="LLMS.txt Metrics Dashboard" description="Analytics and insights from the LLMS.txt ecosystem">
-  <div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-8">LLMS.txt Metrics Dashboard</h1>
-    
+  <!-- Hero Section -->
+  <section class="hero-gradient relative overflow-hidden py-16 px-4">
+    <div class="container mx-auto relative z-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+        <span class="hero-text-gradient">Analytics Dashboard</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+        Deep insights into the llms.txt ecosystem with real-time metrics and trends
+      </p>
+      
+      <!-- Key Metrics Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-blue-400" id="heroTotalEntries">{totalEntries.toLocaleString()}</div>
+          <div class="text-gray-300 text-sm">Total Sites</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-green-400" id="heroRecentUpdates">{last7DaysEntries}</div>
+          <div class="text-gray-300 text-sm">Recent Updates</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-purple-400">{avgTokens.toLocaleString()}</div>
+          <div class="text-gray-300 text-sm">Avg Tokens</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-orange-400">{Math.round(totalTokens / 1000000)}M</div>
+          <div class="text-gray-300 text-sm">Total Tokens</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container mx-auto px-4 py-12">
     <!-- Time Period Filter -->
-    <div class="mb-8 flex gap-4">
-      <button class="time-filter px-4 py-2 rounded bg-blue-500 text-white" data-days="7">Last 7 Days</button>
-      <button class="time-filter px-4 py-2 rounded bg-blue-500 text-white" data-days="30">Last 30 Days</button>
-      <button class="time-filter px-4 py-2 rounded bg-blue-500 text-white" data-days="all">All Time</button>
+    <section class="enhanced-card mb-12">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+        <h2 class="text-2xl font-bold text-white mb-4 sm:mb-0">Time Period Analysis</h2>
+        <div class="flex gap-2">
+          <button class="time-filter px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors duration-200" data-days="7">
+            Last 7 Days
+          </button>
+          <button class="time-filter px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-white font-medium transition-colors duration-200" data-days="30">
+            Last 30 Days
+          </button>
+          <button class="time-filter px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-white font-medium transition-colors duration-200" data-days="all">
+            All Time
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Statistics -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <div class="enhanced-card">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-2">Total Entries</h3>
+            <p class="text-3xl font-bold text-white" id="totalEntries">{totalEntries.toLocaleString()}</p>
+          </div>
+          <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="enhanced-card">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-2">Recent Updates</h3>
+            <p class="text-3xl font-bold text-white" id="recentUpdates">{last7DaysEntries}</p>
+          </div>
+          <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="enhanced-card">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-2">Average Tokens</h3>
+            <p class="text-3xl font-bold text-white">{avgTokens.toLocaleString()}</p>
+          </div>
+          <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M11 7h4a2 2 0 012 2v4m-6-3a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="enhanced-card">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-2">Total Tokens</h3>
+            <p class="text-3xl font-bold text-white">{totalTokens.toLocaleString()}</p>
+          </div>
+          <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Overview Statistics -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-      <div class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
-        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Total Entries</h3>
-        <p class="text-3xl font-bold text-gray-900 dark:text-white" id="totalEntries">{totalEntries}</p>
+    <!-- Key Insights -->
+    <section class="enhanced-card mb-12">
+      <h2 class="text-3xl font-bold text-white mb-8 text-center">Key Insights</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700 text-center">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Growth Rate</h3>
+          <p class="text-gray-300 text-sm">Database growing at {Math.round((last30DaysEntries / totalEntries) * 100)}% monthly rate</p>
+        </div>
+
+        <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700 text-center">
+          <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Quality Score</h3>
+          <p class="text-gray-300 text-sm">{Math.round((qualityDistribution.High || 0) / totalEntries * 100)}% of sites have high quality llms.txt files</p>
+        </div>
+
+        <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700 text-center">
+          <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Content Volume</h3>
+          <p class="text-gray-300 text-sm">Average {Math.round(avgTokens/1000)}k tokens per site</p>
+        </div>
       </div>
-      <div class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
-        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Recent Updates</h3>
-        <p class="text-3xl font-bold text-gray-900 dark:text-white" id="recentUpdates">{last7DaysEntries}</p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
-        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Average Tokens</h3>
-        <p class="text-3xl font-bold text-gray-900 dark:text-white">{avgTokens}</p>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
-        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Total Tokens</h3>
-        <p class="text-3xl font-bold text-gray-900 dark:text-white">{totalTokens}</p>
-      </div>
-    </div>
+    </section>
 
     <!-- Charts Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
       <!-- Quality Distribution -->
-      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
-        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Quality Distribution</h3>
-        <canvas id="qualityChart"></canvas>
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white">Quality Distribution</h3>
+            <p class="text-gray-400 text-sm">How sites perform against llmstxt standards</p>
+          </div>
+        </div>
+        <div class="bg-gray-800/30 rounded-lg p-4">
+          <canvas id="qualityChart"></canvas>
+        </div>
       </div>
 
       <!-- Entry Growth -->
-      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
-        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Entry Growth Over Time</h3>
-        <canvas id="growthChart"></canvas>
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white">Entry Growth Over Time</h3>
+            <p class="text-gray-400 text-sm">Monthly adoption trends</p>
+          </div>
+        </div>
+        <div class="bg-gray-800/30 rounded-lg p-4">
+          <canvas id="growthChart"></canvas>
+        </div>
       </div>
 
       <!-- URL Topics -->
-      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
-        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Top LLM Text Topics</h3>
-        <canvas id="urlTopicsChart"></canvas>
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white">Top LLM Text Topics</h3>
+            <p class="text-gray-400 text-sm">Most common content categories</p>
+          </div>
+        </div>
+        <div class="bg-gray-800/30 rounded-lg p-4">
+          <canvas id="urlTopicsChart"></canvas>
+        </div>
       </div>
 
       <!-- Domain Topics -->
-      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
-        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Top Domain Topics</h3>
-        <canvas id="domainTopicsChart"></canvas>
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9V3"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white">Top Domain Topics</h3>
+            <p class="text-gray-400 text-sm">Website category distribution</p>
+          </div>
+        </div>
+        <div class="bg-gray-800/30 rounded-lg p-4">
+          <canvas id="domainTopicsChart"></canvas>
+        </div>
       </div>
 
       <!-- URL Purposes -->
-      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
-        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">LLM Text Purposes</h3>
-        <canvas id="urlPurposesChart"></canvas>
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-10 h-10 bg-cyan-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white">LLM Text Purposes</h3>
+            <p class="text-gray-400 text-sm">Content usage patterns</p>
+          </div>
+        </div>
+        <div class="bg-gray-800/30 rounded-lg p-4">
+          <canvas id="urlPurposesChart"></canvas>
+        </div>
       </div>
 
       <!-- Domain Purposes -->
-      <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
-        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Domain Purposes</h3>
-        <canvas id="domainPurposesChart"></canvas>
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white">Domain Purposes</h3>
+            <p class="text-gray-400 text-sm">Website function analysis</p>
+          </div>
+        </div>
+        <div class="bg-gray-800/30 rounded-lg p-4">
+          <canvas id="domainPurposesChart"></canvas>
+        </div>
       </div>
     </div>
-  </div>
+
+    <!-- Summary Section -->
+    <section class="text-center mt-12">
+      <div class="enhanced-card border-2 border-blue-500/30 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
+        <h3 class="text-3xl font-bold text-white mb-4">Real-Time Analytics</h3>
+        <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+          This dashboard provides live insights into the growing llms.txt ecosystem. 
+          Data is updated daily as we crawl the web for new implementations.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/" class="glow-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105">
+            Explore Database
+          </a>
+          <a href="/api" class="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200">
+            Access API
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -212,22 +419,40 @@ const chartData = {
     ];
 
     // Initialize charts
-    // Global chart options for better text contrast
+    // Global chart options for better text contrast with dark theme
     const globalOptions = {
       plugins: {
         legend: {
           labels: {
-            color: '#111827', // text-gray-900 equivalent
+            color: '#F3F4F6', // text-gray-200 for dark theme
             font: {
               weight: '500'
             }
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: '#E5E7EB' // text-gray-300
+          },
+          grid: {
+            color: 'rgba(75, 85, 99, 0.3)' // gray-600 with opacity
+          }
+        },
+        y: {
+          ticks: {
+            color: '#E5E7EB' // text-gray-300
+          },
+          grid: {
+            color: 'rgba(75, 85, 99, 0.3)' // gray-600 with opacity
           }
         }
       }
     };
 
     function initializeCharts() {
-      Chart.defaults.color = '#111827'; // Set default text color for all charts
+      Chart.defaults.color = '#F3F4F6'; // Set default text color for dark theme
       
       // Quality Distribution Pie Chart
       const qualityChart = document.getElementById('qualityChart');
@@ -264,16 +489,10 @@ const chartData = {
           options: {
             ...globalOptions,
             scales: {
+              ...globalOptions.scales,
               y: {
-                beginAtZero: true,
-                ticks: {
-                  color: '#111827'
-                }
-              },
-              x: {
-                ticks: {
-                  color: '#111827'
-                }
+                ...globalOptions.scales.y,
+                beginAtZero: true
               }
             }
           }
@@ -295,19 +514,7 @@ const chartData = {
           },
           options: {
             ...globalOptions,
-            indexAxis: 'y',
-            scales: {
-              x: {
-                ticks: {
-                  color: '#111827'
-                }
-              },
-              y: {
-                ticks: {
-                  color: '#111827'
-                }
-              }
-            }
+            indexAxis: 'y'
           }
         });
       }
@@ -327,19 +534,7 @@ const chartData = {
           },
           options: {
             ...globalOptions,
-            indexAxis: 'y',
-            scales: {
-              x: {
-                ticks: {
-                  color: '#111827'
-                }
-              },
-              y: {
-                ticks: {
-                  color: '#111827'
-                }
-              }
-            }
+            indexAxis: 'y'
           }
         });
       }
@@ -358,19 +553,7 @@ const chartData = {
             }]
           },
           options: {
-            ...globalOptions,
-            scales: {
-              x: {
-                ticks: {
-                  color: '#111827'
-                }
-              },
-              y: {
-                ticks: {
-                  color: '#111827'
-                }
-              }
-            }
+            ...globalOptions
           }
         });
       }
@@ -389,19 +572,7 @@ const chartData = {
             }]
           },
           options: {
-            ...globalOptions,
-            scales: {
-              x: {
-                ticks: {
-                  color: '#111827'
-                }
-              },
-              y: {
-                ticks: {
-                  color: '#111827'
-                }
-              }
-            }
+            ...globalOptions
           }
         });
       }
@@ -416,11 +587,11 @@ const chartData = {
         const days = button.getAttribute('data-days');
         // Update active state
         document.querySelectorAll('.time-filter').forEach(btn => {
-          btn.classList.remove('bg-blue-700');
-          btn.classList.add('bg-blue-500');
+          btn.classList.remove('bg-blue-600');
+          btn.classList.add('bg-gray-700');
         });
-        button.classList.remove('bg-blue-500');
-        button.classList.add('bg-blue-700');
+        button.classList.remove('bg-gray-700');
+        button.classList.add('bg-blue-600');
 
         // Update metrics based on time period
         const recentUpdates = document.getElementById('recentUpdates');
@@ -437,3 +608,32 @@ const chartData = {
     });
   </script>
 </Layout>
+
+<style>
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      #0f172a 0%, 
+      #1e293b 25%, 
+      #334155 50%, 
+      #475569 75%, 
+      #64748b 100%);
+    position: relative;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  }
+
+  .hero-text-gradient {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

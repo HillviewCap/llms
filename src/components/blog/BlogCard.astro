@@ -29,13 +29,13 @@ const formattedDate = post.data.pubDate.toLocaleDateString("en-us", {
   day: "numeric",
 });
 
-// Debug: Log the post object to see what's happening
-console.log("Post slug:", post.slug);
-console.log("Post image path:", post.data.image);
 ---
 
 <article
-  class="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden h-full flex flex-col transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-900/20 hover:border-primary-500 focus-within:border-primary-500 focus-within:ring-2 focus-within:ring-primary-500"
+  class="blog-card bg-gray-800 border border-gray-700 rounded-lg overflow-hidden h-full flex flex-col transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-900/20 hover:border-primary-500 focus-within:border-primary-500 focus-within:ring-2 focus-within:ring-primary-500"
+  data-tags={post.data.tags ? post.data.tags.join(',') : ''}
+  data-title={post.data.title.toLowerCase()}
+  data-description={post.data.description.toLowerCase()}
 >
   <div class="h-48 bg-gray-700 relative">
     <!-- Blog post featured image -->
@@ -45,32 +45,36 @@ console.log("Post image path:", post.data.image);
           <img
             src={post.data.image}
             alt={`${post.data.title} thumbnail`}
-            class="absolute inset-0 w-full h-full object-cover"
-            onerror="this.onerror=null; this.src='/assets/favicon-32x32.png';"
-            loading="eager"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+            onerror="this.onerror=null; this.src='/assets/llms-text.jpg'; this.classList.add('opacity-75');"
+            loading="lazy"
             decoding="async"
+            width="400"
+            height="192"
             style="z-index: 1;"
           />
           <div class="absolute inset-0 bg-gradient-to-br from-primary-900/30 to-gray-900/40 pointer-events-none" />
         </>
       ) : (
-        <div class="w-full h-full flex items-center justify-center bg-gray-800">
+        <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
           <div class="text-center p-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-12 w-12 mx-auto text-gray-500 mb-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-              />
-            </svg>
-            <p class="text-sm text-gray-400">{post.data.title}</p>
+            <div class="w-16 h-16 mx-auto mb-3 bg-primary-600/20 rounded-full flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-primary-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <p class="text-sm text-gray-400 font-medium">{post.data.title}</p>
           </div>
         </div>
       )

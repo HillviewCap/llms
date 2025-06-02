@@ -3,65 +3,290 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Legal Information - LLMS.txt Explorer" description="Review the legal information, terms of service, and privacy policy for the LLMS.txt Explorer project.">
-  <div class="prose prose-invert max-w-none">
-    <h1>Legal Information</h1>
+  <!-- Hero Section -->
+  <section class="hero-gradient relative overflow-hidden py-16 px-4">
+    <div class="container mx-auto relative z-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+        <span class="hero-text-gradient">Legal Information</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+        Terms, privacy policy, and legal framework for using the LLMS.txt Explorer service
+      </p>
+      
+      <!-- Quick Reference -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-green-400">Privacy First</div>
+          <div class="text-gray-300 text-sm">No User Tracking</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-blue-400">Open Access</div>
+          <div class="text-gray-300 text-sm">Free to Use</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+          <div class="text-2xl font-bold text-purple-400">Transparent</div>
+          <div class="text-gray-300 text-sm">Clear Terms</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>How This Site Functions</h2>
-      <p>LLMS.txt Explorer functions as a specialized search engine and directory for discovering `llms.txt` files across the web. It helps users find information about how websites prefer Large Language Models (LLMs) to interact with their content.</p>
+  <main class="container mx-auto px-4 py-12">
+    <!-- Overview -->
+    <section class="enhanced-card mb-12">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-white mb-4">Service Overview</h2>
+        <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+          LLMS.txt Explorer operates as a specialized search engine and directory for discovering 
+          llms.txt files across the web, helping users understand how websites prefer Large Language Models 
+          to interact with their content.
+        </p>
+      </div>
     </section>
 
-    <section>
-      <h2>Data Collection and Privacy</h2>
-      <p>This site does not collect or store any personal user data. We are committed to user privacy and operate without tracking individual users or their activities.</p>
-    </section>
+    <!-- Legal Sections Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+      <!-- Privacy & Data -->
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">Privacy & Data Collection</h3>
+            <p class="text-gray-400">How we handle your information</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-gray-300">
+          <p>
+            <strong class="text-white">No Personal Data Collection:</strong> This site does not collect or store any personal user data. 
+            We are committed to user privacy and operate without tracking individual users or their activities.
+          </p>
+          <div class="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
+            <h4 class="text-white font-semibold mb-2">What We Don't Track:</h4>
+            <ul class="text-sm space-y-1">
+              <li class="flex items-center"><span class="text-green-400 mr-2">✓</span>Personal identifiers</li>
+              <li class="flex items-center"><span class="text-green-400 mr-2">✓</span>Browsing behavior</li>
+              <li class="flex items-center"><span class="text-green-400 mr-2">✓</span>Search history</li>
+              <li class="flex items-center"><span class="text-green-400 mr-2">✓</span>User accounts or profiles</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <section>
-      <h2>External Links Disclaimer</h2>
-      <p>LLMS.txt Explorer provides links to external websites where `llms.txt` files are found. We are not responsible for the content, privacy practices, or accuracy of information on these third-party sites. Users access external links at their own risk.</p>
-    </section>
+      <!-- Terms of Service -->
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">Terms of Service</h3>
+            <p class="text-gray-400">Your agreement with our service</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-gray-300">
+          <p>
+            By using LLMS.txt Explorer, you agree to comply with these terms. The service is provided 
+            <strong class="text-white">"as is"</strong> for informational purposes.
+          </p>
+          <div class="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
+            <h4 class="text-white font-semibold mb-2">User Responsibilities:</h4>
+            <ul class="text-sm space-y-1">
+              <li class="flex items-start"><span class="text-blue-400 mr-2">•</span>Use service for lawful purposes only</li>
+              <li class="flex items-start"><span class="text-blue-400 mr-2">•</span>Do not attempt to damage or impair the service</li>
+              <li class="flex items-start"><span class="text-blue-400 mr-2">•</span>Respect rate limits and usage guidelines</li>
+              <li class="flex items-start"><span class="text-blue-400 mr-2">•</span>Report problematic content appropriately</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <section>
-      <h2>Reporting Problematic Sites</h2>
-      <p>We strive to maintain a high-quality index. If you encounter a site linked through our service that you believe is problematic, harmful, or violates ethical standards, please report it to us via [Reporting Mechanism - e.g., email address or contact form link to be added here]. We will review reports and take appropriate action.</p>
-    </section>
+      <!-- External Links -->
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">External Links Disclaimer</h3>
+            <p class="text-gray-400">Third-party website responsibilities</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-gray-300">
+          <p>
+            LLMS.txt Explorer provides links to external websites where <code class="bg-gray-700 px-2 py-1 rounded text-blue-300">llms.txt</code> files are found. 
+            We are <strong class="text-white">not responsible</strong> for the content, privacy practices, or accuracy of information on these third-party sites.
+          </p>
+          <div class="bg-yellow-900/20 border border-yellow-600/50 rounded-lg p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+              <span class="text-yellow-400 font-semibold">Important</span>
+            </div>
+            <p class="text-yellow-200 text-sm">Users access external links at their own risk. Always verify the safety and legitimacy of external websites.</p>
+          </div>
+        </div>
+      </div>
 
-    <section>
-      <h2>Terms of Service / Use</h2>
-      <p>By using LLMS.txt Explorer, you agree to comply with these terms. The service is provided "as is" for informational purposes. You agree not to use the service for any unlawful purpose or in any way that could damage, disable, overburden, or impair the service.</p>
-    </section>
+      <!-- Reporting -->
+      <div class="enhanced-card">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16c-.77.833.192 2.5 1.732 2.5z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">Reporting Problematic Sites</h3>
+            <p class="text-gray-400">Help us maintain quality standards</p>
+          </div>
+        </div>
+        <div class="space-y-4 text-gray-300">
+          <p>
+            We strive to maintain a high-quality index. If you encounter a site that you believe is 
+            problematic, harmful, or violates ethical standards, please report it through our 
+            <a href="/request" class="text-blue-400 hover:text-blue-300 underline">reporting system</a>.
+          </p>
+          <div class="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
+            <h4 class="text-white font-semibold mb-2">Report Issues:</h4>
+            <ul class="text-sm space-y-1">
+              <li class="flex items-start"><span class="text-red-400 mr-2">•</span>Malicious or harmful content</li>
+              <li class="flex items-start"><span class="text-red-400 mr-2">•</span>Broken or non-compliant llms.txt files</li>
+              <li class="flex items-start"><span class="text-red-400 mr-2">•</span>Sites violating ethical standards</li>
+              <li class="flex items-start"><span class="text-red-400 mr-2">•</span>Security concerns or malware</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <section>
-      <h2>Disclaimer of Warranties</h2>
-      <p>The service is provided without warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant that the service will be uninterrupted, error-free, or completely secure.</p>
-    </section>
+    <!-- Additional Legal Terms -->
+    <div class="space-y-8">
+      <!-- Warranties and Liability -->
+      <section class="enhanced-card">
+        <h3 class="text-2xl font-bold text-white mb-6 text-center">Disclaimers and Limitations</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+            <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+              <svg class="w-6 h-6 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+              Disclaimer of Warranties
+            </h4>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              The service is provided without warranties of any kind, either express or implied, including 
+              warranties of merchantability, fitness for a particular purpose, or non-infringement. 
+              We do not warrant that the service will be uninterrupted, error-free, or completely secure.
+            </p>
+          </div>
 
-    <section>
-      <h2>Limitation of Liability</h2>
-      <p>In no event shall LLMS.txt Explorer, its creators, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the service or the content found through it.</p>
-    </section>
+          <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+            <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+              <svg class="w-6 h-6 mr-2 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636m12.728 12.728L18.364 5.636M5.636 18.364l12.728-12.728"></path>
+              </svg>
+              Limitation of Liability
+            </h4>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              In no event shall LLMS.txt Explorer, its creators, or affiliates be liable for any indirect, 
+              incidental, special, consequential, or punitive damages arising out of or related to your 
+              use of the service or content found through it.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Governing Law</h2>
-      <p>These terms shall be governed and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions.</p>
-    </section>
+      <!-- Governing Terms -->
+      <section class="enhanced-card">
+        <h3 class="text-2xl font-bold text-white mb-6 text-center">Legal Framework</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+            <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+              <svg class="w-6 h-6 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16l3-1m-3 1l-3-1"></path>
+              </svg>
+              Governing Law
+            </h4>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              These terms shall be governed and construed in accordance with applicable international 
+              laws and regulations, without regard to conflict of law provisions. Disputes will be 
+              resolved through appropriate legal channels.
+            </p>
+          </div>
 
-    <section>
-      <h2>Changes to Terms</h2>
-      <p>We reserve the right to modify or replace these terms at any time. We will provide notice of significant changes. By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms.</p>
-    </section>
+          <div class="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+            <h4 class="text-xl font-bold text-white mb-4 flex items-center">
+              <svg class="w-6 h-6 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              </svg>
+              Changes to Terms
+            </h4>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              We reserve the right to modify or replace these terms at any time. We will provide notice 
+              of significant changes. By continuing to use our service after revisions become effective, 
+              you agree to be bound by the revised terms.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
 
-  </div>
+    <!-- Contact Section -->
+    <section class="text-center mt-12">
+      <div class="enhanced-card border-2 border-blue-500/30 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
+        <h3 class="text-3xl font-bold text-white mb-4">Questions or Concerns?</h3>
+        <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+          If you have questions about these legal terms or need to report issues, 
+          we're here to help ensure a safe and reliable service for everyone.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/request" class="glow-button bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105">
+            Report Issues
+          </a>
+          <a href="/about" class="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <style>
-  /* Basic styling for readability */
-  section {
-    margin-bottom: 2rem;
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      #0f172a 0%, 
+      #1e293b 25%, 
+      #334155 50%, 
+      #475569 75%, 
+      #64748b 100%);
+    position: relative;
   }
-  h1, h2 {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  }
+
+  .hero-text-gradient {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 </style>
