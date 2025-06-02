@@ -131,7 +131,7 @@ import Layout from "../layouts/Layout.astro";
         <p>Error loading data. Please try refreshing the page.</p>
       </div>
 
-      <div class="overflow-x-auto bg-gray-800 shadow-md rounded-lg p-4" style="display: none;" id="tableContainer">
+      <div class="overflow-x-auto" style="display: none;" id="tableContainer">
       <table
         id="llmsDataTable"
         class="display compact stripe dark-theme"
@@ -197,8 +197,8 @@ import Layout from "../layouts/Layout.astro";
 
   function formatChildRowContent(d) {
     let childHtml =
-      '<div class="p-4 bg-gray-800 text-gray-200 text-sm rounded-md">';
-    childHtml += '<table class="w-full">';
+      '<div class="child-row-content">';
+    childHtml += '<table>';
     childHtml += `<tr><td class="font-semibold pr-2 py-1 w-1/4 text-blue-300">Domain:</td><td>${d.domain || "N/A"}</td></tr>`;
 
     let fullTitle = d.title;
@@ -638,16 +638,22 @@ import Layout from "../layouts/Layout.astro";
           data: "quality",
           title: "Quality",
           render: function (data, type, row) {
-            if (data) return data;
-
-            if (
-              row.qualities &&
-              (row.qualities.llms || row.qualities.llmsFull)
-            ) {
-              return row.qualities.llms || row.qualities.llmsFull || "N/A";
+            let quality = data;
+            
+            if (!quality && row.qualities && (row.qualities.llms || row.qualities.llmsFull)) {
+              quality = row.qualities.llms || row.qualities.llmsFull;
             }
-
-            return "N/A";
+            
+            if (!quality) return "N/A";
+            
+            const qualityClass = quality.toLowerCase();
+            const qualityIcon = {
+              high: '💎',
+              medium: '⭐',
+              low: '📝'
+            }[qualityClass] || '❓';
+            
+            return `<span class="quality-indicator quality-${qualityClass}">${qualityIcon} ${quality}</span>`;
           },
         },
         {
@@ -660,7 +666,9 @@ import Layout from "../layouts/Layout.astro";
               row.metadata.url_topic_ranking.length > 0 &&
               row.metadata.url_topic_ranking[0].length > 0
             ) {
-              return row.metadata.url_topic_ranking[0][0];
+              const topic = row.metadata.url_topic_ranking[0][0];
+              const score = row.metadata.url_topic_ranking[0][1];
+              return `<span class="topic-focus" title="Relevance: ${(score * 100).toFixed(0)}%">${topic}</span>`;
             }
             return "N/A";
           },
@@ -681,9 +689,9 @@ import Layout from "../layouts/Layout.astro";
           title: "Status",
           render: function (data, type, row) {
             if (isNewRecord(row))
-              return '<span class="inline-block bg-green-200 text-green-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">✨ New</span>';
+              return '<span class="status-badge status-badge-new">✨ New</span>';
             if (isRecentlyUpdated(row))
-              return '<span class="inline-block bg-blue-200 text-blue-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">🔄 Updated</span>';
+              return '<span class="status-badge status-badge-updated">🔄 Updated</span>';
             return "";
           },
         },
@@ -819,6 +827,49 @@ import Layout from "../layouts/Layout.astro";
   }
   
   /* Dark mode adjustments */
+  /* Topic focus styling */
+  .topic-focus {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+    border-radius: 0.25rem;
+    font-size: 0.8125rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  .topic-focus:hover {
+    background-color: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+  }
+
+  /* Loading state enhancement */
+  #loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+  }
+
+  #loading .animate-spin {
+    width: 48px;
+    height: 48px;
+    border: 3px solid #1e293b;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+  }
+
+  /* Empty state */
+  .dataTables_empty {
+    padding: 3rem !important;
+    text-align: center;
+    color: #6b7280;
+    font-size: 1.125rem;
+  }
+
   @media (prefers-color-scheme: dark) {
     .hero-gradient {
       background: linear-gradient(135deg, 
@@ -830,106 +881,224 @@ import Layout from "../layouts/Layout.astro";
     }
   }
 
-  /* Dark theme for DataTables */
+  /* Enhanced Dark theme for DataTables */
   .dark-theme {
     color: #e2e8f0;
   }
 
   div.dataTables_wrapper {
-    background-color: #1a202c;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: #e2e8f0;
-    padding: 1rem;
-    border-radius: 0.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
   }
 
-  #llmsDataTable th {
-    background-color: #2d3748;
-    color: #e2e8f0;
+  /* Enhanced table structure */
+  #llmsDataTable {
+    border-spacing: 0 0.5rem;
+    border-collapse: separate;
+  }
+
+  #llmsDataTable thead th {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #f1f5f9;
     font-weight: 600;
-    border-bottom: 1px solid #4a5568;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem 1.25rem;
+    border: none;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  #llmsDataTable td {
-    background-color: #1a202c;
+  #llmsDataTable thead th:first-child {
+    border-radius: 0.5rem 0 0 0;
+  }
+
+  #llmsDataTable thead th:last-child {
+    border-radius: 0 0.5rem 0 0;
+  }
+
+  #llmsDataTable tbody tr {
+    background-color: #1e293b;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #llmsDataTable tbody td {
+    padding: 1rem 1.25rem;
+    border: none;
     color: #e2e8f0;
-    border-bottom: 1px solid #2d3748;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    background-color: inherit;
   }
 
-  #llmsDataTable tr.odd td {
+  /* Rounded corners for first and last cells */
+  #llmsDataTable tbody td:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  #llmsDataTable tbody td:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  /* Enhanced hover effect */
+  #llmsDataTable tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
     background-color: #2d3748;
   }
 
-  #llmsDataTable tbody tr:not(.shown):hover td {
-    background-color: #4a5568;
-  }
-
-  #llmsDataTable tbody tr.shown:hover td,
-  #llmsDataTable tbody tr.shown + tr:hover td {
-    background-color: inherit;
+  #llmsDataTable tbody tr.shown:hover,
+  #llmsDataTable tbody tr.shown + tr:hover {
+    transform: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
   table.dataTable td.dt-control {
     cursor: pointer;
     position: relative;
+    transition: all 0.2s ease;
   }
 
   table.dataTable td.dt-control::before {
     content: "+";
     display: inline-block;
-    background-color: #48bb78;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     color: white;
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     text-align: center;
-    line-height: 20px;
+    line-height: 22px;
     font-weight: bold;
     font-size: 16px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   table.dataTable tr.shown td.dt-control::before {
     content: "-";
-    line-height: 18px;
+    line-height: 20px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  /* Hover effect on expand button */
+  table.dataTable td.dt-control:hover::before {
+    transform: translate(-50%, -50%) scale(1.15);
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+  }
+
+  table.dataTable tr.shown td.dt-control:hover::before {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1.15);
+  }
+
+  /* Enhanced pagination */
+  .dataTables_paginate {
+    margin-top: 1.5rem;
   }
 
   .dataTables_paginate .paginate_button {
     color: #e2e8f0 !important;
-    background-color: #2d3748;
-    border: 1px solid #4a5568;
-    border-radius: 0.25rem;
-    margin: 0 0.25rem;
-    padding: 0.25rem 0.5rem;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 1px solid #475569;
+    border-radius: 0.375rem;
+    margin: 0 0.125rem;
+    padding: 0.5rem 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    min-width: 2.5rem;
+    text-align: center;
+    font-size: 0.875rem;
   }
 
-  .dataTables_paginate .paginate_button:hover {
-    background-color: #4a5568 !important;
+  .dataTables_paginate .paginate_button:hover:not(.disabled):not(.current) {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%) !important;
+    border-color: #3b82f6;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: white !important;
   }
 
   .dataTables_paginate .paginate_button.current {
-    background-color: #4299e1 !important;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+    border-color: #3b82f6;
     color: white !important;
-    border: 1px solid #4299e1;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .dataTables_paginate .paginate_button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* Enhanced DataTables controls */
+  .dataTables_filter {
+    margin-bottom: 1rem;
   }
 
   .dataTables_filter input {
-    background-color: #2d3748;
-    color: #e2e8f0;
-    border: 1px solid #4a5568;
-    border-radius: 0.25rem;
-    padding: 0.25rem 0.5rem;
+    background-color: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 0.5rem;
+    padding: 0.625rem 1rem 0.625rem 2.5rem;
+    font-size: 0.875rem;
+    color: #f1f5f9;
+    transition: all 0.2s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 0.75rem center;
+    background-size: 1rem;
+    padding-left: 2.5rem;
+    width: 300px;
+  }
+
+  .dataTables_filter input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    background-color: #0f172a;
   }
 
   .dataTables_length select {
-    background-color: #2d3748;
+    background-color: #1e293b;
     color: #e2e8f0;
-    border: 1px solid #4a5568;
-    border-radius: 0.25rem;
-    padding: 0.25rem 0.5rem;
+    border: 2px solid #334155;
+    border-radius: 0.375rem;
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+  }
+
+  .dataTables_length select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  .dataTables_info {
+    color: #9ca3af;
+    font-size: 0.875rem;
   }
 
   #llmsDataTable td,
@@ -938,29 +1107,149 @@ import Layout from "../layouts/Layout.astro";
     vertical-align: top;
   }
 
-  div.p-4.bg-gray-100 {
-    background-color: #2d3748 !important;
-    color: #e2e8f0;
-    border-left: 3px solid #4299e1;
+  /* Enhanced child row design */
+  .child-row-content {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 0.5rem 0 1rem 3rem;
+    border-left: 4px solid #3b82f6;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
+  .child-row-content table {
+    width: 100%;
+    border-spacing: 0;
+  }
+
+  .child-row-content td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+  }
+
+  .child-row-content td:first-child {
+    font-weight: 600;
+    color: #60a5fa;
+    width: 180px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+  }
+
+  .child-row-content tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Enhanced link styling */
   #llmsDataTable a {
-    color: #63b3ed;
+    color: #60a5fa;
+    font-weight: 500;
     text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  #llmsDataTable a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #60a5fa;
+    transition: width 0.3s ease;
   }
 
   #llmsDataTable a:hover {
-    text-decoration: underline;
+    color: #93bbfc;
   }
 
-  .inline-block.bg-green-200 {
-    background-color: rgba(72, 187, 120, 0.2);
-    color: #48bb78;
+  #llmsDataTable a:hover::after {
+    width: 100%;
   }
 
-  .inline-block.bg-blue-200 {
-    background-color: rgba(66, 153, 225, 0.2);
-    color: #4299e1;
+  /* Modern status badges */
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    transition: all 0.2s ease;
+  }
+
+  .status-badge-new {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+  }
+
+  .status-badge-new:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+  }
+
+  .status-badge-updated {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+  }
+
+  .status-badge-updated:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+  }
+
+  /* Quality indicators */
+  .quality-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.875rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+  }
+
+  .quality-high {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+
+  .quality-high:hover {
+    background-color: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .quality-medium {
+    background-color: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+  }
+
+  .quality-medium:hover {
+    background-color: rgba(251, 191, 36, 0.15);
+    border-color: rgba(251, 191, 36, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .quality-low {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+
+  .quality-low:hover {
+    background-color: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.3);
+    transform: translateY(-1px);
   }
   
   /* Filter Chips Styles */
