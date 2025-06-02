@@ -218,7 +218,7 @@ import Layout from "../layouts/Layout.astro";
       // Check for llms.txt topics
       if (d.entries && d.entries.llms && d.entries.llms.metadata && d.entries.llms.metadata.url_topic_ranking && Array.isArray(d.entries.llms.metadata.url_topic_ranking) && d.entries.llms.metadata.url_topic_ranking.length > 0) {
         urlTopicsHtml += '<div class="mb-2"><strong class="text-green-300">LLMs.txt Topics:</strong><br>';
-        urlTopicsHtml += d.entries.llms.metadata.url_topic_ranking.map((item) => `${item[0]} <span class="text-blue-400">(${item[1].toFixed(2)})</span>`).join("<br>");
+        urlTopicsHtml += d.entries.llms.metadata.url_topic_ranking.map((item) => `<span class="topic-pill">${item[0]}</span>`).join(' ');
         urlTopicsHtml += '</div>';
         hasAnyTopics = true;
       }
@@ -226,7 +226,7 @@ import Layout from "../layouts/Layout.astro";
       // Check for llms-full.txt topics
       if (d.entries && d.entries.llmsFull && d.entries.llmsFull.metadata && d.entries.llmsFull.metadata.url_topic_ranking && Array.isArray(d.entries.llmsFull.metadata.url_topic_ranking) && d.entries.llmsFull.metadata.url_topic_ranking.length > 0) {
         urlTopicsHtml += '<div class="mb-2"><strong class="text-purple-300">LLMs-Full.txt Topics:</strong><br>';
-        urlTopicsHtml += d.entries.llmsFull.metadata.url_topic_ranking.map((item) => `${item[0]} <span class="text-blue-400">(${item[1].toFixed(2)})</span>`).join("<br>");
+        urlTopicsHtml += d.entries.llmsFull.metadata.url_topic_ranking.map((item) => `<span class="topic-pill">${item[0]}</span>`).join(' ');
         urlTopicsHtml += '</div>';
         hasAnyTopics = true;
       }
@@ -267,7 +267,7 @@ import Layout from "../layouts/Layout.astro";
         d.metadata.domain_topic_ranking.length > 0;
 
       if (hasDomainTopics) {
-        childHtml += `<tr><td class="font-semibold pr-2 py-1 align-top text-blue-300">Domain Topics:</td><td>${d.metadata.domain_topic_ranking.map((item) => `${item[0]} <span class="text-blue-400">(${item[1].toFixed(2)})</span>`).join("<br>")}</td></tr>`;
+        childHtml += `<tr><td class="font-semibold pr-2 py-1 align-top text-blue-300">Domain Topics:</td><td>${d.metadata.domain_topic_ranking.map((item) => `<span class="topic-pill">${item[0]}</span>`).join(' ')}</td></tr>`;
       }
 
       if (
@@ -667,8 +667,7 @@ import Layout from "../layouts/Layout.astro";
               row.metadata.url_topic_ranking[0].length > 0
             ) {
               const topic = row.metadata.url_topic_ranking[0][0];
-              const score = row.metadata.url_topic_ranking[0][1];
-              return `<span class="topic-focus" title="Relevance: ${(score * 100).toFixed(0)}%">${topic}</span>`;
+              return `<span class="topic-focus">${topic}</span>`;
             }
             return "N/A";
           },
@@ -1138,6 +1137,25 @@ import Layout from "../layouts/Layout.astro";
 
   .child-row-content tr:last-child td {
     border-bottom: none;
+  }
+
+  /* Topic pills in expanded rows */
+  .topic-pill {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    margin: 0.125rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+    border-radius: 0.25rem;
+    font-size: 0.8125rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  .topic-pill:hover {
+    background-color: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
   }
 
   /* Enhanced link styling */
